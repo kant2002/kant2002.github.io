@@ -30,6 +30,7 @@ lang: ua
 posts: Статті
 disqus:
   - shortname: kant2002
+google_analytics: G-Q9C7QSY9LY
 
 # Build settings
 theme: minima
