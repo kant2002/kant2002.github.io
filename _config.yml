@@ -40,6 +40,12 @@ plugins:
   - jekyll-readme-index
 #  - jekyll-feed
 
+header_pages:
+   - projects/index.md  
+#header_pages:
+# - path: /OpenAlexBrowser
+#   title: OpenAlex Browser
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
