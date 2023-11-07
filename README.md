@@ -1,3 +1,7 @@
 # Andrii Kurdyumov's personal blog
 
-Nothing to see here yet.
+Як запустити цю диявольку машину
+
+```
+docker run --rm --volume="${PWD}:/srv/jekyll:Z" --publish 4000:4000 jekyll/jekyll jekyll serve
+```
