@@ -281,7 +281,7 @@ void Compile()
 На мою думку треба не думати як підшаманити MSBuild файл, а краще зрозуміти як воно усе це працює. До речі якщо щось працює не так, і ви бачите помилку у MSbuild
 моя дефолтна порада, це додати до запуску `dotnet build` параметр `/bl` і подивитися що у там коїться у файлі msbuild.binlog через [MSBuildLogViewer][msbuildlogviewer]
 
-PS. помилки української виправив [Володимир Лишенко](https://github.com/vovche), дакую!
+PS. помилки української виправив [Володимир Лишенко](https://github.com/vovche), дякую!
 
 [sdk-project-files]: https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview#project-files
 [conditions]: https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-conditions?view=vs-2022
