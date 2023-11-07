@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Крипто змагання - Набор 1
-permalink: /cryptopals/sets/1
+permalink: /cryptopals/sets/1/
 ---
 
 # Крипто змагання - Набор 1
