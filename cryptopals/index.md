@@ -6,11 +6,21 @@ permalink: /cryptopals/
 # Ласкаво просимо до викликів
 Ми не можемо представити цей проект краще ніж це зробив [Maciej Ceglowski](https://blog.pinboard.in/2013/04/the_matasano_crypto_challenges/), так що спочатку прочитайте цю статю із блога.
 
-<div class="card mb-3">
+<!-- <div class="card mb-3">
   <div class="card-header text-bg-warning">Це переклад</div>
   <div class="card-body text-primary">
     <p class="card-text">
         Це переклад на українсьу сайта <a href="https://cryptopals.com/" target="_blank">https://cryptopals.com/</a>.
+    </p>
+  </div>
+</div> -->
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">Це переклад</h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      Це переклад на українсьу сайта <a href="https://cryptopals.com/" target="_blank">https://cryptopals.com/</a>.
     </p>
   </div>
 </div>
