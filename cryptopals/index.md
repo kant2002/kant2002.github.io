@@ -20,7 +20,7 @@ permalink: /cryptopals/
   </div>
   <div class="panel-body">
     <p>
-      Це переклад на українсьу сайта <a href="https://cryptopals.com/" target="_blank">https://cryptopals.com/</a>.
+      Це переклад на українську сайта <a href="https://cryptopals.com/" target="_blank">https://cryptopals.com/</a>.
     </p>
   </div>
 </div>
