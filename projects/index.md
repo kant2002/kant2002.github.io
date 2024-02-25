@@ -8,3 +8,4 @@ permalink: /projects/
 
 - [Переглядач OpenAlex](/projects/openalex/)
 - [Українізація F#](/projects/fsharp-ua/) (a.k.a Ф#) 
+- [генерація завдань](/projects/excercise-generator/)
