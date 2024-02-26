@@ -57,6 +57,7 @@ permalink: /cryptopals/
 
 ## Як почати?
 [Починати тут!](sets/1)
+[Продовжувати тут!](sets/2)
 
 ## Хто це зробив?
 - Thomas Ptacek (@tqbf)
