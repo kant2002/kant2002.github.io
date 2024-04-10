@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: cryptopals
 title: Крипточуваки
 permalink: /cryptopals/
 ---
