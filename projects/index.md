@@ -14,3 +14,6 @@ permalink: /projects/
 - [MstatAnalyser](https://github.com/kant2002/MstatAnalyser) для аналізу чому NativeAOT програми займають купу місця.
 - [WebIDL парсер для C#](https://github.com/kant2002/webidl-csharp)
 - [Аналіз Дії](https://github.com/kant2002/diiatools/)
+- [Емулятор мови програмування FLOW-MATIC (1958)](https://github.com/kant2002/FlowMatic/)
+- [Візуалізація GC - реставрація](https://kant2002.github.io/gc-viz/)
+- [Переклад SmolTutor paper](https://kant2002.github.io/smoltutor/)
