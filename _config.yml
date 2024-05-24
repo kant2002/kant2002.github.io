@@ -39,6 +39,7 @@ theme: minima
 plugins:
   - jekyll-readme-index
 #  - jekyll-feed
+  - jemoji
 
 header_pages:
    - projects/index.md  
