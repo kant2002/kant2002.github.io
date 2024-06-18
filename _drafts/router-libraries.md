@@ -82,7 +82,11 @@ Redirect from defined path, to another location within application. This should 
 
 ### Global Hooks
 
-Global hooks which allow be notified about routes match, or perform actions before and/or after navigation happens.
+Global hooks which allow be notified about routes match, or perform actions before and/or after navigation happens. You usually set them via API or as parameter to Router component.
+
+### Per-Route Hooks
+
+Same as global hooks, but for customization of transitions from/into the specific route. You can emulate these hooks if you have Global hooks support, but manually matching for the desired router. Obviously this is inconvinent if you need to apply customization to many routes.
 
 ## Properties availability
 
@@ -94,8 +98,8 @@ Global hooks which allow be notified about routes match, or perform actions befo
 | Single component match per route      |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: |           | :white_check_mark: |
 | Named routes                          |                    |                    |                    | :white_check_mark: |                    |                    | :white_check_mark: |                 |:white_check_mark: |                    |
 | Redirect to other route               | :white_check_mark: | :white_check_mark: |                    |                    |                    |                    |                    |                 | :white_check_mark: | :white_check_mark: |
-| Global Hooks                          |                    | :white_check_mark: |                    | :white_check_mark: |                    | :white_check_mark: |                    | | | |
-| Per-route Hooks                       | | | | | | | | | | |
+| Global Hooks                          |                    | :white_check_mark: |                    | :white_check_mark: |                    | :white_check_mark: |                    |                 | :white_check_mark: | :white_check_mark: |
+| Per-route Hooks                       |                    |                    |                    |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Typed links                           | | | | | | | | | | |
 | Navigation stack                      | | | | | | | | | | |
 | Programmatic navigation               | | | | | | | | | | |
