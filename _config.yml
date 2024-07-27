@@ -44,6 +44,7 @@ plugins:
 header_pages:
    - projects/index.md  
    - cryptopals/index.md  
+   - compilers/index.md  
 #header_pages:
 # - path: /OpenAlexBrowser
 #   title: OpenAlex Browser
