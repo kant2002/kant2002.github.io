@@ -88,6 +88,10 @@ Global hooks which allow be notified about routes match, or perform actions befo
 
 Same as global hooks, but for customization of transitions from/into the specific route. You can emulate these hooks if you have Global hooks support, but manually matching for the desired router. Obviously this is inconvinent if you need to apply customization to many routes.
 
+### Typed links
+
+For large application it is convinient for for any future refactoring, to be able to prodive typed wrappers for the links, or somehow check at compile time that configured navigation to the route is working.
+
 ## Properties availability
 
 | Property                              | Angular            | Blazor             | Next               | React Navigation   | Reach router       | React Router       | router.js          | TanStack Router | Vue Router   | Wouter    | 
@@ -100,7 +104,7 @@ Same as global hooks, but for customization of transitions from/into the specifi
 | Redirect to other route               | :white_check_mark: | :white_check_mark: |                    |                    |                    |                    |                    |                 | :white_check_mark: | :white_check_mark: |
 | Global Hooks                          |                    | :white_check_mark: |                    | :white_check_mark: |                    | :white_check_mark: |                    |                 | :white_check_mark: | :white_check_mark: |
 | Per-route Hooks                       |                    |                    |                    |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Typed links                           | | | | | | | | | | |
+| Typed links                           |                    |                    |                    | | | | | | | |
 | Navigation stack                      | | | | | | | | | | |
 | Programmatic navigation               | | | | | | | | | | |
 | Authorization                         | | | | | | | | | | |
@@ -111,3 +115,16 @@ Same as global hooks, but for customization of transitions from/into the specifi
 | Search parameters                     | | | | | | | | | | |
 | Parameter constraints                 | | | | | | | | | | |
 | Catch-all parameters                  | | | | | | | | | | |
+
+# Materials
+
+- https://angular.dev/guide/routing/common-router-tasks#specifying-a-relative-route
+- https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing?view=aspnetcore-8.0
+- https://next-typesafe-url.dev/en/setup/defining-your-routes
+- https://reactnavigation.org/docs/navigation-events/
+- https://reach.tech/router/api/useLocation
+- https://reactrouter.com/en/main/hooks/use-params
+- https://github.com/tildeio/router.js/
+- https://tanstack.com/router/latest/docs/framework/react/examples/navigation-blocking
+- https://router.vuejs.org/guide/advanced/transitions.html
+- https://github.com/molefrog/wouter?tab=readme-ov-file#useroute-route-matching-and-parameters
