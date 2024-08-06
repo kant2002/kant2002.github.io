@@ -90,24 +90,42 @@ Same as global hooks, but for customization of transitions from/into the specifi
 
 ### Typed links
 
-For large application it is convinient for for any future refactoring, to be able to prodive typed wrappers for the links, or somehow check at compile time that configured navigation to the route is working.
+For large application it is convinient for for any future refactoring, to be able to prodive typed wrappers for the links, or somehow check at compile time that configured navigation to the route is working. That's can save you a lot of time if you add new route and it start clashing with existing one. With manual links you may hit situation when due to drift, some links become outdated. For large application it would be very hard to check all links, and validate that nothing is broken.
+
+### Navigation stacks
+
+When perform navigation sometimes, you have navigation patterns which act like a navigation stacks. That's your dialog windows, on mobile it's separate screens which allow you return back, etc. You would argue that this is not a router, technicaly yes, but I do not see router as a simple thing which just route something to your page. That way even links generation should not be part of routing. Personally I view routers as navigation libraries, which provide range of navigation facilities to your application. What if I want to be able navigate to dialog box?
+
+I would treat navigation stacks, as facilities which able to create rollback point in the navigation history.
+
+### Programmatic navigation
+
+That's for being able to trigger navigation process, not via user interaction like clicks, but rather via code.
+
+### Authorization
+
+Lot of applications want to hide certain routers behind autorization rules. That may include simply authenticated/not-authenticated rules, or something more complicated with roles-authz or even claims-authz. If router is part of Web framework, and framework support route protection from unauthorized access, via some other means, I counsider this as fact that router support authorization.
+
+### Deep linking
+
+Ability of the routing framework support deep links.
 
 ## Properties availability
 
-| Property                              | Angular            | Blazor             | Next               | React Navigation   | Reach router       | React Router       | router.js          | TanStack Router | Vue Router   | Wouter    | 
-| --------                              | -------            | ------             | ----               | ----------------   | ------------       | ------------       | ---------          | --------------- | ---------- | ------ |
-| Routes matching                       |                    |                    |                    |                    |                    |                    |                    |                 |  | | |
+| Property                              | Angular            | Blazor             | Next               | React Navigation   | Reach router       | React Router       | router.js          | TanStack Router    | Vue Router         | Wouter             | 
+| --------                              | -------            | ------             | ----               | ----------------   | ------------       | ------------       | ------------------ | ------------------ | ------------------ | ------------------ |
+| Routes matching                       |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
 | Routes nesting                        | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Multiple components match per route   | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Single component match per route      |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: |           | :white_check_mark: |
-| Named routes                          |                    |                    |                    | :white_check_mark: |                    |                    | :white_check_mark: |                 |:white_check_mark: |                    |
-| Redirect to other route               | :white_check_mark: | :white_check_mark: |                    |                    |                    |                    |                    |                 | :white_check_mark: | :white_check_mark: |
-| Global Hooks                          |                    | :white_check_mark: |                    | :white_check_mark: |                    | :white_check_mark: |                    |                 | :white_check_mark: | :white_check_mark: |
+| Single component match per route      |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: |
+| Named routes                          |                    |                    |                    | :white_check_mark: |                    |                    | :white_check_mark: |                    | :white_check_mark: |                    |
+| Redirect to other route               | :white_check_mark: | :white_check_mark: |                    |                    |                    |                    |                    |                    | :white_check_mark: | :white_check_mark: |
+| Global Hooks                          |                    | :white_check_mark: |                    | :white_check_mark: |                    | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: |
 | Per-route Hooks                       |                    |                    |                    |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Typed links                           |                    |                    |                    | | | | | | | |
-| Navigation stack                      | | | | | | | | | | |
-| Programmatic navigation               | | | | | | | | | | |
-| Authorization                         | | | | | | | | | | |
+| Typed links                           |                    |                    |                    |                    |                    |                    |                    | :white_check_mark: | :white_check_mark: |                    |
+| Navigation stack                      |                    | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Programmatic navigation               |                    | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Authorization                         | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: |                    |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Deep linking                          | | | | | | | | | | |
 | Modal support                         | | | | | | | | | | |
 | 404 page                              | | | | | | | | | | |
@@ -115,16 +133,3 @@ For large application it is convinient for for any future refactoring, to be abl
 | Search parameters                     | | | | | | | | | | |
 | Parameter constraints                 | | | | | | | | | | |
 | Catch-all parameters                  | | | | | | | | | | |
-
-# Materials
-
-- https://angular.dev/guide/routing/common-router-tasks#specifying-a-relative-route
-- https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing?view=aspnetcore-8.0
-- https://next-typesafe-url.dev/en/setup/defining-your-routes
-- https://reactnavigation.org/docs/navigation-events/
-- https://reach.tech/router/api/useLocation
-- https://reactrouter.com/en/main/hooks/use-params
-- https://github.com/tildeio/router.js/
-- https://tanstack.com/router/latest/docs/framework/react/examples/navigation-blocking
-- https://router.vuejs.org/guide/advanced/transitions.html
-- https://github.com/molefrog/wouter?tab=readme-ov-file#useroute-route-matching-and-parameters
