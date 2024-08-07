@@ -108,7 +108,19 @@ Lot of applications want to hide certain routers behind autorization rules. That
 
 ### Deep linking
 
-Ability of the routing framework support deep links.
+Ability of the routing framework support deep links. Unfortunately only one library support this scenario out of the box.
+
+### Modal support
+
+Some routes may point to opened modal windows. For example you want to provide add and edit entity screens as modal dialogs, and make them navigable via URL.
+
+### 404 page
+
+That's feature which provide catch-all page, in case if URL address does not match existing route.
+
+### Lazy loading
+
+For large applications it is sometimes important not to build whole routing as part of app building and let preload full routing table on as needed basis. 
 
 ## Properties availability
 
@@ -126,10 +138,10 @@ Ability of the routing framework support deep links.
 | Navigation stack                      |                    | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Programmatic navigation               |                    | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Authorization                         | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: |                    |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Deep linking                          | | | | | | | | | | |
-| Modal support                         | | | | | | | | | | |
-| 404 page                              | | | | | | | | | | |
-| Lazy loading                          | | | | | | | | | | |
+| Deep linking                          |                    |                    |                    | :white_check_mark: |                    |                    |                    |                    |                    |                    |
+| Modal support                         |                    |                    |                    | :white_check_mark: |                    |                    |                    |                    |                    |                    |
+| 404 page                              | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Lazy loading                          | :white_check_mark: |                    |                    |                    | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: |                    |
 | Search parameters                     | | | | | | | | | | |
 | Parameter constraints                 | | | | | | | | | | |
 | Catch-all parameters                  | | | | | | | | | | |
