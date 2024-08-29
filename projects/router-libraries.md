@@ -138,7 +138,7 @@ That important for migration of older applications. I will consider that library
 
 Each specified parameter usually have specific format and/or data type. I would like that routing library allow specify which datatype route parameter should accept, or at a minimum to allow manually validate these parameters, so the logic would be contained close enough to the route declaration.
 
-## Properties availability
+## Features availability
 
 | Property                            | Angular            | Blazor             | Next               | React Navigation   | Reach router       | React Router       | router.js          | TanStack Router    | Vue Router         | Wouter             |
 | ----------------------------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
