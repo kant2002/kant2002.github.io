@@ -97,7 +97,7 @@ For large application it is convenient for any future refactoring, to be able to
 
 ### Navigation stacks
 
-When you perform a navigation, sometimes you have navigation patterns which act like a navigation stack. That's your dialog windows, on mobile it's separate screens which allow you return back, etc. You would argue that this is not a router, technically yes, but I do not see router as a simple thing which is just a concept of "route something to your page". That way even suppose that links generation should not be part of routing. Personally I view routers as navigation libraries, which provide range of navigation facilities to your application. What if I want to be able navigate to dialog box directly?
+When you perform a navigation, sometimes you have navigation patterns which act like a navigation stack. That's your dialog windows, on mobile it's separate screens which allow you to return back, etc. You would argue that this is not a router, technically yes, but I do not see router as a simple thing which is just a concept of "route something to your page". That way we can even suppose that links generation should not be part of routing. Personally I view routers as navigation libraries, which provide range of navigation facilities to your application. What if I want to be able navigate to dialog box directly?
 
 I would treat navigation stacks, as facilities which able to create rollback point in the navigation history.
 
