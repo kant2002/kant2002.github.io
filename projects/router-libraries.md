@@ -69,7 +69,7 @@ Rationale for such grouping is to define areas and sub-areas in large applicatio
 
 This feature means that we can have more then one UI component matched for the final route. Usually that's comes for free with routes nesting, since parent route provide UI component and nested route also provide UI component, so we have more then one UI block controlled by routing. Usually that requires to design parent UI component as some form of containers.
 
-It is not impossible for me to image that we can have two route definitions which match same path, and provide 2 UI controls to display.
+It is not impossible for me to imagine that we can have two route definitions which match same path, and provide 2 UI controls to display.
 
 ### Single component match per route
 
