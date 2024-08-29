@@ -18,3 +18,4 @@ permalink: /projects/
 - [Візуалізація GC - реставрація](https://kant2002.github.io/gc-viz/)
 - [Переклад SmolTutor paper](https://kant2002.github.io/smoltutor/)
 - [Емулятор обчислюванної машини "Київ" (1958)](https://github.com/kant2002/KyivMachine/)
+- [What is routing library](/projects/router-libraries/)

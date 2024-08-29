@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: page
 title:  "What is routing library?"
+permalink: /projects/router-libraries/
 ---
 
 # What is routing library?
@@ -9,8 +10,9 @@ One of my friend ask me to give feedback on his routing library for Blazor, and 
 
 I know that this is vague question, and different libraries obviously have different features. But, I previously seen [previous surveys](https://open-ui.org/) for Web, which was trying to capture current state, and find common ground.
 
-So I decice that survey existing libraries is great thing to move forward, and I should do this survey. Preliminary questions from people around me seems to be support this, so let's move forward and do the survey. I intend to make this document living, in a sense that if you 
-find library which is mature enough, and have interesting set of features, and want to place it in the list, you can submit PR. I also would like to see mature frameworks to appear on the list, and potentially routing for mobile devs, if that make sense.
+So I decice that survey existing libraries is great thing to move forward, and I should do this survey. Preliminary questions from people around me seems to be support this, so let's move forward and do the survey. I intend to make this document living, in a sense that if you find library which is mature enough, and have interesting set of features, and want to place it in the list, you can submit PR. I also would like to see mature frameworks to appear on the list, and potentially routing for mobile devs, if that make sense.
+
+Please also consider this article as living document. If you think I misinterpret something, or you want to add one more library, or property, you can go to https://github.com/kant2002/kant2002.github.io and suggest changes.
 
 ## What is routing library?
 
@@ -50,6 +52,7 @@ List of routing libraries which I look at in alphabetical order:
 - Modal support
 - 404 page
 - Lazy loading
+- Path parameters
 - Search parameters
 - Parameter constraints
 - Menu link matching based on route
@@ -120,7 +123,20 @@ That's feature which provide catch-all page, in case if URL address does not mat
 
 ### Lazy loading
 
-For large applications it is sometimes important not to build whole routing as part of app building and let preload full routing table on as needed basis. 
+For large applications it is sometimes important not to build whole routing tress as part of app launching and let preload full routing table on as needed basis. 
+
+### Path parameters
+
+This is paramters which is passed inside `path` part of URL. This parameter values then accessible by user application, and can be used to control what information to present. Some libraries make that these parameters are staticaly typed, which is extra nice thing in my opinion.
+
+### Search parameters
+
+When specify routes, occasionally you should define how parameters can be passed to query strings. These query string parameters should be parsed and presented in some structured fashion. Otherwise, you can always use `location` object yourself. That's defeat purpose.
+That important for migration of older applications. I will consider that library support search parameters, if you can define them, and access these values via same object as regular route parameters.
+
+### Parameter constraints
+
+Each specified parameter usually have specific format and/or data type. I would like that routing library allow specify which datatype route parameter should accept, or at a minimum allow manually and validate parameters, so logic would be contained close to route declaration. 
 
 ## Properties availability
 
@@ -134,7 +150,7 @@ For large applications it is sometimes important not to build whole routing as p
 | Redirect to other route               | :white_check_mark: | :white_check_mark: |                    |                    |                    |                    |                    |                    | :white_check_mark: | :white_check_mark: |
 | Global Hooks                          |                    | :white_check_mark: |                    | :white_check_mark: |                    | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: |
 | Per-route Hooks                       |                    |                    |                    |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Typed links                           |                    |                    |                    |                    |                    |                    |                    | :white_check_mark: | :white_check_mark: |                    |
+| Typed links                           |                    |                    | :white_check_mark: |                    |                    |                    |                    | :white_check_mark: | :white_check_mark: |                    |
 | Navigation stack                      |                    | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Programmatic navigation               |                    | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Authorization                         | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: |                    |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -142,6 +158,7 @@ For large applications it is sometimes important not to build whole routing as p
 | Modal support                         |                    |                    |                    | :white_check_mark: |                    |                    |                    |                    |                    |                    |
 | 404 page                              | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Lazy loading                          | :white_check_mark: |                    |                    |                    | :white_check_mark: |                    |                    | :white_check_mark: | :white_check_mark: |                    |
-| Search parameters                     | | | | | | | | | | |
-| Parameter constraints                 | | | | | | | | | | |
-| Catch-all parameters                  | | | | | | | | | | |
+| Path parameters                       | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Search parameters                     |                    | :white_check_mark: | :white_check_mark: |                    |                    |                    |                    | :white_check_mark: |                    |                    |
+| Parameter constraints                 | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    |                    |                    |                    | :white_check_mark: |                    |                    |
+| Catch-all parameters                  | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
