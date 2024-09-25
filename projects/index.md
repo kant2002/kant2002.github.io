@@ -19,3 +19,4 @@ permalink: /projects/
 - [Переклад SmolTutor paper](https://kant2002.github.io/smoltutor/)
 - [Емулятор обчислюванної машини "Київ" (1958)](https://github.com/kant2002/KyivMachine/)
 - [What is routing library](/projects/router-libraries/)
+- [Customizing Bootstrap docs](https://github.com/kant2002/custom-bootstrap)
