@@ -25,6 +25,13 @@ You would not find anything surpising. For me that's cool, you can real old book
 ## Dart
 - [token.h](https://github.com/dart-lang/sdk/blob/63dff0db52a66e1f35d687abb28a248af4026de3/runtime/vm/token.h#L215)
 
+## Erlang
+- [erl_scan.erl](https://github.com/erlang/otp/blob/cc2dc0520c6c60f489d2f285e9e3349e669cf7d6/lib/stdlib/src/erl_scan.erl#L130)
+
+## Haskell/GHC
+- [Lexer.x](https://github.com/ghc/ghc/blob/e4ac1b0d281b85a0144d1ef6f84a1df00e236052/compiler/GHC/Parser/Lexer.x#L778)
+- [SrcLoc.hs](https://github.com/ghc/ghc/blob/e4ac1b0d281b85a0144d1ef6f84a1df00e236052/compiler/GHC/Types/SrcLoc.hs#L881)
+
 ## Java/OpenJDK
 - [Tokens.java](https://github.com/openjdk/jdk/blob/10da2c21a19affe93a3f5d67a70db5d9cd37181c/src/jdk.compiler/share/classes/com/sun/tools/javac/parser/Tokens.java#L294-L311)
 
@@ -39,6 +46,9 @@ You would not find anything surpising. For me that's cool, you can real old book
 
 ## Lua
 - [llex.h](https://github.com/lua/lua/blob/fd0e1f530d06340f99334b07d74e5133ce073787/llex.h#L49-L59)
+
+## Ocaml
+- [defs.h](https://github.com/ocaml/ocaml/blob/trunk/yacc/defs.h#L136-L152)
 
 ## PHP
 - [tokenizer.stub.php](https://github.com/php/php-src/blob/9ee9c0e6748157198d0180920454bc203ee439a5/ext/tokenizer/tokenizer.stub.php#L15)
