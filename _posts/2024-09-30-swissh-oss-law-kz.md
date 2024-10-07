@@ -6,7 +6,7 @@ categories: software-development
 comments: true
 ---
 
-Бұл мақала [украин тілінен](https://kant2002.github.io/software-development/2024/08/22/swissh-oss-law.html) аударылған. 
+Бұл мақала [украин тілінен](https://kant2002.github.io/software-development/2024/08/22/swissh-oss-law.html) аударылған. Сонымен қатар, [орыс тілінде](https://kant2002.github.io/software-development/2024/08/22/swissh-oss-law.html) аудармасы бар. 
 
 # Ашық бастапқы код және ашық үкіметтік деректер
 
