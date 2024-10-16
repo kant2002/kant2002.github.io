@@ -42,9 +42,19 @@ plugins:
   - jemoji
 
 header_pages:
-   - projects/index.md  
-   - cryptopals/index.md  
-   - compilers/index.md  
+   - projects/index.md
+   - cryptopals/index.md
+   - compilers/index.md
+   - byol-c/index.md
+   - EarlyHistoryOfSmalltalk/index.html
+
+defaults:
+  -
+    scope:
+      path: "cryptopals/*/*.md"
+    values:
+      layout: "cryptopals"
+
 #header_pages:
 # - path: /OpenAlexBrowser
 #   title: OpenAlex Browser
