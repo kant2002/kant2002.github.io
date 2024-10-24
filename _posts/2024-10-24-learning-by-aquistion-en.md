@@ -6,7 +6,7 @@ categories: en learning programming-languages
 comments: true
 ---
 
-This is translation of [post in Ukrainian]({% link 2024-10-17-learning-by-aquistion.md %})
+This is translation of [post in Ukrainian]({% link _posts/2024-10-17-learning-by-aquistion.md %})
 
 I just read article about Stephen Krashen’s theory on second language acquisition and it struck me with similarities which I see in the learning how we build software. Maybe that can be said about any skill acquisition, but given that programming languages and natural languages have some similarities I would try to speculate a bit.
 
