@@ -28,13 +28,13 @@ Conference.
 Funding for this research was provided in part by Harvard Business School.
 
 
-## The Value of Open Source Software
+## Вартість програмного забезпечення з відкритим кодом
 
 Manuel Hoffmanna Frank Nagle b Yanuo Zhouc
 This version: January 1, 2024
 
-### Abstract
-The value of a non-pecuniary (free) product is inherently difficult to assess. A pervasive example is open source software (OSS), a global public good that plays a vital role in the economy and is foundational for most technology we use today. However, it is difficult to measure the value of OSS due to its non-pecuniary nature and lack of centralized usage tracking. Therefore, OSS remains largely unaccounted for in economic measures. Although prior studies have estimated the supply-side costs to recreate this software, a lack of data has hampered estimating the much larger demand-side (usage) value created by OSS. Therefore, to understand the complete economic and social value of widely-used OSS, we leverage unique global data from two complementary sources capturing OSS usage by millions of global firms. We first estimate the supply-side value by calculating the cost to recreate the most widely used OSS once. We then calculate the demand- side value based on a replacement value for each firm that uses the software and would need to build it internally if OSS did not exist. We estimate the supply-side value of widely-used OSS is $4.15 billion, but that the demand-side value is much larger at $8.8 trillion. We find that firms would need to spend 3.5 times more on software than they currently do if OSS did not exist. The top six programming languages in our sample comprise 84% of the demand-side value of OSS. Further, 96% of the demand-side value is created by only 5% of OSS developers.
+### Анотація
+Вартість негрошового (безкоштовного) продукту за своєю суттю важко оцінити. Поширеним прикладом є програмне забезпечення з відкритим кодом (OSS), глобальне суспільне благо, яке відіграє життєво важливу роль в економіці та є основою для більшості технологій, які ми використовуємо сьогодні. Однак важко виміряти цінність OSS через його негрошовий характер і відсутність централізованого відстеження використання. Таким чином, OSS залишається значною мірою неврахованим в економічних показниках. Незважаючи на те, що попередні дослідження оцінювали витрати з боку пропозиції на відтворення цього програмного забезпечення, брак даних заважав оцінити набагато більшу цінність на стороні попиту (користування), яку створює OSS. Тому, щоб зрозуміти повну економічну та соціальну цінність широко використовуваного OSS, ми використовуємо унікальні глобальні дані з двох додаткових джерел, які фіксують використання OSS мільйонами глобальних компаній. Спочатку ми оцінюємо цінність з боку пропозиції, підраховуючи вартість одноразового відтворення найпоширенішого OSS. Потім ми розраховуємо вартість на стороні попиту на основі вартості заміни для кожної фірми, яка використовує програмне забезпечення та потребувала б створити його всередині себе, якби OSS не існувало. За нашими оцінками, вартість широко використовуваних OSS на стороні пропозиції становить 4,15 мільярда доларів, але вартість на стороні попиту набагато вища – 8,8 трильйона доларів. Ми виявили, що компаніям довелося б витрачати в 3,5 рази більше на програмне забезпечення, ніж зараз, якби OSS не існувало. Шість найкращих мов програмування в нашій вибірці становлять 84% цінності OSS з боку попиту. Крім того, 96% цінності з боку попиту створюють лише 5% розробників OSS.
 
 _JEL Classification:_ H4; O3; J
 _Keywords:_ Open-source software, global public good
@@ -43,957 +43,406 @@ Acknowledgement: The authors are grateful for financial and administrative suppo
 
 #### M5S 3E6, Canada, E-Mail: yanuo.zhou@rotman.utoronto.ca.
 
-#### 1. Introduction
+#### 1. Вступ
 
-In 2011, venture capitalist Mark Andreessen famously argued that “software is eating the world” (Andreessen, 2011), a sentiment few would argue with today. More recently, venture capitalist Joseph Jacks argued that “open source is eating software faster than software is eating the world,” (Jacks, 2022). Other recent studies have come to similar conclusions showing that open source software (OSS) – software whose source code is publicly available for inspection, use, and modification and is often created in a decentralized manner and distributed for free – appears in 96% of codebases (Synopsys 2023), and that some commercial software consists of up to 99.9% freely available OSS (Musseau et al., 2022). Although in its early days OSS frequently copied features from existing proprietary software, OSS today includes cutting edge technology in various fields including artificial intelligence (AI), quantum computing, big data, and analytics. However, despite the increasing importance of OSS to all software (and therefore to the entire economy), measuring its impact has been elusive. Traditionally, to measure the value created by a good or service, economists multiply the price ( _p_ ) times the quantity sold ( _q_ ). However, in OSS, _p_ is generally zero since the source code is publicly available, and _q_ is unknown due to the limited number of restrictions around how the code may be copied and reused. For example, if a company downloads a piece of OSS from a public code repository, it may copy it thousands of times internally (legally) and then share it with suppliers or customers (also legally), so public download data is insufficient. Although some recent studies have sought to estimate the value of _p_ (discussed below), data for estimating _q_ has been unavailable or intractable for anything more than just a handful of OSS packages. Using newly collected data from multiple sources, the goal of this paper is to provide estimates for both _p_ and _q_ and to use those to shine light on the question: What is the value of open source software? 
+У 2011 році венчурний капіталіст Марк Андріссен висловив знамениту думку про те, що «програмне забезпечення поїдає світ» (Andreessen, 2011), сьогодні мало хто сперечатиметься з цим. Нещодавно венчурний капіталіст Джозеф Джекс стверджував, що «відкрите програмне забезпечення з’їдає програмне забезпечення швидше, ніж програмне забезпечення з’їдає світ» (Джекс, 2022). Інші останні дослідження дійшли подібних висновків, показуючи, що програмне забезпечення з відкритим кодом (OSS) – програмне забезпечення, вихідний код якого є загальнодоступним для перевірки, використання та модифікації та часто створюється децентралізованим способом і поширюється безкоштовно – з’являється в 96% кодових баз. (Synopsys 2023) і що деяке комерційне програмне забезпечення на 99,9% складається з вільно доступних OSS (Musseau та ін., 2022). Хоча на початку свого існування OSS часто копіював функції з існуючого пропрієтарного програмного забезпечення, сьогодні OSS включає передові технології в різних сферах, включаючи штучний інтелект (AI), квантові обчислення, великі дані та аналітику. Однак, незважаючи на зростаючу важливість OSS для всього програмного забезпечення (і, отже, для всієї економіки), виміряти його вплив було важко. Традиційно, щоб виміряти вартість, створену товаром або послугою, економісти множать ціну (_p_) на продану кількість (_q_). Проте в OSS _p_ зазвичай дорівнює нулю, оскільки вихідний код є загальнодоступним, а _q_ невідомий через обмежену кількість обмежень щодо того, як код можна копіювати та повторно використовувати. Наприклад, якщо компанія завантажує частину OSS із загальнодоступного сховища коду, вона може скопіювати її тисячі разів всередину (на законних підставах), а потім поділитися з постачальниками чи клієнтами (також на законних підставах), тому загальнодоступних даних для завантаження недостатньо. Незважаючи на те, що деякі нещодавні дослідження намагалися оцінити значення _p_ (обговорюється нижче), дані для оцінки _q_ були недоступні або важкооброблені для чогось іншого, ніж просто для кількох пакетів OSS. Використовуючи нещодавно зібрані дані з багатьох джерел, мета цієї статті — надати оцінки як для _p_, так і для _q_ та використати їх, щоб прояснити питання: яка цінність програмного забезпечення з відкритим кодом?
 
-Understanding the value of OSS is of critical importance not only due to the role it plays in the economy, but also due to it being one of the most successful and impactful modern examples of the centuries old economic concept of “the commons” which run the risk of meeting the fate known as “the tragedy of the commons.” This concept can trace its roots as far back as the 4th-century BC philosopher Aristotle who wrote “That which is common to the greatest number gets the least amount of care. Men pay most attention to what is their own and care less for what is common.” (Aristotle, 1981). William Forster Lloyd (1833) resurfaced the idea in modern economic thought by highlighting the example of shared tracts of land used for cattle grazing by multiple cattle herders who each had an incentive to overuse the shared resource. Garrett Hardin (1968) brought the concept into the broader zeitgeist when he wrote an article discussing the
-problem entitled “The Tragedy of the Commons.” Building on this work, Elinor Ostrom won the
-Nobel Prize for her research highlighting paths to avoiding the tragedy of the commons through
-community coordination efforts that did not necessitate government enforced laws to manage and
-guard the commons (Ostrom 1990). The parallels between shared grazing lands and shared digital
-infrastructure are palpable – the availability of communal grass to feed cattle, and in turn feed
-people, was critical to the agrarian economy, and the ability to not have to recreate code that
-someone else has already written is critical to the modern economy. Further, in both contexts,
-despite knowing grass and code are critical inputs to the economy, measuring their actual value is
-difficult. And, as the renowned mathematician and physicist Lord Kelvin is believed to have said,
-“If you can’t measure it, you can’t improve it.” And if you cannot improve and maintain it, such
-common goods may crumble under the weight of their own success as they are overused, but
-underinvested in (Lifshitz-Assaf and Nagle, 2021). Therefore, measuring the value OSS creates is
-crucial to the future health of the digital economy, and the rest of the economy that is built on top
-of it.
+Розуміння цінності OSS має вирішальне значення не лише через роль, яку вона відіграє в економіці, але й через те, що вона є одним із найуспішніших і найвпливовіших сучасних прикладів багатовікової економічної концепції «загальних благ», яка керує ризик зустріти долю, відому як «трагедія спільного населення». Ця концепція сягає корінням ще в 4-е століття до нашої ери, філософ Аристотель, який писав: «Те, що є спільним для найбільшої кількості людей, потребує найменшої уваги. Люди найбільше звертають увагу на те, що є своїм, і менше піклуються про те, що є спільним». (Аристотель, 1981). Вільям Форстер Ллойд (1833) відновив цю ідею в сучасній економічній думці, навівши приклад спільних ділянок землі, які використовувалися для випасу худоби кількома пастухами, кожен з яких мав стимул надмірно використовувати спільний ресурс. Гаррет Гардін (1968) переніс цю концепцію в ширший дух часу, коли написав статтю, де обговорював проблему під назвою «Трагедія спільного». Спираючись на цю роботу, Елінор Остром отримала Нобелівську премію за дослідження, що висвітлює шляхи уникнення трагедії спільного надбання шляхом координації зусиль громади, які не вимагають застосування державними законами для управління та охорони спільного надбання (Ostrom 1990). Паралелі між спільними пасовищами та спільною цифровою інфраструктурою є відчутними – доступність комунальної трави для годування худоби та, у свою чергу, годування людей, була критично важливою для аграрної економіки, а можливість не відтворювати код, який уже написав хтось інший. має вирішальне значення для сучасної економіки. Крім того, в обох контекстах, незважаючи на те, що знаємо, що grass і код є критично важливими факторами економіки, виміряти їх фактичну вартість важко. І, як вважається, сказав відомий математик і фізик лорд Кельвін: «Якщо ви не можете це виміряти, ви не можете це покращити». І якщо ви не можете покращити та підтримувати його, такі загальні блага можуть розвалитися під вагою власного успіху, оскільки їх надмірно використовують, але в них недостатньо інвестують (Ліфшиц-Ассаф та Нейгл, 2021). Тому вимірювання вартості, яку створює OSS, має вирішальне значення для майбутнього здоров’я цифрової економіки та решти економіки, яка побудована на ній.
 
-Importantly, recent studies have attempted to address these measurement issues but fall
-short of capturing both the breadth and depth of OSS usage – a gap we seek to fill with this paper.
-For example, researchers have attempted to gain breadth by using novel methodologies to estimate
-the labor replacement value of the current corpus of OSS created in the United States at $38 billion
-in 2019 (Robbins et al., 2021) and that created in the European Union at €1 billion (Blind et al.,
-2021 ) by imputing the labor costs that it would have taken to rewrite existing OSS. Such efforts
-do a very good job at estimating what it would cost to replace all existing OSS if it disappeared
-tomorrow. However, the resultant estimates rely on two important assumptions. First, that all OSS
-is equally valuable from a usage standpoint, and second that the concept of OSS would still exist,
-and society would just need to rewrite the code once, thus addressing the aforementioned problem
-of a missing value for _p_ , but not addressing the missing value of _q_. In a world where OSS did not
-exist at all, then each piece of OSS software would not need to be rewritten just once, but instead
-would need to be rewritten by every firm that used the software (assuming the firm could freely
-share the software within its boundaries). Other research (Greenstein and Nagle, 2014; Murciano-
-Goroff, Zhuo, and Greenstein, 2021) has gone deeper into this hypothetical, albeit in a narrow manner, by only focusing on web servers (which are public facing on the Internet and can therefore
-be readily measured). Using different methods, both studies measure _q_ for this one type of software
-and impute _p_ by using a goods replacement value approach based on the prices for closed-source
-alternatives offered by firms. With data from the United States the resulting estimates show a value
-of $2 billion for the OSS Apache Web Server in 2012 (Greenstein and Nagle, 2014) and a
-combined value of $4.5 billion for Apache and the increasingly popular OSS web server nginx in
-2018 (Murciano-Goroff, et al., 2021). However, although web servers are an important part of the
-OSS ecosystem, they constitute a small portion of it. We seek to build upon the important
-contributions this existing research has made in an attempt to go both broad and deep to create a
-more complete measure of the value of OSS.
+Важливо те, що останні дослідження намагалися вирішити ці проблеми вимірювання, але не змогли охопити як широту, так і глибину використання OSS – прогалину, яку ми прагнемо заповнити цією роботою. Наприклад, дослідники намагалися розширити масштаби, використовуючи нові методології, щоб оцінити вартість заміщення робочої сили поточного корпусу OSS, створеного в Сполучених Штатах у 38 мільярдів доларів у 2019 році (Robbins et al., 2021), а також того, що було створено в Європейському Союзі. в 1 мільярд євро (Blind et al., 2021) шляхом врахування витрат на оплату праці, які були б потрібні для переписування існуючої OSS. Такі зусилля дуже добре допомагають оцінити, скільки коштуватиме заміна всіх існуючих OSS, якщо вони зникнуть завтра. Однак отримані оцінки ґрунтуються на двох важливих припущеннях. По-перше, що всі OSS є однаково цінними з точки зору використання, а по-друге, що концепція OSS все ще існуватиме, і суспільству потрібно буде лише один раз переписати код, таким чином вирішуючи вищезгадану проблему відсутнього значення для _p_, але не вирішуючи відсутнє значення _q_. У світі, де OSS взагалі не існувало, кожну частину програмного забезпечення OSS не потрібно було б переписувати лише один раз, а натомість мала б бути переписана кожною фірмою, яка використовує програмне забезпечення (припускаючи, що фірма може вільно ділитися програмним забезпеченням у межах його межі). Інші дослідження (Greenstein and Nagle, 2014; Murciano-Goroff, Zhuo, and Greenstein, 2021) заглибилися в цю гіпотезу, хоча й у вузькій манері, зосередившись лише на веб-серверах (які є загальнодоступними в Інтернеті і тому можуть легко виміряти). Використовуючи різні методи, обидва дослідження вимірюють _q_ для цього одного типу програмного забезпечення та приписують _p_ за допомогою підходу відновної вартості товару на основі цін на альтернативи із закритим кодом, які пропонують фірми. З даними зі Сполучених Штатів отримані оцінки показують вартість OSS Apache Web Server у 2 мільярди доларів у 2012 році (Greenstein and Nagle, 2014) і загальну вартість у 4,5 мільярда доларів США для Apache та OSS веб-сервера nginx у 2018 році ( Murciano-Goroff та ін., 2021). Однак, хоча веб-сервери є важливою частиною екосистеми OSS, вони становлять невелику її частину. Ми прагнемо спиратися на важливий внесок, зроблений цими існуючими дослідженнями, намагаючись вийти як широко, так і глибоко, щоб створити більш повну міру цінності OSS.
 
-To consider the value of OSS in both a broad and deep manner, we use data from two
-primary sources that allow us to gain insights into the OSS used at tens of thousands of firms across
-the world. The first is the “Census II of Free and Open Source Software – Application Libraries”
-(Nagle et al., 2022). The Census II project utilized partnerships with multiple software composition
-analysis (SCA) firms to create various lists of the most widely used OSS. SCAs are hired to scan
-the codebases of a company to ensure they are not violating any OSS licenses and, as a byproduct,
-track all the OSS code used by their customers and the products they build. The Census II project
-aggregated data from multiple SCAs to build a dataset of OSS usage at tens of thousands of firms
-based on millions of data points (observations of OSS usage). The second data source is the
-BuiltWith dataset, from which we leverage scans of nearly nine million websites to identify the
-underlying technology deployed by these websites, including OSS libraries. The BuiltWith data
-has been used in multiple academic studies (DeStefano & Timmis 2023, Dushnitsky & Stroube
-2021, Koning et al.. 2022), but to our knowledge this is the first one to focus on OSS usage. The
-Census II data and the BuiltWith data are complementary as the former focuses on OSS that is
-built into the software a company sells, while the latter focuses on OSS that is built into a
-company’s website, thus reducing the chances of double-counting observations across the datasets.
-In aggregate, these two datasets combined create the most complete measurement of OSS usage
-( _q_ ) to date. Further, by focusing on OSS that is widely deployed and used by firms, rather than
-considering all the projects that exist in an OSS repository, we enhance the methodologies of prior
-studies by reducing the likelihood of measurement error stemming from projects that are posted as
-publicly available OSS but are not actually used in any practical manner. Not accounting for this measurement error would lead to overestimation of the actual value of OSS as projects that are
-widely used would be valued in the same way as projects that are not used at all.
+Щоб розглянути цінність OSS як широко, так і глибоко, ми використовуємо дані з двох основних джерел, які дозволяють нам отримати уявлення про OSS, що використовується в десятках тисяч компаній у всьому світі. Перший – це «Перепис II вільного програмного забезпечення з відкритим кодом – бібліотеки програм» (Nagle та ін., 2022). Проект Census II використовував партнерство з кількома фірмами, що займаються аналізом складу програмного забезпечення (SCA), щоб створити різноманітні списки найбільш широко використовуваних OSS. SCA наймають для сканування кодових баз компанії, щоб переконатися, що вони не порушують жодних ліцензій OSS, і, як побічний продукт, відстежують увесь код OSS, який використовують їхні клієнти, і продукти, які вони створюють. Проект Census II зібрав дані з кількох SCA для створення набору даних про використання OSS у десятках тисяч фірм на основі мільйонів точок даних (спостережень за використанням OSS). Другим джерелом даних є набір даних BuiltWith, з якого ми використовуємо сканування майже дев’яти мільйонів веб-сайтів, щоб визначити основну технологію, що розгортається на цих веб-сайтах, включаючи бібліотеки OSS. Дані BuiltWith використовувалися в багатьох академічних дослідженнях (DeStefano & Timmis 2023, Dushnitsky & Stroube 2021, Koning et al.. 2022), але, наскільки нам відомо, це перше дослідження, яке присвячене використанню OSS. Дані Census II і дані BuiltWith доповнюють один одного, оскільки перший зосереджується на OSS, вбудованому в програмне забезпечення, яке продає компанія, тоді як другий зосереджується на OSS, вбудованому на веб-сайт компанії, таким чином зменшуючи ймовірність подвійного підрахунку спостережень у всьому світі. набори даних. У сукупності ці два набори даних створюють найповніше вимірювання використання OSS ( _q_ ) на сьогодні. Крім того, зосереджуючись на OSS, яка широко розгорнута та використовується компаніями, а не на розгляді всіх проектів, які існують у сховищі OSS, ми вдосконалюємо методології попередніх досліджень, зменшуючи ймовірність помилки вимірювання, що виникає в результаті проектів, які публікуються як загальнодоступні. доступні OSS, але фактично практично не використовуються. Неврахування цієї помилки вимірювання призведе до переоцінки фактичної вартості OSS, оскільки проекти, які широко використовуються, оцінюватимуться так само, як проекти, які не використовуються взагалі.
 
-To estimate _p_ , we follow the literature discussed above and use the labor replacement
-value. First, we calculate the labor cost it would take an individual firm to recreate a given OSS
-package by measuring the number of lines of code within the package and then applying the
-Constructive Cost Model II (Boehm, 1984; Boehm et al., 2009) – also known as COCOMO II –
-to estimate the number of person-hours it would take to write the code from scratch. We then
-utilize global wage data from Salary Expert to get an accurate estimate of the labor costs a firm
-would incur if this piece of OSS did not exist. These costs can be combined with the _q_ values from
-above at the OSS package level to estimate the combined value of all OSS from both the supply
-and demand sides.
+Щоб оцінити _p_, ми дотримуємося літератури, розглянутої вище, і використовуємо відновну вартість праці. По-перше, ми обчислюємо витрати на оплату праці окремої фірми, щоб відтворити даний пакет OSS, вимірюючи кількість рядків коду в пакеті, а потім застосовуючи модель конструктивних витрат II (Boehm, 1984; Boehm et al., 2009). – також відомий як COCOMO II – щоб оцінити кількість людино-годин, які знадобляться для написання коду з нуля. Потім ми використовуємо глобальні дані про заробітну плату від Salary Expert, щоб отримати точну оцінку витрат на оплату праці, які б понесла фірма, якби цієї частини OSS не існувало. Ці витрати можна поєднати зі значеннями _q_ вище на рівні пакету OSS, щоб оцінити загальну вартість усіх OSS як з боку пропозиції, так і з боку попиту.
 
-We find a value ranging from $1.22 billion to $6.22 billion if we were to decide as a society
-to recreate all widely used OSS on the supply side. However, considering the actual usage of OSS
-leads to a demand-side value that is orders of magnitude larger and ranges from $2.59 trillion to
-$13.18 trillion, if each firm who used an OSS package had to recreate it from scratch (e.g., the
-concept of OSS did not exist). We document substantial heterogeneity of the value of OSS by
-| Programming Language | and internal vs outward-facing programming efforts. Further, we find
-considerable heterogeneity in value contributions by programmers as 5% of programmers are
-responsible for more than 90% of the value created on the supply- and demand- side. The data we
-use is arguably the most comprehensive source of data to measure the value created by firm usage
-of OSS at this time. However, as for any project, the evidence is not complete and we argue that
-we underestimate the value since our data, e.g., does not include operating systems, which are a
-substantial omitted category of OSS.
+Ми знаходимо вартість від 1,22 мільярда до 6,22 мільярда доларів, якщо ми вирішили як суспільство відтворити всі широко використовувані OSS на стороні пропозиції. Проте врахування фактичного використання OSS призводить до того, що вартість з боку попиту на порядки більша і коливається від $2,59 трлн до $13,18 трлн, якби кожна фірма, яка використовувала пакет OSS, мала відтворити його з нуля (наприклад, концепція OSS не існувало). Ми документуємо значну неоднорідність значення OSS за | Мова програмування | а також зусилля щодо внутрішнього та зовнішнього програмування. Крім того, ми знаходимо значну неоднорідність у цінних внесках програмістів, оскільки 5% програмістів відповідають за понад 90% вартості, створеної на стороні попиту та пропозиції. Дані, які ми використовуємо, є, мабуть, найповнішим джерелом даних для вимірювання цінності, створеної компанією з використання OSS на даний момент. Однак, як і для будь-якого проекту, докази не є повними, і ми стверджуємо, що недооцінюємо цінність, оскільки наші дані, наприклад, не включають операційні системи, які є значною мірою пропущеною категорією OSS.
 
-This study makes four important contributions to the academic literature, practitioners, and
-policy makers. First, it provides the most complete estimate of the value of widely used OSS to
-date by accounting for not only the supply-side of OSS (price to create it), but also for the
-usage/demand-side at a scale that has not been done before. While prior estimates of the value of
-OSS only went either broad (estimating the supply-side costs of a large swath of OSS) or deep
-(estimating the value created by one particular type of OSS), this study does both by using unique
-datasets that allow for a better understanding of the breadth and depth of OSS usage. Further, rather
-than measuring the value of all OSS, this study focuses on the value of OSS that is used by firms 
-to create its products and websites, limiting the measurement error occurring in studies that are
-unable to account for which OSS is actually used in production. This contribution builds upon, and
-extends, important research (e.g., Blind et al., 2021; Greenstein and Nagle, 2014; Murciano-Goroff
-et al., 2021; Robbins et al., 2021) that has sought to identify the value of this vital resource that
-contributes a great deal to the modern economy despite the difficulties measuring this contribution.
-In doing so, it adds insights to a long-running discussion related to the impact of information
-technology (IT) on productivity (Brynjolfsson, 1993; Brynjolfsson and Hitt, 1996; Nagle, 2019a;
-Solow, 1987) known as the “productivity paradox” where IT investments can have limited impact
-on productivity statistics. This debate has continued into the emerging context of AI (Brynjolfsson,
-Rock, and Syverson, 2018). Our work contributes to this conversation by highlighting a massive
-societal level cost-savings (and hence productivity enhancement) that is created by the existence
-of OSS.
+Це дослідження робить чотири важливі внески для наукової літератури, практиків і політиків. По-перше, він надає найповнішу оцінку вартості широко використовуваних OSS на сьогоднішній день, враховуючи не лише пропозицію OSS (ціна на її створення), але й використання/попит у масштабі, який не було зроблено раніше. У той час як попередні оцінки цінності OSS були лише широкими (оцінка витрат з боку пропозиції великої групи OSS) або глибокими (оцінка вартості, створеної одним конкретним типом OSS), це дослідження робить і те, і інше за допомогою унікальних наборів даних, які дозволяють краще зрозуміти широту та глибину використання OSS. Крім того, замість того, щоб вимірювати цінність усіх OSS, це дослідження зосереджено на цінності OSS, яка використовується компаніями для створення своїх продуктів і веб-сайтів, обмежуючи похибку вимірювання, що виникає в дослідженнях, які не можуть пояснити, для яких OSS насправді використовується в виробництва. Цей внесок спирається на важливі дослідження (наприклад, Blind та ін., 2021; Greenstein та Nagle, 2014; Murciano-Goroff та ін., 2021; Robbins та ін., 2021), які намагалися визначити цінність це життєво важливий ресурс, який робить великий внесок у сучасну економіку, незважаючи на труднощі вимірювання цього внеску. Роблячи це, він додає ідеї до тривалої дискусії, пов’язаної з впливом інформаційних технологій (ІТ) на продуктивність (Brynjolfsson, 1993; Brynjolfsson and Hitt, 1996; Nagle, 2019a; Solow, 1987), відомої як «парадокс продуктивності». », де інвестиції в ІТ можуть мати обмежений вплив на статистику продуктивності. Ці дебати тривають у новому контексті ШІ (Brynjolfsson, Rock, and Syverson, 2018). Наша робота сприяє цій розмові, висвітлюючи значну економію коштів на суспільному рівні (і, отже, підвищення продуктивності), яку створює існування OSS.
 
-Second, our research contributes methodological advances to the study of intangible capital
-by highlighting novel sources of data related to investments in OSS. Prior research has shown that
-intangible capital plays an increasingly important role in economic growth (Corrado, Hulten, and
-Sichel, 2009) and firm value (Peters and Taylor, 2017), but it often goes unmeasured or
-misattributed (Eisfeldt and Papanikolaou, 2014). Further, we demonstrate how these data sources
-can be used to understand the true investments in software that a firm makes, and that which they
-would have to make if OSS did not exist. This is valuable as investments in software are an
-increasingly important type of intangible capital that is driving innovation (Branstetter, Drev, and
-Kwon, 2019) and performance (Krishnan et al., 2000).
+По-друге, наше дослідження вносить методологічний прогрес у вивчення нематеріального капіталу, висвітлюючи нові джерела даних, пов’язаних з інвестиціями в OSS. Попередні дослідження показали, що нематеріальний капітал відіграє дедалі важливішу роль в економічному зростанні (Corrado, Hulten, and Sichel, 2009) і вартості фірми (Peters and Taylor, 2017), але його часто не вимірюють або неправильно розподіляють (Eisfeldt and Papanikolaou, 2014). . Крім того, ми демонструємо, як ці джерела даних можна використовувати, щоб зрозуміти справжні інвестиції в програмне забезпечення, які робить фірма, і те, що вони повинні були б зробити, якби OSS не існувало. Це важливо, оскільки інвестиції в програмне забезпечення стають дедалі важливішим типом нематеріального капіталу, який сприяє інноваціям (Branstetter, Drev, and Kwon, 2019) і продуктивності (Krishnan et al., 2000).
 
-Third, our results help highlight for firms and managers the importance of OSS to their
-production, and ideally add weight to arguments that users of OSS should not just free ride but
-also contribute to the creation and maintenance of OSS (e.g., Henkel, 2008; Nagle, 2018). Such
-contributions are a fraction of the costs that firms would incur if OSS did not exist and the active
-participation of OSS users in helping maintain the OSS they use is critical to the health and future
-well-being of the OSS ecosystem (Lifshitz-Assaf and Nagle, 2021; Zhang et al., 2019).
+По-третє, наші результати допомагають підкреслити для компаній і менеджерів важливість OSS для їхнього виробництва та в ідеалі додають ваги аргументам про те, що користувачі OSS повинні не лише безкоштовно користуватися, але й робити свій внесок у створення та підтримку OSS (наприклад, Henkel, 2008; Нейгл, 2018). Такі внески становлять незначну частину витрат, які б зазнали фірми, якби OSS не існувало, і активна участь користувачів OSS у підтримці OSS, яку вони використовують, має вирішальне значення для здоров’я та майбутнього добробуту екосистеми OSS (Ліфшиц-Ассаф і Nagle, 2021; Чжан та ін., 2019).
 
-Fourth, and finally, our study helps inform policymakers who have recently started to
-understand the growing importance of OSS to the economy and taken actions to support the
-ecosystem (European Commission, 2020; Executive Order No. 14028, 2021). However, most of
-these efforts are related to securing the existing OSS ecosystem, which is quite important, but do not go as far as supporting the creation of new OSS. Our results help shine light on the importance
-of OSS to the overall economy and add weight to calls for more societal support of this critical
-resource. Our results further show that the majority of the value created by OSS is created by a
-small number of contributors. Although it has long been known that a small number of OSS
-contributors do most of the work, we add new insights that show this is even more true for the
-value creation of widely-used OSS projects and that societal support for these individuals is critical
-to the future success of OSS, and in turn, the economy.
+По-четверте, і нарешті, наше дослідження допомагає інформувати політиків, які нещодавно почали розуміти зростаючу важливість OSS для економіки та вжили заходів для підтримки екосистеми (Європейська комісія, 2020; виконавчий наказ № 14028, 2021). Однак більшість цих зусиль пов’язані із забезпеченням безпеки існуючої екосистеми OSS, що є досить важливим, але не доходять до підтримки створення нових OSS. Наші результати допомагають пролити світло на важливість OSS для загальної економіки та додати ваги закликам до більшої суспільної підтримки цього важливого ресурсу. Наші результати також показують, що більшість цінностей, створених OSS, створюється невеликою кількістю учасників. Хоча вже давно відомо, що невелика кількість учасників OSS виконує більшу частину роботи, ми додаємо нові відомості, які показують, що це ще більше стосується створення цінності широко використовуваних проектів OSS і що суспільна підтримка цих осіб є критично важливою для майбутній успіх OSS і, у свою чергу, економіка.
 
-The remainder of this paper is organized as follows. Section 2 describes the empirical
-setting and data. Section 3 discusses the methods including measurement challenges. In section 4,
-we estimate the value of open source software. Section 5 concludes.
+Інша частина цього документа організована таким чином. Розділ 2 описує емпіричне налаштування та дані. Розділ 3 обговорює методи, включаючи проблеми вимірювання. У розділі 4 ми оцінюємо цінність програмного забезпечення з відкритим кодом. Розділ 5 завершується.
 
-#### 2. Empirical Setting and Data
+#### 2. Емпіричне налаштування та дані
 
-Although the concept of free and open software has existed since the 1950’s, it became more
-popular in the 1980’s due to the efforts of Richard Stallman and his launch of the GNU Project
-and the Free Software Foundation (Maracke, 2019). However, it was in the 1990’s that OSS took
-off after Linus Torvalds released the Linux kernel, a now widely adopted OSS operating system
-(Tozzi, 2016). Today, OSS is considered a key building block of the digital economy and is widely
-used by software developers in everything from phones to cars to refrigerators to cutting-edge AI
-(Lifshitz-Assaf and Nagle, 2021).
+Хоча концепція вільного та відкритого програмного забезпечення існує з 1950-х років, вона стала більш популярною у 1980-х роках завдяки зусиллям Річарда Столмана та його запуску проекту GNU та Фонду вільного програмного забезпечення (Maracke, 2019). Однак саме в 1990-х роках OSS набула популярності після того, як Лінус Торвальдс випустив ядро ​​Linux, широко поширену операційну систему OSS (Tozzi, 2016). Сьогодні OSS вважається ключовим будівельним блоком цифрової економіки та широко використовується розробниками програмного забезпечення в усьому: від телефонів до автомобілів, холодильників і передового штучного інтелекту (Lifshitz-Assaf and Nagle, 2021).
 
-We use two complementary main data sources to estimate the value of OSS. The first is
-the Census and is inward facing. It allows us to identify OSS code that goes into products that
-firms create. The second dataset is BuiltWith and is outward facing, allowing us to identify OSS
-code that consumers directly interact with through firm websites. Since the raw data in both
-datasets only contains package names, version numbers, and package manager names, and does
-not contain any source code related information, we first obtain the publicly accessible code
-repository for each package which includes package-level information including the lines of code
-and the programming languages used. One may worry about double-counting for the value
-calculations as a result of using two separate datasets. However, the overlap of both the Census
-and the BuiltWith sample is very small: there are only 18 packages found in both datasets.
-Moreover, it is unlikely that double counting is a concern as the two datasets capture different
-dimensions of OSS usage: the Census captures packaged software whose usage is inward-facing
-while BuiltWith captures usage in websites that are outward-facing. Finally, as a supplementary dataset, we use GHTorrent, a detailed history of OSS-related activity on GitHub, the most popular
-OSS hosting platform and a commonly used data source for studies of OSS (e.g., Burton et al,
-2017; Conti, Peukert, and Roche, 2023; Fackler, Hofmann, and Laurentsyeva, 2023; Kim, 2020;
-Tang, Wang, & Tong, 2023). This detailed historical data allows us to go deeper into how the
-value of OSS is created by better understanding the dispersion of the contributions across
-individual OSS developers. We describe the details of all three data sources and their preparation
-for estimation below.
+Ми використовуємо два основних джерела даних, які доповнюють один одного, щоб оцінити цінність OSS. Перший – це перепис, звернений досередини. Це дозволяє нам ідентифікувати код OSS, який входить до продуктів, які створюють компанії. Другий набір даних — це BuiltWith і спрямований назовні, що дозволяє нам ідентифікувати код OSS, з яким споживачі безпосередньо взаємодіють через веб-сайти фірм. Оскільки необроблені дані в обох наборах даних містять лише назви пакетів, номери версій та імена менеджерів пакетів і не містять жодної інформації, пов’язаної з вихідним кодом, ми спочатку отримуємо загальнодоступне сховище коду для кожного пакета, яке містить інформацію на рівні пакета, включаючи рядки коду та використовуваних мов програмування. Можна хвилюватися про подвійний підрахунок для розрахунків вартості в результаті використання двох окремих наборів даних. Однак перекриття вибірки Census і BuiltWith дуже невелике: в обох наборах даних знайдено лише 18 пакетів. Крім того, малоймовірно, що подвійний підрахунок викликає занепокоєння, оскільки два набори даних фіксують різні виміри використання OSS: Census фіксує упаковане програмне забезпечення, використання якого спрямоване всередину, тоді як BuiltWith фіксує використання на веб-сайтах, які спрямовані назовні. Нарешті, як додатковий набір даних ми використовуємо GHTorrent, детальну історію діяльності, пов’язаної з OSS, на GitHub, найпопулярнішій платформі розміщення OSS і широко використовуваному джерелі даних для досліджень OSS (наприклад, Burton et al, 2017; Conti, Peukert). і Roche, 2023; Fackler, Hofmann і Laurentsyeva, 2023; Ці детальні історичні дані дозволяють нам глибше зрозуміти, як створюється цінність OSS, завдяки кращому розумінню розподілу внесків між окремими розробниками OSS. Нижче ми описуємо деталі всіх трьох джерел даних та їхню підготовку до оцінки.
 
-**_Census._** The Census II of Free and Open Source Software (here: Census) was jointly
-undertaken by the Linux Foundation and the Laboratory for Innovation Science at Harvard (Nagle
-et al., 2022).[^1] The Census was created via the aggregation of data from three major software
-composition analysis (SCA) firms with thousands of clients across the globe. SCAs are hired to
-scan the codebase of a client and gather the OSS usage embedded in their proprietary software to
-ensure they are not violating any OSS license agreements.[^2] Frequently this takes place as part of
-the due diligence process related to mergers and acquisitions. Unlike other OSS demand measures
-available from public sources such as package download counts and code changes, the way this
-data was collected ensures that we observe the precise amount and type of internal OSS usage of
-the firms. In addition, it allows us to trace the dependencies each package relies on, so that we can
-observe the indirect OSS usage that is commonly hidden and difficult to obtain.[^3] The result is over
-2.7 million observations of OSS packages being used within products created by the SCA client
-firms for the calendar year 2020 (January 1 to December 31, 2020).[^4]
+**_Перепис._** Другий перепис вільного програмного забезпечення з відкритим кодом (тут: Перепис) спільно провели Linux Foundation і Лабораторія науки про інновації в Гарварді (Нагл та ін., 2022).[^1] Перепис було створено шляхом агрегування даних від трьох великих компаній з аналізу складу програмного забезпечення (SCA), які мають тисячі клієнтів по всьому світу. SCA наймають для сканування кодової бази клієнта та збору даних про використання OSS, вбудованого в їхнє власне програмне забезпечення, щоб переконатися, що вони не порушують жодних ліцензійних угод OSS.[^2] Часто це відбувається як частина процесу належної перевірки, пов’язаної зі злиттям і придбання. На відміну від інших вимірювань попиту на OSS, доступних із загальнодоступних джерел, таких як підрахунок завантажень пакетів і зміни коду, спосіб збору цих даних гарантує, що ми спостерігаємо точну кількість і тип внутрішнього використання OSS фірмами. Крім того, це дозволяє нам відстежувати залежності, на які покладається кожен пакет, щоб ми могли спостерігати непряме використання OSS, яке зазвичай приховано та важко отримати.[^3] Результатом є понад 2,7 мільйона спостережень пакетів OSS, які використовуються всередині продукти, створені фірмами-клієнтами SCA на 2020 календарний рік (з 1 січня по 31 грудня 2020 року).[^4]
 
-The Census project standardized package names based on the naming system of libraries.io 
-- a widely used site maintained by Tidelift that organizes information about more than eight
-million open source packages. The Census focused on the top 2,000 packages based on usage reported from the three of the most prominent SCA vendors to identify the most widely used OSS
-rather than the long-tail of the usage distribution. This led to packages with less than five
-observations of usage being dropped. Since packages written in the JavaScript programming
-language, and usually hosted on the Node Package Manager (NPM), are generally smaller (fewer
-lines of code) than packages in other languages and therefore frequently have higher usage
-numbers (since developers must include many small packages instead of a few large packages),
-the Census separately selected the top 1,000 NPM packages and the top 1,000 non-NPM hosted
-packages.
+Проект Census стандартизував назви пакетів на основі системи імен libraries.io – широко використовуваного сайту, підтримуваного Tidelift, який упорядковує інформацію про понад вісім мільйонів пакетів з відкритим кодом. Перепис зосередився на 2000 найпопулярніших пакетів на основі даних про використання, повідомлених трьома найвідомішими постачальниками SCA, щоб визначити найпоширеніші OSS, а не довгий хвіст розподілу використання. Це призвело до того, що пакети з менш ніж п’ятьма спостереженнями використання були видалені. Оскільки пакунки, написані на мові програмування JavaScript і зазвичай розміщені в Node Package Manager (NPM), зазвичай менші (менша кількість рядків коду), ніж пакунки на інших мовах, і тому часто мають більші показники використання (оскільки розробники повинні включити багато невеликих пакетів замість кількох великих пакетів), перепис окремо відібрав 1000 найпопулярніших пакетів NPM і 1000 найпопулярніших пакетів, які не є NPM.
 
-This final dataset covers 70% of the total usage of OSS observed in the raw data of the
-census.[^5] For each of these 2,000 OSS packages in the Census, we identified the raw code
-maintained on GitHub, the most widely used platform for hosting OSS.[^6] We first attempted to
-obtain the GitHub repository uniform resource locator (URL) for each package from libraries.io.
-We were able to match 1,657 packages to repositories via this initial method.[^7] For URLs without
-a matching repository, we performed Google searches loosely following the method in Singh
-(2020). More specifically, for each unmatched package, we used the Google API to search for the
-package name and “GitHub Repository” and treated the first GitHub repository URL in the results
-as its best matched GitHub URL.[^8] This resulted in an additional 174 packages matched to a
-repository. Finally, we manually searched for URLs for the remaining 169 packages to identify
-the relevant repository. This entire process resulted in matching 1,840 out of the 2,000 Census
-packages to a code repository with the raw source code for the package. The unmatched packages
-were determined to have been either removed from GitHub or became proprietary (and thus the
-original source code was no longer available) and hence, the manual search allowed us to drop these 160 unmatched packages (less than 8% of the Census sample of 2,000) with high confidence
-from our analysis.
+Цей остаточний набір даних охоплює 70% загального використання OSS, спостережуваного в необроблених даних перепису.[^5] Для кожного з цих 2000 пакетів OSS у переписі ми визначили необроблений код, який підтримується на GitHub, найбільш поширеній платформі. для розміщення OSS.[^6] Спочатку ми спробували отримати уніфікований покажчик ресурсів (URL) сховища GitHub для кожного пакета з libraries.io. Нам вдалося зіставити 1657 пакетів зі сховищами за допомогою цього початкового методу.[^7] Для URL-адрес без відповідного сховища ми здійснили пошук Google, дотримуючись методу Сінгха (2020). Зокрема, для кожного невідповідного пакета ми використовували Google API для пошуку назви пакета та «Сховища GitHub» і розглядали першу URL-адресу сховища GitHub у результатах як найкращу відповідну URL-адресу GitHub.[^8] Це призвело до додаткового 174 пакунки підійшли до репозиторію. Нарешті, ми вручну шукали URL-адреси для решти 169 пакетів, щоб визначити відповідне сховище. Весь цей процес призвів до зіставлення 1840 із 2000 пакетів Census до сховища коду з необробленим вихідним кодом для пакета. Було визначено, що невідповідні пакети були або видалені з GitHub, або стали власністю (і тому оригінальний вихідний код більше не був доступний), і, отже, ручний пошук дозволив нам видалити ці 160 невідповідних пакетів (менше 8% вибірки перепису). 2000) з високою достовірністю згідно з нашим аналізом.
 
-**_BuiltWith._** The BuiltWith data contains scans of all public websites across the globe and
-identifies the technologies they use. Unlike the inward facing Census data which focus on the
-usage of OSS, the BuiltWith data scan for the use of both proprietary and OSS in firm websites
-without explicit differentiation. To separate OSS from proprietary software in BuiltWith, we turn
-to the subset of all open source web development software in the technology category that includes
-"JavaScript and its libraries," which generates 778 observations corresponding to the NPM OSS
-category in the Census data. There are two reasons for this sampling choice. First, this given
-category is constructed by BuiltWith and we use it as a proxy for OSS to separate it from pecuniary
-software. Second, JavaScript, one of the core technologies for building websites, is the most
-popular | Programming Language | by usage on GitHub (GitHub, 2022) and thus enables us to capture
-the most important OSS from the demand side perspective. The scans include 8.8 million unique
-websites and 72.8 million corresponding observations of OSS usage from January 1 to November
-16, 2020. Further, to ensure that we measure the value of OSS usage generated by the private
-sector, we match the adopting domains of the JavaScript-related OSS from BuiltWith with
-company websites recorded in Orbis, Compustat, and PitchBook, three commonly used databases
-of corporate activity that capture registered businesses across the world. Performing this match
-ensures that OSS used by non-commercial websites (e.g., an individual person’s personal website)
-is excluded in our analysis. This results in a match-rate of 38.6%, which corresponds to around 3.
-million websites of distinct firms.
+**_BuiltWith._** Дані BuiltWith містять сканування всіх загальнодоступних веб-сайтів у всьому світі та ідентифікують технології, які вони використовують. На відміну від даних перепису, спрямованих усередину, які зосереджені на використанні OSS, сканування даних BuiltWith для використання як пропрієтарних, так і OSS на веб-сайтах фірм без чіткої диференціації. Щоб відокремити OSS від пропрієтарного програмного забезпечення в BuiltWith, ми звернемося до підмножини всього програмного забезпечення веб-розробки з відкритим кодом у категорії технологій, яка включає «JavaScript та його бібліотеки», яка генерує 778 спостережень, що відповідають категорії NPM OSS у даних перепису. Є дві причини для такого вибору вибірки. По-перше, ця дана категорія створена BuiltWith, і ми використовуємо її як проксі для OSS, щоб відокремити її від грошового програмного забезпечення. По-друге, JavaScript, одна з основних технологій для створення веб-сайтів, є найпопулярнішою | Мова програмування | використанням на GitHub (GitHub, 2022) і, таким чином, дозволяє нам охопити найважливіші OSS з точки зору попиту. Сканування охоплює 8,8 мільйона унікальних веб-сайтів і 72,8 мільйона відповідних спостережень за використанням OSS з 1 січня по 16 листопада 2020 року. Крім того, щоб переконатися, що ми вимірюємо цінність використання OSS у приватному секторі, ми зіставляємо прийнятні домени JavaScript OSS від BuiltWith із веб-сайтами компаній, записаними в Orbis, Compustat і PitchBook, трьох широко використовуваних базах даних корпоративної діяльності, які фіксують зареєстровані підприємства по всьому світу. Виконання цього збігу гарантує, що OSS, який використовується некомерційними веб-сайтами (наприклад, особистим веб-сайтом окремої особи), буде виключено з нашого аналізу. Це призводить до рівня відповідності 38,6%, що відповідає приблизно 3 мільйонам веб-сайтів різних фірм.
 
-For the BuiltWith data, we cannot employ the first method we use for the Census (using
-libraries.io to help identify the repository URL) since only the technology names associated with
-the packages were provided by BuiltWith, and other information (e.g., package and package
-manager names) is not included.[^9] Hence, we start by performing the Google Search method
-mentioned above which results in a match of 695 packages to repositories. We then manually
-searched the Github URLs for 83 of the remaining unmatched packages, resulting in an addition
-of 46 packages. In total, for the BuiltWith data we were able to identify 741 out of 778 package-repository matches. As with the Census data, the remaining 37 unmatched packages (less than 5%)
-are dropped from our analysis because they had been deleted from GitHub.
+Для даних BuiltWith ми не можемо застосувати перший метод, який використовуємо для перепису (використовуючи libraries.io для визначення URL-адреси сховища), оскільки BuiltWith надав лише назви технологій, пов’язані з пакетами, та іншу інформацію (наприклад, пакет і імена менеджерів пакунків) не включено.[^9] Отже, ми починаємо з виконання методу пошуку Google, згаданого вище, який призводить до відповідності 695 пакунків репозиторіям. Потім ми вручну здійснили пошук за URL-адресами Github для 83 із решти невідповідних пакетів, у результаті чого додано 46 пакетів. Загалом для даних BuiltWith ми змогли ідентифікувати 741 із 778 збігів пакетів із сховищами. Як і дані перепису, решта 37 невідповідних пакетів (менше 5%) виключено з нашого аналізу, оскільки їх було видалено з GitHub.
 
-**_GHTorrent database._** To obtain measures of the dispersion of the OSS value creation, we
-utilize the GHTorrent database, which contains the entire activity history on GitHub using
-GitHub’s Representational State Transfer (REST) application programming interface (API). We
-leveraged its records of GitHub repositories, developer-level commits, and developer public
-profile information to estimate the contribution of each developer. We narrowed the sample for
-our developer contribution analysis in two steps. First, we winnowed the GitHub repositories and
-their commits from GHTorrent based on the repository URLs of our joint Census-BuiltWith
-sample.[^10] Second, we focus on human contributions to OSS by removing approximately eight
-thousand (12%) GitHub contributors that we considered to be robots.[^11] The final sample contains
-around sixty thousand developers and 2.3 million commits.
+**_База даних GHTorrent._** Щоб отримати вимірювання дисперсії створення цінності OSS, ми використовуємо базу даних GHTorrent, яка містить всю історію активності на GitHub за допомогою інтерфейсу прикладного програмування (API) GitHub Representational State Transfer (REST). Щоб оцінити внесок кожного розробника, ми використали його записи про репозиторії GitHub, комісії на рівні розробника та інформацію про загальнодоступний профіль розробника. Ми звузили вибірку для нашого аналізу внеску розробників у два етапи. По-перше, ми відвіяли репозиторії GitHub та їхні коміти з GHTorrent на основі URL-адрес сховища нашого спільного зразка Census-BuiltWith.[^10] По-друге, ми зосереджуємося на людському внеску в OSS, видаливши приблизно вісім тисяч (12%) учасників GitHub, які ми вважали роботами.[^11] Остаточна вибірка містить близько шістдесяти тисяч розробників і 2,3 мільйона комітів.
 
-To prepare these three datasets for estimation, we first identified the number of lines of
-code and the programming languages used for each package using the OSS packages pygount (to
-count the number of lines of code) and linguist (to identify programming languages).[^12] We
-categorize each distinct language into one of three different buckets moving from more likely
-human-written to more likely machine-written (see Table A1). Bucket 1 contains programming
-and markup languages (which are most likely to be human-written), bucket 3 contains data (most
-likely to be machine-written), and bucket 2 contains anything in between, such as config files and
-batch processing (which are sometimes human-written and sometimes machine-written, but it is
-difficult to tell based purely on looking at the code).[^13] For our primary estimation we only use
-bucket 1 while providing robustness checks for buckets 2 and 3 in the Appendix, and thus our
-results represent a lower bound. Finally, for some analyses we dig deeper and show the top 5
-programming languages (as classified by GitHub, 2022 for the year 2020; the year our data is
-from). The top 5 programming languages contain C (including C# and C++), Java, JavaScript, Python, and Typescript. We also add Go to this list of top languages since it is an increasingly
-widely used language in OSS.
+Щоб підготувати ці три набори даних для оцінки, ми спочатку визначили кількість рядків коду та мови програмування, які використовуються для кожного пакета, використовуючи пакети OSS pygount (для підрахунку кількості рядків коду) та linguist (для визначення мов програмування).[ ^12] Ми класифікуємо кожну окрему мову в одну з трьох різних груп, переходячи від більш ймовірно написаної людиною до більш імовірно написаної машиною (див. таблицю A1). Відро 1 містить мови програмування та мови розмітки (які, швидше за все, написані людиною), сегмент 3 містить дані (швидше за все, написані машиною), а сегмент 2 містить щось середнє, наприклад файли конфігурації та пакетну обробку (що інколи написані людиною, а інколи — машиною, але це важко визначити, лише дивлячись на код).[^13] Для нашої первинної оцінки ми використовуємо лише сегмент 1, забезпечуючи перевірку надійності сегментів 2 і 3 у Додаток, і, таким чином, наші результати представляють нижню межу. Нарешті, для деяких аналізів ми копаємо глибше та показуємо 5 найкращих мов програмування (за класифікацією GitHub, 2022 рік за 2020 рік; рік, з якого взято наші дані). До 5 найкращих мов програмування входять C (включаючи C# і C++), Java, JavaScript, Python і Typescript. Ми також додаємо Go до цього списку найпопулярніших мов, оскільки вона стає все більш широко використовуваною мовою в OSS.
 
-#### 3. Methodology
+#### 3. Методика
 
-We first measure the value of OSS by considering the supply and the demand side of OSS using a
-labor market approach.[^14] The thought experiment is that we live in a world where OSS does not
-exist and has to be recreated at each firm that uses a given piece of OSS. Using the labor market
-approach, we calculate the labor replacement cost of each OSS package. To estimate the value for
-each package, we use COCOMO II (Boehm, 1984; Boehm et al., 2009) at the individual package
-level and then sum across all package values to obtain a supply-side labor market replacement
-value. Then, we scale the supply-side value by the number of times firms are using each package
-while removing multi-usage within each firm to obtain a demand-side value.
+Спочатку ми вимірюємо цінність OSS, розглядаючи пропозицію та попит на OSS, використовуючи підхід до ринку праці.[^14] Уявний експеримент полягає в тому, що ми живемо у світі, де OSS не існує, і його потрібно відтворювати на кожній фірмі. який використовує дану частину OSS. Використовуючи підхід ринку праці, ми розраховуємо вартість заміщення робочої сили кожного пакета OSS. Щоб оцінити вартість кожного пакету, ми використовуємо COCOMO II (Boehm, 1984; Boehm та ін., 2009) на рівні окремого пакета, а потім підсумовуємо всі значення пакету, щоб отримати вартість заміщення ринку праці з боку пропозиції. Потім ми масштабуємо значення з боку пропозиції на кількість разів, коли фірми використовують кожен пакет, при цьому усуваючи багаторазове використання всередині кожної фірми, щоб отримати значення з боку попиту.
 
-Second, we move beyond the aggregate and inspect inequality in the value creation process.
-In OSS, as with many creative endeavors, it is common that a small handful of individuals provide
-the bulk of the contributions, while many others make small contributions (sometimes referred to
-as the 80/20 rule, implying 80% of the work is done by 20% of the people). Research has shown
-these frequent contributors often attain positions of influence in OSS communities as a result of
-their efforts (Hanisch, et al, 2018). Therefore, to better understand the dispersion of value creation
-across developers, we first use the GHTorrent data and identify individual developer contributions
-in two ways: a) through their OSS value contributions directly and b) through the total number of
-repositories they contributed to. We then test how concentrated these two contribution measures
-are to better understand whether many or few developers contribute to the total value we measure.
-We explain the exact details for the labor market approach and the inequality of valuations below.
+По-друге, ми виходимо за межі сукупності та перевіряємо нерівність у процесі створення вартості. В OSS, як і в багатьох творчих починаннях, зазвичай невелика група людей робить основну частину внесків, тоді як багато інших роблять невеликі внески (іноді це називається правилом 80/20, тобто 80% роботи зроблено) на 20% людей). Дослідження показали, що ці постійні учасники часто досягають впливових позицій у спільнотах OSS завдяки їхнім зусиллям (Hanisch та ін., 2018). Тому, щоб краще зрозуміти дисперсію створення цінності серед розробників, ми спершу використовуємо дані GHTorrent і визначаємо внески окремих розробників двома способами: а) через їхні внески цінності OSS безпосередньо та б) через загальну кількість сховищ, до яких вони зробили внесок. Потім ми перевіряємо, наскільки сконцентровані ці два показники внеску, щоб краще зрозуміти, багато чи мало розробників роблять внесок у загальну цінність, яку ми вимірюємо. Нижче ми пояснюємо точні деталі підходу до ринку праці та нерівності оцінок.
 
-**3.1 Labor market approach**
-For the labor market approach, we estimate the value of OSS by calculating the replacement value
-of a package. We ask how much it would cost to reproduce the package by hiring a programmer
-and paying them a competitive market wage. To estimate this supply-side value ($`𝑉_{S}^{Labor}`$)_ , we take
-the complete list of OSS packages discussed above, and then count the lines of code in each unique package.[^15] For each unique package, _i_ , we calculate the value and then sum over all these values
-to obtain the total value:
+**3.1 Підхід до ринку праці**
+Для підходу ринку праці ми оцінюємо вартість OSS шляхом розрахунку відновної вартості пакета. Ми запитуємо, скільки коштуватиме відтворення пакета, найнявши програміста та заплативши йому конкурентоспроможну ринкову зарплату. Щоб оцінити це значення на стороні постачання ($`𝑉_{S}^{Labor}`$), ми беремо повний список пакетів OSS, розглянутий вище, а потім підраховуємо рядки коду в кожному унікальному пакеті.[^15] Для кожного унікального пакета, _i_, ми обчислюємо значення, а потім підсумовуємо всі ці значення, щоб отримати загальне значення:
 
 ```math
 𝑉_{S}^{Labor}=\sum_{i=1}^{N}V_{S_i}=\sum_{i=1}^{N}P_i * 1 (1)
 ```
 
-In this calculation, we implicitly do not incorporate any production externalities since we
-assume that there is no spillover knowledge from one package to the next that would lower the
-cost of programming.[^16] This methodology is similar to that used by other papers that estimate the
-supply-side costs of OSS (Blind et al., 2021; Nagle, 2019b; Robbins et al., 2021).
-We then calculate the demand-side value of OSS by incorporating the usage information ( _Q)_ for
-each package:
+У цьому розрахунку ми неявно не враховуємо жодних виробничих зовнішніх ефектів, оскільки ми припускаємо, що немає переливу знань від одного пакета до іншого, який би знизив вартість програмування.[^16] Ця методологія подібна до тієї, що використовується в інших роботах, які оцінити витрати з боку пропозиції OSS (Blind et al., 2021; Nagle, 2019b; Robbins et al., 2021). Потім ми обчислюємо значення OSS з боку попиту, додаючи інформацію про використання (_Q_) для кожного пакета:
 
 ```math
 𝑉_{D}^{Labor}=\sum_{i=1}^{N}V_{D_i}=\sum_{i=1}^{N}P_i * Q_i (2)
 ```
 
-Here, we do not incorporate consumption externalities, i.e., we do not allow a benefit to
-arise for the general public when a package has been created and we further make sure that each
-firm is only replacing a package they use once, since a replaced package can be used within a firm
-as a club good (e.g., see Cornes and Sandler, 1996). The value $`𝑉_{S}^{Labor}`$ reflects the cost to rewrite
-all widely-used OSS once (e.g., the concept of OSS still exists, but all of these packages needed to
-be rewritten from scratch), while the value $`𝑉_{D}^{Labor}`$ reflects the cost for each firm that uses one of
-these OSS packages to pay a developer to rewrite those packages (e.g., OSS itself no longer exists).
+Тут ми не враховуємо зовнішні ефекти споживання, тобто ми не допускаємо отримання вигоди для широкої громадськості, коли пакет було створено, і ми також гарантуємо, що кожна фірма замінює пакет, який вони використовують лише один раз, оскільки замінений пакет може бути використаний у фірмі як клубний товар (наприклад, див. Cornes and Sandler, 1996). Значення $`𝑉_{S}^{Labor}`$ відображає вартість одноразового перепису всіх широко використовуваних OSS (наприклад, концепція OSS все ще існує, але всі ці пакунки потрібно було переписати з нуля), тоді як значення $`𝑉_{D}^{Labor}`$ відображає вартість кожної фірми, яка використовує один із цих пакетів OSS, щоб заплатити розробнику за переписування цих пакетів (наприклад, сама OSS більше не існує).
 
-For both the supply and demand models, we obtain the dollar-value for each package ($`P_i`$)
-via the Constructive Cost Model II, also abbreviated as COCOMO II (Boehm 1984, Boehm et al.
-2009). The model has previously been used by the United States Department of Defense to estimate
-software project costs as well as in prior research estimating the value of OSS (Blind et al., 2021;
-Nagle, 2019b; Robbins et al., 2021). It is a highly flexible model that allows us to create non-linear
-transformations of lines of code to dollar-values. It uses the following modelling equation:
-
-
+Як для моделі пропозиції, так і для моделі попиту ми отримуємо доларову вартість для кожного пакета ($`P_i`$) за допомогою Constructive Cost Model II, також скорочено COCOMO II (Boehm 1984, Boehm et al. 2009). Ця модель раніше використовувалася Міністерством оборони Сполучених Штатів для оцінки вартості програмного проекту, а також у попередніх дослідженнях оцінки вартості OSS (Blind et al., 2021; Nagle, 2019b; Robbins et al., 2021). Це дуже гнучка модель, яка дозволяє нам створювати нелінійні перетворення рядків коду в доларові значення. Він використовує наступне рівняння моделювання:
 
 ```math
 E_i=\alpha\eta L_i^{\beta} (3)
 ```
 
-where 𝐿 represents the lines of codes in thousands and E the effort in person-month units
-for each project _i_. Consistent with Blind et al. (2021), we use the default parameter values for 𝛼, 𝛽 and 𝜂. The parameters 𝛼, 𝛽 are non-linear adjustment factors set to 2.94, and 1.0997 respectively. 
-The parameter 𝜂 is an effort-adjustment factor which can be modified to incorporate subjective
-assessments of product, hardware, personnel, and project attributes. Since we do not have a prior
-for each project, we set 𝜂 to the default value of one. To obtain the price (𝑃() of each OSS project,
-we then multiply the results of equation (3) by the weighted global wage that an average
-programmer would obtain on the open market. To calculate a global wage, we include the base
-monthly salaries of software developers from Salary Expert for the top 30 countries in terms of
-their GitHub developer counts in 2021 (Wachs et al., 2022).[^17] The weight of each country is its
-share of active GitHub contributors over the total contributors in the top 30 countries. We further
-create bounds by using a low-wage (India) and high-wage (USA) labor market for the wage to
-better understand how the value would vary by the pool of programmers used to recreate all of
-OSS.[^18]
+де 𝐿 представляє рядки кодів у тисячах, а E – зусилля в одиницях людино-місяць для кожного проекту _i_. Відповідно до Blind et al. (2021), ми використовуємо значення параметрів за замовчуванням для 𝛼, 𝛽 та 𝜂. Параметри 𝛼, 𝛽 є нелінійними коригуючими коефіцієнтами, встановленими на 2,94 і 1,0997 відповідно. Параметр 𝜂 — це коефіцієнт коригування зусиль, який можна змінити, щоб включити суб’єктивні оцінки атрибутів продукту, обладнання, персоналу та проекту. Оскільки ми не маємо попереднього значення для кожного проекту, ми встановлюємо 𝜂 значення за замовчуванням одиниці. Щоб отримати ціну (𝑃() кожного проекту OSS, ми потім помножимо результати рівняння (3) на зважену глобальну заробітну плату, яку отримав би середній програміст на відкритому ринку. Щоб обчислити глобальну заробітну плату, ми включаємо місячну базову суму зарплати розробників програмного забезпечення від Salary Expert для 30 найкращих країн за кількістю розробників GitHub у 2021 році (Wachs та ін., 2022).[^17] Вага кожної країни — це частка активних учасників GitHub у загальній кількості учасників. у 30 найкращих країнах ми також створюємо межі, використовуючи ринок праці з низькою (Індія) і високою (США), щоб краще зрозуміти, як вартість буде змінюватися залежно від групи програмістів, які використовуються для відтворення всіх OSS. .[^18]
 
-**3.2 Contribution Measurement**
-To better understand how value is created and whether it is created equally or unequally, we
-build up a graphical depiction in three steps. In the first step, we measure the value contributions
-by developers. In a second step, we obtain a measure for the number of repositories developers
-contribute to. Finally, we provide a graphical representation of both using the commonly known
-concept of the Lorenz curve to better understand the extent of inequality in contributions. We
-describe the details below.
+**3.2 Вимірювання внеску**
+Щоб краще зрозуміти, як створюється цінність і однаково чи нерівномірно вона створюється, ми створюємо графічне зображення в три кроки. На першому кроці ми вимірюємо цінний внесок розробників. На другому кроці ми отримуємо показник кількості репозиторіїв, до яких вносяться розробники. Нарешті, ми надаємо графічне представлення обох, використовуючи загальновідому концепцію кривої Лоренца, щоб краще зрозуміти ступінь нерівності у внесках. Ми описуємо деталі нижче.
 
-**_Value Contribution._** We calculated the supply and demand values of OSS that each developer
-contributed. At the repository level, we quantified each developer's proportional work contribution
-by calculating their share of commits to the total number of commits for a repository. This share
-was subsequently multiplied with the repository’s demand and supply values separately to derive the value-added contribution of that individual contributor to the repository. Finally, we aggregate
-the value contributions across all repositories for each developer. The individual value contribution
-from a unique developer _Dev_ , $`V_j^{Dev}`$, can be expressed as:
+**_Внесок вартості._** Ми розрахували значення попиту та пропозиції OSS, які вніс кожен розробник. На рівні сховища ми кількісно оцінили пропорційний внесок кожного розробника в роботу, підрахувавши їхню частку комітів до загальної кількості комітів для репозиторію. Згодом ця частка була помножена окремо на величину попиту та пропозиції сховища, щоб отримати доданий внесок цього окремого учасника в сховище. Нарешті, ми об’єднуємо цінні внески в усіх сховищах для кожного розробника. Індивідуальний цінний внесок унікального розробника _Dev_, $`V_j^{Dev}`$, можна виразити так:
 
 ```math
 V_j^{Dev}=\sum_{j}^{N}\sigma_i^{Dev}*V_{ij}  (7)
 ```
 
-where $`\sigma_i^{Dev}`$ is the share of commits the focal developer made in repository _i_ , and $`V_{ij}`$ is the demand
-or supply value of the entire repository _i_ specified in Equations (1) and (2), with 𝑗∈{𝐷,𝑆}, and _N_
-is the number of repositories in our main sample, i.e. Census and BuiltWith combined.
+де $`\sigma_i^{Dev}`$ — це частка комітів, зроблених головним розробником у сховищі _i_, а $`V_{ij}`$ — це значення попиту чи пропозиції для всього сховища _i_, указане в рівняннях (1) і (2), де 𝑗∈{𝐷,𝑆}, а _N_ — це кількість сховищ у нашій основній вибірці, тобто Census і BuiltWith разом.
 
-**_Repository Contribution._** This is simply the number of repositories a given developer
-contributes to, and it is expressed as follows:
-
+**_Внесок у репозіторій._** Це просто кількість сховищ, до яких вносить певний розробник, і вона виражається таким чином:
 
 ```math
 N^{Dev}=\sum_{j}^{N}𝟙\{\sigma_i^{Dev} > 0\}  (8)
 ```
 
-where 𝟙 is the indicator function equal to 1 when the developer has a non-zero number of commits
-to repository _i_. This measure entails the variety of OSS needs being addressed by individual
-developers. Jointly with the value contribution measure, they help us understand whether the value
-that is being generated overall is concentrated within a small number of developers. It may be
-generally more desirable for the whole OSS ecosystem and its diversity if individual developers
-participate in many repositories and not just a few.
+де 𝟙 — функція індикатора, що дорівнює 1, коли розробник має ненульову кількість комітів до репозиторію _i_. Цей захід передбачає різноманітні потреби OSS, які вирішуються окремими розробниками. Разом із мірою внеску цінності вони допомагають нам зрозуміти, чи зосереджена загальна цінність у невеликій кількості розробників. Загалом для всієї екосистеми OSS та її різноманітності може бути більш бажаним, якщо окремі розробники беруть участь у багатьох сховищах, а не лише в кількох.
 
-**_Measuring the Dispersion of Contributions_****.** To graphically examine the dispersion of
-developer contribution values, we utilized Lorenz curves (Lorenz, 1905), with respect to both
-demand and supply side values. Lorenz curves are a well-established way to represent inequality
-and, as such, they allow us to better understand how dispersed developer contributions to OSS
-within the private economy are. Developers are systematically arranged in ascending order based
-on their contributions to OSS demand and supply, as delineated in Equation (7). Subsequently,
-these ranks were normalized to a scale ranging from 0 to 100 percentiles, serving as the x-axis
-values for the Lorenz Curves. The y-axis, on the other hand, presents the corresponding value
-contributions $`\sigma_i^{Dev}`$. The graphical representation in the results section will elucidate the degree of
-inequality pertaining to the value contributions among developers. To supplement the analysis, we further investigated how dispersed the repository contribution, $`N^{Dev}`$, is by plotting Equation (8).
-This enables us to ascertain whether any substantial value inequality stems from top contributors
-predominantly focusing on a narrow subset of exceptionally popular repositories, or alternatively,
-from their engagement with a broader spectrum of successful repositories.
+**_Вимірювання дисперсії внесків_****.** Щоб графічно дослідити дисперсію значень внесків розробників, ми використали криві Лоренца (Лоренц, 1905) щодо значень як попиту, так і пропозиції. Криві Лоренца є усталеним способом представлення нерівності, і, таким чином, вони дозволяють нам краще зрозуміти, наскільки розпорошені внески розробників у OSS у приватній економіці. Розробники систематично розташовані в порядку зростання на основі їхнього внеску в попит і пропозицію OSS, як показано в рівнянні (7). Згодом ці ранги були нормалізовані до шкали від 0 до 100 процентилів, що слугує значенням осі абсцис для кривих Лоренца. З іншого боку, вісь ординат представляє відповідні внески вартості $`\sigma_i^{Dev}`$. Графічне представлення в розділі результатів прояснить ступінь нерівності, що стосується внесків вартості між розробниками. Щоб доповнити аналіз, ми додатково дослідили, наскільки розпорошений внесок сховища, $`N^{Dev}`$, побудувавши рівняння (8). Це дає нам змогу з’ясувати, чи є будь-яка істотна нерівність цінностей пов’язана з тим, що провідні учасники переважно зосереджуються на вузькій підмножині виключно популярних сховищ, чи, навпаки, з їхньої взаємодії з більш широким спектром успішних сховищ.
 
-#### 4. Results
+#### 4. Результати
 
-After applying the labor market approach using COCOMO II, we obtain global estimates for the
-value of OSS. To calculate the overall value, we first need the underlying number of lines of code
-(to calculate the supply-side value) and then the usage statistics (for the demand-side value). Since
-there may be substantial heterogeneity in value by programming languages, we also show the top
-programming languages during our investigation period in the year 2020, as discussed above.
+Після застосування підходу ринку праці з використанням COCOMO II ми отримуємо глобальні оцінки вартості OSS. Щоб обчислити загальну цінність, нам спочатку потрібна базова кількість рядків коду (щоб обчислити значення з боку пропозиції), а потім статистика використання (для значення з боку попиту). Оскільки мовами програмування можуть бути суттєві неоднорідні значення, ми також показуємо найпопулярніші мови програмування протягом нашого досліджуваного періоду в 2020 році, як обговорювалося вище.
 
---- Table 1 about here ---
+--- Таблиця 1 приблизно тут ---
 
-Table 1 shows descriptive statistics from both data sets separately. The inward-facing
-Census (Panel A) contains just over 261.7 million lines of code with 72 % of the lines being
-attributable to the top programming languages. The average package includes 142 thousand lines
-of code with a slightly lower average of 113 thousand lines of code for the subset of top languages.
-When considering the demand (usage) side, we observe that the Census packages were used over
-2.7 million times while 92 % of this usage is attributable to the top languages. The average package
-was used 1 ,472.4 times with a higher usage of around 1 ,497.5 for the top languages. For the
-outward-facing BuiltWith data we find similar patterns, but at different levels. The packages
-included from BuiltWith include over 82 million lines of code, 71 % of which are attributable to
-the top programming languages. The average package within the BuiltWith sample has 111
-thousand lines of code with a lower average of around 80 thousand lines of code for the top
-languages. This is because our BuiltWith data primarily consists of JavaScript-based packages,
-which are often smaller than packages written in other languages. BuiltWith packages were used
-over 142 thousand times where 99.97% were attributable to the top languages. Next, we used these
-raw observations to calculate the value of all OSS through the labor market approach and estimated
-the value created from the supply and demand side.
+Таблиця 1 показує описову статистику з обох наборів даних окремо. Внутрішній перепис (панель A) містить трохи більше 261,7 мільйона рядків коду, причому 72 % рядків припадають на найпопулярніші мови програмування. Середній пакет включає 142 тисячі рядків коду з дещо нижчим середнім показником 113 тисяч рядків коду для підмножини найкращих мов. Розглядаючи сторону попиту (використання), ми помічаємо, що пакети Census використовувалися понад 2,7 мільйона разів, при цьому 92 % цього використання припадає на найпопулярніші мови. Середній пакет використовувався 1472,4 рази з вищим використанням приблизно 1497,5 для найпопулярніших мов. Для зовнішніх даних BuiltWith ми знаходимо схожі шаблони, але на різних рівнях. Пакети, включені в BuiltWith, містять понад 82 мільйони рядків коду, 71% з яких відноситься до найкращих мов програмування. Середній пакет у зразку BuiltWith містить 111 тисяч рядків коду з нижчим середнім показником приблизно 80 тисяч рядків коду для найпопулярніших мов. Це пояснюється тим, що наші дані BuiltWith переважно складаються з пакетів на основі JavaScript, які часто менші за пакети, написані іншими мовами. Пакети BuiltWith використовувалися понад 142 тисячі разів, причому 99,97% припадає на найкращі мови. Далі ми використали ці необроблені спостереження, щоб обчислити вартість усіх OSS за допомогою підходу ринку праці та оцінили вартість, створену з боку пропозиції та попиту.
+
+--- Таблиця 2 приблизно тут ---
 
 
---- Table 2 about here ---
+У таблиці 2 наведено оцінки вартості OSS на основі спільної вибірки Census і BuiltWith, що стосується фірми. Усі оцінки в таблиці 2 базуються лише на мовах програмного забезпечення, класифікованих у сегменті 1 таблиці A1, які, швидше за все, будуть написані людиною, а не машиною.[^19] Перший стовпець містить оцінки із заробітною платою з низького доходу. країна (Індія), середня заробітна плата в світі та країна з високим доходом (Сполучені Штати Америки), відповідно (як описано вище). Щоб одноразово відтворити всі широко використовувані OSS (наприклад, ідея OSS все ще існує, але всі поточні OSS видалені та потребують кодування з нуля), використовуючи програмістів із середньою заробітною платою розробника з Індії, знадобляться інвестиції \ 1,22 мільярда доларів. Навпаки, якщо ми використовуємо середню зарплату розробника зі Сполучених Штатів, то відтворення всіх широко використовуваних OSS потребуватиме інвестицій у розмірі 6,22 мільярда доларів. Використання пулу програмістів з усього світу, зважених на основі існуючих географічних внесків у OSS, як обговорювалося вище, призвело б до інвестицій десь між країнами з низьким і високим рівнем доходу, \$4,15 млрд. Корисно порівняти ці цифри з показниками подібних досліджень, щоб зрозуміти різницю в оцінці всіх OSS (попередніх досліджень) і тих, які широко використовуються (наше дослідження). Роббінс та ін. (2021) і Блінд та ін. (2021) використали метод, схожий на наш, і оцінили, що вартість OSS, створеного в США, становить 38 мільярдів доларів у 2019 році, а в ЄС – 1 мільярд євро у 2018 році. Wachs et al. (2022) показують, що приблизно 50% внесків OSS надходять із США та ЄС разом. У сукупності це призведе до того, що ці дослідження дадуть глобальну вартість OSS у 78 мільярдів доларів. Таким чином, наша середня оцінка вартості з боку пропозиції в 4,15 мільярда доларів лише для орієнтованих на фірму та широко використовуваних OSS є надійною нижньою межею та підкреслює вищі оцінки загальної вартості з боку пропозиції OSS, якщо не враховувати, чи чи не даний пакет OSS широко використовується. Це додатково вказує на те, що значення з боку пропозиції найбільш широко використовуваних OSS становить приблизно 5,5% від значення з боку пропозиції всіх OSS.
 
+Другий стовпець таблиці 2 містить оцінки попиту на основі підходу ринку праці. Ми виявили, що якби компаніям довелося відтворити всі пакети OSS, які вони використовували (наприклад, самого OSS більше не існувало, і кожна фірма, яка використовувала пакет OSS, мала б його відтворити), тоді загальні витрати становитимуть від \$2,59 трлн до \$13,18 трлн використання робочої сили лише з країни з низькою чи високою зарплатою відповідно. Група програмістів по всьому світу може відтворити всі OSS, які широко використовуються, вартістю приблизно 8,80 трильйонів доларів. Інтерпретація цього числа трохи складніша, але все ж можлива. Згідно зі звітом Statista (2023), глобальний дохід від програмного забезпечення у 2020 році (тому ж році, що й наші дані) становив 531,7 мільярда доларів. Однак це потік, а не запас програмного забезпечення. Покладаючись на державні оцінки, згідно з якими програмне забезпечення повністю знецінюється протягом трьох років, ми можемо зробити зворотний розрахунок конверта та розглянути купівельну вартість повного запасу готового програмного забезпечення, використаного у 2020 році, як сукупність того, що було продано з 2018 по 2020 рік, що становить \ 1,54 трильйона доларів. Крім того, це лише витрати на готове програмне забезпечення та не включає програмне забезпечення, придбане на замовлення або розроблене власними силами. Тут найкращі оцінки інвестицій приватного сектору в програмне забезпечення в цілому походять із даних звіту про національний дохід і продукт США (NIPA 2023). У 2020 році дані національних рахунків показують, що в США приватні компанії витратили 479,2 мільярда доларів на програмне забезпечення, з яких 45% (215,5 мільярда доларів) було розфасовано. Якщо ми припустимо, що це постійне співвідношення для решти світу, то загальна сума, яку фірми витратили на програмне забезпечення, яке використовувалося в 2020 році, становила 3,4 трильйона доларів (= 1,54 трильйона доларів/0,45). Поєднуючи цю приблизну оцінку з оцінкою вартості OSS з боку попиту на основі середньої глобальної заробітної плати (\$8,8 трлн), це означає, що фірми витратили б \$12,2 трлн (=\$3,4 трлн + $8,8 трлн), або в три з половиною рази скільки вони зараз витрачають, якби їм потрібно було заплатити власним розробникам за написання OSS, яким вони зараз користуються безкоштовно.
 
-Table 2 shows the estimates for the value of OSS based on the firm-relevant joint Census
-and BuiltWith sample. All estimates in Table 2 are based only on software languages classified in
-bucket 1 from Table A1, which are the most likely to be written by a human rather than a
-machine.[^19] The first column contains estimates with wages from a low income country (India), the global average wage, and a high income country (United States of America), respectively (as described above). To reproduce all widely-used OSS once (e.g., the idea of OSS still exists, but all
-current OSS is deleted and needs to be coded from scratch), using programmers at the average
-developer wage from India, it would require an investment of \$1.22 billion. In contrast, if we use
-the average developer wage from the United States, then reproducing all widely-used OSS would
-require an investment of \$6.22 billion. Using a pool of programmers from across the world,
-weighed based on the existing geographic contributions to OSS as discussed above, would lead to
-an investment somewhere in between the low and high-income country, \$4.15 billion. It is useful
-to compare these numbers to those from similar studies to understand differences in valuing all
-OSS (prior studies) versus that which is widely used (our study). Robbins et al. (2021) and Blind
-et al. (2021) use a method similar to ours and estimate that the value of OSS created in the US is
-$38 billion in 2019 and that created in the EU is €1 billion in 2018. Wachs et al. (2022) show that
-roughly 50% of OSS contributions come from the US and EU combined. In aggregate, that would
-lead these studies to give a global value of OSS of $ 78 billion. Thus, our middle estimate of a
-supply-side value of \$4.15 billion for only firm-oriented and widely used OSS is a credible lower-
-bound and highlights the higher estimations of the total of supply-side value of OSS when not
-considering whether or not a given OSS package is widely used. This further indicates that the
-supply-side value of the most widely used OSS is roughly 5.5% of the supply-side value of all
-OSS.
+--- Малюнок 1 приблизно тут ---
 
-The second column in Table 2 contains the demand side estimates based on the labor
-market approach. We find that if firms had to recreate all OSS packages they used (e.g., OSS itself
-no longer existed and every firm that used an OSS package had to recreate it), then the entire cost
-would amount to between \$2.59 trillion to \$13.18 trillion using labor from the low wage or high
-wage country only, respectively. A pool of programmers across the globe could recreate all of OSS
-that is being widely used for a cost of approximately \$8.80 trillion. Interpreting this number is slightly more complicated but still feasible. According to a Statista (2023) report, global software
-revenue in 2020 (the same year as our data) was \$531.7 billion. However, this represents a flow,
-not a stock, of software. Relying on government estimates that software fully depreciates over
-three years, we can do a back of the envelope calculation and consider the purchase value of the
-full stock of prepackaged software used in 2020 as the aggregate of that sold from 2018 to 2020,
-which is \$1.54 trillion. Further, this represents only the expenditure on prepackaged software and
-does not include custom purchased or in-house developed software. Here, the best obtainable
-estimates of private-sector investment in software overall come from the United States National
-Income and Product Accounts data (NIPA 2023). In 2020, the national account data shows that in
-the US, private firms spent \$479.2 billion on software, of which 45% ($215.5 billion) was
-prepackaged. If we assume this is a consistent ratio for the rest of the world, then the total amount
-firms spent on software being used in 2020 was \$3.4 trillion (= \$1.54 trillion/0.45). Combining
-this rough estimate with the demand side estimate of the value of OSS based on an average global
-wage (\$8.8 trillion), this indicates firms would spend \$12.2 trillion (=\$3.4 trillion + $8.8 trillion),
-or three and a half times what they currently spend if they needed to pay in-house developers to
-write the OSS that they currently use for free.
+На малюнку 1 показано неоднорідність значення OSS для найпопулярніших мов програмування. На панелі A показано значення сторони постачання, а вартість праці відображається на вертикальній осі. Ми виявили, що пакети OSS, створені в Go, мають найвищу цінність із вартістю 80 3 мільйони доларів, яку довелося б створювати з нуля, якби пакети OSS не існували. Відразу за Go йдуть JavaScript і Java з $758 і $658 млн відповідно. Вартість C і Typescript становить 406 мільйонів доларів США та 317 мільйонів доларів відповідно, тоді як Python має найнижчу вартість серед найпопулярніших мов – близько 55 мільйонів доларів. JavaScript є не лише найпопулярнішою мовою на GitHub принаймні з 2014 року (GitHub, 2022), це також мова з одним із найвищих значень у наших даних. Навпаки, Python з часом ставав все більш популярним, піднявшись із четвертого місця на друге місце у 2020 році серед усіх пакетів OSS на GitHub, тоді як він займає останнє місце серед наших найкращих мов.
 
+Панель B показує значення з боку попиту для найпопулярніших мов програмування. Виходячи з цінності використання, Go більш ніж у чотири рази перевищує цінність наступної мови, JavaScript. Typescript (мова, яка розширює JavaScript) значно зросла, піднявшись з десятого місця в топ-10 мов у 2017 році до четвертого місця в 2020 році, що також відображено в наших даних: Typescript є третьою за значенням мовою з боку попиту. За цими двома веб-мовами йдуть C, а Java та Python – далеко позаду.
 
---- Figure 1 about here ---
+--- Малюнок 2 приблизно тут ---
 
-Figure 1 shows the heterogeneity of the value of OSS across the top programming languages. Panel
-A shows the supply side value with the labor value being displayed on the vertical axis. We find
-that OSS packages created in Go have the highest value with $80 3 million in value that would
-have to be created from scratch if the OSS packages did not exist. Go is closely followed by
-JavaScript and Java with \$758 million and \$658 million, respectively. The value of C and
-Typescript is \$406 million and \$317 million, respectively, while Python has the lowest value of
-the top languages with around \$55 million. JavaScript is not only the top language on GitHub since
-at least 2014 (GitHub, 2022) it is also the language with one of the highest values in our data. In
-contrast, Python became more popular over time moving up from the number four spot to the
-number two language being used in 2020 across all OSS packages on GitHub, while it is in the last spot of our top languages.
+На малюнку 2 розділені оцінки значення OSS для кожної мови за нашими внутрішніми (Census) і зовнішніми (BuiltWith) джерелами даних. Панелі A та B зосереджені на оцінці попиту та пропозиції для перепису. Ми отримуємо подібну модель, яка вже була встановлена ​​в сукупності під час об’єднання обох джерел даних (рис. 1), хоча вплив JavaScript є значно меншим. На стороні пропозиції Перепису в панелі А Java має друге за величиною значення, тоді як код JavaScript з Перепису сприяє значно нижчому значенню в сукупності. Подібним чином значення C, Python і Typescript на стороні пропозиції в основному визначаються переписом. З боку панелі B з боку попиту ми виявили, що Go є найпопулярнішою мовою для внутрішнього коду, тоді як усі інші мови здаються незначними у відносному вираженні.
 
-Panel B shows the demand side value across the top programming languages. Based on
-usage generated value, Go is more than four times the value of the next language, JavaScript. Typescript (a language that extends JavaScript) has seen immense growth rising from the tenth spot of the top 10 languages in 2017 to the fourth spot in 2020 which is also reflected in our data with Typescript being the third most important language on the demand side. The two web languages are followed by C and far behind are Java, and Python.
+На рисунку 2, панель C і панель D показано значення попиту та пропозиції для набору даних BuiltWith. Значення сторони постачання на панелі C чітко вказує на те, що значення із зразка BuiltWith керується кодом JavaScript, що є хорошою перевіркою розумності, оскільки ми зосередилися на пакетах JavaScript для проксі для OSS у зразку BuiltWith, як обговорювалося вище. Друге найвище значення створює TypeScript, що заспокоює, оскільки це надмножина JavaScript. Панель D демонструє подібну модель використання, де більша частина цінності виникає з JavaScript, тоді як TypeScript також відстає на другому місці. Інші мови вносять лише мізерні суми у значення попиту та пропозиції. Загалом ці висновки загалом узгоджуються з основними випадками використання різних мов (веб-програмування проти програмування додатків) та ідеєю, що мови, за допомогою яких генеруються цінності, не обов’язково ідентичні мовам, якими користується широка громадськість.
 
---- Figure 2 about here ---
+--- Малюнок 3 приблизно тут ---
 
-Figure 2 splits the OSS value estimates for each language by our inward facing (Census)
-and outward facing (BuiltWith) data sources. Panel A and Panel B focus on the supply and demand
-side estimation for the Census. We obtain a similar pattern that has been established already in the
-aggregate when pooling both data sources (Figure 1) albeit the impact of JavaScript is substantially
-lower. On the supply side of the Census in Panel A, Java has the second-highest value while
-JavaScript code from the Census contributes to a substantially lower value to the aggregate.
-Similarly, the supply side values of C, Python, and Typescript are mainly driven by the Census.
-From the demand side Panel B we find that Go is the most popular language for inward facing
-code while all other languages appear to be negligible in relative terms.
+На малюнку 3 показано значення попиту OSS у галузях за 2-значними кодами NAICS з використанням онлайн-даних BuiltWith.[^20] Це можна інтерпретувати як значення, яке отримує кожна з цих галузей через існування OSS. Галузь із найвищою вартістю використання — близько 43 мільярдів доларів — це «Професійні, наукові та технічні послуги». «Роздрібна торгівля», а також «Адміністративні та допоміжні послуги та послуги з управління відходами та відновлення» складають ще одну значну частину зовнішньої вартості OSS з боку попиту з 36 і 35 мільярдами доларів США відповідно. Навпаки, галузі, які становлять лише невелику частину вартості, це «Гірнича промисловість, розробка кар’єрів, видобуток нафти та газу», «Комунальні послуги», «Сільське господарство, лісове господарство, рибальство та мисливство». Останні галузі є класичними галузями, не пов’язаними з обслуговуванням, і тому очікується, що програмне забезпечення відіграватиме там меншу роль.
 
-Figure 2, Panel C and Panel D show the supply and demand side values for the BuiltWith
-dataset. The supply side value in Panel C clearly indicates that the value from the BuiltWith sample
-is driven by JavaScript code, which is a good sanity check since we focused on JavaScript packages
-to proxy for OSS in the BuiltWith sample, as discussed above. The second highest value is created
-by TypeScript which is reassuring since it is a superset of JavaScript. Panel D shows a similar
-pattern on the usage side where most of the value arises from JavaScript while TypeScript is
-trailing at the second spot as well. The other languages contribute only marginal amounts to the
-supply and demand side values. Overall, these findings are broadly consistent with the main use
-cases of the various languages (web programming vs. application programming) and an idea that
-languages through which value are generated are not necessarily identical to languages that are
-used by the general public.
+--- Малюнок 4 приблизно тут ---
 
+На малюнку 3 показано криві Лоренца та кількість сховищ, до яких долучилася частка програмістів для сторони пропозиції (панель A) і сторони попиту (панель B). Крива Лоренца, яка лежить прямо на лінії 45 градусів, означатиме дуже рівномірний розподіл значень між програмістами. Натомість панель A показує криву Лоренца як майже рівну лінію з різким збільшенням кінцевої частки програмістів. Це означає, що розподіл вартості пропозиції є дуже нерівномірним і значно більш концентрованим, ніж стандарт 80/20. Дійсно, останні п’ять відсотків програмістів, або 3000 програмістів, генерують понад 93% вартості з боку пропозиції. Подібним чином панель B показує – якщо врахувати використання – що останні п’ять відсотків створюють понад 96% вартості на стороні попиту. Загалом це вказує на те, що дуже невелика кількість програмістів створює основну частину коду OSS, на який фірми сильно покладаються при створенні власного коду. Як на панелі A, так і на панелі B ми також бачимо збільшення кількості сховищ для останніх 10-15% програмістів, які роблять внесок у найвищу цінність, що означає, що нерівномірне значення, яке генерується декількома програмістами, є не просто до кількох дуже цінних сховищ, але завдяки внеску цієї жменьки учасників до значної кількості сховищ.
 
---- Figure 3 about here ---
+#### 5. Висновок
 
-Figure 3 shows the demand-side value of OSS across industries by NAICS 2-digit codes
-using the BuiltWith online data.[^20] This can be interpreted as the value each of these industries
-receive because OSS exists. The industry with the highest usage value of around $ 43 billion is
-“Professional, Scientific, and Technical Services.” “Retail Trade” as well as “Administrative and
-Support and Waste Management and Remediation Services” make up another large part of the
-demand-side externally facing value of OSS with $ 36 billion and $ 35 billion, respectively. In
-contrast, industries that constitute just a small portion of the value are “Mining, Quarrying, and
-Oil and Gas Extraction”, “Utilities”, “Agriculture, Forestry, Fishing, and Hunting.” The latter
-industries are classical non-service sector industries and as such software is expected to play less
-of a role there.
+У цьому дослідженні ми оцінюємо цінність широко використовуваного програмного забезпечення з відкритим кодом у всьому світі за допомогою двох унікальних наборів даних: даних Census of OSS і даних BuiltWith. Ми можемо оцінити не лише цінність наявного коду з боку пропозиції (наприклад, вартість, яку знадобиться для переписування кожного фрагмента широко використовуваного OSS), але й цінність з боку попиту для приватної економіки (наприклад, вартість взяти для кожної компанії, яка використовує частину OSS, щоб переписати її). Хоча ми не зосереджуємося на довгому хвості OSS, ми вважаємо це додатковим внеском нашого дослідження, оскільки зосередження на OSS, яке широко використовується, дозволяє точніше зрозуміти цінність, яку створює OSS, а не лише вимірювати вартість заміни для всіх OSS (що переоцінило б справжнє значення, оскільки багато проектів OSS не використовуються у робочому коді). Однак, незважаючи на те, що ми підкреслюємо значну цінність OSS для нашого суспільства на основі широкого спектру даних про використання, неможливо ідентифікувати 100% OSS, що використовується в усьому світі, тому наші оцінки з боку попиту, ймовірно, недооцінка справжньої вартості.
 
+З поправкою на використання, ми знаходимо велике значення OSS на стороні попиту в 8,8 трильйона доларів США, коли використовуємо програмістів з усього світу, з деякими відхиленнями, залежно від того, чи будемо ми наймати програмістів лише з країни з низьким чи високим рівнем доходу. Існує суттєва неоднорідність значення в мовах програмування та щодо того, чи є код внутрішнім – тобто для створення продуктів, які продаються – чи зовнішнім – тобто використовується на веб-сайті компанії. 6 найпопулярніших мов програмування створюють 84 % цінності з боку попиту. Ми також демонструємо значну неоднорідність за галузями промисловості та, нарешті, неоднорідність ціннісних внесків самих програмістів. Понад 95% вартості на стороні попиту генерується лише п’ятьма відсотками програмістів, і ці програмісти беруть участь не лише в кількох широко використовуваних проектах, а й у значно більшій кількості проектів, ніж програмісти, які працюють у нижньому кінці розподілу вартості. .
 
--- Figure 4 about here ---
+У сукупності наші результати показують значну цінність, яку OSS робить для економіки, незважаючи на те, що це значення зазвичай дорівнює нулю шляхом прямого вимірювання, оскільки ціни дорівнюють нулю, а кількість важко виміряти, використовуючи лише публічні дані. Наше дослідження закладає основу для майбутніх досліджень не лише OSS, але й усіх ІТ та їх зростаючого впливу на світову економіку.
 
-Figure 3 shows the Lorenz curves and the number of repositories that a fraction of programmers
-has contributed to for the supply side (Panel A) and the demand side (Panel B). A Lorenz curve
-that lay directly on the 45 degree line would imply a very even distribution of values across
-programmers. Instead, Panel A shows a Lorenz curve as a nearly flat line with a drastic increase
-for the final share of programmers. This implies that the distribution of the supply value is highly
-uneven and considerably more concentrated than the 80/20 standard. Indeed, the last five percent
-of programmers, or 3,000 programmers, generate over 93% of the supply side value. Similarly,
-Panel B shows – when accounting for usage – that those last five percent generate over 96% of the
-demand side value. In aggregate, this indicates that a very small number of programmers are
-creating the bulk of OSS code that is heavily relied upon by firms to create their own code. In both
-Panel A and Panel B we can also see a rise in the number of repositories for the last 10-15% of
-programmers that contribute to the highest value, which implies that the uneven value that is
-generated by few programmers is not just due to a few highly valuable repositories but by the
-contributions of this handful of contributors to a substantial number of repositories.
-
-#### 5. Conclusion
-
-In this study we estimate the value of widely-used open source software globally with two
-unique datasets: the Census of OSS and the BuiltWith data. We are able to estimate not only the
-supply side value of existing code (e.g., the cost it would take to rewrite each piece of widely-used
-OSS once) but also the demand side value for the private economy (e.g., the cost it would take for
-each company that uses a piece of OSS to rewrite it). While we do not focus on the long tail of
-OSS, we consider this an additional contribution of our study as focusing on OSS that is widely
-used allows us to more precisely understand the value created by OSS, rather than only measuring
-the replacement cost for all OSS (which would overestimate the true value since many OSS
-projects are not used in production code). However, although we highlight the substantial value
-that OSS has in our society based on a wide swath of usage data, it is not feasible to identify 100%
-of the OSS used across the world and, as such, our demand-side estimates are likely an
-underestimate of the true value.
-
-Adjusted for usage, we find a large demand-side value of OSS of $8.8 trillion when using
-programmers from across the world, with some variance, depending on whether we would hire
-programmers from a low- or high-income country only. There is substantial heterogeneity in the
-value across programming languages and whether the code is inward–facing – i.e., for creating
-products that are being sold – or outward-facing – i.e., used on the company’s website. The top 6
-programming languages create 84 % of the demand-side value. We also show substantial
-heterogeneity by industries and, finally, heterogeneity in the value contributions by programmers
-themselves. Over 95% percent of the demand-side value is generated by only five percent of
-programmers, and those programmers contribute not only to a few widely used projects but to
-substantially more projects than the programmers that are engaged at the lower end of the value
-distribution.
-
-In aggregate, our results show the substantial value that OSS contributes to the economy
-despite this value generally showing up as zero via direct measurement since prices equal zero and
-quantity is difficult to measure using public data alone. Our research lays the groundwork for
-future studies of not only OSS, but of all IT and its growing impact on the global economy.
-
-
-**References**
-Almeida, D. A., Murphy, G. C., Wilson, G., & Hoye, M. (2017, May). Do software developers
-understand open source licenses? In 2017 IEEE/ACM 25th International Conference on
-Program Comprehension (ICPC) (pp. 1-11). IEEE.
-Andreessen, M. (2011). Why Software Is Eating The World. Accessed May 1, 2023. Source:
-https://www.wsj.com/articles/SB10001424053111903480904576512250915629460
+**Посилання**
+Almeida, D. A., Murphy, G. C., Wilson, G., & Hoye, M. (2017, May). Do software developers understand open source licenses? In 2017 IEEE/ACM 25th International Conference on Program Comprehension (ICPC) (pp. 1-11). IEEE.
+Andreessen, M. (2011). Why Software Is Eating The World. Accessed May 1, 2023. Source: https://www.wsj.com/articles/SB10001424053111903480904576512250915629460
 Aristotle. (1981). Politics_._ Book 2, Chapter 3. T.A. Sinclair translation. Penguin Books, London.
-Blind, K., Böhm, M., Grzegorzewska, P., Katz, A., Muto, S., Pätsch, S., & Schubert, T. (2021).
-The impact of Open Source Software and Hardware on technological independence,
-competitiveness and innovation in the EU economy. European Commission, Ed.
-Blind, K., & Schubert, T. (2023). Estimating the GDP effect of Open Source Software and its
-complementarities with R&D and patents: evidence and policy implications. The Journal
-of Technology Transfer, 1-26.
-Boehm, B. W. (1984). Software engineering economics. IEEE transactions on Software
-Engineering, (1), 4-21.
-Boehm, B. W., Abts, C., Brown, A. W., Chulani, S., Clark, B. K., Horowitz, E., Madachy, R.,
-Reifer, D., & Steece, B. (2009). Software cost estimation with COCOMO II. Prentice Hall
-Press.
-Branstetter, Lee G., Matej Drev, and Namho Kwon. (2019). “Get with the program: Software-
-driven innovation in traditional manufacturing.” Management Science 65, no. 2: 541-558.
-Brynjolfsson, E. (1993). The productivity paradox of information technology. Communications of
-the ACM, 36(12), 66-77.
-Brynjolfsson, E., & Hitt, L. (1996). Paradox lost? Firm-level evidence on the returns to information
-systems spending. Management Science, 42(4), 541-558.
-Brynjolfsson, E., Rock, D., & Syverson, C. (2018). Artificial intelligence and the modern
-productivity paradox: A clash of expectations and statistics. In The economics of artificial
-intelligence: An agenda (pp. 23-57). University of Chicago Press.
-Burton, R. M., Håkonsson, D. D., Nickerson, J., Puranam, P., Workiewicz, M., & Zenger, T.
-(2017). GitHub: exploring the space between boss-less and hierarchical forms of
-organizing. _Journal of Organization Design_ , _6_ , 1-19.
-Conti, A., Peukert, C., & Roche, M. |(2023). "Beefing IT up for your Investor? Open Sourcing
-and Startup Funding: Evidence from GitHub." _Harvard Business School Working paper
-No. 22- 001_.
-Cornes, R., & Sandler, T. (1996). The theory of externalities, public goods, and club goods.
-Cambridge University Press.
-DeStefano, T., and J. Timmis (2023). Demand Shocks and Data Analytics Diffusion, working
-paper.
-Dushnitsky, G., & Stroube, B. K. (2021). Low-code entrepreneurship: Shopify and the alternative
-path to growth. Journal of Business Venturing Insights, 16, e00251.
-Eisfeldt, A. L., & Papanikolaou, D. (2014). The value and ownership of intangible capital.
-American Economic Review, 104(5), 189-194.
-European Commission. (2020). Open Source Software Strategy 2020-2023. Luxembourg: Office
-for Official Publications of the European Communities.
-Executive Order No. 14028. (2021). Executive Order on Improving the Nation’s Cybersecurity.
-May 2021.
-
-
-Fackler, T., Hofmann, M., & Laurentsyeva, N. (2023). _Defying Gravity: What Drives
-Productivity in Remote Teams?_ (No. 427). CRC TRR 190 Rationality and Competition.
-Greenstein, S., & Nagle, F. (2014). Digital dark matter and the economic contribution of Apache.
-_Research Policy_ , _43_ (4), 623-631.
-GitHub (2022). “Octoverse: The state of open source software.” Accessed November 3, 2023.
-https://octoverse.github.com/2022/top-programming-languages.
-Hanisch, M., Haeussler, C., Berreiter, S., & Apel, S. (2018, July). Developers’ progression from
-periphery to core in the Linux kernel development project. In _Academy of Management
-Proceedings_ (Vol. 2018, No. 1, p. 14263). Briarcliff Manor, NY 10510: Academy of
+Blind, K., Böhm, M., Grzegorzewska, P., Katz, A., Muto, S., Pätsch, S., & Schubert, T. (2021). The impact of Open Source Software and Hardware on technological independence, competitiveness and innovation in the EU economy. European Commission, Ed.
+Blind, K., & Schubert, T. (2023). Estimating the GDP effect of Open Source Software and its complementarities with R&D and patents: evidence and policy implications. The Journal of Technology Transfer, 1-26.
+Boehm, B. W. (1984). Software engineering economics. IEEE transactions on Software Engineering, (1), 4-21.
+Boehm, B. W., Abts, C., Brown, A. W., Chulani, S., Clark, B. K., Horowitz, E., Madachy, R., Reifer, D., & Steece, B. (2009). Software cost estimation with COCOMO II. Prentice Hall Press.
+Branstetter, Lee G., Matej Drev, and Namho Kwon. (2019). “Get with the program: Software-driven innovation in traditional manufacturing.” Management Science 65, no. 2: 541-558.
+Brynjolfsson, E. (1993). The productivity paradox of information technology. Communications of the ACM, 36(12), 66-77.
+Brynjolfsson, E., & Hitt, L. (1996). Paradox lost? Firm-level evidence on the returns to information systems spending. Management Science, 42(4), 541-558.
+Brynjolfsson, E., Rock, D., & Syverson, C. (2018). Artificial intelligence and the modern productivity paradox: A clash of expectations and statistics. In The economics of artificial intelligence: An agenda (pp. 23-57). University of Chicago Press.
+Burton, R. M., Håkonsson, D. D., Nickerson, J., Puranam, P., Workiewicz, M., & Zenger, T. (2017). GitHub: exploring the space between boss-less and hierarchical forms of organizing. _Journal of Organization Design_ , _6_ , 1-19.
+Conti, A., Peukert, C., & Roche, M. |(2023). "Beefing IT up for your Investor? Open Sourcing and Startup Funding: Evidence from GitHub." _Harvard Business School Working paper No. 22- 001_.
+Cornes, R., & Sandler, T. (1996). The theory of externalities, public goods, and club goods. Cambridge University Press.
+DeStefano, T., and J. Timmis (2023). Demand Shocks and Data Analytics Diffusion, working paper.
+Dushnitsky, G., & Stroube, B. K. (2021). Low-code entrepreneurship: Shopify and the alternative path to growth. Journal of Business Venturing Insights, 16, e00251.
+Eisfeldt, A. L., & Papanikolaou, D. (2014). The value and ownership of intangible capital. American Economic Review, 104(5), 189-194.
+European Commission. (2020). Open Source Software Strategy 2020-2023. Luxembourg: Office for Official Publications of the European Communities.
+Executive Order No. 14028. (2021). Executive Order on Improving the Nation’s Cybersecurity. May 2021.
+Fackler, T., Hofmann, M., & Laurentsyeva, N. (2023). _Defying Gravity: What Drives Productivity in Remote Teams?_ (No. 427). CRC TRR 190 Rationality and Competition.
+Greenstein, S., & Nagle, F. (2014). Digital dark matter and the economic contribution of Apache. _Research Policy_ , _43_ (4), 623-631.
+GitHub (2022). “Octoverse: The state of open source software.” Accessed November 3, 2023. https://octoverse.github.com/2022/top-programming-languages.
+Hanisch, M., Haeussler, C., Berreiter, S., & Apel, S. (2018, July). Developers’ progression from periphery to core in the Linux kernel development project. In _Academy of Management Proceedings_ (Vol. 2018, No. 1, p. 14263). Briarcliff Manor, NY 10510: Academy of
 Management.
 Hardin, G. (1968). “The Tragedy of the Commons”. Science. 162 (3859): 1243–1248.
-Henkel, J. (2009). Champions of revealing—the role of open source developers in commercial
-firms. Industrial and Corporate Change, 18(3), 435-471.
-Jacks, J. (2022). Open Source Is Eating Software FASTER than Software Is Eating The World.
-Accessed May 1, 2023. Source: https://www.coss.community/cossc/open-source-is-
-eating-software-faster-than-software-is-eating-the-world-3b01
-Kim, D. Y. (2020). Product Market Performance and Openness: The Moderating Role of
-Customer Heterogeneity. In _Academy of Management Proceedings_ (Vol. 2020, No. 1, p.
-21309). Briarcliff Manor, NY 10510: Academy of Management.
-Koning, R., Hasan, S., & Chatterji, A. (2022). Experimentation and start-up performance:
-Evidence from A/B testing. Management Science, 68(9), 6434-6453.
-Krishnan, M. S., Kriebel, C. H., Kekre, S., & Mukhopadhyay, T. (2000). An empirical analysis of
-productivity and quality in software products. Management science, 46(6), 745-759.
-Lerner, J., & Tirole, J. (2005). The scope of open source licensing. Journal of Law, Economics,
-and Organization, 21(1), 20-56.
-Lorenz, M. O. (1905). "Methods of measuring the concentration of wealth". Publications of the
-American Statistical Association. Publications of the _American Statistical Association_ ,
-Vol. 9, No. 70. 9 (70): 209–219. Bibcode:1905PAmSA...9..209L. doi:10.2307/2276207.
-JSTOR 2276207.
-Lifshitz-Assaf, H., & Nagle, F. (2021). The digital economy runs on open source. Here's how to
-protect it. Harvard Business Review Digital Articles. https://hbr.org/2021/09/the-digital-
-economy-runs-on-open-source-heres-how-to-protect-it.
-Lloyd, W. F. (1833). Two lectures on the checks to population: Delivered before the University of
-Oxford, in Michaelmas Term 1832. JH Parker.
-Maracke, C. (2019). Free and Open Source Software and FRAND‐based patent licenses: How to
-mediate between Standard Essential Patent and Free and Open Source Software. The
-Journal of World Intellectual Property, 22(3-4), 78-102.
-Murciano-Goroff, R., Zhuo, R., & Greenstein, S. (2021). Hidden software and veiled value
-creation: Illustrations from server software usage. _Research Policy_ , _50_ (9), 104333.
-Musseau, J., Meyers, J. S., Sieniawski, G. P., Thompson, C. A., & German, D. (2022, May). Is
-open source eating the world’s software? Measuring the proportion of open source in
-proprietary software using Java binaries. In _Proceedings of the 19th International
-Conference on Mining Software Repositories_ (pp. 561-565).
-Nagle, F. (2018). Learning by contributing: Gaining competitive advantage through contribution
-to crowdsourced public goods. Organization Science, 29(4), 569-587.
-
-
-Nagle, F. (2019a). Open source software and firm productivity. Management Science, 65(3), 1191-
-1215.
-Nagle, Frank (2019b). “Government Technology Policy, Social Value, and National
-Competitiveness.” Harvard Business School Working Paper, No. 19-103, March 2019.
-Nagle, F., Dana, J., Hoffman, J., Randazzo, S., & Zhou, Y. (2022). Census II of Free and Open
-Source Software—Application Libraries. _Linux Foundation, Harvard Laboratory for
-Innovation Science (LISH) and Open Source Security Foundation (OpenSSF).
-https://www.linuxfoundation.org/research/census-ii-of-free-and-open-source-software-
-application-libraries._
-NIPA (2023). Bureau of Eonomic Analysis, NIPA Table 5.6.5. accessed: 2023- 11 - 14, source:
-https://apps.bea.gov/iTable/?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_
-list=331&series=q&first_year=2013&last_year=2023&scale=-9.
+Henkel, J. (2009). Champions of revealing—the role of open source developers in commercial firms. Industrial and Corporate Change, 18(3), 435-471.
+Jacks, J. (2022). Open Source Is Eating Software FASTER than Software Is Eating The World. Accessed May 1, 2023. Source: https://www.coss.community/cossc/open-source-is-eating-software-faster-than-software-is-eating-the-world-3b01
+Kim, D. Y. (2020). Product Market Performance and Openness: The Moderating Role of Customer Heterogeneity. In _Academy of Management Proceedings_ (Vol. 2020, No. 1, p.21309). Briarcliff Manor, NY 10510: Academy of Management.
+Koning, R., Hasan, S., & Chatterji, A. (2022). Experimentation and start-up performance: Evidence from A/B testing. Management Science, 68(9), 6434-6453.
+Krishnan, M. S., Kriebel, C. H., Kekre, S., & Mukhopadhyay, T. (2000). An empirical analysis of productivity and quality in software products. Management science, 46(6), 745-759.
+Lerner, J., & Tirole, J. (2005). The scope of open source licensing. Journal of Law, Economics, and Organization, 21(1), 20-56.
+Lorenz, M. O. (1905). "Methods of measuring the concentration of wealth". Publications of the American Statistical Association. Publications of the _American Statistical Association_ , Vol. 9, No. 70. 9 (70): 209–219. Bibcode:1905PAmSA...9..209L. doi:10.2307/2276207. JSTOR 2276207.
+Lifshitz-Assaf, H., & Nagle, F. (2021). The digital economy runs on open source. Here's how to protect it. Harvard Business Review Digital Articles. https://hbr.org/2021/09/the-digital-economy-runs-on-open-source-heres-how-to-protect-it.
+Lloyd, W. F. (1833). Two lectures on the checks to population: Delivered before the University of Oxford, in Michaelmas Term 1832. JH Parker.
+Maracke, C. (2019). Free and Open Source Software and FRAND‐based patent licenses: How to mediate between Standard Essential Patent and Free and Open Source Software. The Journal of World Intellectual Property, 22(3-4), 78-102.
+Murciano-Goroff, R., Zhuo, R., & Greenstein, S. (2021). Hidden software and veiled value creation: Illustrations from server software usage. _Research Policy_ , _50_ (9), 104333.
+Musseau, J., Meyers, J. S., Sieniawski, G. P., Thompson, C. A., & German, D. (2022, May). Is open source eating the world’s software? Measuring the proportion of open source in proprietary software using Java binaries. In _Proceedings of the 19th International Conference on Mining Software Repositories_ (pp. 561-565).
+Nagle, F. (2018). Learning by contributing: Gaining competitive advantage through contribution to crowdsourced public goods. Organization Science, 29(4), 569-587.
+Nagle, F. (2019a). Open source software and firm productivity. Management Science, 65(3), 1191-1215.
+Nagle, Frank (2019b). “Government Technology Policy, Social Value, and National Competitiveness.” Harvard Business School Working Paper, No. 19-103, March 2019.
+Nagle, F., Dana, J., Hoffman, J., Randazzo, S., & Zhou, Y. (2022). Census II of Free and Open Source Software—Application Libraries. _Linux Foundation, Harvard Laboratory for Innovation Science (LISH) and Open Source Security Foundation (OpenSSF). https://www.linuxfoundation.org/research/census-ii-of-free-and-open-source-software-application-libraries.
+NIPA (2023). Bureau of Eonomic Analysis, NIPA Table 5.6.5. accessed: 2023- 11 - 14, source:https://apps.bea.gov/iTable/?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=331&series=q&first_year=2013&last_year=2023&scale=-9.
 Nordhaus, William D., 2006, “Principles of National Accounting for Nonmarket Accounts,” in _A
-New Architecture for the US National Accounts_ , editors, Dale W. Jorgenson, J. Steven
-Landefeld, and William D. Nordhaus, University of Chicago Press.
-Ostrom, Elinor (1990). Governing the commons: The evolution of institutions for collective action.
-Cambridge: Cambridge University Press.
-Peters, R. H., & Taylor, L. A. (2017). Intangible capital and the investment-q relation. Journal of
-Financial Economics, 123(2), 251-272.
-Robbins, C., Korkmaz, G., Guci, L., Calderón, J. B. S., & Kramer, B. (2021). A First Look at
-Open-Source Software Investment in the United States and in Other Countries, 2009-2019.
-Singh, Shivendu Pratap (2020) _Products, Platforms, and Open Innovation: Three Essays on
-Technology Innovation._ Doctoral Dissertation, University of Pittsburgh. (Unpublished)
+New Architecture for the US National Accounts_ , editors, Dale W. Jorgenson, J. Steven Landefeld, and William D. Nordhaus, University of Chicago Press.
+Ostrom, Elinor (1990). Governing the commons: The evolution of institutions for collective action. Cambridge: Cambridge University Press.
+Peters, R. H., & Taylor, L. A. (2017). Intangible capital and the investment-q relation. Journal of Financial Economics, 123(2), 251-272.
+Robbins, C., Korkmaz, G., Guci, L., Calderón, J. B. S., & Kramer, B. (2021). A First Look at Open-Source Software Investment in the United States and in Other Countries, 2009-2019.
+Singh, Shivendu Pratap (2020) _Products, Platforms, and Open Innovation: Three Essays on Technology Innovation._ Doctoral Dissertation, University of Pittsburgh. (Unpublished)
 Solow, R. (1987). “We Better Watch Out.” _New York Times Book Review_ , July 1987, p. 36.
-Statista (2023). Statista Software Worldwide, accessed 2023- 11 - 14, source: -
-https://www.statista.com/outlook/tmo/software/worldwide#revenue, accessed November
-2023.
-Synopsys (2023). 2023 OSSRA: A deep dive into open source trends. Accessed May 1, 2023.
-Source : https://www.synopsys.com/blogs/software-security/open-source-trends-ossra-
-report/
-Tang, S., Wang, Z., & Tong, T. (2023). Knowledge Governance in Open Source Contributions:
-The Role of Gatekeepers. In _Academy of Management Proceedings_ (Vol. 2023, No. 1, p.
-17622). Briarcliff Manor, NY 10510: Academy of Management.
-Tozzi, C. (2016). “Open Source History: Why Did Linux Succeed?” _Channel Futures_ , August,
+Statista (2023). Statista Software Worldwide, accessed 2023- 11 - 14, source: - https://www.statista.com/outlook/tmo/software/worldwide#revenue, accessed November 2023.
+Synopsys (2023). 2023 OSSRA: A deep dive into open source trends. Accessed May 1, 2023. Source : https://www.synopsys.com/blogs/software-security/open-source-trends-ossra-report/
+Tang, S., Wang, Z., & Tong, T. (2023). Knowledge Governance in Open Source Contributions: The Role of Gatekeepers. In _Academy of Management Proceedings_ (Vol. 2023, No. 1, p.17622). Briarcliff Manor, NY 10510: Academy of Management.
+Tozzi, C. (2016). “Open Source History: Why Did Linux Succeed?” _Channel Futures_ , August, 2016. Accessed November 3, 2023. https://www.channelfutures.com/open-source/open-source-history-why-did-linux-succeed
+Wachs, J., Nitecki, M., Schueller, W., & Polleres, A. (2022). The geography of open source software: Evidence from github. _Technological Forecasting and Social Change_ , _176_ , 121478.
+Williamson, S. (2006). Notes on macroeconomic theory. University in St. Louis. Department of Economics.
+Zhang, Y., Zhou, M., Mockus, A., & Jin, Z. (2019). Companies’ participation in oss development–an empirical study of openstack. IEEE Transactions on Software Engineering, 47(10), 2242 - 2259.
 
-2016. Accessed November 3, 2023. https://www.channelfutures.com/open-source/open-
-source-history-why-did-linux-succeed
-Wachs, J., Nitecki, M., Schueller, W., & Polleres, A. (2022). The geography of open source
-software: Evidence from github. _Technological Forecasting and Social Change_ , _176_ ,
-121478.
-Williamson, S. (2006). Notes on macroeconomic theory. University in St. Louis. Department of
-Economics.
-Zhang, Y., Zhou, M., Mockus, A., & Jin, Z. (2019). Companies’ participation in oss development–
-an empirical study of openstack. IEEE Transactions on Software Engineering, 47(10),
-2242 - 2259.
+**Малюнок 1** Цінність програмного забезпечення з відкритим кодом: найпопулярніші мови
+
+Панель A. Сторона постачання
+![Панель A. Сторона постачання](/oss/the-value-of-oss-000.png)
+Панель B. Сторона попиту
+![Панель B. Сторона попиту](/oss/the-value-of-oss-001.png)
 
 
-
-**Figure 1** The value of open source software: top languages
-
-Panel A. Supply Side
-![Panel A. Supply Side](/oss/the-value-of-oss-000.png)
-Panel B. Demand Side
-![Panel B. Demand Side](/oss/the-value-of-oss-001.png)
+_Примітка._ Цифри показують вартість ринку праці для 5 найкращих мов за GitHub plus Go. На панелі A відображається сторона постачання, а на панелі B – використання. Що стосується праці, ми використовуємо нашу розрахункову середню глобальну заробітну плату для програмістів, як пояснюється в розділі методології.
 
 
-_Note._ The figures show the labor market value for the top-5 languages according to GitHub plus Go. Panel A
-displays the supply side while Panel B incorporates usage. On the labor side we use our estimated average global
-wage for programmers as explained in the methodology section.
+**Малюнок 2** Значення відкритого коду для 5 найкращих мов + Go та джерел даних
+
+Панель А. Перепис. Сторона постачання
+![Панель А. Перепис. Сторона постачання](/oss/the-value-of-oss-002.png)
+Панель Б. Перепис. Сторона попиту
+![Панель Б. Перепис. Сторона попиту](/oss/the-value-of-oss-003.png)
 
 
+Панель C. BuiltWith. Сторона постачання
+![Панель C. BuiltWith. Сторона постачання](/oss/the-value-of-oss-004.png)
+Панель D. BuiltWith. Сторона попиту
+![Панель D. BuiltWith. Сторона попиту](/oss/the-value-of-oss-005.png)
 
-**Figure 2** The value of open source across top-5 languages + Go and across data sources
+_Примітка_. Цифри показують ринкову вартість робочої сили та товарів для 5 найпопулярніших мов (згідно з GitHub) + Go, розділених за джерелами даних, спрямованими всередину (Census) і зовнішніми (BuiltWith). Панелі A та B показують значення з боку пропозиції та попиту для перепису, а панелі C та D — значення з боку пропозиції та попиту для BuiltWith.
 
+**Малюнок 3** Значення відкритого коду в різних галузях із веб-сайтів
 
-Panel A. Census. Supply Side
-![Panel A. Census. Supply Side](/oss/the-value-of-oss-002.png)
-Panel B. Census. Demand Side
-![Panel B. Census. Demand Side](/oss/the-value-of-oss-003.png)
+![Значення відкритого коду для різних галузей із веб-сайтів](/oss/the-value-of-oss-006.png)
 
+_Примітка._ На малюнку показано вартість праці з боку попиту в галузях із 2-значним кодом NAICS із використанням даних Built With. Для компаній (доменів), які пов’язані з кількома галузями, ми взяли середнє значення та розподілили його між галузями.
 
-Panel C. BuiltWith. Supply Side 
-![Panel C. BuiltWith. Supply Side](/oss/the-value-of-oss-004.png)
-Panel D. BuiltWith. Demand Side
-![Panel D. BuiltWith. Demand Side](/oss/the-value-of-oss-005.png)
+**Малюнок 4** Розподіл створення цінності з відкритим кодом
 
-_Note_. The figures show the labor and goods market value for the top-5 languages (according to GitHub) + Go split
-by inward facing (Census) and outward facing (BuiltWith) data source. Panel A and Panel B show the supply side
-and demand side values for the Census and Panels C and D the supply and demand side values for BuiltWith.
+Панель A. Сторона постачання
+![Панель A. Сторона постачання](/oss/the-value-of-oss-007.png)
+Панель B. Сторона попиту
+![Панель B. Сторона попиту](/oss/the-value-of-oss-008.png)
 
+_Примітка._ Цифри показують криву Лоренца внеску вартості ринку праці на одного розробника (синім кольором), а також кількість сховищ, у які внесла частка програмістів (жовтим кольором). На панелі A відображається сторона постачання, а на панелі B – використання.
 
-**Figure 3** The value of open source across industries from websites
-
-![The value of open source across industries from websites](/oss/the-value-of-oss-006.png)
-
-_Note._ The figure shows the demand side labor value across NAICS 2-digit code industries using the Built With data.
-For firms (domains) that are associated with multiple industries we took the average value and distributed it across
-industries.
-
-
-**Figure 4** The dispersion of the value creation of open source
-
-
-Panel A. Supply Side
-![Panel A. Supply Side](/oss/the-value-of-oss-007.png)
-Panel B. Demand Side
-![Panel B. Demand Side](/oss/the-value-of-oss-008.png)
-
-_Note._ The figures show the Lorenz curve of the labor market value contribution per developer (in blue) as well as
-the number of repositories that a fraction of programmers contributed to (in yellow). Panel A displays the supply
-side while Panel B incorporates usage.
-
-
-**Table 1** Descriptive statistics on lines of code and usage
+**Таблиця 1** Описова статистика рядків коду та використання
 | | Sum | Mean | SD | Obs |
 | - | --- | ---- | -- | ---- |
-| **Panel A: Census** |
-| Lines of Code – All packages | 261,653,728 | 142,203.1 | 887,937.2 | 1,840 |
-| Lines of Code – Top 5 Languages and Go | 189,673,184|  113,712.9|  702,832.1|  1,668| 
-| Usage – All packages | 2,709,155|  1472.4| 2,167.9|  1,840| 
-| Usage – Top 5 Languages and Go | 2,497,785|  1497.5|  2,228.8|  1,668| 
-| **Panel B: BuiltWith** | 
-| Lines of Code – All packages | 82,504,613|  111,342.3|  613,488.1| 741| 
-| Lines of Code – Top 5 Languages and Go | 58,664,935|  79,925.0|  354,415.0|   734| 
-| Usage – All packages | 142,794.4|  192.7|  733.4| 741| 
-| Usage – Top 5 Languages and Go | 142,751.2|  194.5|  736.6| 734| 
+| **Панель А: Перепис** |
+| Рядки коду – усі пакети | 261,653,728 | 142,203.1 | 887,937.2 | 1,840 |
+| Рядки коду – 5 найкращих мов і Go | 189,673,184|  113,712.9|  702,832.1|  1,668| 
+| Використання – Усі пакети | 2,709,155|  1472.4| 2,167.9|  1,840| 
+| Використання – 5 найкращих мов і Go | 2,497,785|  1497.5|  2,228.8|  1,668| 
+| **Панель B: BuiltWith** | 
+| Рядки коду – усі пакети | 82,504,613|  111,342.3|  613,488.1| 741| 
+| Рядки коду – 5 найкращих мов і Go | 58,664,935|  79,925.0|  354,415.0|   734| 
+| Використання – Усі пакети | 142,794.4|  192.7|  733.4| 741| 
+| Використання – 5 найкращих мов і Go | 142,751.2|  194.5|  736.6| 734| 
 
-_Note_. The statistics are based on the lines of codes of different repositories. Panel A (B) portrays the aggregate sum,
-mean, standard deviation and number of observations for the Census (BuiltWith) data across lines of code and usage
-using all packages from bucket 1 (see Table A1).
+_Примітка_. Статистика базується на рядках кодів різних репозиторіїв. Панель A (B) відображає загальну суму, середнє значення, стандартне відхилення та кількість спостережень для даних перепису (BuiltWith) у рядках коду та використання з використанням усіх пакетів із групи 1 (див. таблицю A1).
 
-**Table 2** The labor-market value of open source
-| | Labor Supply|  Labor Demand| 
+**Таблиця 2** Вартість відкритого коду на ринку праці
+| | Пропозиція робочої сили|  Попит на робочу силу| 
 | -| -|  -| 
-| Wage: Low | $1.22 Billion | $2.59 Trillion| 
-| Wage: Global | $4.15 Billion | $8.80 Trillion| 
-| Wage: High | $6.22 Billion | $13.18 Trillion|
+| Заробітна плата: низька | $1.22 Billion | $2.59 Trillion| 
+| Заробітна плата: глобальна | $4.15 Billion | $8.80 Trillion| 
+| Заробітна плата: висока | $6.22 Billion | $13.18 Trillion|
 
-_Note_. The high wage scenario is based on the US average wage and the low wage scenario is the Indian average wage
-for programmers in 2020. The global wage is an average wage from the countries in Table A 4 , weighted according to
-their contributions to OSS. These estimates include only languages from software classified in bucket 1 (see Table
-A1).
+_Примітка_. Сценарій високої заробітної плати базується на середній заробітній платі в США, а сценарій низької заробітної плати – це середня заробітна плата програмістів в Індії у 2020 році. Загальна заробітна плата – це середня заробітна плата в країнах у таблиці A4, зважена відповідно до їхніх внесків у OSS. Ці оцінки включають лише мови з програмного забезпечення, класифікованого у сегменті 1 (див. таблицю A1).
 
+#### Онлайн-додаток
 
-#### Online Appendix
-
-
-**Table A1** Languages within each bucket
-| Type | Language| 
+**Таблиця A1** Мови в кожному сегменті
+| Тип | Мова| 
 | - | -| 
-| **Panel A: Bucket 1 - Languages** | 
-| Mark-Up Language | BIBTEX
-| Mark-Up Language | COLDFUSION HTML
-| Mark-Up Language | DOCBOOK XML
-| Mark-Up Language | HAML
-| Mark-Up Language | HTML
-| Mark-Up Language | HXML
-| Mark-Up Language | JAVAEE XML
-| Mark-Up Language | MARKDOWN
-| Mark-Up Language | MASON
-| Mark-Up Language | MXML
-| Mark-Up Language | RELAX-NG COMPACT
-| Mark-Up Language | RHTML
-| Mark-Up Language | TEX
-| Mark-Up Language | XML
-| Mark-Up Language | XQUERY
-| Mark-Up Language | YAML
-| Programming Language | ABNF
-| Programming Language | ACTIONSCRIPT
-| Programming Language | ADA
-| Programming Language | APPLESCRIPT
-| Programming Language | ARDUINO
-| Programming Language | ASPECTJ
-| Programming Language | ASPX-CS
-| Programming Language | ASPX-VB
-| Programming Language | AWK
-| Programming Language | C
-| Programming Language | C#
-| Programming Language | CHARMCI
-| Programming Language | CLOJURE
-| Programming Language | COFFEESCRIPT
-| Programming Language | COMMON LISP
-| Programming Language | CSS
-| Programming Language | CUDA
-| Programming Language | CYTHON
-| Programming Language | D
-| Programming Language | DART
-| Programming Language | DELPHI
-| Programming Language | EASYTRIEVE
-| Programming Language | EC
-| Programming Language | ELIXIR
-| Programming Language | ELM
-| Programming Language | EMACSLISP
-| Programming Language | ERLANG
-| Programming Language | F#
-| Programming Language | FISH
-| Programming Language | FORTH
-| Programming Language | FORTRAN
-| Programming Language | FORTRANFIXED
-| Programming Language | GAP
-| Programming Language | GHERKIN
-| Programming Language | GLSL
-| Programming Language | GO
-| Programming Language | GRAPHVIZ
-| Programming Language | GROOVY
-| Programming Language | HASKELL
-| Programming Language | HAXE
-| Programming Language | IDL
-| Programming Language | JAVA
-| Programming Language | JAVA SERVER PAGE
-| Programming Language | JAVASCRIPT
-| Programming Language | KOTLIN
-| Programming Language | LESSCSS
-| Programming Language | LIQUID
-| Programming Language | LIVESCRIPT
-| Programming Language | LLVM
-| Programming Language | LOGOS
-| Programming Language | LUA
-| Programming Language | MATHEMATICA
-| Programming Language | MINISCRIPT
-| Programming Language | MODULA- 2
-| Programming Language | NASM
-| Programming Language | NIX
-| Programming Language | OBJECTIVE-C
-| Programming Language | OBJECTIVE-J
-| Programming Language | OCAML
-| Programming Language | OPENEDGE ABL
-| Programming Language | PAWN
-| Programming Language | PERL
-| Programming Language | PHP
-| Programming Language | PL/PGSQL
-| Programming Language | POSTSCRIPT
-| Programming Language | POVRAY
-| Programming Language | PROLOG
-| Programming Language | PROPERTIES
-| Programming Language | PUPPET
-| Programming Language | PYTHON
-| Programming Language | REASONML
-| Programming Language | REBOL
-| Programming Language | REDCODE
-| Programming Language | REXX
-| Programming Language | RUBY
-| Programming Language | RUST
-| Programming Language | S
-| Programming Language | SASS
-| Programming Language | SCALA
-| Programming Language | SCILAB
-| Programming Language | SCSS
-| Programming Language | SLIM
-| Programming Language | SMALLTALK
-| Programming Language | SOLIDITY
-| Programming Language | STANDARD ML
-| Programming Language | SWIFT
-| Programming Language | SWIG
-| Programming Language | TADS 3
-| Programming Language | TCL
-| Programming Language | THRIFT
-| Programming Language | TRANSACT-SQL
-| Programming Language | TREETOP
-| Programming Language | TYPESCRIPT
-| Programming Language | VB.NET
-| Programming Language | VBSCRIPT
-| Programming Language | VCL
-| Programming Language | VIML
-| Programming Language | WEB IDL
-| **Panel B: Bucket 2 – Auxiliary Languages** |
-| Assembler/Compiler/Interpreter/Macro Processors | GAS
-| Assembler/Compiler/Interpreter/Macro Processors | M4
-| Assembler/Compiler/Interpreter/Macro Processors | RAGEL IN RUBY HOST
-| Configuration |  CMAKE
-| Configuration |  INI
-| Configuration |  MAKEFILE
-| Configuration |  NGINX Configuration FILE
-| Configuration |  NSIS
-| Configuration |  SQUIDCONF
-| Configuration |  TERRAFORM
-| Configuration |  TOML
-| Formatting |  GROFF
+| **Панель A: сегмент 1 – мови** | 
+| Мова розмітки | BIBTEX
+| Мова розмітки | COLDFUSION HTML
+| Мова розмітки | DOCBOOK XML
+| Мова розмітки | HAML
+| Мова розмітки | HTML
+| Мова розмітки | HXML
+| Мова розмітки | JAVAEE XML
+| Мова розмітки | MARKDOWN
+| Мова розмітки | MASON
+| Мова розмітки | MXML
+| Мова розмітки | RELAX-NG COMPACT
+| Мова розмітки | RHTML
+| Мова розмітки | TEX
+| Мова розмітки | XML
+| Мова розмітки | XQUERY
+| Мова розмітки | YAML
+| Мова програмування | ABNF
+| Мова програмування | ACTIONSCRIPT
+| Мова програмування | ADA
+| Мова програмування | APPLESCRIPT
+| Мова програмування | ARDUINO
+| Мова програмування | ASPECTJ
+| Мова програмування | ASPX-CS
+| Мова програмування | ASPX-VB
+| Мова програмування | AWK
+| Мова програмування | C
+| Мова програмування | C#
+| Мова програмування | CHARMCI
+| Мова програмування | CLOJURE
+| Мова програмування | COFFEESCRIPT
+| Мова програмування | COMMON LISP
+| Мова програмування | CSS
+| Мова програмування | CUDA
+| Мова програмування | CYTHON
+| Мова програмування | D
+| Мова програмування | DART
+| Мова програмування | DELPHI
+| Мова програмування | EASYTRIEVE
+| Мова програмування | EC
+| Мова програмування | ELIXIR
+| Мова програмування | ELM
+| Мова програмування | EMACSLISP
+| Мова програмування | ERLANG
+| Мова програмування | F#
+| Мова програмування | FISH
+| Мова програмування | FORTH
+| Мова програмування | FORTRAN
+| Мова програмування | FORTRANFIXED
+| Мова програмування | GAP
+| Мова програмування | GHERKIN
+| Мова програмування | GLSL
+| Мова програмування | GO
+| Мова програмування | GRAPHVIZ
+| Мова програмування | GROOVY
+| Мова програмування | HASKELL
+| Мова програмування | HAXE
+| Мова програмування | IDL
+| Мова програмування | JAVA
+| Мова програмування | JAVA SERVER PAGE
+| Мова програмування | JAVASCRIPT
+| Мова програмування | KOTLIN
+| Мова програмування | LESSCSS
+| Мова програмування | LIQUID
+| Мова програмування | LIVESCRIPT
+| Мова програмування | LLVM
+| Мова програмування | LOGOS
+| Мова програмування | LUA
+| Мова програмування | MATHEMATICA
+| Мова програмування | MINISCRIPT
+| Мова програмування | MODULA- 2
+| Мова програмування | NASM
+| Мова програмування | NIX
+| Мова програмування | OBJECTIVE-C
+| Мова програмування | OBJECTIVE-J
+| Мова програмування | OCAML
+| Мова програмування | OPENEDGE ABL
+| Мова програмування | PAWN
+| Мова програмування | PERL
+| Мова програмування | PHP
+| Мова програмування | PL/PGSQL
+| Мова програмування | POSTSCRIPT
+| Мова програмування | POVRAY
+| Мова програмування | PROLOG
+| Мова програмування | PROPERTIES
+| Мова програмування | PUPPET
+| Мова програмування | PYTHON
+| Мова програмування | REASONML
+| Мова програмування | REBOL
+| Мова програмування | REDCODE
+| Мова програмування | REXX
+| Мова програмування | RUBY
+| Мова програмування | RUST
+| Мова програмування | S
+| Мова програмування | SASS
+| Мова програмування | SCALA
+| Мова програмування | SCILAB
+| Мова програмування | SCSS
+| Мова програмування | SLIM
+| Мова програмування | SMALLTALK
+| Мова програмування | SOLIDITY
+| Мова програмування | STANDARD ML
+| Мова програмування | SWIFT
+| Мова програмування | SWIG
+| Мова програмування | TADS 3
+| Мова програмування | TCL
+| Мова програмування | THRIFT
+| Мова програмування | TRANSACT-SQL
+| Мова програмування | TREETOP
+| Мова програмування | TYPESCRIPT
+| Мова програмування | VB.NET
+| Мова програмування | VBSCRIPT
+| Мова програмування | VCL
+| Мова програмування | VIML
+| Мова програмування | WEB IDL
+| **Панель B: Відро 2 – Допоміжні мови** |
+| Асемблер/Компілятор/Інтерпретатор/Макропроцесори | GAS
+| Асемблер/Компілятор/Інтерпретатор/Макропроцесори | M4
+| Асемблер/Компілятор/Інтерпретатор/Макропроцесори | RAGEL IN RUBY HOST
+| Конфігурація |  CMAKE
+| Конфігурація |  INI
+| Конфігурація |  MAKEFILE
+| Конфігурація |  NGINX Configuration FILE
+| Конфігурація |  NSIS
+| Конфігурація |  SQUIDCONF
+| Конфігурація |  TERRAFORM
+| Конфігурація |  TOML
+| Форматування |  GROFF
 | IDE | NETBEANS PROJECT |
-| Template Engine |  CHEETAH
-| Template Engine |  GENSHI
-| Template Engine |  PUG
-| Template Engine |  SMARTY
-| Template Engine |  VELOCITY
+| Механізм шаблонів |  CHEETAH
+| Механізм шаблонів |  GENSHI
+| Механізм шаблонів |  PUG
+| Механізм шаблонів |  SMARTY
+| Механізм шаблонів |  VELOCITY
 | Terminal/Batch |  ANT
 | Terminal/Batch |  APACHECONF
 | Terminal/Batch |  BASH
@@ -1003,21 +452,21 @@ A1).
 | Terminal/Batch |  RPMSPEC
 | Terminal/Batch |  SINGULARITY
 | Terminal/Batch |  TCSH
-| Translational | GETTEXT CATALOG
-| **Panel C: Bucket 3 - Data** |
-| Data | BNF
-| Data | DIFF
-| Data | DTD
-| Data | E-MAIL
-| Data | JSON
-| Data | PROTOCOL BUFFER
-| Data | RESTRUCTUREDTEXT
-| Data | TEXT ONLY
-| Data | XSLT
+| Перекладний | GETTEXT CATALOG
+| **Панель C: сегмент 3 – дані** |
+| Дані | BNF
+| Дані | DIFF
+| Дані | DTD
+| Дані | E-MAIL
+| Дані | JSON
+| Дані | PROTOCOL BUFFER
+| Дані | RESTRUCTUREDTEXT
+| Дані | TEXT ONLY
+| Дані | XSLT
 
 
-**Table A2** Top 30 countries included for the global wage
-| **Country**| 
+**Таблиця A2** Включено 30 найкращих країн із глобальною заробітною платою
+| **Країна**| 
 | -| 
 | United States
 | China
@@ -1050,37 +499,29 @@ A1).
 | Vietnam
 | Austria
 
-_Note_. The top 30 countries are sorted in ascending order by GitHub user shares, and they include 88% of GitHub
-activity from 2020.
+_Примітка_. 30 найкращих країн відсортовані в порядку зростання за часткою користувачів GitHub, і вони включають 88% активності GitHub з 2020 року.
 
+**Таблиця** A3 Цінність ринку праці з відкритим кодом із використанням мов у сегментах 1 і 2
+| | Пропозиція робочої сили|  Попит на робочу силу| 
+| -| -|  -| 
+| Заробітна плата: низька | $1.23 Billion | $2.60 Trillion
+| Заробітна плата: глобальна | $4.18 Billion | $8.84 Trillion
+| Заробітна плата: висока | $6.26 Billion | $13.24 Trillion
 
-**Table** A3 The labor-market value of open source using languages in buckets 1 and 2
-| | Labor Supply|  Labor Demand| 
+_Примітка_. Сценарій високої заробітної плати базується на середній заробітній платі в США, а сценарій низької заробітної плати – це середня заробітна плата програмістів в Індії у 2020 році. Загальна заробітна плата – це середня заробітна плата в країнах, указаних у таблиці A 4. Оцінки включають лише мови з груп 1 і 2 (див. таблицю A1).
+
+**Таблиця A4** Вартість ринку праці з відкритим вихідним кодом із використанням мов у сегментах 1, 2 і 3
+| | Пропозиція робочої сили|  Попит на робочу силу| 
 | -| -| -| 
-| Wage: Low | $1.23 Billion | $2.60 Trillion
-| Wage: Global | $4.18 Billion | $8.84 Trillion
-| Wage: High | $6.26 Billion | $13.24 Trillion
+| Заробітна плата: низька | $1.88 Billion | $3.52 Trillion
+| Заробітна плата: глобальна | $6.41 Billion | $11.96 Trillion
+| Заробітна плата: висока | $9.59 Billion | $17.91 Trillion
 
-_Note_. The high wage scenario is based on the US average wage and the low wage scenario is the Indian average wage
-for programmers in 2020. The global wage is an average wage from the countries in Table A 4. The estimates include
-only languages from buckets 1 and 2 (see Table A1).
+_Примітка_. Сценарій високої заробітної плати базується на середній заробітній платі в США, а сценарій низької заробітної плати – це середня заробітна плата в Індії для програмістів у 2020 році. Загальна заробітна плата – це середня заробітна плата в країнах, указаних у таблиці A 4. Оцінки включають лише мови з груп 1, 2 , і 3 (див. таблицю A1).
 
-**Table A4** The labor-market value of open source using languages in buckets 1, 2, and 3
-| | Labor Supply|  Labor Demand| 
-| -| -| -| 
-| Wage: Low | $1.88 Billion | $3.52 Trillion
-| Wage: Global | $6.41 Billion | $11.96 Trillion
-| Wage: High | $9.59 Billion | $17.91 Trillion
+**Таблиця A 5** Кошик товарів – еквівалентне програмне забезпечення з відкритим кодом і пропрієтарне програмне забезпечення
 
-
-_Note_. The high wage scenario is based on the US average wage and the low wage scenario is the Indian average wage
-for programmers in 2020 The global wage is an average wage from the countries in Table A 4. The estimates include
-only languages from buckets 1, 2, and 3 (see Table A1).
-
-
-**Table A 5** Goods Basket – Equivalent Open Source and Proprietary Software
-
-| Open Source Software | Proprietary Software | 
+| Програмне забезпечення з відкритим кодом | Закрите програмне забезпечення |
 | -| -| 
 | Apache Http Server | Windows Server 2008
 | Audacity | Adobe Audition
@@ -1104,59 +545,22 @@ only languages from buckets 1, 2, and 3 (see Table A1).
 | VLC Media Player | CyberLink PowerDVD
 
 
-**Table A6** The goods-market value of open source using languages in buckets 1, 2, and 3
+**Таблиця A6** Товарно-ринкова вартість відкритого коду з використанням мов у сегментах 1, 2 і 3
 
 | | Goods-Demand Bucket 1|  Goods-Demand Bucket 1-2|  Goods Demand, Bucket 1-3| 
 | -| -| -| -| 
-| Wage: Low | $177 Million | $179 Million | $242 Million
-| Wage: Global | $177 Million | $179 Million | $242 Million
-| Wage: High | $177 Million | $179 Million | $242 Million
+| Заробітна плата: низька | $177 Million | $179 Million | $242 Million
+| Заробітна плата: глобальна | $177 Million | $179 Million | $242 Million
+| Заробітна плата: висока | $177 Million | $179 Million | $242 Million
 
-_Note_. The high wage scenario is based on the US average wage and the low wage scenario is the Indian average wage
-for programmers in 2020 The global wage is an average wage from the countries in Table A 4. The estimates include
-only languages from buckets 1, 2, and 3 (see Table A1).
+_Примітка_. Сценарій високої заробітної плати базується на середній заробітній платі в США, а сценарій низької заробітної плати – це середня заробітна плата в Індії для програмістів у 2020 році. Загальна заробітна плата – це середня заробітна плата в країнах, указаних у таблиці A 4. Оцінки включають лише мови з груп 1, 2 , і 3 (див. таблицю A1).
 
 
-**Appendix A) Goods-Market Valuation Approach**
+**Додаток A) Підхід до ринкової оцінки товарів**
 
-As an alternate estimation method, instead of using the labor replacement cost, we use a goods
-replacement value approach. We identify several OSS packages that have similar closed-source,
-pecuniary alternatives and consider the costs if all commercial users of the free OSS had to replace
-that software with a pecuniary alternative (similar to the calculations Greenstein and Nagle (2014)
-and Murciano-Goroff et al. (2021) performed for web servers). We can then use this alternate value
-of _p_ , combined with the _q_ values from above to estimate a goods replacement value of OSS. This
-method builds on suggestions from Nordhaus (2006, p. 146) who says “...the price of market and
-nonmarket goods and services should be imputed on the basis of the comparable market goods and
-services.” We do not expect the estimates from the two methods to be similar. Quite the contrary,
-the value of those two methods varies substantially since the latter goods-market approach assumes
-a fixed price to sell a good multiple times and that fixed price is usually lower than the total value
-estimated from recreating all packages on the labor side. The differential between these estimates
-is essentially the result of a firm stepping in to reproduce the missing OSS packages and then
-selling them for a pecuniary price rather than all firms needing to reproduce those packages from
-scratch themselves.
-With the goods market approach, the thought experiment is still that we live in a world
-where OSS does not exist, but it has to be recreated via one firm that then charges a price for a
-good that is currently free. To value OSS via the goods market approach, we created a basket of
-equivalent substitute proprietary goods that are priced on the open market as a stand-in for an OSS
-product. This methodology is consistent with that used in the prior literature (Greenstein and
-Nagle, 2014; Murciano-Goroff et al., 2021) although both of those studies only used a single good
-rather than a basket since they were focused on only one type of OSS (web servers). Since there is
-no readily available database for proprietary equivalents of OSS, we conduct a search based on
-subjective perception of popularity of OSS and we then search for pecuniary, closed-source
-substitutes for them. The resulting basket of 20 OSS packages with proprietary substitutes is a
-good representation of the diversity of OSS. The software ranges from media and design software
-to statistical analysis programs, to database management and web server software.[^21]
+Як альтернативний метод оцінки замість використання відновної вартості праці ми використовуємо підхід відновної вартості товару. Ми визначаємо кілька пакетів OSS, які мають подібні грошові альтернативи із закритим вихідним кодом, і розглядаємо витрати, якби всім комерційним користувачам безкоштовного OSS довелося замінити це програмне забезпечення на грошову альтернативу (подібно до розрахунків Грінстайна та Нейгла (2014) та Мурчіано-Гороффа та ін. (2021) для веб-серверів). Потім ми можемо використати це альтернативне значення _p_ у поєднанні зі значеннями _q_, наведеними вище, щоб оцінити вартість заміни товару OSS. Цей метод ґрунтується на пропозиціях Нордгауза (2006, стор. 146), який каже, що «...ціна ринкових і неринкових товарів і послуг повинна розраховуватися на основі порівнянних ринкових товарів і послуг». Ми не очікуємо, що оцінки за двома методами будуть подібними. Навпаки, вартість цих двох методів суттєво різниться, оскільки останній товарно-ринковий підхід припускає фіксовану ціну, щоб продати товар кілька разів, і ця фіксована ціна зазвичай нижча за загальну вартість, оцінену на основі відтворення всіх пакетів з боку праці. Різниця між цими оцінками є, по суті, результатом того, що фірма втручається, щоб відтворити відсутні пакети OSS і потім продає їх за грошову ціну, а не всім фірмам, які повинні відтворювати ці пакети з нуля самостійно. З підходом до ринку товарів уявний експеримент все ще полягає в тому, що ми живемо у світі, де OSS не існує, але його потрібно відтворити за допомогою однієї фірми, яка потім стягує ціну за товар, який зараз є безкоштовним. Щоб оцінити OSS за допомогою підходу ринку товарів, ми створили кошик еквівалентних запатентованих товарів-замінників, які оцінюються на відкритому ринку як заміна продукту OSS. Ця методологія узгоджується з тією, що використовувалася в попередній літературі (Greenstein and Nagle, 2014; Murciano-Goroff et al., 2021), хоча в обох цих дослідженнях використовувався лише один товар, а не кошик, оскільки вони були зосереджені лише на одному типі OSS (веб-сервери). Оскільки немає легкодоступної бази даних для власних еквівалентів OSS, ми проводимо пошук на основі суб’єктивного сприйняття популярності OSS, а потім шукаємо грошові, закриті замінники для них. Отриманий кошик із 20 пакетів OSS із запатентованими замінниками є гарним уявленням про різноманітність OSS. Програмне забезпечення варіюється від засобів масової інформації та програмного забезпечення для дизайну до програм статистичного аналізу, керування базами даних і програмного забезпечення веб-сервера.[^21]
 
-Based on our OSS equivalent substitute proprietary goods basket we then obtain prices for
-each proprietary software equivalent and we calculated the COCOMO labor market supply-side
-value for each OSS product in the basket which we use as a proxy – for lack of the code from the
-proprietary software – for the COCOMO labor supply side value of the proprietary software (e.g.,
-the cost it would take to pay a programmer to write that proprietary software from scratch). We
-then calculate the average COCOMO labor supply-side value of the basket, $`V_{S,Basket}`$, and the
-average price for the basket, $`P_{S,Basket}`$.[^22] Since, we know the labor market supply-side value of all
-
-OSS, $`V_{S,Basket}`$, we can setup the following equation and obtain the price of OSS, $`P_S`$ for the goods-
-market for all OSS via a simple scaling transformation:
+На основі нашого еквівалентного кошика пропрієтарних товарів-замінників OSS ми потім отримуємо ціни для кожного еквівалента пропрієтарного програмного забезпечення та розраховуємо вартість пропозиції на ринку праці COCOMO для кожного продукту OSS у кошику, який ми використовуємо як проксі – через відсутність коду з пропрієтарне програмне забезпечення – для цінності пропрієтарного програмного забезпечення COCOMO з боку пропозиції робочої сили (наприклад, вартість, яка знадобиться, щоб заплатити програмісту за написання цього пропрієтарного програмного забезпечення з нуля). Потім ми обчислюємо середню вартість кошика COCOMO на стороні пропозиції робочої сили $`V_{S,Basket}`$ і середню ціну кошика $`P_{S,Basket}`$.[^22] Оскільки , ми знаємо вартість пропозиції на ринку праці для всіх OSS, $`V_{S,Basket}`$, ми можемо налаштувати наступне рівняння та отримати ціну OSS, $`P_S`$ для ринку товарів для всіх OSS за допомогою простого перетворення масштабування:
 
 ```math
 \frac{P_S}{V_{S}^{Labor}}=\frac{P_{S,Basket}}{V_{S,Basket}}
@@ -1164,120 +568,47 @@ market for all OSS via a simple scaling transformation:
 P_S=\frac{V_{S}^{Labor}}{V_{S,Basket}}P_{S,Basket} (4)
 ```
 
-This results in the following goods-market supply-side value:
+Це призводить до наступної вартості пропозиції на ринку товарів:
 
 ```math
 V_{S}^{Goods}=P_S * 1.  (5)
 ```
 
-We can then obtain the equivalent demand-side goods-market values as follows:
+Тоді ми можемо отримати еквівалентні ринкові вартості товарів з боку попиту наступним чином:
 
 ```math
 V_{D}^{Goods} =𝑃_S∗Q. (6)
 ```
 
-From the goods market side, we consider the equivalent price that a firm would charge if
-it produced all existing widely used OSS and then sold it as a product to customers.
+З боку товарного ринку ми розглядаємо еквівалентну ціну, яку фірма стягувала б, якби виробляла всі наявні широко використовувані OSS, а потім продавала їх як продукт клієнтам.
 
-Table A6 , column 3 shows that the value on the demand side ranges between \$177 million
-and \$244 million across the different buckets independent of the country of origin from which
-programmers are hired. Naturally, the goods-market value will be substantially smaller than the
-labor demand value since this imaginary firm will make a profit at a comparatively low price by
-producing the software once and then selling it to many customers. Further, while Greenstein and
-Nagle (2014) as well as Murciano-Goroff et al. (2021) focus on one particular type of software
-only (web servers), we attempt to expand on their approach to many goods. However, the data
-limitations become a stronger constraint in this context which makes it inherently more difficult to estimate the value through this approach while requiring substantially more assumptions.
-Instead of a pure goods-market approach, this requires assistance from the labor-market approach
-in terms of scaling for the estimate, which ultimately leads to a substantial underestimate of the
-value of OSS. Further, the pricing strategy of the proprietary software counterparts is sensitive to
-the market demand. With the goods-market approach extending to multiple goods, the strong
-implicit assumption is that the market demands for our basket software and our sample OSS are
-similar, so they lead to commensurate prices.
+Таблиця A6, стовпець 3, показує, що вартість на стороні попиту коливається від 177 до 244 мільйонів доларів для різних сегментів, незалежно від країни походження, з якої наймають програмістів. Природно, ринкова вартість товару буде значно меншою, ніж вартість попиту на робочу силу, оскільки ця уявна фірма буде отримувати прибуток за порівняно низькою ціною, виробляючи програмне забезпечення один раз, а потім продаючи його багатьом клієнтам. Крім того, у той час як Greenstein and Nagle (2014), а також Murciano-Goroff et al. (2021) зосереджені лише на одному конкретному типі програмного забезпечення (веб-серверах), ми намагаємося розширити їхній підхід до багатьох товарів. Однак обмеження даних стають сильнішими обмеженнями в цьому контексті, що за своєю суттю ускладнює оцінку вартості за допомогою цього підходу, вимагаючи значно більше припущень. Замість чистого підходу ринку товарів, це потребує допомоги підходу ринку праці в плані масштабування для оцінки, що зрештою призводить до суттєвої недооцінки вартості OSS. Крім того, стратегія ціноутворення аналогів пропрієтарного програмного забезпечення чутлива до ринкового попиту. Оскільки підхід ринку товарів поширюється на кілька товарів, сильним неявним припущенням є те, що ринковий попит на наше програмне забезпечення для кошика та наш зразок OSS подібні, тому вони призводять до співмірних цін.
 
-An alternative and even more simplified goods-market back-of-the-envelope calculation
-that does not account for lines of code and relies on no scaling from the labor market approach
-would simply be to multiply a price of a reference good with the usage. We can take the minimum,
-average, and maximum prices of the basket of proprietary goods as captured in the reference price
-vector p = (69.99, 1610.17, 5800 ) and simply multiply it with usage from the combined Census
-and BuiltWith sample (Table 1). Based on those imputed proprietary price assumptions, the goods
-market demand side value would range from $0.2 – $16.5 trillion (minimum price – maximum
-price) with the mean price resulting in a value estimate of \$4.5 trillion. However, while this
-estimate creates slightly more variance than the labor market approach, it is inherently flawed by
-simply assuming that the imputed prices are identical for each open source product based on the
-reference price. We further think this very simple back-of-the-envelope is an orange to apples
-comparison since the goods in our basket are fully functional, stand-alone software packages,
-while the packages in the Census and BuiltWith datasets are comprised of application libraries,
-which are generally smaller than such stand-alone packages.
+Альтернативний і ще більш спрощений розрахунок на задній частині ринку товарів, який не враховує рядки коду та не покладається на масштабування підходу ринку праці, полягав би просто в множенні ціни еталонного товару на використання. Ми можемо взяти мінімальну, середню та максимальну ціни кошика пропрієтарних товарів, зафіксованих у векторі базових цін p = (69,99, 1610,17, 5800), і просто помножити їх на використання комбінованої вибірки Census і BuiltWith (таблиця 1). . Виходячи з цих умовних припущень про власну ціну, вартість попиту на ринку товарів коливатиметься від 0,2 до 16,5 трильйонів доларів США (мінімальна ціна – максимальна ціна), а середня ціна дасть оцінку вартості в 4,5 трильйона доларів. Однак, незважаючи на те, що ця оцінка створює дещо більше розбіжностей, ніж підхід до ринку праці, вона за своєю суттю є хибною, оскільки просто припускає, що умовні ціни є ідентичними для кожного продукту з відкритим кодом на основі базової ціни. Крім того, ми вважаємо, що цей дуже простий зворотний бік конверта є порівнянням апельсина з яблуками, оскільки товари в нашому кошику є повністю функціональними, автономними пакетами програмного забезпечення, тоді як пакети в наборах даних Census і BuiltWith складаються з бібліотек програм, які зазвичай менші, ніж такі окремі пакети.
 
-Given all the complexities and assumptions one has to make due to lack of data for a goods-
-market approach, we place stronger emphasis on the labor cost approach highlighted in the main
-body but we include this method here for completeness.
+Враховуючи всі складнощі та припущення, які доводиться робити через брак даних для підходу товарного ринку, ми робимо більший акцент на підході вартості робочої сили, виділеному в основній частині, але ми включаємо цей метод тут для повноти.
 
 
 
-
-[^1]: The precise methodologies for the data collection and aggregation are detailed in the Census report by Nagle et al (2022). 
-[^2]: OSS usage licenses vary a great deal and while some licenses are very open and allow the code to be reused in any
-manner, including within proprietary code that will be made available for sale at a non-zero price, other licenses
-restrict reuse to only be allowed if the resultant code is released under the same OSS license (known as copyleft). A
-detailed discussion of OSS licenses can be found in Lerner and Tirole (2005) and Almeida et al (2017). 
-[^3]: Indirect OSS usage is captured by dependency analysis and is necessary to accurately measure the full breadth of the
-OSS a firm relies on. For example, if a firm’s proprietary code calls OSS package A, but package A, in turn, calls
-package B, then only looking at the direct calls would miss that package B was a required building block for the firm’s
-proprietary code. 
-[^4]: The Census defines an OSS package as “a unit of software that can be installed and managed by a package manager,”
-and defines a package manager as “software that automates the process of installing and otherwise managing
-packages” (Nagle et al, 2022).
-[^5]: The packages that made up the remaining 30% of the full Census data in the long-tail usage distribution were not
-shared in the final report and therefore cannot be included in our analysis. 
-[^6]: GitHub is a hosting and collaboration platform that contributors can use to coordinate the development and
-distribution of OSS projects. Founded in 2008, GitHub has become the largest hub for OSS development in the world.
-In January 2023, GitHub had more than 370 million repositories and over 100 million developers. In addition to
-personal users, a wide range of private firms actively use the GitHub platform, including Microsoft (which bought
-GitHub in 2018), Facebook, Google, and numerous other small and large firms.
-[^7]: We attempted to access all repository URLs obtained as a sanity check to ensure they are in working condition. For
-those we could not access on GitHub, we manually found the correct URLs. 
-[^8]: As a robustness check, we randomly selected 50 package-repository matches derived from the Google Search method
-and we checked them by hand. All matches were manually confirmed to be correct providing additional support for
-the automated matching method.
-[^9]: Since the package and package manager names are missing, a precise match using libraries.io was not feasible.
-Technology names are product names intended for customers and can be less technical and precise than the package
-names for internal development purposes. Thus, using technology names in a libraries.io search could cause significant
-ambiguity.
-[^10]: The match rate is over 96%, with the unmatched repositories accounting for only 0.15% of our calculated OSS
-demand value discussed below. 
-[^11]: The filtering is based on the “fake user” classification by GHTorrent, as well as any usernames containing words
-“bot” or “robot”, surrounded by special characters. This method is more conservative than other methods of bot
-detection like that used in the GitHub Innovation Graph (https://innovationgraph.github.com/), which rely on a
-monthly commit frequency threshold. 
-[^12]: https://pypi.org/project/pygount/ and https://github.com/github-linguist/linguist
-[^13]: Note that our focus is the cost to recreate OSS code written by humans, not robots. However, directly removing all
-OSS contributions from robot accounts is infeasible here, because we cannot observe the exact lines of code written
-by the robot accounts on GitHub.
-[^14]: In an alternative version, we use a mixture of a labor and goods market approach that is more closely aligned with
-Greenstein and Nagle (2014) and Murciano-Goroff, et al (2021). However, applying this method in our setting requires
-numerous additional assumptions due to data constraints. For simplicity we call it the goods market approach for
-which we provide the details and statistics, as well as the limitations in Appendix A.
-[^15]: We use only the pure lines of code excluding documentation lines and empty lines. Hence, we underestimate the
-true value of recreating each package. 
-[^16]: Similar to a representative agent model (e.g. see Williamson 2006), one may think of each package being reproduced
-by separate programmers who are identical replicas of each other (and therefore have the same skill level, but do not
-become more efficient via learning).
-[^17]: There are 179 counties in Wachs et al. (2022), but the top 30 countries consist of over 88% of the global active
-contributors with each of the rest having less than 0.6% share. The top 30 countries are listed in Table A 2.
-[^18]: We choose the high- and low-wage reference countries based on a combination of the number of active GitHub
-developers and the average annual software developer base wage.
-[^19]: Tables in the appendix show the equivalent values from Table 2 when including software language buckets 1 and 2
-(Table A3 ) and all three software language buckets (Table A4 ).
-[^20]: Due to the Census containing proprietary customer information, it did not reveal industries across the whole dataset
-and as such we can only show the value across industries using the outward-facing data from BuiltWith. We match
-BuiltWith websites to industry information from the Orbis and Compustat datasets. 94.6% of BuiltWith websites are
-matched with an industry through this process. For firms (domains) that are associated with multiple industries we
-took the average value and distributed it across industries.
-[^21]: Table A5 shows the basket of OSS and their proprietary equivalents that we used. To create this basket, we looked
-for proprietary software that had an OSS equivalent that was similar in its overall function and feature set, and sought
-to identify pairs of software that, in aggregate, captured a broad and representative set of the types of OSS that exist.
-[^22]: We obtained the average price of the goods-market proprietary basket by using a 3 years lifespan of software, i.e.
-1/(1-0.66), so the depreciation factor is 0.33. This is consistent with the United States Internal Revenue Service (IRS)
-rules for depreciating software, which states “If you can depreciate the cost of computer software, use the straight line
-method over a useful life of 36 months.” https://www.irs.gov/publications/p946#en_US_2022_publink1000107354.
+[^1]: точні методології збору та агрегування даних детально описано у звіті про перепис населення, автором якого є Нейгл та інші (2022).
+[^2]: Ліцензії на використання OSS дуже відрізняються, і хоча деякі ліцензії є дуже відкритими та дозволяють використовувати код у будь-який спосіб, зокрема в межах власного коду, який буде доступний для продажу за ненульовою ціною, інші ліцензії обмежити повторне використання, лише якщо отриманий код випущено під тією ж ліцензією OSS (відома як копілефт). Детальне обговорення ліцензій OSS можна знайти в Лернера та Тіроля (2005) та Алмейди та інших (2017).
+[^3]: непряме використання OSS фіксується аналізом залежностей і є необхідним для точного вимірювання повного спектру OSS, на який покладається фірма. Наприклад, якщо власний код фірми викликає OSS-пакет A, а пакет A, у свою чергу, викликає пакет B, тоді лише дивлячись на прямі виклики, ви пропустите, що пакет B був необхідним будівельним блоком для власного коду фірми.
+[^4]: Перепис визначає пакет OSS як «одиницю програмного забезпечення, яке може бути встановлено та кероване менеджером пакунків», а менеджер пакунків — як «програмне забезпечення, яке автоматизує процес інсталяції та іншого керування пакетами» (Nagle та інші, 2022).
+[^5]: Пакети, які становлять решту 30% повних даних перепису в розподілі використання з довгим хвостом, не були представлені в остаточному звіті, тому їх не можна включити в наш аналіз.
+[^6]: GitHub — це платформа для хостингу та співпраці, яку учасники можуть використовувати для координації розробки та розповсюдження проектів OSS. GitHub, заснований у 2008 році, став найбільшим у світі центром розробки OSS. У січні 2023 року GitHub мав понад 370 мільйонів сховищ і понад 100 мільйонів розробників. Окрім особистих користувачів, платформу GitHub активно використовує широкий спектр приватних компаній, у тому числі Microsoft (яка купила GitHub у 2018 році), Facebook, Google та численні інші малі та великі фірми.
+[^7]: Ми спробували отримати доступ до всіх URL-адрес сховища, отриманих під час перевірки працездатності, щоб переконатися, що вони в робочому стані. Для тих, до яких ми не змогли отримати доступ на GitHub, ми вручну знайшли правильні URL-адреси.
+[^8]: для перевірки надійності ми випадковим чином вибрали 50 збігів пакетів із сховищем, отриманих за допомогою методу пошуку Google, і перевірили їх вручну. Усі збіги було вручну підтверджено правильними, що забезпечує додаткову підтримку для автоматичного методу зіставлення.
+[^9]: Оскільки назви пакета та менеджера пакунків відсутні, точна відповідність за допомогою libraries.io була неможливою. Назви технологій – це назви продуктів, призначені для клієнтів, і можуть бути менш технічними та точними, ніж назви пакетів для цілей внутрішньої розробки. Таким чином, використання назв технологій у пошуку libraries.io може спричинити значну неоднозначність.
+[^10]: Коефіцієнт відповідності становить понад 96%, причому невідповідні сховища складають лише 0,15% від нашого розрахованого значення попиту на OSS, яке обговорюється нижче.
+[^11]: фільтрація базується на класифікації «підроблених користувачів» від GHTorrent, а також на будь-яких іменах користувачів, які містять слова «бот» або «робот», оточені спеціальними символами. Цей метод є більш консервативним, ніж інші методи виявлення ботів, як той, що використовується в GitHub Innovation Graph (https://innovationgraph.github.com/), який покладається на порогове значення частоти місячних комітів.
+[^12]: https://pypi.org/project/pygount/ і https://github.com/github-linguist/linguist
+[^13]: Зауважте, що ми зосереджені на вартості відтворення коду OSS, написаного людьми, а не роботами. Однак напряму видалити всі внески OSS з облікових записів роботів тут неможливо, оскільки ми не можемо побачити точні рядки коду, написані обліковими записами роботів на GitHub.
+[^14]: В альтернативній версії ми використовуємо поєднання підходу до ринку праці та товарів, який більше узгоджується з Greenstein and Nagle (2014) та Murciano-Goroff та ін. (2021). Однак застосування цього методу в наших умовах вимагає багатьох додаткових припущень через обмеження даних. Для простоти ми називаємо це підходом ринку товарів, для якого ми надаємо деталі та статистику, а також обмеження в Додатку A.
+[^15]: ми використовуємо лише чисті рядки коду, за винятком рядків документації та порожніх рядків. Отже, ми недооцінюємо справжню цінність відтворення кожного пакета.
+[^16]: Подібно до репрезентативної моделі агента (наприклад, див. Williamson 2006), можна подумати, що кожен пакет відтворюється окремими програмістами, які є ідентичними копіями один одного (і, отже, мають однаковий рівень кваліфікації, але не стають вищими ефективний через навчання).
+[^17]: у Wachs et al. є 179 округів. (2022), але 30 найбільших країн складаються з понад 88% глобальних активних учасників, а кожна з решти має менше 0,6% частки. 30 найкращих країн наведено в таблиці A 2.
+[^18]: ми обираємо референтні країни з високою та низькою заробітною платою на основі комбінації кількості активних розробників GitHub і середньорічної базової заробітної плати розробника програмного забезпечення.
+[^19]: таблиці в додатку показують еквівалентні значення з таблиці 2, якщо включити сегменти мови програмного забезпечення 1 і 2 (таблиця A3) і всі три сегменти мови програмного забезпечення (таблиця A4).
+[^20]: оскільки перепис містив конфіденційну інформацію про клієнтів, він не виявив галузей у всьому наборі даних, тому ми можемо показати значення для галузей лише за допомогою зовнішніх даних із BuiltWith. Ми зіставляємо веб-сайти BuiltWith з галузевою інформацією з наборів даних Orbis і Compustat. 94,6% веб-сайтів BuiltWith узгоджуються з галуззю завдяки цьому процесу. Для компаній (доменів), які пов’язані з кількома галузями, ми взяли середнє значення та розподілили його між галузями.
+[^21]: Таблиця A5 показує кошик OSS та їх власних еквівалентів, які ми використовували. Щоб створити цей кошик, ми шукали пропрієтарне програмне забезпечення, яке мало еквівалент OSS, подібний за загальною функцією та набором функцій, і намагалися визначити пари програмного забезпечення, які в сукупності охоплювали широкий і репрезентативний набір типів OSS, які існують.
+[^22]: ми отримали середню ціну власного кошика товарного ринку, використовуючи 3 роки життя програмного забезпечення, тобто 1/(1-0,66), тому коефіцієнт амортизації становить 0,33. Це узгоджується з правилами Служби внутрішніх доходів США (IRS) щодо амортизації програмного забезпечення, де сказано: «Якщо ви можете амортизувати вартість комп’ютерного програмного забезпечення, використовуйте прямолінійний метод протягом терміну корисного використання 36 місяців». https://www.irs.gov/publications/p946#en_US_2022_publink1000107354.
