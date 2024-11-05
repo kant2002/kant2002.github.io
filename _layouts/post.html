@@ -5,7 +5,9 @@ layout: default
 <script>
   MathJax = {
     tex: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+      inlineMath: [ ['$','$'], ['\\(', '\\)'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
     },
     svg: {
       fontCache: 'global'
