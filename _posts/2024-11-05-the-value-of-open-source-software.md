@@ -6,6 +6,8 @@ categories: uk open-source
 comments: true
 ---
 
+Це переклад статті від Гарвадської школи бізнеса. Орігінал [тут](https://www.hbs.edu/ris/Publication%20Files/24-038_51f8444f-502c-4139-8bf2-56eb4b65c58a.pdf)
+
 ### Manuel Hoffmann
 
 Harvard Business School
