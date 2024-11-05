@@ -1,7 +1,19 @@
 ---
 layout: default
 ---
+{% if page.use_math %}
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+{% endif %}
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
