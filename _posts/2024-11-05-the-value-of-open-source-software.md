@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Вартість програмного забезпечення з відкритим кодом"
-date:   2024-10-24 12:37:44 +0500
+date:   2024-11-05 19:05:44 +0500
 categories: uk open-source
 comments: true
 ---
