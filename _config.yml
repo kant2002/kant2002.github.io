@@ -33,9 +33,10 @@ disqus:
 google_analytics: G-Q9C7QSY9LY
 show_excerpts: true
 excerpt_separator: <!--more-->
+
 markdown: kramdown
 kramdown:
-  math_engine: katex
+  math-engine: katex
 
 # Build settings
 theme: minima
