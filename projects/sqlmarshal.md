@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AOT-дружня бібліотека для доступу до баз даних
-permalink: /projects/openalex/
+permalink: /projects/sqlmarshal/
 ---
 
 # SqlMarshal
