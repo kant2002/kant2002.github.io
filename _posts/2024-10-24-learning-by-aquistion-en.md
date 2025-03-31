@@ -10,6 +10,8 @@ This is translation of [post in Ukrainian]({% link _posts/2024-10-17-learning-by
 
 I just read article about Stephen Krashen’s theory on second language acquisition and it struck me with similarities which I see in the learning how we build software. Maybe that can be said about any skill acquisition, but given that programming languages and natural languages have some similarities I would try to speculate a bit.
 
+<!--more-->
+
 Stehen’s idea is that your learn languages in one way: “When we understand what people say and when we understand what we read”. He distinguish learning and acquiring of the language. Learning is process where person deliberately study grammar rules, phrases and vocabulary and then consciously attempt to apply them as they speak. Acquisition on the other hand is unconsciousness process which naturally happen then person reading and speaking in new language. Acquisition happens when person immerse in the language environment where reading and listening to stories and eventually start to get grammar rules without actively thinking about them. That happens when persons perceive a lot of understandable material when person start intuitively grasp the material. 
 
 I would stop explaining Stephen’s works, and suggest read short introduction and his own books and works to get ideas. From this point I concentrate on the similarities which I think interesting. 

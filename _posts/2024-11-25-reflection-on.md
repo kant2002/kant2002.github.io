@@ -11,6 +11,8 @@ I’m very glad that more articles like [this](https://blog.sigplan.org/2024/11/
 
 Personally as industry worker I suffered a lot from perceived misinterpretation of some usability and easy-of-use metrics for programming languages. Also blanket ignoring that some of my friends and coworkers have problem with understanding of some PL concepts. Also even if I totally agree with message, my perception is that message of article would pass by intended audience and things become “business as usual”. I writing this post, to probably fuel some discussion.
 
+<!--more-->
+
 After writing this I realize that this is more of dump of thoughts, then really reflection on the problems outlined and solutions outlined. I probably comes from educational, or congnitive easieness perspective on the problem. Anyway, let's continue.
 
 ## On usability 

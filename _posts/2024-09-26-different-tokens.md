@@ -10,6 +10,8 @@ comments: true
 
 One guy ask in the chat, "how should I define tokens? should I combine token information with position in file?". That's simple question, and coming from C#, for me answer was obviously yes. But, I was curios how other languages define different tokens.
 
+<!--more-->
+
 So here compilation of links to GitHub, so you can take a look at yourself, how it's done by the industry already.
 You would not find anything surpising. For me that's cool, you can real old book and immidiately know how industry did it. Probably you should read different books, so you will see different approaches.
 

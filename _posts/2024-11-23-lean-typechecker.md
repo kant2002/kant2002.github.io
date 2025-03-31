@@ -13,6 +13,8 @@ use_math: false
 [Certified Programming with Dependent Types](http://adam.chlipala.net/cpdt/) Адама Чіліпала
 і прикладу [із репозіторію Lean4](https://github.com/leanprover/lean4/blob/ba3f2b3ecf8967410f3498e2835b883601f03967/doc/examples/tc.lean).
 
+<!--more-->
+
 Створимо індуктивний тип який описує 4 типа виразів - літерал цілого числа, літерал логічного типа, операція додавання та операція логічного І.
 
 ```lean

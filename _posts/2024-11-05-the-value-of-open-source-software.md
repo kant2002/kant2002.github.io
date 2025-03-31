@@ -20,6 +20,8 @@ use_math: true
 - [5. Висновок](#5-висновок)
 - [Онлайн-додаток](#онлайн-додаток)
 
+<!--more-->
+
 ### Manuel Hoffmann
 
 Harvard Business School

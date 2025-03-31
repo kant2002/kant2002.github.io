@@ -14,6 +14,8 @@ comments: true
 - Sentinel 2
 - Landsat-8
 
+<!--more-->
+
 Sentinel 2 має роздільну здатність ~10 м (для RGB), а Landsat-8 — ~30 м (для RGB).
 
 <!--more-->
