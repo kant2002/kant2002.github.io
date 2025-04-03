@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="631" viewBox="0 0 791 631" width="791" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="patching-ndag-svg">
+<rect fill="white" height="631" transform="translate(0.298737)" width="790"/>
+<rect fill="url(#pattern0_2450_5245)" height="495" id="image" width="712.783" x="72.2987" y="90"/>
+<text fill="#1A1A1A" font-family="Roboto" font-size="16" id="Activity after perturbation (as fraction of initial value)" letter-spacing="0em" style="white-space: pre" transform="translate(137.299 67)" xml:space="preserve"><tspan x="131.219" y="10.4688">Activity after perturbation (as fraction of initial value)</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="24" font-weight="bold" id="Effect of inhibiting a supernode (â1Ã) on others" letter-spacing="0em" style="white-space: pre" transform="translate(139.299 22)" xml:space="preserve"><tspan x="62.9219" y="13.7031">Effect of inhibiting a supernode (−1×) on others</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="16" id="Inhibited supernodes" letter-spacing="0em" style="white-space: pre" transform="translate(15.2987 572) rotate(-90)" xml:space="preserve"><tspan x="136.883" y="48.4688">Inhibited supernodes</tspan></text>
+<g id="Group 729">
+<text fill="#1A1A1A" font-family="Roboto" font-size="13" id="Connected nodes" letter-spacing="0em" style="white-space: pre" transform="translate(35.6224 101.615)" xml:space="preserve"><tspan x="0" y="15.239">Connected nodes</tspan></text>
+<rect height="16.438" id="Rectangle 540" stroke="#D37423" stroke-width="6" width="21.3621" x="3" y="103.769"/>
+</g>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Selected intervention effects on feature activations for âThe National Digital Analytics Group (Nâ." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0.298737" y="611.443">Figure 00: Selected intervention effects on feature activations for “The National Digital Analytics Group (N”.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2450_5245" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.000595593 0.000857633)" xlink:href="#image0_2450_5245"/>
+</pattern>
+<image data-name="image.png" height="1166" id="image0_2450_5245" preserveAspectRatio="none" width="1679" xlink:href="./png/img_b3fa04b12cb1d260.png"/>
+</defs>
+</svg>

@@ -16,7 +16,6 @@ permalink: /projects/
 - [Аналіз Дії](https://github.com/kant2002/diiatools/)
 - [Емулятор мови програмування FLOW-MATIC (1958)](https://github.com/kant2002/FlowMatic/)
 - [Візуалізація GC - реставрація](https://kant2002.github.io/gc-viz/)
-- [Переклад SmolTutor paper](https://kant2002.github.io/smoltutor/)
 - [Емулятор обчислюванної машини "Київ" (1958)](https://github.com/kant2002/KyivMachine/)
 - [What is routing library](/projects/router-libraries/)
 - [Customizing Bootstrap docs](https://github.com/kant2002/custom-bootstrap)
@@ -33,7 +32,7 @@ permalink: /projects/
 - [Дружня до AOT бібліотека для інверсії залежностей](https://github.com/kant2002/storekeeper)
 - [Приклад інтеграції ASP.NET Core Identity із існуючою базою](https://github.com/kant2002/SimpleIdentity)
 - [C# library for operating Ledman.cn senders](https://github.com/kant2002/Ledman)
-- [Монітор присутності Wifi мережі у радіусіант](https://github.com/kant2002/wifi-monitor)
+- [Монітор присутності Wifi мережі у радіусі](https://github.com/kant2002/wifi-monitor)
 
 # Проекти які я підтримую
 
@@ -43,8 +42,21 @@ permalink: /projects/
 - [Бібліoтека для навчання прoграмуванню](https://github.com/kant2002/FunSharp)
 - [NCrawler](https://github.com/kant2002/ncrawler)
 
+# Переклади
+
+- [Переклад SmolTutor paper](https://kant2002.github.io/smoltutor/)
+- [Рання історія Smalltalk](https://kant2002.github.io/EarlyHistoryOfSmalltalk/)
+- [Крипточуваки](https://kant2002.github.io/cryptopals/)
+
+<!-- 
+- [Чібік](https://kant2002.github.io/compilers/chibicc/)
+- [Компілятор Ліспа своїми руками](https://kant2002.github.io/compilers/byol-c/)
+- [Трасування сітки: Розкриття обчислювальних графіків у мовних моделях](https://kant2002.github.io/transformers-circuit/2025/attribution-graphs/methods.html) 
+-->
+
 # Проекти де я гарно допомогав
 
 - [Кoмпілятoр С для .NET - Цезіум](https://github.com/fornever/cesium)
 - [База даних в пам'яти StereoDB](https://github.com/StereoDB/StereoDB)
 - [Експерімент NativeAOT](https://github.com/dotnet/runtimelab/tree/feature/NativeAOT)
+

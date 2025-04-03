@@ -1,0 +1,358 @@
+
+html {
+    margin: 0px;
+    background: #fff;
+    font-family: system-ui;
+}
+
+body {
+    margin: 10px;
+}
+
+.tooltip {
+    top: -1000px;
+    position: fixed;
+    padding: 5px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid lightgray;
+    pointer-events: none;
+    z-index: 10000;
+    font-size: 10px;
+    line-height: 1.3em;
+}
+
+.feature-examples-tooltip{
+    width: 600px;
+    overflow-x: scroll;
+    overscroll-behavior: contain; /* Prevent scroll chaining */
+
+    height: 300px;
+    opacity: 1;
+    /* background: #F6F6F3; */
+    border: 1px solid #000;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
+    padding-top: 0;
+    border-radius: 5px;
+    
+    @media (max-width: 700px) {
+        width: 100vw;
+        left: 0 !important;
+        right: 0;
+        margin: 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .feature-example-logits{
+        overflow: hidden;
+    }
+
+    
+    .feature-nav{
+        overflow-x: scroll;
+        overflow-y: visible;
+        white-space:nowrap;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        position: sticky;
+        top: 0px;
+        /* margin-top: -10px; */
+        padding-top: 5px;
+        z-index: 10000000;
+        background: #fff;
+        outline: 2px solid #fff;
+        padding-bottom: 15px;
+        padding-left: 1px;
+        margin-left: -1px;
+        
+        .button{
+            display: inline-block;
+            margin: 1px;
+            margin-right: 10px;
+            
+            font-size: 12px;
+            outline: 1px solid #6F6D5E;
+            padding: 1px 4px;
+            cursor: pointer;
+            border-radius: 4px;
+            overflow: visible;
+        }
+        .button:hover{
+            outline: 2px solid #444 !important;
+        }
+        .button.active{
+            outline: 1px solid #6F6D5E;
+            background: #E5E3D7;
+            /* color: #000; */
+        }
+    }
+    
+    .feature-example-logits{
+        position: relative !important;
+    }
+}
+
+.tooltip-hidden {
+    opacity: 0;
+    transition: all .3s;
+    transition-delay: .1s;
+}
+
+
+text{
+    cursor: default;
+    /* text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff; */
+}
+
+svg{
+    overflow: visible;
+    max-width: 100%;
+    height: auto;
+}
+
+.fh-span{
+    outline: 1px solid #6D6A5C;
+    padding: 2px 4px;
+    transition: all .3s .1s;
+    cursor: default;
+    white-space: nowrap;
+    background: #E5E3D7;
+    border-radius: 3px;
+    margin-right: 2px;
+    margin-left: 2px;
+
+    &.feature-examples-tooltipped{
+        outline: 2px solid #444;
+        transition: all 0s 0s;
+    }
+}
+
+
+.sn-figma-div{
+    rect{
+        transition: all .3s .1s;
+    }
+    
+    .feature-examples-tooltipped{
+        rect{
+            stroke: #444;
+            stroke-width: 2.2px;
+            transition: all 0s 0s;
+        }
+    }
+}
+
+
+.gray-box{
+    font-family: monospace;
+    padding: 10px;
+    white-space: pre;
+    margin: 10px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.cg-div{
+    background: #FAFAFA;
+    height: 800px;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+    padding: 40px 10px;
+    margin: 60px -10px;
+    width: calc(100% + 20px);
+    grid-column: 1 / -1;
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+    > .gridsnap{
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+    
+    .feature-example-logits{
+        background: #FAFAFA !important;
+        outline-color: #FAFAFA !important;
+    }
+}
+
+
+
+d-article{
+    overflow: visible;
+}
+
+
+.vis-link{
+    margin: 0px auto;
+    font-size: 12px;
+    margin-top: -15px;
+    margin-bottom: 1em;
+}
+
+.full_graph_link{
+    cursor: pointer;
+    text{
+        cursor: pointer;
+    }
+
+    rect{
+        transition: all 200ms;
+    }
+
+    &:hover rect{
+        fill-opacity: 0.2;
+    }
+}
+
+modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    
+    /* not working, using js */
+    overscroll-behavior: contain; 
+
+    &.is-active{
+        display: block;
+        overflow-y: hidden; /* Add this */
+
+    }
+
+    .modal-bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .5);
+        cursor: pointer;
+    }
+
+    .modal-content{
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        background: white;
+        border-radius: 3px;
+        
+        display: flex;
+        flex-direction: column;
+        
+        .cg-container {
+          flex: 1;
+          min-height: 0; 
+        }
+        
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    .modal-hide{
+        position: absolute;
+        right: 50px;
+        top: 40px;
+        cursor: pointer;
+        color: #999;
+        font-size: 20px;
+        /* padding: 5px 10px; */
+        font-weight: 200;
+        /* text-align: center; */
+        line-height: 1;
+
+        &:hover, .modal-bg:hover ~ &{
+            color: #000;
+            font-weight: 500;
+        }
+    }
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+.graph-prompt-select {
+    max-width: 40%;
+    max-height: 4.8em;
+    white-space: normal;
+    display: flex;
+    align-items: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 8px;
+    padding-right: 25px;
+    border-radius: 5px;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' stroke-width='.5px' fill='none' %3E%3Cpath stroke='%23000' d='M8 10l2 2 2-2'/%3E%3C/svg%3E");
+    background-position: right 0px center;
+    background-repeat: no-repeat;
+    background-size: 40px; 
+
+    /* Removes the dropdown arrow */
+    appearance: none;
+
+    option {
+        display: -webkit-box;
+        -webkit-line-clamp: 3; 
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+
+.modal-content .graph-prompt-select{
+    margin: 5px;
+}
+
+
+.section-title, .quantile-title{
+    font-weight: 500 !important;
+    font-size: 13px;
+    margin-bottom: 5px;
+    font-family: system-ui;
+    color: #000;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #eee;
+    display: block;
+    line-height: 14px;
+}
+
+.quantile-title{
+    margin-bottom: 0px !important;
+}
+
+
+.sticky-toc {
+    position: fixed;
+    top: 3px;
+    left: 3px;
+    z-index: 100;
+    
+    @media (max-width: 900px) {
+        top: -3px !important;
+        left: -1px;
+    }
+
+    select {
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        transition: opacity .3s;
+        pointer-events: none;
+
+        &.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}

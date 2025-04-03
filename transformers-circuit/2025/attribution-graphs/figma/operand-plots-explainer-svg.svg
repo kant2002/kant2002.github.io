@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="765" viewBox="0 0 704 765" width="704" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_1334_3748)" id="operand-plots-explainer-svg">
+<rect fill="white" height="765" width="704"/>
+<text fill="#1A1A1A" font-family="Roboto" font-size="25" font-weight="bold" id="Addition Features" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="21.0449">Addition Features</tspan></text>
+<g id="Group 597">
+<rect fill="#F6F6F3" height="88" id="Rectangle 130" rx="1.5" stroke="#B8B6AD" width="335.057" x="369.5" y="1.5"/>
+<g id="Tokens" style="mix-blend-mode:darken">
+<g id="Frame 90">
+<rect fill="#F6F6F3" height="89" transform="translate(369 1)" width="85.4383"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="18" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="384.693" y="52.4917">calc:</tspan></text>
+</g>
+</g>
+<g id="Tokens_2" style="mix-blend-mode:darken">
+<rect fill="#706D5C" height="2" id="Rectangle 19" width="61.9428" x="455.15" y="1"/>
+<g id="Frame 90_2">
+<rect fill="#E6E3D6" height="87" transform="translate(455.15 3)" width="61.9428"/>
+<text fill="black" font-family="Roboto Mono" font-size="20" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="480.116" y="53.2686">a</tspan></text>
+</g>
+</g>
+<g id="Tokens_3" style="mix-blend-mode:darken">
+<g id="Frame 90_3">
+<rect fill="#F6F6F3" height="89" transform="translate(517.805 1)" width="61.9428"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="18" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="543.371" y="52.4917">+</tspan></text>
+</g>
+</g>
+<g id="Tokens_4" style="mix-blend-mode:darken">
+<g id="Frame 90_4">
+<rect fill="#F6F6F3" height="89" transform="translate(580.46 1)" width="61.9428"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="18" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="606.026" y="52.4917">b</tspan></text>
+</g>
+</g>
+<g id="Tokens_5" style="mix-blend-mode:darken">
+<rect fill="#706D5C" height="2" id="Rectangle 19_2" width="61.9428" x="643.115" y="1"/>
+<g id="Frame 90_5">
+<rect fill="#E6E3D6" height="87" transform="translate(643.115 3)" width="61.9428"/>
+<text fill="black" font-family="Roboto Mono" font-size="20" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="668.08" y="53.2686">=</tspan></text>
+</g>
+</g>
+</g>
+<g id="operand plot with axes">
+<rect fill="url(#pattern0_1334_3748)" height="300" id="b8411656" width="300" x="403" y="319.5"/>
+<g id="axes">
+<g id="y-axis">
+<g id="Group 725">
+<text fill="black" font-family="Roboto" font-size="15" id="80" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="372.125" y="384.627">80</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="70" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="372.125" y="414.627">70</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="60" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="372.125" y="444.627">60</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="50" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="372.125" y="474.627">50</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="40" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="372.125" y="504.627">40</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="30" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="372.125" y="534.627">30</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="20" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="372.125" y="564.627">20</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="10" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="372.125" y="594.627">10</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="0" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="380.562" y="624.627">0</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="90" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="372.125" y="354.627">90</tspan></text>
+</g>
+<g id="Group 722">
+<path d="M403 319.5L403 620.5" id="Vector 383" stroke="black"/>
+<g id="Group 721">
+<path d="M393 527.5H403" id="Vector 394" stroke="black"/>
+<path d="M393 587.5H403" id="Vector 392" stroke="black"/>
+<path d="M393 617.5H403" id="Vector 396" stroke="black"/>
+<path d="M393 557.5H403" id="Vector 395" stroke="black"/>
+<path d="M393 407.5H403" id="Vector 394_2" stroke="black"/>
+<path d="M393 467.5H403" id="Vector 392_2" stroke="black"/>
+<path d="M393 497.5H403" id="Vector 396_2" stroke="black"/>
+<path d="M393 437.5H403" id="Vector 395_2" stroke="black"/>
+<path d="M393 347.5H403" id="Vector 392_3" stroke="black"/>
+<path d="M393 377.5H403" id="Vector 396_3" stroke="black"/>
+</g>
+</g>
+</g>
+<g id="x-axis">
+<g id="Group 722_2">
+<path d="M703 620H403" id="Vector 383_2" stroke="black"/>
+<g id="Group 721_2">
+<path d="M494.5 630V620" id="Vector 394_3" stroke="black"/>
+<path d="M434.5 630V620" id="Vector 392_4" stroke="black"/>
+<path d="M404.5 630V620" id="Vector 396_4" stroke="black"/>
+<path d="M464.5 630V620" id="Vector 395_3" stroke="black"/>
+<path d="M614.5 630V620" id="Vector 394_4" stroke="black"/>
+<path d="M554.5 630V620" id="Vector 392_5" stroke="black"/>
+<path d="M524.5 630V620" id="Vector 396_5" stroke="black"/>
+<path d="M584.5 630V620" id="Vector 395_4" stroke="black"/>
+<path d="M674.5 630V620" id="Vector 392_6" stroke="black"/>
+<path d="M644.5 630V620" id="Vector 396_6" stroke="black"/>
+</g>
+</g>
+<g id="Group 720">
+<text fill="black" font-family="Roboto" font-size="15" id="80_2" letter-spacing="0em" style="white-space: pre" transform="translate(635.011 632.748)" xml:space="preserve"><tspan x="0.125" y="13.127">80</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="70_2" letter-spacing="0em" style="white-space: pre" transform="translate(605.012 632.654)" xml:space="preserve"><tspan x="0.125" y="13.127">70</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="60_2" letter-spacing="0em" style="white-space: pre" transform="translate(575.012 632.561)" xml:space="preserve"><tspan x="0.125" y="13.127">60</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="50_2" letter-spacing="0em" style="white-space: pre" transform="translate(545.012 632.466)" xml:space="preserve"><tspan x="0.125" y="13.127">50</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="40_2" letter-spacing="0em" style="white-space: pre" transform="translate(515.012 632.372)" xml:space="preserve"><tspan x="0.125" y="13.127">40</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="30_2" letter-spacing="0em" style="white-space: pre" transform="translate(485.012 632.278)" xml:space="preserve"><tspan x="0.125" y="13.127">30</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="20_2" letter-spacing="0em" style="white-space: pre" transform="translate(455.012 632.185)" xml:space="preserve"><tspan x="0.125" y="13.127">20</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="10_2" letter-spacing="0em" style="white-space: pre" transform="translate(425.012 632.091)" xml:space="preserve"><tspan x="0.125" y="13.127">10</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="0_2" letter-spacing="0em" style="white-space: pre" transform="translate(399.5 632.591)" xml:space="preserve"><tspan x="0.5625" y="13.127">0</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="90_2" letter-spacing="0em" style="white-space: pre" transform="translate(665.011 632.842)" xml:space="preserve"><tspan x="0.125" y="13.127">90</tspan></text>
+</g>
+</g>
+</g>
+<g id="The value of addend b">
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" letter-spacing="0em" style="white-space: pre" transform="translate(399 654)" xml:space="preserve"><tspan x="0" y="15.3105">The value of addend </tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" font-weight="bold" letter-spacing="0em" style="white-space: pre" transform="translate(399 654)" xml:space="preserve"><tspan x="157.316" y="15.3105">b</tspan></text>
+</g>
+<g id="The value of addend a">
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" letter-spacing="0em" style="white-space: pre" transform="translate(333 625) rotate(-90)" xml:space="preserve"><tspan x="0" y="15.3105">The value of addend </tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" font-weight="bold" letter-spacing="0em" style="white-space: pre" transform="translate(333 625) rotate(-90)" xml:space="preserve"><tspan x="157.316" y="15.3105">a</tspan></text>
+</g>
+</g>
+<g id="The direct effect of the sum of a featureâs decoders on the outputs for tokens 0â99. Visualized for features active on =.">
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" letter-spacing="0em" style="white-space: pre" transform="translate(0 488)" xml:space="preserve"><tspan x="0" y="15.3105">The direct effect of the sum of a </tspan><tspan x="0" y="34.3105">feature’s decoders on the outputs for </tspan><tspan x="0" y="53.3105">tokens 0–99. Visualized for features </tspan><tspan x="0" y="72.3105">active on </tspan><tspan x="82.2607" y="72.3105">.</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" font-weight="bold" letter-spacing="0em" style="white-space: pre" transform="translate(0 488)" xml:space="preserve"><tspan x="72.499" y="72.3105">=</tspan></text>
+</g>
+<g id="The direct effect of embeddings for tokens 0â99 on the feature encoder. Visualized for features active on a or b.">
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" letter-spacing="0em" style="white-space: pre" transform="translate(1 217)" xml:space="preserve"><tspan x="0" y="15.3105">The direct effect of embeddings for </tspan><tspan x="0" y="34.3105">tokens 0–99 on the feature encoder. </tspan><tspan x="0" y="53.3105">Visualized for features active on </tspan><tspan x="255.465" y="53.3105"> or </tspan><tspan x="288.917" y="53.3105">.</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" font-weight="bold" letter-spacing="0em" style="white-space: pre" transform="translate(1 217)" xml:space="preserve"><tspan x="246.367" y="53.3105">a</tspan><tspan x="279.354" y="53.3105">b</tspan></text>
+</g>
+<g id="operand is in the 50s">
+<text fill="#1A1A1A" font-family="Roboto" font-size="20" font-weight="bold" letter-spacing="0em" style="white-space: pre" transform="translate(3 288)" xml:space="preserve"><tspan x="57.2656" y="17.8359">operand</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="20" letter-spacing="0em" style="white-space: pre" transform="translate(3 288)" xml:space="preserve"><tspan x="130.781" y="17.8359"> is in the 50s</tspan></text>
+</g>
+<g id="We systematically analyze the features active on one- and two-digit addition prompts of the form calc: a+b= for a, b â [0,99].">
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" letter-spacing="0em" style="white-space: pre" transform="translate(1 50)" xml:space="preserve"><tspan x="0" y="15.3105">We systematically analyze the features </tspan><tspan x="0" y="34.3105">active on one- and two-digit addition </tspan><tspan x="0" y="53.3105">prompts of the form </tspan><tspan x="234.364" y="53.3105"> for </tspan><tspan x="273.262" y="53.3105">, </tspan><tspan x="290.395" y="53.3105"> ∈ </tspan><tspan x="0" y="72.3105">[0,99].
+</tspan><tspan x="0" y="91.3105">
+</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" font-weight="bold" letter-spacing="0em" style="white-space: pre" transform="translate(1 50)" xml:space="preserve"><tspan x="156.32" y="53.3105">calc: a+b=</tspan><tspan x="264.164" y="53.3105">a</tspan><tspan x="280.832" y="53.3105">b</tspan></text>
+</g>
+<text fill="#1A1A1A" font-family="Roboto" font-size="25" font-weight="bold" id="Operand Plots" letter-spacing="0em" style="white-space: pre" transform="translate(396 179)" xml:space="preserve"><tspan x="0" y="21.0449">Operand Plots</tspan></text>
+<g id="Group 728">
+<g id="Group 724">
+<rect fill="url(#pattern1_1334_3748)" height="75" id="image 50" width="300" x="3" y="589"/>
+</g>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" id="Target prediction" letter-spacing="0em" style="white-space: pre" transform="translate(1 696)" xml:space="preserve"><tspan x="0" y="15.3105">Target prediction</tspan></text>
+<g id="output is 5 modulo 10">
+<text fill="#1A1A1A" font-family="Roboto" font-size="20" font-weight="bold" letter-spacing="0em" style="white-space: pre" transform="translate(3 567)" xml:space="preserve"><tspan x="52.5781" y="17.8359">output</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="20" letter-spacing="0em" style="white-space: pre" transform="translate(3 567)" xml:space="preserve"><tspan x="111.094" y="17.8359"> is 5 modulo 10</tspan></text>
+</g>
+</g>
+<g id="Group 729">
+<rect fill="url(#pattern2_1334_3748)" height="75" id="b21541325_embed 1" width="300" x="3" y="311"/>
+<g id="x-axis_2">
+<g id="Group 720_2">
+<text fill="black" font-family="Roboto" font-size="15" id="80_3" letter-spacing="0em" style="white-space: pre" transform="translate(235.511 399.248)" xml:space="preserve"><tspan x="0.125" y="13.127">80</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="70_3" letter-spacing="0em" style="white-space: pre" transform="translate(205.512 399.154)" xml:space="preserve"><tspan x="0.125" y="13.127">70</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="60_3" letter-spacing="0em" style="white-space: pre" transform="translate(175.512 399.061)" xml:space="preserve"><tspan x="0.125" y="13.127">60</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="50_3" letter-spacing="0em" style="white-space: pre" transform="translate(145.512 398.966)" xml:space="preserve"><tspan x="0.125" y="13.127">50</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="40_3" letter-spacing="0em" style="white-space: pre" transform="translate(115.512 398.872)" xml:space="preserve"><tspan x="0.125" y="13.127">40</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="30_3" letter-spacing="0em" style="white-space: pre" transform="translate(85.5125 398.778)" xml:space="preserve"><tspan x="0.125" y="13.127">30</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="20_3" letter-spacing="0em" style="white-space: pre" transform="translate(55.5125 398.685)" xml:space="preserve"><tspan x="0.125" y="13.127">20</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="10_3" letter-spacing="0em" style="white-space: pre" transform="translate(25.5125 398.591)" xml:space="preserve"><tspan x="0.125" y="13.127">10</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="0_3" letter-spacing="0em" style="white-space: pre" transform="translate(0 399.091)" xml:space="preserve"><tspan x="0.5625" y="13.127">0</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="90_3" letter-spacing="0em" style="white-space: pre" transform="translate(265.511 399.342)" xml:space="preserve"><tspan x="0.125" y="13.127">90</tspan></text>
+</g>
+<g id="Group 722_3">
+<path d="M303 386H2.99999" id="Vector 383_3" stroke="black"/>
+<g id="Group 721_3">
+<path d="M94.5 396V386" id="Vector 394_5" stroke="black"/>
+<path d="M34.5 396V386" id="Vector 392_7" stroke="black"/>
+<path d="M4.5 396L4.5 386" id="Vector 396_7" stroke="black"/>
+<path d="M64.5 396V386" id="Vector 395_5" stroke="black"/>
+<path d="M214.5 396V386" id="Vector 394_6" stroke="black"/>
+<path d="M154.5 396V386" id="Vector 392_8" stroke="black"/>
+<path d="M124.5 396V386" id="Vector 396_8" stroke="black"/>
+<path d="M184.5 396V386" id="Vector 395_6" stroke="black"/>
+<path d="M274.5 396V386" id="Vector 392_9" stroke="black"/>
+<path d="M244.5 396V386" id="Vector 396_9" stroke="black"/>
+</g>
+</g>
+</g>
+<g id="x-axis_3">
+<g id="Group 720_3">
+<text fill="black" font-family="Roboto" font-size="15" id="80_4" letter-spacing="0em" style="white-space: pre" transform="translate(235.511 677.248)" xml:space="preserve"><tspan x="0.125" y="13.127">80</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="70_4" letter-spacing="0em" style="white-space: pre" transform="translate(205.512 677.154)" xml:space="preserve"><tspan x="0.125" y="13.127">70</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="60_4" letter-spacing="0em" style="white-space: pre" transform="translate(175.512 677.061)" xml:space="preserve"><tspan x="0.125" y="13.127">60</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="50_4" letter-spacing="0em" style="white-space: pre" transform="translate(145.512 676.966)" xml:space="preserve"><tspan x="0.125" y="13.127">50</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="40_4" letter-spacing="0em" style="white-space: pre" transform="translate(115.512 676.872)" xml:space="preserve"><tspan x="0.125" y="13.127">40</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="30_4" letter-spacing="0em" style="white-space: pre" transform="translate(85.5125 676.778)" xml:space="preserve"><tspan x="0.125" y="13.127">30</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="20_4" letter-spacing="0em" style="white-space: pre" transform="translate(55.5125 676.685)" xml:space="preserve"><tspan x="0.125" y="13.127">20</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="10_4" letter-spacing="0em" style="white-space: pre" transform="translate(25.5125 676.591)" xml:space="preserve"><tspan x="0.125" y="13.127">10</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="0_4" letter-spacing="0em" style="white-space: pre" transform="translate(0 677.091)" xml:space="preserve"><tspan x="0.5625" y="13.127">0</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="90_4" letter-spacing="0em" style="white-space: pre" transform="translate(265.511 677.342)" xml:space="preserve"><tspan x="0.125" y="13.127">90</tspan></text>
+</g>
+<g id="Group 722_4">
+<path d="M303 664H2.99999" id="Vector 383_4" stroke="black"/>
+<g id="Group 721_4">
+<path d="M94.5 674V664" id="Vector 394_7" stroke="black"/>
+<path d="M34.5 674V664" id="Vector 392_10" stroke="black"/>
+<path d="M4.5 674L4.5 664" id="Vector 396_10" stroke="black"/>
+<path d="M64.5 674V664" id="Vector 395_7" stroke="black"/>
+<path d="M214.5 674V664" id="Vector 394_8" stroke="black"/>
+<path d="M154.5 674V664" id="Vector 392_11" stroke="black"/>
+<path d="M124.5 674V664" id="Vector 396_11" stroke="black"/>
+<path d="M184.5 674V664" id="Vector 395_8" stroke="black"/>
+<path d="M274.5 674V664" id="Vector 392_12" stroke="black"/>
+<path d="M244.5 674V664" id="Vector 396_12" stroke="black"/>
+</g>
+</g>
+</g>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" id="Embedding token" letter-spacing="0em" style="white-space: pre" transform="translate(0 418)" xml:space="preserve"><tspan x="0" y="15.3105">Embedding token</tspan></text>
+</g>
+<text fill="#1A1A1A" font-family="Roboto" font-size="25" font-weight="bold" id="Output Weight Plots" letter-spacing="0em" style="white-space: pre" transform="translate(0 450)" xml:space="preserve"><tspan x="0" y="21.0449">Output Weight Plots</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="25" font-weight="bold" id="Embedding Weight Plots" letter-spacing="0em" style="white-space: pre" transform="translate(0 179)" xml:space="preserve"><tspan x="0" y="21.0449">Embedding Weight Plots</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" id="The activity of a feature on the â=â token of the prompt âcalc: a+b=â, for a,b â [0,99]" letter-spacing="0em" style="white-space: pre" transform="translate(395 211)" xml:space="preserve"><tspan x="0" y="15.3105">The activity of a feature on </tspan><tspan x="0" y="34.3105">the “=” token of the prompt </tspan><tspan x="0" y="53.3105">“calc: a+b=”, for a,b ∈ [0,99]</tspan></text>
+<g id="Group 807">
+<path d="M496 465L406 583.283V615.5L496 577.045V465Z" fill="#E9E9E2" fill-opacity="0.9" id="Vector 450" stroke="#B8B6AD" stroke-linecap="round"/>
+<path d="M492.5 578H607L436 615.5H405L492.5 578Z" fill="#E9E9E2" fill-opacity="0.9" id="Vector 451" stroke="#B8B6AD" stroke-linecap="round"/>
+<g id="Rectangle 425" style="mix-blend-mode:darken">
+<rect fill="#D9D9D9" height="113" rx="0.5" width="112" x="495.5" y="464.5"/>
+<rect height="113" rx="0.5" stroke="#525047" width="112" x="495.5" y="464.5"/>
+</g>
+<g id="Rectangle 424" opacity="0.63" style="mix-blend-mode:darken">
+<rect fill="#D9D9D9" height="34" rx="1.5" width="34" x="405.5" y="581.5"/>
+<rect height="34" rx="1.5" stroke="#525047" width="34" x="405.5" y="581.5"/>
+</g>
+<rect fill="url(#pattern3_1334_3748)" height="112" id="8411656" width="112" x="496" y="465"/>
+</g>
+<g id="Group 808">
+<path d="M496 466L406 584.283V616.5L496 578.045V466Z" fill="#E9E9E2" fill-opacity="0.9" id="Vector 450_2" stroke="#B8B6AD" stroke-linecap="round"/>
+<path d="M492.5 579H607L436 616.5H405L492.5 579Z" fill="#E9E9E2" fill-opacity="0.9" id="Vector 451_2" stroke="#B8B6AD" stroke-linecap="round"/>
+<g id="Rectangle 425_2" style="mix-blend-mode:darken">
+<rect fill="#D9D9D9" height="113" rx="0.5" width="112" x="495.5" y="465.5"/>
+<rect height="113" rx="0.5" stroke="#525047" width="112" x="495.5" y="465.5"/>
+</g>
+<g id="Rectangle 424_2" opacity="0.63" style="mix-blend-mode:darken">
+<rect fill="#D9D9D9" height="34" rx="1.5" width="34" x="405.5" y="582.5"/>
+<rect height="34" rx="1.5" stroke="#525047" width="34" x="405.5" y="582.5"/>
+</g>
+<g id="Group 842">
+<rect fill="white" height="112" id="Rectangle 441" width="111" x="496" y="466"/>
+<rect fill="#EDEDED" height="112" id="Rectangle 450" width="10" x="587" y="466"/>
+<rect fill="#EDEDED" height="10" id="Rectangle 451" width="111" x="496" y="476"/>
+<rect fill="#FF8D47" height="10" id="Rectangle 442" width="10" x="527" y="466"/>
+<rect fill="#FFF5EC" height="10" id="Rectangle 443" width="10" x="537" y="476"/>
+<rect fill="#DDDDDD" height="10" id="Rectangle 452" width="10" x="587" y="476"/>
+<rect fill="#FF8D47" height="10" id="Rectangle 444" width="10" x="547" y="486"/>
+<rect fill="#FF6927" height="10" id="Rectangle 445" width="10" x="557" y="496"/>
+<rect fill="#FFAE72" height="10" id="Rectangle 446" width="10" x="567" y="506"/>
+<rect fill="#E84918" height="10" id="Rectangle 447" width="10" x="577" y="516"/>
+<rect fill="#FF8D47" height="10" id="Rectangle 449" width="10" x="597" y="536"/>
+</g>
+</g>
+<text fill="black" font-family="Roboto" font-size="15" id="6+9" letter-spacing="0em" style="white-space: pre" transform="translate(534 526)" xml:space="preserve"><tspan x="0.614258" y="13.127">6+9</tspan></text>
+<path d="M562 534L573 529" id="Vector 394_9" stroke="black"/>
+<g id="a+b is 5 modulo 10">
+<text fill="#1A1A1A" font-family="Roboto" font-size="20" letter-spacing="0em" style="white-space: pre" transform="translate(399 290)" xml:space="preserve"><tspan x="100.262" y="19.3359"> is 5 modulo 10</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="20" font-weight="bold" letter-spacing="0em" style="white-space: pre" transform="translate(399 290)" xml:space="preserve"><tspan x="67.4102" y="19.3359">a+b</tspan></text>
+</g>
+<g id="Frame 114">
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Common elements in figures describing addition features." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="741.443">Figure 00: Common elements in figures describing addition features.</tspan></text>
+</g>
+</g>
+<defs>
+<pattern height="1" id="pattern0_1334_3748" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image0_1334_3748"/>
+</pattern>
+<pattern height="1" id="pattern1_1334_3748" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005 0.02)" xlink:href="#image1_1334_3748"/>
+</pattern>
+<pattern height="1" id="pattern2_1334_3748" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005 0.02)" xlink:href="#image2_1334_3748"/>
+</pattern>
+<pattern height="1" id="pattern3_1334_3748" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.0454545 0 0 0.0455128 0 -8.10256)" xlink:href="#image3_1334_3748"/>
+</pattern>
+<clipPath id="clip0_1334_3748">
+<rect fill="white" height="765" width="704"/>
+</clipPath>
+<image data-name="image.png" height="200" id="image0_1334_3748" preserveAspectRatio="none" width="200" xlink:href="./png/img_75c801d3fb382d81.png"/>
+<image data-name="image.png" height="50" id="image1_1334_3748" preserveAspectRatio="none" width="200" xlink:href="./png/img_a3e2f10455de0cd5.png"/>
+<image data-name="21541325_embed.png" height="50" id="image2_1334_3748" preserveAspectRatio="none" width="200" xlink:href="./png/img_7072b4c018bc2d39.png"/>
+<image data-name="8411656.png" height="200" id="image3_1334_3748" preserveAspectRatio="none" width="200" xlink:href="./png/img_2a4b861056ac7157.png"/>
+</defs>
+</svg>

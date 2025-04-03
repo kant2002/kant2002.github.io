@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="480" viewBox="0 0 1266 480" width="1266" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="edge-influence-correlation-svg">
+<rect fill="white" height="480" width="1266"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Relationship between (x) pairwise influence of all nodes in the pruned graph (y) the absolute relative effect on a target nodeâs activation after ablating the source node in the underlying model. We observe the graph-based pairwise influence is fairly predictive of the ablation effect." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="15" y="447.443">Figure 00: Relationship between (x) pairwise influence of all nodes in the pruned graph (y) the absolute relative effect on a target node’s activation after ablating the source node in the underlying model. We </tspan><tspan x="15" y="465.443">observe the graph-based pairwise influence is fairly predictive of the ablation effect.</tspan></text>
+<rect fill="url(#pattern0_2366_5390)" height="413" id="image 881740455" width="1266"/>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2366_5390" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00024418 0.000748503)" xlink:href="#image0_2366_5390"/>
+</pattern>
+<image data-name="image.png" height="1336" id="image0_2366_5390" preserveAspectRatio="none" width="4096" xlink:href="./png/img_4c409bf0e6b3706a.png"/>
+</defs>
+</svg>

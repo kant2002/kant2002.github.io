@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="538" viewBox="0 0 1090 538" width="1090" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph-metrics-svg">
+<rect fill="white" height="538" width="1090"/>
+<rect fill="url(#pattern0_2366_5398)" height="495" id="image 881740457" width="1090"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Comparison of graph completeness and replacement score versus per-token L0 for graphs generated with different underlying dictionaries. Higher replacement scores correspond to graphs with fewer holes, and lower L0 suggests more interpretable graphs." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="13" y="508.443">Figure 00: Comparison of graph completeness and replacement score versus per-token L0 for graphs generated with different underlying dictionaries.  Higher replacement scores </tspan><tspan x="13" y="526.443">correspond to graphs with fewer holes, and lower L0 suggests more interpretable graphs.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2366_5398" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.000458716 0.0010101)" xlink:href="#image0_2366_5398"/>
+</pattern>
+<image data-name="image.png" height="990" id="image0_2366_5398" preserveAspectRatio="none" width="2180" xlink:href="./png/img_6ec6650ebf0523cf.png"/>
+</defs>
+</svg>

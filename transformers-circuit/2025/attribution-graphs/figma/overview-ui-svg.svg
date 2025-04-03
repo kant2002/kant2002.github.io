@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="797" viewBox="0 0 1200 797" width="1200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="overview-ui-svg">
+<rect fill="white" height="797" width="1200"/>
+<g clip-path="url(#clip0_1426_4365)" id="Frame 475">
+<g id="Group 694">
+<g id="Frame 142">
+<rect fill="#F6F6F3" height="608" rx="14" width="1159" x="15" y="136"/>
+<g id="Frame 144">
+<g id="Frame 145">
+<rect fill="#141413" height="37" id="Rectangle 434" opacity="0.05" width="1159" x="15" y="136"/>
+<g id="Frame 146" opacity="0.5">
+<g id="Ellipse 257" style="mix-blend-mode:multiply">
+<circle cx="34.5" cy="154.5" fill="#D9D9D9" r="5.5"/>
+</g>
+<g id="Ellipse 258" style="mix-blend-mode:multiply">
+<circle cx="52.5" cy="154.5" fill="#D9D9D9" r="5.5"/>
+</g>
+<g id="Ellipse 259" style="mix-blend-mode:multiply">
+<circle cx="70.5" cy="154.5" fill="#D9D9D9" r="5.5"/>
+</g>
+</g>
+</g>
+</g>
+<g id="Frame 523">
+<rect fill="url(#pattern0_1426_4365)" height="452" id="image" width="1154" x="17" y="170"/>
+<rect fill="url(#pattern1_1426_4365)" height="22" id="image 65" width="36" x="634.5" y="173"/>
+</g>
+</g>
+</g>
+</g>
+<text fill="black" font-family="Roboto" font-size="15" id="Logit node" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="589" y="113.627">Logit node</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="Embedding" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="31" y="113.627">Embedding</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="Feature nodes appear at the token position where they are active" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="149" y="79.627">Feature nodes appear at </tspan><tspan x="149" y="96.627">the token position where </tspan><tspan x="149" y="113.627">they are active</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="Diamond shaped error nodes represent reconstruction errors" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="357" y="96.627">Diamond shaped error nodes </tspan><tspan x="357" y="113.627">represent reconstruction errors</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="The strongest input features, colored by edge strength" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="734" y="96.627">The strongest input features, </tspan><tspan x="734" y="113.627">colored by edge strength</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="Strongest token embedding inputs and logit outputs" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="679" y="667.627">Strongest token embedding </tspan><tspan x="679" y="684.627">inputs and logit outputs</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="The strongest output features, colored by edge strength" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="963" y="96.627">The strongest output features, </tspan><tspan x="963" y="113.627">colored by edge strength</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="Top activating dataset examples. â¨Each row is from a different text. â¨Orange color denotes activation strength." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="897" y="667.627">Top activating dataset examples.  </tspan><tspan x="897" y="684.627">Each row is from a different text.  </tspan><tspan x="897" y="701.627">Orange color denotes activation strength.</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="15" font-weight="bold" id="Full graph details" letter-spacing="0em" style="white-space: pre" transform="translate(15 12)" xml:space="preserve"><tspan x="0" y="17.627">Full graph details</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="15" font-weight="bold" id="Selected and grouped subgraph" letter-spacing="0em" style="white-space: pre" transform="translate(15 723)" xml:space="preserve"><tspan x="0" y="17.627">Selected and grouped subgraph</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="15" font-weight="bold" id="Selected node details" letter-spacing="0em" style="white-space: pre" transform="translate(682 12)" xml:space="preserve"><tspan x="0" y="17.627">Selected node details</tspan></text>
+<path d="M652 68V64.1111C652 58.5883 647.523 54.1111 642 54.1111H74.271M15 68V64.1111C15 58.5883 19.4772 54.1111 25 54.1111H74.271M74.271 54.1111V43" id="Rectangle 430" stroke="#706D5C"/>
+<path d="M652 687V690.889C652 696.412 647.523 700.889 642 700.889H72.4571M13 687V690.889C13 696.412 17.4772 700.889 23 700.889H72.4571M72.4571 700.889V712" id="Rectangle 435" stroke="#706D5C"/>
+<path d="M1174 68V64.1111C1174 58.5883 1169.52 54.1111 1164 54.1111H716.239M682 68V64.1111C682 58.5883 686.477 54.1111 692 54.1111H716.239M716.239 54.1111V43" id="Rectangle 434_2" stroke="#706D5C"/>
+<path d="M86.2929 308.707C86.6834 309.098 87.3166 309.098 87.7071 308.707L94.0711 302.343C94.4616 301.953 94.4616 301.319 94.0711 300.929C93.6806 300.538 93.0474 300.538 92.6569 300.929L87 306.586L81.3432 300.929C80.9526 300.538 80.3195 300.538 79.9289 300.929C79.5384 301.319 79.5384 301.953 79.9289 302.343L86.2929 308.707ZM86 125L86 308L88 308L88 125L86 125Z" fill="#706D5C" id="Vector 917"/>
+<path d="M502.293 214.707C502.683 215.098 503.317 215.098 503.707 214.707L510.071 208.343C510.462 207.953 510.462 207.319 510.071 206.929C509.681 206.538 509.047 206.538 508.657 206.929L503 212.586L497.343 206.929C496.953 206.538 496.319 206.538 495.929 206.929C495.538 207.319 495.538 207.953 495.929 208.343L502.293 214.707ZM502 125V214H504V125H502Z" fill="#706D5C" id="Vector 912"/>
+<path d="M643.293 177.707C643.683 178.098 644.317 178.098 644.707 177.707L651.071 171.343C651.462 170.953 651.462 170.319 651.071 169.929C650.681 169.538 650.047 169.538 649.657 169.929L644 175.586L638.343 169.929C637.953 169.538 637.319 169.538 636.929 169.929C636.538 170.319 636.538 170.953 636.929 171.343L643.293 177.707ZM643 125V177H645V125H643Z" fill="#706D5C" id="Vector 919"/>
+<path d="M863.293 227.707C863.683 228.098 864.317 228.098 864.707 227.707L871.071 221.343C871.462 220.953 871.462 220.319 871.071 219.929C870.681 219.538 870.047 219.538 869.657 219.929L864 225.586L858.343 219.929C857.953 219.538 857.319 219.538 856.929 219.929C856.538 220.319 856.538 220.953 856.929 221.343L863.293 227.707ZM863 125V227H865V125H863Z" fill="#706D5C" id="Vector 913"/>
+<path d="M785.707 415.293C785.317 414.902 784.683 414.902 784.293 415.293L777.929 421.657C777.538 422.047 777.538 422.681 777.929 423.071C778.319 423.462 778.953 423.462 779.343 423.071L785 417.414L790.657 423.071C791.047 423.462 791.681 423.462 792.071 423.071C792.462 422.681 792.462 422.047 792.071 421.657L785.707 415.293ZM786 648L786 416L784 416L784 648L786 648Z" fill="#706D5C" id="Vector 915"/>
+<text fill="black" font-family="Roboto" font-size="15" id="Nodes can be dragged around manually" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="15" y="667.627">Nodes can be dragged around manually </tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="Nodes are grouped into supernodes" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="328" y="667.627">Nodes are grouped into supernodes</tspan></text>
+<path d="M80.2929 605.793C80.6834 605.402 81.3166 605.402 81.7071 605.793L88.0711 612.157C88.4616 612.547 88.4616 613.181 88.0711 613.571C87.6805 613.962 87.0474 613.962 86.6569 613.571L81 607.914L75.3431 613.571C74.9526 613.962 74.3195 613.962 73.9289 613.571C73.5384 613.181 73.5384 612.547 73.9289 612.157L80.2929 605.793ZM80 648L80 606.5L82 606.5L82 648L80 648Z" fill="#706D5C" id="Vector 918"/>
+<path d="M393.293 604.793C393.683 604.402 394.317 604.402 394.707 604.793L401.071 611.157C401.462 611.547 401.462 612.181 401.071 612.571C400.681 612.962 400.047 612.962 399.657 612.571L394 606.914L388.343 612.571C387.953 612.962 387.319 612.962 386.929 612.571C386.538 612.181 386.538 611.547 386.929 611.157L393.293 604.793ZM393 648L393 605.5L395 605.5L395 648L393 648Z" fill="#706D5C" id="Vector 920"/>
+<path d="M921.707 607.793C921.317 607.402 920.683 607.402 920.293 607.793L913.929 614.157C913.538 614.547 913.538 615.181 913.929 615.571C914.319 615.962 914.953 615.962 915.343 615.571L921 609.914L926.657 615.571C927.047 615.962 927.681 615.962 928.071 615.571C928.462 615.181 928.462 614.547 928.071 614.157L921.707 607.793ZM922 648L922 608.5L920 608.5L920 648L922 648Z" fill="#706D5C" id="Vector 916"/>
+<path d="M1060.29 227.707C1060.68 228.098 1061.32 228.098 1061.71 227.707L1068.07 221.343C1068.46 220.953 1068.46 220.319 1068.07 219.929C1067.68 219.538 1067.05 219.538 1066.66 219.929L1061 225.586L1055.34 219.929C1054.95 219.538 1054.32 219.538 1053.93 219.929C1053.54 220.319 1053.54 220.953 1053.93 221.343L1060.29 227.707ZM1060 125V227H1062V125H1060Z" fill="#706D5C" id="Vector 914"/>
+<path d="M207.293 252.707C207.683 253.098 208.317 253.098 208.707 252.707L215.071 246.343C215.462 245.953 215.462 245.319 215.071 244.929C214.681 244.538 214.047 244.538 213.657 244.929L208 250.586L202.343 244.929C201.953 244.538 201.319 244.538 200.929 244.929C200.538 245.319 200.538 245.953 200.929 246.343L207.293 252.707ZM207 125V252H209V125H207Z" fill="#706D5C" id="Vector 910"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: An overview of the interface for interacting with an attribution graph." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="15" y="780.443">Figure 00: An overview of the interface for interacting with an attribution graph.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_1426_4365" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.000357654 0 0 0.000913125 0 0.00782565)" xlink:href="#image0_1426_4365"/>
+</pattern>
+<pattern height="1" id="pattern1_1426_4365" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.00892977 0 0 0.0146123 -18.5656 0)" xlink:href="#image1_1426_4365"/>
+</pattern>
+<clipPath id="clip0_1426_4365">
+<rect fill="white" height="489" transform="translate(15 136)" width="1159"/>
+</clipPath>
+<image data-name="image.png" height="1078" id="image0_1426_4365" preserveAspectRatio="none" width="2796" xlink:href="./png/img_8e3bf5a3a37285ba.png"/>
+<image data-name="image.png" height="1658" id="image1_1426_4365" preserveAspectRatio="none" width="3592" xlink:href="./png/img_839284736f9b28bb.png"/>
+</defs>
+</svg>

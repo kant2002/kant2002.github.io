@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="633" viewBox="0 0 1304 633" width="1304" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_1235_1971)" id="ndag-graph-svg">
+<rect fill="white" height="633" width="1304"/>
+<path d="M482 465V319.058C482 315.745 484.686 313.058 488 313.058H589C592.314 313.058 595 310.372 595 307.058V300" id="Vector 876" stroke="#633636" stroke-width="2.5"/>
+<path d="M539 356V319.058C539 315.745 541.686 313.058 545 313.058H589C592.314 313.058 595 310.372 595 307.058V300" id="Vector 877" stroke="#633636" stroke-width="2.5"/>
+<path d="M594 248V211.058C594 207.745 596.686 205.058 600 205.058H822C825.314 205.058 828 202.372 828 199.058V192" id="Vector 883" stroke="#633636" stroke-width="2.5"/>
+<path d="M961 41L953.783 53.5H968.217L961 41ZM829.25 123V86.0583H826.75V123H829.25ZM834 81.3083H955V78.8083H834V81.3083ZM962.25 74.0583V52.25H959.75V74.0583H962.25ZM955 81.3083C959.004 81.3083 962.25 78.0624 962.25 74.0583H959.75C959.75 76.6817 957.623 78.8083 955 78.8083V81.3083ZM829.25 86.0583C829.25 83.435 831.377 81.3083 834 81.3083V78.8083C829.996 78.8083 826.75 82.0543 826.75 86.0583H829.25Z" fill="#633636" id="Vector 885"/>
+<path d="M709 374V211.058C709 207.745 711.686 205.058 715 205.058H822C825.314 205.058 828 202.372 828 199.058V192" id="Vector 884" stroke="#633636" stroke-width="2.5"/>
+<path d="M651 356V319.058C651 315.745 648.314 313.058 645 313.058H601C597.686 313.058 595 310.372 595 307.058V300" id="Vector 878" stroke="#633636" stroke-width="2.5"/>
+<g id="Group 806">
+<path d="M977 482V443.699C977 440.385 974.314 437.699 971 437.699H545C541.686 437.699 539 435.013 539 431.699V411" id="Vector 883_2" stroke="#633636" stroke-width="2.5"/>
+<path d="M676 407L668.783 419.5H683.217L676 407ZM978.25 482V443.699H975.75V482H978.25ZM971 436.449H682V438.949H971V436.449ZM677.25 431.699V418.25H674.75V431.699H677.25ZM682 436.449C679.377 436.449 677.25 434.322 677.25 431.699H674.75C674.75 435.703 677.996 438.949 682 438.949V436.449ZM978.25 443.699C978.25 439.695 975.004 436.449 971 436.449V438.949C973.623 438.949 975.75 441.076 975.75 443.699H978.25Z" fill="#633636" id="Vector 882"/>
+<rect fill="white" height="13" id="Rectangle 436" width="11" x="641" y="431"/>
+<rect fill="white" height="13" id="Rectangle 437" width="11" x="704" y="431"/>
+<rect fill="white" height="13" id="Rectangle 438" width="11" x="822" y="431"/>
+</g>
+<path d="M851 407L843.783 419.5H858.217L851 407ZM978.25 482V443.699H975.75V482H978.25ZM971 436.449H857V438.949H971V436.449ZM852.25 431.699V418.25H849.75V431.699H852.25ZM857 436.449C854.377 436.449 852.25 434.322 852.25 431.699H849.75C849.75 435.703 852.996 438.949 857 438.949V436.449ZM978.25 443.699C978.25 439.695 975.004 436.449 971 436.449V438.949C973.623 438.949 975.75 441.076 975.75 443.699H978.25Z" fill="#633636" id="Vector 881"/>
+<path d="M595 286L587.783 298.5H602.217L595 286ZM710.25 463V319.058H707.75V463H710.25ZM703 311.808H601V314.308H703V311.808ZM596.25 307.058V297.25H593.75V307.058H596.25ZM601 311.808C598.377 311.808 596.25 309.682 596.25 307.058H593.75C593.75 311.062 596.996 314.308 601 314.308V311.808ZM710.25 319.058C710.25 315.054 707.004 311.808 703 311.808V314.308C705.623 314.308 707.75 316.435 707.75 319.058H710.25Z" fill="#633636" id="Vector 879"/>
+<path d="M828 528L820.783 540.5L835.217 540.5L828 528ZM829.25 585L829.25 539.25L826.75 539.25L826.75 585L829.25 585Z" fill="#633636" id="Vector 318"/>
+<path d="M977 528L969.783 540.5L984.217 540.5L977 528ZM978.25 585L978.25 539.25L975.75 539.25L975.75 585L978.25 585Z" fill="#633636" id="Vector 328"/>
+<path d="M682 528L674.783 540.5L689.217 540.5L682 528ZM683.25 585L683.25 539.25L680.75 539.25L680.75 585L683.25 585Z" fill="#633636" id="Vector 325"/>
+<path d="M518 528L510.783 540.5L525.217 540.5L518 528ZM519.25 583L519.25 539.25L516.75 539.25L516.75 583L519.25 583Z" fill="#633636" id="Vector 326"/>
+<path d="M539 407L531.783 419.5L546.217 419.5L539 407ZM540.25 467L540.25 418.25L537.75 418.25L537.75 467L540.25 467Z" fill="#633636" id="Vector 350"/>
+<path d="M646 407L638.783 419.5L653.217 419.5L646 407ZM647.25 467L647.25 418.25L644.75 418.25L644.75 467L647.25 467Z" fill="#633636" id="Vector 351"/>
+<path d="M828 407L820.783 419.5L835.217 419.5L828 407ZM829.25 467L829.25 418.25L826.75 418.25L826.75 467L829.25 467Z" fill="#633636" id="Vector 880"/>
+<path d="M828 172L820.783 184.5L835.217 184.5L828 172ZM829.25 348L829.25 183.25L826.75 183.25L826.75 348L829.25 348Z" fill="#633636" id="Vector 882_2"/>
+<rect fill="#F6F6F3" height="40" id="Rectangle 132" rx="1.5" stroke="#B8B6AD" width="703" x="300.5" y="0.5"/>
+<g id="Tokens" style="mix-blend-mode:darken">
+<g id="Frame 90">
+<rect fill="#F6F6F3" height="35" transform="translate(491 2)" width="453"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="501" y="26.1033">The National Digital Analytics Group (⇪N</tspan></text>
+</g>
+</g>
+<g id="Tokens_2" style="mix-blend-mode:darken">
+<g id="Frame 90_2">
+<path d="M917 1H1001C1002.1 1 1003 1.89543 1003 3V39H917V1Z" fill="#E6E3D6"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="944.5" y="25.6033">DAG</tspan></text>
+</g>
+<path d="M917 39H1002.53H1003C1003 40.1046 1002.1 41 1001 41H917V39Z" fill="#706D5C" id="Rectangle 19"/>
+</g>
+<g id="Frame 106">
+<rect fill="#F6F6F3" height="39" rx="1.5" width="703" x="300.5" y="572.5"/>
+<rect height="39" rx="1.5" stroke="#B8B6AD" width="703" x="300.5" y="572.5"/>
+<g id="Tokens_3" style="mix-blend-mode:darken">
+<rect height="39" rx="9.5" stroke="black" width="42" x="300.5" y="572.5"/>
+<g id="Frame 90_3">
+<rect fill="#F6F6F3" height="40" transform="translate(300 572)" width="43"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="308" y="598.603">The</tspan></text>
+</g>
+</g>
+<g id="Tokens_4" style="mix-blend-mode:darken">
+<rect fill="#706D5C" height="2" id="Rectangle 19_2" width="102" x="356" y="572"/>
+<g id="Frame 90_4">
+<rect fill="#E6E3D6" height="38" transform="translate(356 574)" width="102"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="366" y="598.603">National</tspan></text>
+</g>
+</g>
+<g id="Tokens_5" style="mix-blend-mode:darken">
+<rect fill="#706D5C" height="2" id="Rectangle 19_3" width="92" x="471" y="572"/>
+<g id="Frame 90_5">
+<rect fill="#E6E3D6" height="38" transform="translate(471 574)" width="92"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="481" y="598.603">Digital</tspan></text>
+</g>
+</g>
+<g id="Tokens_6" style="mix-blend-mode:darken">
+<rect fill="#706D5C" height="2" id="Rectangle 19_4" width="112" x="626" y="572"/>
+<g id="Frame 90_6">
+<rect fill="#E6E3D6" height="38" transform="translate(626 574)" width="112"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_6" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="636" y="598.603">Analytics</tspan></text>
+</g>
+</g>
+<g id="Tokens_7" style="mix-blend-mode:darken">
+<rect fill="#706D5C" height="2" id="Rectangle 19_5" width="72" x="791" y="572"/>
+<g id="Frame 90_7">
+<rect fill="#E6E3D6" height="38" transform="translate(791 574)" width="72"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_7" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="801" y="598.603">Group</tspan></text>
+</g>
+</g>
+<g id="Tokens_8" style="mix-blend-mode:darken">
+<rect fill="#706D5C" height="2" id="Rectangle 19_6" width="42" x="896" y="572"/>
+<g id="Frame 90_8">
+<rect fill="#E6E3D6" height="38" transform="translate(896 574)" width="42"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_8" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="906" y="598.603">(⇪</tspan></text>
+</g>
+</g>
+<g id="Tokens_9" style="mix-blend-mode:darken">
+<rect fill="#706D5C" height="2" id="Rectangle 19_7" width="31" x="961" y="572"/>
+<g id="Frame 90_9">
+<rect fill="#E6E3D6" height="38" transform="translate(961 574)" width="31"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_9" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="971" y="598.603">N</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_say-continue-an-__b13802533_b21276087">
+<g id="Group 286">
+<g id="Frame 90_10">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="924.75" y="467.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="924.75" y="467.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="960.015" y="482.811">say/</tspan><tspan x="932.332" y="500.811">continue an </tspan><tspan x="943.604" y="518.811">acronym</tspan></text>
+</g>
+<g id="Frame 89">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="921.75" y="465.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="921.75" y="465.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="957.015" y="480.811">say/</tspan><tspan x="929.332" y="498.811">continue an </tspan><tspan x="940.604" y="516.811">acronym</tspan></text>
+</g>
+<g id="Frame 88">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="918.75" y="463.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="918.75" y="463.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="954.015" y="478.811">say/</tspan><tspan x="926.332" y="496.811">continue an </tspan><tspan x="937.604" y="514.811">acronym</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_say---g-__b23349218_b24479876_b13370328">
+<g id="Group 286_2">
+<g id="Frame 90_11">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="88.5" x="783.75" y="349.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="88.5" x="783.75" y="349.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="797.246" y="382.811">say “_G”</tspan></text>
+</g>
+<g id="Frame 89_2">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="88.5" x="780.75" y="347.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="88.5" x="780.75" y="347.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="794.246" y="380.811">say “_G”</tspan></text>
+</g>
+<g id="Frame 88_2">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="88.5" x="777.75" y="345.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="88.5" x="777.75" y="345.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_6" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="791.246" y="378.811">say “_G”</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_say---a-__b15808787_b27769861_b67082">
+<g id="Group 286_3">
+<g id="Frame 90_12">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="88.5" x="607.75" y="349.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="88.5" x="607.75" y="349.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_7" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="621.993" y="382.811">say “_A”</tspan></text>
+</g>
+<g id="Frame 89_3">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="88.5" x="604.75" y="347.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="88.5" x="604.75" y="347.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_8" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="618.993" y="380.811">say “_A”</tspan></text>
+</g>
+<g id="Frame 88_3">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="88.5" x="601.75" y="345.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="88.5" x="601.75" y="345.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_9" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="615.993" y="378.811">say “_A”</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_say--d--__b27339305_b25733589_b14129802_b8881455_b25876490_b18707149">
+<g id="Group 286_4">
+<g id="Frame 90_13">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="88.5" x="501.75" y="349.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="88.5" x="501.75" y="349.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_10" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="515.461" y="382.811">say “D_”</tspan></text>
+</g>
+<g id="Frame 89_4">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="88.5" x="498.75" y="347.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="88.5" x="498.75" y="347.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_11" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="512.461" y="380.811">say “D_”</tspan></text>
+</g>
+<g id="Frame 88_4">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="88.5" x="495.75" y="345.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="88.5" x="495.75" y="345.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_12" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="509.461" y="378.811">say “D_”</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_digital__b13069339_b6968304_b7420431_b19785252">
+<g id="Group 286_5">
+<g id="Frame 90_14">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="469.75" y="467.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="469.75" y="467.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_13" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="497.544" y="500.811">Digital</tspan></text>
+</g>
+<g id="Frame 89_5">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="466.75" y="465.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="466.75" y="465.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_14" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="494.544" y="498.811">Digital</tspan></text>
+</g>
+<g id="Frame 88_5">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="463.75" y="463.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="463.75" y="463.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_15" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="491.544" y="496.811">Digital</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_analytics__b20190866_b5736269_b7683371_b2834781">
+<g id="Group 286_6">
+<g id="Frame 90_15">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="632.75" y="467.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="632.75" y="467.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_16" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="649.853" y="500.811">Analytics</tspan></text>
+</g>
+<g id="Frame 89_6">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="629.75" y="465.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="629.75" y="465.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_17" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="646.853" y="498.811">Analytics</tspan></text>
+</g>
+<g id="Frame 88_6">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="626.75" y="463.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="626.75" y="463.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_18" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="643.853" y="496.811">Analytics</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_group__b8222859_b13121260_b4697708">
+<g id="Group 286_7">
+<g id="Frame 90_16">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="779.75" y="467.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="779.75" y="467.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_19" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="808.598" y="500.811">Group</tspan></text>
+</g>
+<g id="Frame 89_7">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="776.75" y="465.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="776.75" y="465.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_20" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="805.598" y="498.811">Group</tspan></text>
+</g>
+<g id="Frame 88_7">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="773.75" y="463.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="773.75" y="463.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_21" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="802.598" y="496.811">Group</tspan></text>
+</g>
+</g>
+</g>
+<rect fill="#F6F6F3" height="88" id="image" rx="1.5" stroke="#B8B6AD" width="392" x="78.5" y="202.5"/>
+<path d="M78 179C78 177.895 78.8954 177 80 177H469C470.105 177 471 177.895 471 179V203H78V179Z" fill="#B8B6AD" id="Rectangle 125"/>
+<text fill="white" font-family="Roboto" font-size="14" id="say âDA_â" letter-spacing="-0.02em" style="white-space: pre" xml:space="preserve"><tspan x="85" y="194.785">say “DA_” </tspan></text>
+<path d="M471 246H547" id="Vector 80" stroke="#B8B6AD" stroke-dasharray="2 2" stroke-width="2"/>
+<rect fill="url(#pattern0_1235_1971)" height="78" id="image_2" width="384.872" x="81" y="206"/>
+<g id="sn18l_say-dag__b16424601">
+<g id="Group 286_8">
+<g id="Frame 90_17">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="779.75" y="111.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="779.75" y="111.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_22" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="793.599" y="144.811">say “DAG”</tspan></text>
+</g>
+<g id="Frame 89_8">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="776.75" y="109.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="776.75" y="109.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_23" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="790.599" y="142.811">say “DAG”</tspan></text>
+</g>
+<g id="Frame 88_8">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="773.75" y="107.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="773.75" y="107.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_24" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="787.599" y="140.811">say “DAG”</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_say--da--__b5477227_b29852699">
+<g id="Group 286_9">
+<g id="Frame 90_18">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="545.75" y="229.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="545.75" y="229.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_25" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="561.508" y="262.811">say “DA_”</tspan></text>
+</g>
+<g id="Frame 89_9">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="542.75" y="227.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="542.75" y="227.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_26" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="558.508" y="260.811">say “DA_”</tspan></text>
+</g>
+<g id="Frame 88_9">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="539.75" y="225.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="539.75" y="225.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_27" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="555.508" y="258.811">say “DA_”</tspan></text>
+</g>
+</g>
+</g>
+<g id="Group 794">
+<text fill="#CC6500" font-family="Roboto" font-size="13" font-style="italic" id="Hover to see feature visualizations!" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="376" y="122.443">Hover to see </tspan><tspan x="376" y="136.443">feature </tspan><tspan x="376" y="150.443">visualizations!</tspan></text>
+<path d="M553.646 217.854C553.842 218.049 554.158 218.049 554.354 217.854L557.536 214.672C557.731 214.476 557.731 214.16 557.536 213.964C557.34 213.769 557.024 213.769 556.828 213.964L554 216.793L551.172 213.964C550.976 213.769 550.66 213.769 550.464 213.964C550.269 214.16 550.269 214.476 550.464 214.672L553.646 217.854ZM464 132C494.687 132 517.036 138.862 531.717 152.924C546.393 166.981 553.5 188.324 553.5 217.5H554.5C554.5 188.176 547.357 166.519 532.408 152.201C517.464 137.888 494.813 131 464 131V132Z" fill="#CC6500" id="Vector 456"/>
+</g>
+<text fill="white" font-family="Roboto" font-size="12" font-weight="bold" id="Dataset Examples" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="350.43" y="195.602">DATASET EXAMPLES</tspan></text>
+<g id="Frame 114">
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: A simplified diagram of the attribution graph for 18L completing a fictional acronym." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="300" y="627.443">Figure 00: A simplified diagram of the attribution graph for 18L completing a fictional acronym.</tspan></text>
+</g>
+</g>
+<defs>
+<pattern height="1" id="pattern0_1235_1971" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.00140013 0 0 0.00690862 -0.43389 -0.0128205)" xlink:href="#image0_1235_1971"/>
+</pattern>
+<clipPath id="clip0_1235_1971">
+<rect fill="white" height="633" width="1304"/>
+</clipPath>
+<image data-name="image.png" height="156" id="image0_1235_1971" preserveAspectRatio="none" width="1334" xlink:href="./png/img_2c4f96209661d526.png"/>
+</defs>
+</svg>

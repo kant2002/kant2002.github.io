@@ -1,0 +1,2899 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="743" viewBox="0 0 855 743" width="855" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="vw-twea-svg">
+<rect fill="white" height="743" width="855"/>
+<text fill="#1A1A1A" font-family="Roboto" font-size="15" font-weight="bold" id="Output features" letter-spacing="0em" style="white-space: pre" transform="translate(447 61)" xml:space="preserve"><tspan x="144.266" y="13.627">Output features</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="15" font-weight="bold" id="Input features" letter-spacing="0em" style="white-space: pre" transform="translate(12 61)" xml:space="preserve"><tspan x="149.781" y="13.627">Input features</tspan></text>
+<path d="M12 87H406" id="Vector 1570" stroke="#B0AEA5"/>
+<path d="M447 87L841 87" id="Vector 1573" stroke="#B0AEA5"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="12" id="Virtual weight" letter-spacing="0em" style="white-space: pre" transform="translate(11.6543 97)" xml:space="preserve"><tspan x="0" y="10.6016">Virtual weight</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="12" id="Virtual weight_2" letter-spacing="0em" style="white-space: pre" transform="translate(447 97)" xml:space="preserve"><tspan x="0" y="10.6016">Virtual weight</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="12" id="TWERA" letter-spacing="0em" style="white-space: pre" transform="translate(113 97)" xml:space="preserve"><tspan x="0" y="10.6016">TWERA</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="12" id="TWERA_2" letter-spacing="0em" style="white-space: pre" transform="translate(548.346 97)" xml:space="preserve"><tspan x="0" y="10.6016">TWERA</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="12" id="Feature label" letter-spacing="0em" style="white-space: pre" transform="translate(216 97)" xml:space="preserve"><tspan x="0" y="10.6016">Feature label</tspan></text>
+<g id="Frame 519">
+<g id="axes_10">
+<g id="Clip path group">
+<mask height="18" id="mask0_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="125">
+<g id="p09164011d1">
+<path d="M101.14 125H12V142.828H101.14V125Z" fill="white" id="Vector"/>
+</g>
+</mask>
+<g mask="url(#mask0_1933_7665)">
+<g id="Group">
+<rect fill="url(#pattern0_1933_7665)" height="18.5446" id="imagede27530518" transform="matrix(1 0 0 -1 12 142.831)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_3">
+<path d="M12 142.828V125" id="Vector_2" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_4">
+<path d="M101.14 142.828V125" id="Vector_3" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_5">
+<path d="M12 142.829H101.14" id="Vector_4" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_6">
+<path d="M12 125H101.14" id="Vector_5" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_13">
+<g id="Clip path group_2">
+<mask height="19" id="mask1_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="153">
+<g id="p21bb217c12">
+<path d="M101.14 153.929H12V171.756H101.14V153.929Z" fill="white" id="Vector_6"/>
+</g>
+</mask>
+<g mask="url(#mask1_1933_7665)">
+<g id="Group_2">
+<rect fill="url(#pattern1_1933_7665)" height="18.5446" id="imagec96964adb4" transform="matrix(1 0 0 -1 12 171.761)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_13">
+<path d="M12 171.756V153.929" id="Vector_7" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_14">
+<path d="M101.14 171.756V153.929" id="Vector_8" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_15">
+<path d="M12 171.758H101.14" id="Vector_9" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_16">
+<path d="M12 153.929H101.14" id="Vector_10" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_16">
+<g id="Clip path group_3">
+<mask height="19" id="mask2_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="182">
+<g id="p72e66555b1">
+<path d="M101.14 182.857H12V200.685H101.14V182.857Z" fill="white" id="Vector_11"/>
+</g>
+</mask>
+<g mask="url(#mask2_1933_7665)">
+<g id="Group_3">
+<rect fill="url(#pattern2_1933_7665)" height="18.5446" id="image925f593aa8" transform="matrix(1 0 0 -1 12 200.689)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_23">
+<path d="M12 200.685V182.857" id="Vector_12" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_24">
+<path d="M101.14 200.685V182.857" id="Vector_13" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_25">
+<path d="M12 200.687H101.14" id="Vector_14" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_26">
+<path d="M12 182.857H101.14" id="Vector_15" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_19">
+<g id="Clip path group_4">
+<mask height="19" id="mask3_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="211">
+<g id="pd70f35ed0b">
+<path d="M101.14 211.786H12V229.614H101.14V211.786Z" fill="white" id="Vector_16"/>
+</g>
+</mask>
+<g mask="url(#mask3_1933_7665)">
+<g id="Group_4">
+<rect fill="url(#pattern3_1933_7665)" height="18.5446" id="imagee498fcab3e" transform="matrix(1 0 0 -1 12 229.618)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_33">
+<path d="M12 229.614V211.786" id="Vector_17" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_34">
+<path d="M101.14 229.614V211.786" id="Vector_18" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_35">
+<path d="M12 229.615H101.14" id="Vector_19" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_36">
+<path d="M12 211.786H101.14" id="Vector_20" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_22">
+<g id="Clip path group_5">
+<mask height="19" id="mask4_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="240">
+<g id="p0b7eb67d9b">
+<path d="M101.14 240.716H12V258.543H101.14V240.716Z" fill="white" id="Vector_21"/>
+</g>
+</mask>
+<g mask="url(#mask4_1933_7665)">
+<g id="Group_5">
+<rect fill="url(#pattern4_1933_7665)" height="18.5447" id="imageba2997b570" transform="matrix(1 0 0 -1 12 258.587)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_43">
+<path d="M12 258.543V240.716" id="Vector_22" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_44">
+<path d="M101.14 258.543V240.716" id="Vector_23" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_45">
+<path d="M12 258.544H101.14" id="Vector_24" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_46">
+<path d="M12 240.716H101.14" id="Vector_25" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_25">
+<g id="Clip path group_6">
+<mask height="19" id="mask5_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="269">
+<g id="p92e7799668">
+<path d="M101.14 269.644H12V287.471H101.14V269.644Z" fill="white" id="Vector_26"/>
+</g>
+</mask>
+<g mask="url(#mask5_1933_7665)">
+<g id="Group_6">
+<rect fill="url(#pattern5_1933_7665)" height="18.5447" id="image104d0cbe23" transform="matrix(1 0 0 -1 12 287.515)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_53">
+<path d="M12 287.471V269.644" id="Vector_27" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_54">
+<path d="M101.14 287.471V269.644" id="Vector_28" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_55">
+<path d="M12 287.472H101.14" id="Vector_29" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_56">
+<path d="M12 269.644H101.14" id="Vector_30" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_28">
+<g id="Clip path group_7">
+<mask height="19" id="mask6_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="298">
+<g id="p89e83981be">
+<path d="M101.14 298.572H12V316.4H101.14V298.572Z" fill="white" id="Vector_31"/>
+</g>
+</mask>
+<g mask="url(#mask6_1933_7665)">
+<g id="Group_7">
+<rect fill="url(#pattern6_1933_7665)" height="18.5447" id="image84b28307f1" transform="matrix(1 0 0 -1 12 316.443)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_63">
+<path d="M12 316.4V298.572" id="Vector_32" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_64">
+<path d="M101.14 316.4V298.572" id="Vector_33" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_65">
+<path d="M12 316.4H101.14" id="Vector_34" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_66">
+<path d="M12 298.572H101.14" id="Vector_35" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_31">
+<g id="Clip path group_8">
+<mask height="19" id="mask7_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="327">
+<g id="p91320985b4">
+<path d="M101.14 327.5H12V345.328H101.14V327.5Z" fill="white" id="Vector_36"/>
+</g>
+</mask>
+<g mask="url(#mask7_1933_7665)">
+<g id="Group_8">
+<rect fill="url(#pattern7_1933_7665)" height="18.5447" id="image3829976dea" transform="matrix(1 0 0 -1 12 345.414)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_73">
+<path d="M12 345.328V327.5" id="Vector_37" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_74">
+<path d="M101.14 345.328V327.5" id="Vector_38" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_75">
+<path d="M12 345.328H101.14" id="Vector_39" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_76">
+<path d="M12 327.5H101.14" id="Vector_40" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_34">
+<g id="Clip path group_9">
+<mask height="19" id="mask8_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="356">
+<g id="p0ce1fd3fad">
+<path d="M101.14 356.429H12V374.256H101.14V356.429Z" fill="white" id="Vector_41"/>
+</g>
+</mask>
+<g mask="url(#mask8_1933_7665)">
+<g id="Group_9">
+<rect fill="url(#pattern8_1933_7665)" height="18.5446" id="image37e65e354c" transform="matrix(1 0 0 -1 12 374.26)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_83">
+<path d="M12 374.256V356.429" id="Vector_42" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_84">
+<path d="M101.14 374.256V356.429" id="Vector_43" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_85">
+<path d="M12 374.257H101.14" id="Vector_44" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_86">
+<path d="M12 356.429H101.14" id="Vector_45" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_37">
+<g id="Clip path group_10">
+<mask height="19" id="mask9_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="385">
+<g id="p0a3503be38">
+<path d="M101.14 385.356H12V403.184H101.14V385.356Z" fill="white" id="Vector_46"/>
+</g>
+</mask>
+<g mask="url(#mask9_1933_7665)">
+<g id="Group_10">
+<rect fill="url(#pattern9_1933_7665)" height="18.5447" id="image427dd9dc2c" transform="matrix(1 0 0 -1 12 403.271)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_93">
+<path d="M12 403.184V385.356" id="Vector_47" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_94">
+<path d="M101.14 403.184V385.356" id="Vector_48" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_95">
+<path d="M12 403.185H101.14" id="Vector_49" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_96">
+<path d="M12 385.356H101.14" id="Vector_50" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_40">
+<g id="Clip path group_11">
+<mask height="19" id="mask10_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="414">
+<g id="p77f195aa77">
+<path d="M101.14 414.285H12V432.113H101.14V414.285Z" fill="white" id="Vector_51"/>
+</g>
+</mask>
+<g mask="url(#mask10_1933_7665)">
+<g id="Group_11">
+<rect fill="url(#pattern10_1933_7665)" height="18.5447" id="image7c704d6e81" transform="matrix(1 0 0 -1 12 432.199)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_103">
+<path d="M12 432.113V414.285" id="Vector_52" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_104">
+<path d="M101.14 432.113V414.285" id="Vector_53" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_105">
+<path d="M12 432.113H101.14" id="Vector_54" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_106">
+<path d="M12 414.285H101.14" id="Vector_55" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_43">
+<g id="Clip path group_12">
+<mask height="19" id="mask11_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="443">
+<g id="pbf2e9d4b3f">
+<path d="M101.14 443.213H12V461.04H101.14V443.213Z" fill="white" id="Vector_56"/>
+</g>
+</mask>
+<g mask="url(#mask11_1933_7665)">
+<g id="Group_12">
+<rect fill="url(#pattern11_1933_7665)" height="18.5446" id="image92f6ff2ce6" transform="matrix(1 0 0 -1 12 461.044)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_113">
+<path d="M12 461.04V443.213" id="Vector_57" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_114">
+<path d="M101.14 461.04V443.213" id="Vector_58" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_115">
+<path d="M12 461.041H101.14" id="Vector_59" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_116">
+<path d="M12 443.213H101.14" id="Vector_60" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_46">
+<g id="Clip path group_13">
+<mask height="18" id="mask12_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="472">
+<g id="p38e4c7c6ab">
+<path d="M101.14 472.141H12V489.968H101.14V472.141Z" fill="white" id="Vector_61"/>
+</g>
+</mask>
+<g mask="url(#mask12_1933_7665)">
+<g id="Group_13">
+<rect fill="url(#pattern12_1933_7665)" height="18.5447" id="image2c771406ee" transform="matrix(1 0 0 -1 12 490.055)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_123">
+<path d="M12 489.968V472.141" id="Vector_62" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_124">
+<path d="M101.14 489.968V472.141" id="Vector_63" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_125">
+<path d="M12 489.969H101.14" id="Vector_64" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_126">
+<path d="M12 472.141H101.14" id="Vector_65" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_49">
+<g id="Clip path group_14">
+<mask height="18" id="mask13_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="501">
+<g id="p0d229df134">
+<path d="M101.14 501.069H12V518.897H101.14V501.069Z" fill="white" id="Vector_66"/>
+</g>
+</mask>
+<g mask="url(#mask13_1933_7665)">
+<g id="Group_14">
+<rect fill="url(#pattern13_1933_7665)" height="18.5447" id="image55132ba755" transform="matrix(1 0 0 -1 12 518.899)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_133">
+<path d="M12 518.897V501.069" id="Vector_67" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_134">
+<path d="M101.14 518.897V501.069" id="Vector_68" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_135">
+<path d="M12 518.898H101.14" id="Vector_69" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_136">
+<path d="M12 501.069H101.14" id="Vector_70" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_52">
+<g id="Clip path group_15">
+<mask height="19" id="mask14_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="529">
+<g id="p53c93cf39d">
+<path d="M101.14 529.998H12V547.826H101.14V529.998Z" fill="white" id="Vector_71"/>
+</g>
+</mask>
+<g mask="url(#mask14_1933_7665)">
+<g id="Group_15">
+<rect fill="url(#pattern14_1933_7665)" height="18.5446" id="image0f895b98c5" transform="matrix(1 0 0 -1 12 547.829)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_143">
+<path d="M12 547.826V529.998" id="Vector_72" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_144">
+<path d="M101.14 547.826V529.998" id="Vector_73" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_145">
+<path d="M12 547.826H101.14" id="Vector_74" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_146">
+<path d="M12 529.998H101.14" id="Vector_75" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_55">
+<g id="Clip path group_16">
+<mask height="19" id="mask15_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="558">
+<g id="p3c898b7760">
+<path d="M101.14 558.926H12V576.753H101.14V558.926Z" fill="white" id="Vector_76"/>
+</g>
+</mask>
+<g mask="url(#mask15_1933_7665)">
+<g id="Group_16">
+<rect fill="url(#pattern15_1933_7665)" height="18.5447" id="image82736b350f" transform="matrix(1 0 0 -1 12 576.84)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_153">
+<path d="M12 576.753V558.926" id="Vector_77" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_154">
+<path d="M101.14 576.753V558.926" id="Vector_78" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_155">
+<path d="M12 576.754H101.14" id="Vector_79" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_156">
+<path d="M12 558.926H101.14" id="Vector_80" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_58">
+<g id="Clip path group_17">
+<mask height="19" id="mask16_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="587">
+<g id="p3587571e33">
+<path d="M101.14 587.854H12V605.682H101.14V587.854Z" fill="white" id="Vector_81"/>
+</g>
+</mask>
+<g mask="url(#mask16_1933_7665)">
+<g id="Group_17">
+<rect fill="url(#pattern16_1933_7665)" height="18.5446" id="image8bd13a151a" transform="matrix(1 0 0 -1 12 605.686)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_163">
+<path d="M12 605.682V587.854" id="Vector_82" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_164">
+<path d="M101.14 605.682V587.854" id="Vector_83" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_165">
+<path d="M12 605.683H101.14" id="Vector_84" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_166">
+<path d="M12 587.854H101.14" id="Vector_85" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_61">
+<g id="Clip path group_18">
+<mask height="19" id="mask17_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="616">
+<g id="paae87d754b">
+<path d="M101.14 616.782H12V634.61H101.14V616.782Z" fill="white" id="Vector_86"/>
+</g>
+</mask>
+<g mask="url(#mask17_1933_7665)">
+<g id="Group_18">
+<rect fill="url(#pattern17_1933_7665)" height="18.5446" id="imagedc590213b6" transform="matrix(1 0 0 -1 12 634.613)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_173">
+<path d="M12 634.61V616.782" id="Vector_87" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_174">
+<path d="M101.14 634.61V616.782" id="Vector_88" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_175">
+<path d="M12 634.61H101.14" id="Vector_89" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_176">
+<path d="M12 616.782H101.14" id="Vector_90" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_64">
+<g id="Clip path group_19">
+<mask height="19" id="mask18_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="12" y="645">
+<g id="p847b6f2f68">
+<path d="M101.14 645.71H12V663.537H101.14V645.71Z" fill="white" id="Vector_91"/>
+</g>
+</mask>
+<g mask="url(#mask18_1933_7665)">
+<g id="Group_19">
+<rect fill="url(#pattern18_1933_7665)" height="18.5446" id="image61d4a9c44c" transform="matrix(1 0 0 -1 12 663.541)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_183">
+<path d="M12 663.537V645.71" id="Vector_92" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_184">
+<path d="M101.14 663.537V645.71" id="Vector_93" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_185">
+<path d="M12 663.538H101.14" id="Vector_94" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_186">
+<path d="M12 645.71H101.14" id="Vector_95" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_67">
+<g id="Clip path group_20">
+<mask height="19" id="mask19_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="89" x="12" y="674">
+<g id="p71b6d9732f">
+<path d="M100.926 674.639H12V692.338H100.926V674.639Z" fill="white" id="Vector_96"/>
+</g>
+</mask>
+<g mask="url(#mask19_1933_7665)">
+<g id="Group_20">
+<rect fill="url(#pattern19_1933_7665)" height="18.5031" id="image8fe6a9c3cc" transform="matrix(1 0 0 -1 12 692.336)" width="89.1389"/>
+</g>
+</g>
+</g>
+<g id="matplotlib.axis_77">
+<g id="xtick_1">
+<g id="line2d_1">
+<g id="Group_21">
+<g id="Vector_97">
+<path d="M12 692.333V696.421V692.333Z" fill="#666664"/>
+<path d="M12 692.333V696.421" stroke="#666664" stroke-width="1.06667"/>
+</g>
+</g>
+</g>
+</g>
+<g id="xtick_2">
+<g id="line2d_2">
+<g id="Group_22">
+<g id="Vector_98">
+<path d="M100.925 692.333V696.421V692.333Z" fill="#666664"/>
+<path d="M100.925 692.333V696.421" stroke="#666664" stroke-width="1.06667"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g id="patch_193">
+<path d="M12 692.338V674.639" id="Vector_99" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_194">
+<path d="M100.925 692.338V674.639" id="Vector_100" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_195">
+<path d="M12 692.336H100.926" id="Vector_101" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_196">
+<path d="M12 674.639H100.926" id="Vector_102" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<text fill="#4D4D4D" font-family="Roboto" font-size="9" id="&lt;1% max" letter-spacing="0em" style="white-space: pre" transform="translate(12 698)" xml:space="preserve"><tspan x="0" y="8.07617">&lt;1% max</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="9" id="max" letter-spacing="0em" style="white-space: pre" transform="translate(83.1553 697.695)" xml:space="preserve"><tspan x="0.732176" y="8.07617">max</tspan></text>
+</g>
+</g>
+<g id="Frame 518">
+<g id="axes_70">
+<g id="Clip path group_21">
+<mask height="18" id="mask20_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="125">
+<g id="p3aafa5584a">
+<path d="M536.14 125H447V142.828H536.14V125Z" fill="white" id="Vector_103"/>
+</g>
+</mask>
+<g mask="url(#mask20_1933_7665)">
+<g id="Group_23">
+<rect fill="url(#pattern20_1933_7665)" height="18.5448" id="image7bdf18b824" transform="matrix(1 0 0 -1 447 142.828)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_203">
+<path d="M447 142.828V125" id="Vector_104" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_204">
+<path d="M536.141 142.828V125" id="Vector_105" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_205">
+<path d="M447 142.828H536.14" id="Vector_106" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_206">
+<path d="M447 125H536.14" id="Vector_107" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_73">
+<g id="Clip path group_22">
+<mask height="19" id="mask21_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="153">
+<g id="p3685f9b465">
+<path d="M536.14 153.928H447V171.755H536.14V153.928Z" fill="white" id="Vector_108"/>
+</g>
+</mask>
+<g mask="url(#mask21_1933_7665)">
+<g id="Group_24">
+<rect fill="url(#pattern21_1933_7665)" height="18.5448" id="imagede9163d823" transform="matrix(1 0 0 -1 447 171.756)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_213">
+<path d="M447 171.755V153.928" id="Vector_109" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_214">
+<path d="M536.141 171.755V153.928" id="Vector_110" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_215">
+<path d="M447 171.756H536.14" id="Vector_111" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_216">
+<path d="M447 153.928H536.14" id="Vector_112" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_76">
+<g id="Clip path group_23">
+<mask height="19" id="mask22_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="182">
+<g id="pd905130c61">
+<path d="M536.14 182.856H447V200.684H536.14V182.856Z" fill="white" id="Vector_113"/>
+</g>
+</mask>
+<g mask="url(#mask22_1933_7665)">
+<g id="Group_25">
+<rect fill="url(#pattern22_1933_7665)" height="18.5448" id="image50f887357a" transform="matrix(1 0 0 -1 447 200.685)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_223">
+<path d="M447 200.684V182.856" id="Vector_114" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_224">
+<path d="M536.141 200.684V182.856" id="Vector_115" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_225">
+<path d="M447 200.685H536.14" id="Vector_116" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_226">
+<path d="M447 182.856H536.14" id="Vector_117" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_79">
+<g id="Clip path group_24">
+<mask height="19" id="mask23_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="211">
+<g id="p88bfc4d41f">
+<path d="M536.14 211.784H447V229.612H536.14V211.784Z" fill="white" id="Vector_118"/>
+</g>
+</mask>
+<g mask="url(#mask23_1933_7665)">
+<g id="Group_26">
+<rect fill="url(#pattern23_1933_7665)" height="18.5448" id="image510bfa9c34" transform="matrix(1 0 0 -1 447 229.612)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_233">
+<path d="M447 229.612V211.784" id="Vector_119" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_234">
+<path d="M536.141 229.612V211.784" id="Vector_120" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_235">
+<path d="M447 229.612H536.14" id="Vector_121" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_236">
+<path d="M447 211.784H536.14" id="Vector_122" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_82">
+<g id="Clip path group_25">
+<mask height="19" id="mask24_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="240">
+<g id="p2e947269f4">
+<path d="M536.14 240.712H447V258.54H536.14V240.712Z" fill="white" id="Vector_123"/>
+</g>
+</mask>
+<g mask="url(#mask24_1933_7665)">
+<g id="Group_27">
+<rect fill="url(#pattern24_1933_7665)" height="18.5448" id="image9a6f8a26cc" transform="matrix(1 0 0 -1 447 258.54)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_243">
+<path d="M447 258.54V240.712" id="Vector_124" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_244">
+<path d="M536.141 258.54V240.712" id="Vector_125" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_245">
+<path d="M447 258.54H536.14" id="Vector_126" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_246">
+<path d="M447 240.712H536.14" id="Vector_127" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_85">
+<g id="Clip path group_26">
+<mask height="19" id="mask25_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="269">
+<g id="pbbd424f31f">
+<path d="M536.14 269.64H447V287.467H536.14V269.64Z" fill="white" id="Vector_128"/>
+</g>
+</mask>
+<g mask="url(#mask25_1933_7665)">
+<g id="Group_28">
+<rect fill="url(#pattern25_1933_7665)" height="18.5448" id="image9ba7b1f841" transform="matrix(1 0 0 -1 447 287.468)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_253">
+<path d="M447 287.467V269.64" id="Vector_129" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_254">
+<path d="M536.141 287.467V269.64" id="Vector_130" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_255">
+<path d="M447 287.468H536.14" id="Vector_131" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_256">
+<path d="M447 269.64H536.14" id="Vector_132" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_88">
+<g id="Clip path group_27">
+<mask height="19" id="mask26_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="298">
+<g id="pfd2a7457be">
+<path d="M536.14 298.568H447V316.396H536.14V298.568Z" fill="white" id="Vector_133"/>
+</g>
+</mask>
+<g mask="url(#mask26_1933_7665)">
+<g id="Group_29">
+<rect fill="url(#pattern26_1933_7665)" height="18.5448" id="image6598574136" transform="matrix(1 0 0 -1 447 316.396)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_263">
+<path d="M447 316.396V298.568" id="Vector_134" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_264">
+<path d="M536.141 316.396V298.568" id="Vector_135" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_265">
+<path d="M447 316.396H536.14" id="Vector_136" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_266">
+<path d="M447 298.568H536.14" id="Vector_137" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_91">
+<g id="Clip path group_28">
+<mask height="19" id="mask27_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="327">
+<g id="pb07fb7d884">
+<path d="M536.14 327.496H447V345.324H536.14V327.496Z" fill="white" id="Vector_138"/>
+</g>
+</mask>
+<g mask="url(#mask27_1933_7665)">
+<g id="Group_30">
+<rect fill="url(#pattern27_1933_7665)" height="18.5448" id="image42414e53fc" transform="matrix(1 0 0 -1 447 345.324)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_273">
+<path d="M447 345.324V327.496" id="Vector_139" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_274">
+<path d="M536.141 345.324V327.496" id="Vector_140" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_275">
+<path d="M447 345.324H536.14" id="Vector_141" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_276">
+<path d="M447 327.496H536.14" id="Vector_142" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_94">
+<g id="Clip path group_29">
+<mask height="19" id="mask28_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="356">
+<g id="pbae7c8009c">
+<path d="M536.14 356.424H447V374.252H536.14V356.424Z" fill="white" id="Vector_143"/>
+</g>
+</mask>
+<g mask="url(#mask28_1933_7665)">
+<g id="Group_31">
+<rect fill="url(#pattern28_1933_7665)" height="18.5447" id="imagec6fa78e78d" transform="matrix(1 0 0 -1 447 374.252)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_283">
+<path d="M447 374.252V356.424" id="Vector_144" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_284">
+<path d="M536.141 374.252V356.424" id="Vector_145" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_285">
+<path d="M447 374.252H536.14" id="Vector_146" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_286">
+<path d="M447 356.424H536.14" id="Vector_147" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_97">
+<g id="Clip path group_30">
+<mask height="19" id="mask29_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="385">
+<g id="p6ad49ed325">
+<path d="M536.14 385.352H447V403.179H536.14V385.352Z" fill="white" id="Vector_148"/>
+</g>
+</mask>
+<g mask="url(#mask29_1933_7665)">
+<g id="Group_32">
+<rect fill="url(#pattern29_1933_7665)" height="18.5448" id="image2837642f8f" transform="matrix(1 0 0 -1 447 403.18)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_293">
+<path d="M447 403.179V385.352" id="Vector_149" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_294">
+<path d="M536.141 403.179V385.352" id="Vector_150" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_295">
+<path d="M447 403.18H536.14" id="Vector_151" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_296">
+<path d="M447 385.352H536.14" id="Vector_152" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_100">
+<g id="Clip path group_31">
+<mask height="19" id="mask30_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="414">
+<g id="pc018b1c30a">
+<path d="M536.14 414.28H447V432.108H536.14V414.28Z" fill="white" id="Vector_153"/>
+</g>
+</mask>
+<g mask="url(#mask30_1933_7665)">
+<g id="Group_33">
+<rect fill="url(#pattern30_1933_7665)" height="18.5448" id="imagefc74124dc6" transform="matrix(1 0 0 -1 447 432.108)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_303">
+<path d="M447 432.108V414.28" id="Vector_154" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_304">
+<path d="M536.141 432.108V414.28" id="Vector_155" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_305">
+<path d="M447 432.108H536.14" id="Vector_156" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_306">
+<path d="M447 414.28H536.14" id="Vector_157" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_103">
+<g id="Clip path group_32">
+<mask height="19" id="mask31_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="443">
+<g id="pb0a14be774">
+<path d="M536.14 443.208H447V461.036H536.14V443.208Z" fill="white" id="Vector_158"/>
+</g>
+</mask>
+<g mask="url(#mask31_1933_7665)">
+<g id="Group_34">
+<rect fill="url(#pattern31_1933_7665)" height="18.5447" id="imagebae22dcdf3" transform="matrix(1 0 0 -1 447 461.036)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_313">
+<path d="M447 461.036V443.208" id="Vector_159" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_314">
+<path d="M536.141 461.036V443.208" id="Vector_160" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_315">
+<path d="M447 461.036H536.14" id="Vector_161" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_316">
+<path d="M447 443.208H536.14" id="Vector_162" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_106">
+<g id="Clip path group_33">
+<mask height="18" id="mask32_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="472">
+<g id="pa580d0c1cc">
+<path d="M536.14 472.136H447V489.964H536.14V472.136Z" fill="white" id="Vector_163"/>
+</g>
+</mask>
+<g mask="url(#mask32_1933_7665)">
+<g id="Group_35">
+<rect fill="url(#pattern32_1933_7665)" height="18.5448" id="image9e739538ac" transform="matrix(1 0 0 -1 447 489.964)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_323">
+<path d="M447 489.964V472.136" id="Vector_164" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_324">
+<path d="M536.141 489.964V472.136" id="Vector_165" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_325">
+<path d="M447 489.964H536.14" id="Vector_166" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_326">
+<path d="M447 472.136H536.14" id="Vector_167" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_109">
+<g id="Clip path group_34">
+<mask height="18" id="mask33_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="501">
+<g id="peff17d7104">
+<path d="M536.14 501.064H447V518.892H536.14V501.064Z" fill="white" id="Vector_168"/>
+</g>
+</mask>
+<g mask="url(#mask33_1933_7665)">
+<g id="Group_36">
+<rect fill="url(#pattern33_1933_7665)" height="18.5448" id="imagece46c05f16" transform="matrix(1 0 0 -1 447 518.893)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_333">
+<path d="M447 518.892V501.064" id="Vector_169" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_334">
+<path d="M536.141 518.892V501.064" id="Vector_170" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_335">
+<path d="M447 518.893H536.14" id="Vector_171" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_336">
+<path d="M447 501.064H536.14" id="Vector_172" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_112">
+<g id="Clip path group_35">
+<mask height="19" id="mask34_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="529">
+<g id="pe045dfeac0">
+<path d="M536.14 529.992H447V547.82H536.14V529.992Z" fill="white" id="Vector_173"/>
+</g>
+</mask>
+<g mask="url(#mask34_1933_7665)">
+<g id="Group_37">
+<rect fill="url(#pattern34_1933_7665)" height="18.5447" id="imaged7f0c09e8f" transform="matrix(1 0 0 -1 447 547.82)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_343">
+<path d="M447 547.82V529.992" id="Vector_174" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_344">
+<path d="M536.141 547.82V529.992" id="Vector_175" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_345">
+<path d="M447 547.82H536.14" id="Vector_176" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_346">
+<path d="M447 529.992H536.14" id="Vector_177" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_115">
+<g id="Clip path group_36">
+<mask height="19" id="mask35_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="558">
+<g id="pfa4139a1db">
+<path d="M536.14 558.92H447V576.748H536.14V558.92Z" fill="white" id="Vector_178"/>
+</g>
+</mask>
+<g mask="url(#mask35_1933_7665)">
+<g id="Group_38">
+<rect fill="url(#pattern35_1933_7665)" height="18.5448" id="image77a2d5dae6" transform="matrix(1 0 0 -1 447 576.748)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_353">
+<path d="M447 576.748V558.92" id="Vector_179" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_354">
+<path d="M536.141 576.748V558.92" id="Vector_180" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_355">
+<path d="M447 576.748H536.14" id="Vector_181" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_356">
+<path d="M447 558.92H536.14" id="Vector_182" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_118">
+<g id="Clip path group_37">
+<mask height="19" id="mask36_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="587">
+<g id="p0c82249392">
+<path d="M536.14 587.848H447V605.675H536.14V587.848Z" fill="white" id="Vector_183"/>
+</g>
+</mask>
+<g mask="url(#mask36_1933_7665)">
+<g id="Group_39">
+<rect fill="url(#pattern36_1933_7665)" height="18.5447" id="imagee5feb2ac3f" transform="matrix(1 0 0 -1 447 605.676)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_363">
+<path d="M447 605.675V587.848" id="Vector_184" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_364">
+<path d="M536.141 605.675V587.848" id="Vector_185" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_365">
+<path d="M447 605.676H536.14" id="Vector_186" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_366">
+<path d="M447 587.848H536.14" id="Vector_187" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_121">
+<g id="Clip path group_38">
+<mask height="19" id="mask37_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="616">
+<g id="pd715fb676a">
+<path d="M536.14 616.776H447V634.604H536.14V616.776Z" fill="white" id="Vector_188"/>
+</g>
+</mask>
+<g mask="url(#mask37_1933_7665)">
+<g id="Group_40">
+<rect fill="url(#pattern37_1933_7665)" height="18.5447" id="image2819e5ec84" transform="matrix(1 0 0 -1 447 634.604)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_373">
+<path d="M447 634.604V616.776" id="Vector_189" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_374">
+<path d="M536.141 634.604V616.776" id="Vector_190" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_375">
+<path d="M447 634.604H536.14" id="Vector_191" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_376">
+<path d="M447 616.776H536.14" id="Vector_192" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_124">
+<g id="Clip path group_39">
+<mask height="19" id="mask38_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="645">
+<g id="pe5239053d0">
+<path d="M536.14 645.704H447V663.532H536.14V645.704Z" fill="white" id="Vector_193"/>
+</g>
+</mask>
+<g mask="url(#mask38_1933_7665)">
+<g id="Group_41">
+<rect fill="url(#pattern38_1933_7665)" height="18.5447" id="image6810b35a3c" transform="matrix(1 0 0 -1 447 663.532)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_383">
+<path d="M447 663.532V645.704" id="Vector_194" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_384">
+<path d="M536.141 663.532V645.704" id="Vector_195" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_385">
+<path d="M447 663.532H536.14" id="Vector_196" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_386">
+<path d="M447 645.704H536.14" id="Vector_197" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_127">
+<g id="Clip path group_40">
+<mask height="19" id="mask39_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="447" y="674">
+<g id="p62b6e4f967">
+<path d="M536.14 674.632H447V692.371H536.14V674.632Z" fill="white" id="Vector_198"/>
+</g>
+</mask>
+<g mask="url(#mask39_1933_7665)">
+<g id="Group_42">
+<rect fill="url(#pattern39_1933_7665)" height="18.5452" id="image39a9295375" transform="matrix(1 0 0 -1 447 692.37)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="matplotlib.axis_157">
+<g id="xtick_5">
+<g id="line2d_5">
+<g id="Group_43">
+<g id="Vector_199">
+<path d="M447 692.371V696.469V692.371Z" fill="#666664"/>
+<path d="M447 692.371V696.469" stroke="#666664" stroke-width="1.06667"/>
+</g>
+</g>
+</g>
+</g>
+<g id="xtick_6">
+<g id="line2d_6">
+<g id="Group_44">
+<g id="Vector_200">
+<path d="M536.141 692.371V696.469V692.371Z" fill="#666664"/>
+<path d="M536.141 692.371V696.469" stroke="#666664" stroke-width="1.06667"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g id="patch_393">
+<path d="M447 692.371V674.632" id="Vector_201" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_394">
+<path d="M536.141 692.371V674.632" id="Vector_202" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_395">
+<path d="M447 692.371H536.14" id="Vector_203" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_396">
+<path d="M447 674.632H536.14" id="Vector_204" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<text fill="#4D4D4D" font-family="Roboto" font-size="9" id="&lt;1% max_2" letter-spacing="0em" style="white-space: pre" transform="translate(447 698)" xml:space="preserve"><tspan x="0" y="8.07617">&lt;1% max</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="9" id="max_2" letter-spacing="0em" style="white-space: pre" transform="translate(518.029 698)" xml:space="preserve"><tspan x="0.732176" y="8.07617">max</tspan></text>
+</g>
+</g>
+<text fill="#4D4D4D" font-family="Roboto" font-size="12" id="Feature label_2" letter-spacing="0em" style="white-space: pre" transform="translate(650 97)" xml:space="preserve"><tspan x="0" y="10.6016">Feature label</tspan></text>
+<g id="Frame 511">
+<g id="sn18l_say16__b21594094">
+<g id="Group 286">
+<g id="Frame 88">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="121.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="121.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="136.602">Say a game name</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="136.602">L16</tspan></text>
+</g>
+<g id="sn18l_ultimate15__b1966097">
+<g id="Group 286_2">
+<g id="Frame 88_2">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="150.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="150.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="165.602">Ultimate frisbee</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="165.602">L15</tspan></text>
+</g>
+<g id="sn18l_say15__b27742033">
+<g id="Group 286_3">
+<g id="Frame 88_3">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="179.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="179.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="194.602">Say a game name</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="194.602">L15</tspan></text>
+</g>
+<g id="sn18l_texas15__b9540782">
+<g id="Group 286_4">
+<g id="Frame 88_4">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="208.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="208.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="223.602">Texas Hold'em</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="223.602">L15</tspan></text>
+</g>
+<g id="sn18l_say14__b15617050">
+<g id="Group 286_5">
+<g id="Frame 88_5">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="237.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="237.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="252.602">Say a game name</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="252.602">L14</tspan></text>
+</g>
+<g id="sn18l_predict15__b2648754">
+<g id="Group 286_6">
+<g id="Frame 88_6">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="266.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="266.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_6" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="281.602">Predict another game name</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_6" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="281.602">L15</tspan></text>
+</g>
+<g id="sn18l_billiards14__b18197544">
+<g id="Group 286_7">
+<g id="Frame 88_7">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="295.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="295.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_7" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="310.602">Billiards</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_7" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="310.602">L14</tspan></text>
+</g>
+<g id="sn18l_sudoku15__b1437102">
+<g id="Group 286_8">
+<g id="Frame 88_8">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="324.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="324.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_8" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="339.602">Sudoku</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_8" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="339.602">L15</tspan></text>
+</g>
+<g id="sn18l_ultimate15__b29045004">
+<g id="Group 286_9">
+<g id="Frame 88_9">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="353.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="353.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_9" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="368.602">Ultimate frisbee</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_9" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="368.602">L15</tspan></text>
+</g>
+<g id="sn18l_say16__b17888728">
+<g id="Group 286_10">
+<g id="Frame 88_10">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="382.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="382.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_10" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="397.602">Say a game name</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_10" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="397.602">L16</tspan></text>
+</g>
+<g id="sn18l_pickleball16__b434639">
+<g id="Group 286_11">
+<g id="Frame 88_11">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="411.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="411.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_11" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="426.602">Pickleball, Checkers, et al.</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_11" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="426.602">L16</tspan></text>
+</g>
+<g id="sn18l_ult15__b16182856">
+<g id="Group 286_12">
+<g id="Frame 88_12">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="440.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="440.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_12" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="455.602">Ultimate frisbee, et al.</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_12" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="455.602">L15</tspan></text>
+</g>
+<g id="sn18l_say16__b16952597">
+<g id="Group 286_13">
+<g id="Frame 88_13">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="469.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="469.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_13" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="484.602">Say a game name</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_13" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="484.602">L16</tspan></text>
+</g>
+<g id="sn18l_say16__b24980780">
+<g id="Group 286_14">
+<g id="Frame 88_14">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="498.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="498.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_14" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="513.602">Say a game name</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_14" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="513.602">L16</tspan></text>
+</g>
+<g id="sn18l_craps15__b12261208">
+<g id="Group 286_15">
+<g id="Frame 88_15">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="527.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="527.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_15" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="542.602">Craps Croquet</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_15" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="542.602">L15</tspan></text>
+</g>
+<g id="sn18l_blackjack14__b2846185">
+<g id="Group 286_16">
+<g id="Frame 88_16">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="556.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="556.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_16" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="571.602">Blackjack</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_16" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="571.602">L14</tspan></text>
+</g>
+<g id="sn18l_bingo16__b3488986">
+<g id="Group 286_17">
+<g id="Frame 88_17">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="585.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="585.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_17" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="600.602">Bingo, Baccarat</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_17" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="600.602">L16</tspan></text>
+</g>
+<g id="sn18l_bingo17__b29747141">
+<g id="Group 286_18">
+<g id="Frame 88_18">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="614.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="614.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_18" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="629.602">Bingo</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_18" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="629.602">L17</tspan></text>
+</g>
+<g id="sn18l_pingpong14__b29693235">
+<g id="Group 286_19">
+<g id="Frame 88_19">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="643.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="643.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_19" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="658.602">Ping-Pong</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_19" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="658.602">L14</tspan></text>
+</g>
+<g id="sn18l_say15__b2114430">
+<g id="Group 286_20">
+<g id="Frame 88_20">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="650.65" y="672.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="650.65" y="672.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_20" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="656" y="687.602">Say a video game</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_20" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="817" y="687.602">L15</tspan></text>
+</g>
+</g>
+<g id="Frame 512">
+<g id="sn18l_capitalized1__b15071285">
+<g id="Group 286_21">
+<g id="Frame 88_21">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="121.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="121.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_21" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="136.602">Capitalized tokens</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_21" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="136.602">L1</tspan></text>
+</g>
+<g id="sn18l_of1__b13782837">
+<g id="Group 286_22">
+<g id="Frame 88_22">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="150.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="150.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_22" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="165.602">"of" token</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_22" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="165.602">L1</tspan></text>
+</g>
+<g id="sn18l_capitalized1__b29428248">
+<g id="Group 286_23">
+<g id="Frame 88_23">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="179.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="179.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_23" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="194.602">Capitalized tokens</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_23" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="194.602">L1</tspan></text>
+</g>
+<g id="sn18l_like1__b16791382">
+<g id="Group 286_24">
+<g id="Frame 88_24">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="208.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="208.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_24" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="223.602">"like" token</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_24" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="223.602">L1</tspan></text>
+</g>
+<g id="sn18l_in1__b8236485">
+<g id="Group 286_25">
+<g id="Frame 88_25">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="237.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="237.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_25" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="252.602">"in" token</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_25" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="252.602">L1</tspan></text>
+</g>
+<g id="sn18l_board12__b19308707">
+<g id="Group 286_26">
+<g id="Frame 88_26">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="266.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="266.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_26" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="281.602">Board games</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_26" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="281.602">L12</tspan></text>
+</g>
+<g id="sn18l_games6__b15085125">
+<g id="Group 286_27">
+<g id="Frame 88_27">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="295.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="295.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_27" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="310.602">Games</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_27" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="310.602">L6</tspan></text>
+</g>
+<g id="sn18l_1__b21006915">
+<g id="Group 286_28">
+<g id="Frame 88_28">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="324.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="324.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_28" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="339.602">"," token</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_28" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="339.602">L1</tspan></text>
+</g>
+<g id="sn18l_play1__b25789245">
+<g id="Group 286_29">
+<g id="Frame 88_29">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="353.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="353.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_29" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="368.602">"play" token</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_29" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="368.602">L1</tspan></text>
+</g>
+<g id="sn18l_at1__b9386179">
+<g id="Group 286_30">
+<g id="Frame 88_30">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="382.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="382.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_30" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="397.602">"at" token</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_30" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="397.602">L1</tspan></text>
+</g>
+<g id="sn18l_role8__b25765338">
+<g id="Group 286_31">
+<g id="Frame 88_31">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="411.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="411.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_31" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="426.602">Role or game playing</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_31" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="426.602">L8</tspan></text>
+</g>
+<g id="sn18l_rules12__b6358055">
+<g id="Group 286_32">
+<g id="Frame 88_32">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="440.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="440.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_32" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="455.602">Rules explanations</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_32" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="455.602">L12</tspan></text>
+</g>
+<g id="sn18l_mostly9__b16529860">
+<g id="Group 286_33">
+<g id="Frame 88_33">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="469.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="469.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_33" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="484.602">(Mostly card) games</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_33" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="484.602">L9</tspan></text>
+</g>
+<g id="sn18l_physical9__b25319355">
+<g id="Group 286_34">
+<g id="Frame 88_34">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="498.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="498.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_34" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="513.602">Physical games</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_34" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="513.602">L9</tspan></text>
+</g>
+<g id="sn18l_playing7__b24908714">
+<g id="Group 286_35">
+<g id="Frame 88_35">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="527.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="527.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_35" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="542.602">"playing" token</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_35" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="542.602">L7</tspan></text>
+</g>
+<g id="sn18l_pots12__b17252319">
+<g id="Group 286_36">
+<g id="Frame 88_36">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="556.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="556.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_36" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="571.602">"pots" or "pools"</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_36" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="571.602">L12</tspan></text>
+</g>
+<g id="sn18l_playing1__b2999814">
+<g id="Group 286_37">
+<g id="Frame 88_37">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="585.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="585.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_37" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="600.602">"playing token"</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_37" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="600.602">L1</tspan></text>
+</g>
+<g id="sn18l_de1__b25290542">
+<g id="Group 286_38">
+<g id="Frame 88_38">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="614.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="614.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_38" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="629.602">"de" token</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_38" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="629.602">L1</tspan></text>
+</g>
+<g id="sn18l_game9__b2373193">
+<g id="Group 286_39">
+<g id="Frame 88_39">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="643.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="643.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_39" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="658.602">Game names</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_39" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="658.602">L9</tspan></text>
+</g>
+<g id="sn18l_play1__b12975895">
+<g id="Group 286_40">
+<g id="Frame 88_40">
+<rect fill="#E6E3D6" height="21.7" rx="5.35" width="158.7" x="216.65" y="672.65"/>
+<rect height="21.7" rx="5.35" stroke="#706D5C" stroke-width="1.3" width="158.7" x="216.65" y="672.65"/>
+<text fill="black" font-family="Roboto" font-size="12" id="Say a Capital_40" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="222" y="687.602">"play" token</tspan></text>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L15_40" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="383" y="687.602">L1</tspan></text>
+</g>
+</g>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Largest TWERA values for the same example feature." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="10" y="735.443">Figure 00: Largest TWERA values for the same example feature.</tspan></text>
+<g id="Group 715">
+<g id="CircuitNode">
+<g id="sn18l_gamename__b28460932">
+<g id="Frame 88_41">
+<rect fill="#E6E3D6" height="25.5" rx="5.25" width="138.5" x="358.75" y="12.75"/>
+<rect height="25.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="138.5" x="358.75" y="12.75"/>
+<text fill="black" font-family="Roboto" font-size="12" font-weight="bold" id="Say a game name" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="380.334" y="29.6016">Say a game name</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#87867F" font-family="Roboto" font-size="12" id="L13" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="416" y="53.6016">L13</tspan></text>
+</g>
+<path d="M358 26L348 20.2265L348 31.7735L358 26ZM201 43.2222L201 57L203 57L203 43.2222L201 43.2222ZM349 25L337.812 25L337.812 27L349 27L349 25ZM337.812 25L217 25L217 27L337.812 27L337.812 25ZM201 41L201 43.2222L203 43.2222L203 41L201 41ZM217 25C208.163 25 201 32.1635 201 41L203 41C203 33.268 209.268 27 217 27L217 25Z" fill="#633636" id="Vector 828"/>
+<path d="M643 57L648.774 47H637.227L643 57ZM562.444 25L498 25V27L562.444 27V25ZM644 52.9882V41H642V52.9882H644ZM628 25L562.444 25V27L628 27V25ZM644 41C644 32.1634 636.837 25 628 25V27C635.732 27 642 33.268 642 41H644Z" fill="#633636" id="Vector 1572"/>
+<g id="Frame 520">
+<g id="Frame 522">
+<g id="axes_11">
+<g id="Clip path group_41">
+<mask height="18" id="mask40_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="125">
+<g id="peff9c3952b">
+<path d="M202.14 125H113V142.828H202.14V125Z" fill="white" id="Vector_205"/>
+</g>
+</mask>
+<g mask="url(#mask40_1933_7665)">
+<g id="Group_45">
+<rect fill="url(#pattern40_1933_7665)" height="18.5448" id="imageb2c6889b11" transform="matrix(1 0 0 -1 113 142.828)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_8">
+<path d="M113 142.828V125" id="Vector_206" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_9">
+<path d="M202.142 142.828V125" id="Vector_207" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_10">
+<path d="M113 142.828H202.14" id="Vector_208" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_11">
+<path d="M113 125H202.14" id="Vector_209" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_14">
+<g id="Clip path group_42">
+<mask height="19" id="mask41_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="153">
+<g id="pc4e9d5d128">
+<path d="M202.14 153.929H113V171.756H202.14V153.929Z" fill="white" id="Vector_210"/>
+</g>
+</mask>
+<g mask="url(#mask41_1933_7665)">
+<g id="Group_46">
+<rect fill="url(#pattern41_1933_7665)" height="18.5448" id="image72a2b80d81" transform="matrix(1 0 0 -1 113 171.757)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_18">
+<path d="M113 171.756V153.929" id="Vector_211" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_19">
+<path d="M202.142 171.756V153.929" id="Vector_212" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_20">
+<path d="M113 171.757H202.14" id="Vector_213" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_21">
+<path d="M113 153.929H202.14" id="Vector_214" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_17">
+<g id="Clip path group_43">
+<mask height="19" id="mask42_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="182">
+<g id="p82dec6d102">
+<path d="M202.14 182.856H113V200.684H202.14V182.856Z" fill="white" id="Vector_215"/>
+</g>
+</mask>
+<g mask="url(#mask42_1933_7665)">
+<g id="Group_47">
+<rect fill="url(#pattern42_1933_7665)" height="18.5448" id="imageeee53b1bee" transform="matrix(1 0 0 -1 113 200.685)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_28">
+<path d="M113 200.684V182.856" id="Vector_216" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_29">
+<path d="M202.142 200.684V182.856" id="Vector_217" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_30">
+<path d="M113 200.685H202.14" id="Vector_218" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_31">
+<path d="M113 182.856H202.14" id="Vector_219" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_20">
+<g id="Clip path group_44">
+<mask height="19" id="mask43_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="211">
+<g id="pc07094d79e">
+<path d="M202.14 211.785H113V229.613H202.14V211.785Z" fill="white" id="Vector_220"/>
+</g>
+</mask>
+<g mask="url(#mask43_1933_7665)">
+<g id="Group_48">
+<rect fill="url(#pattern43_1933_7665)" height="18.5448" id="imagea0b407d8cf" transform="matrix(1 0 0 -1 113 229.613)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_38">
+<path d="M113 229.613V211.785" id="Vector_221" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_39">
+<path d="M202.142 229.613V211.785" id="Vector_222" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_40">
+<path d="M113 229.613H202.14" id="Vector_223" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_41">
+<path d="M113 211.785H202.14" id="Vector_224" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_23">
+<g id="Clip path group_45">
+<mask height="19" id="mask44_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="240">
+<g id="p5b9a0de689">
+<path d="M202.14 240.713H113V258.541H202.14V240.713Z" fill="white" id="Vector_225"/>
+</g>
+</mask>
+<g mask="url(#mask44_1933_7665)">
+<g id="Group_49">
+<rect fill="url(#pattern44_1933_7665)" height="18.5448" id="imagea6186d960f" transform="matrix(1 0 0 -1 113 258.541)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_48">
+<path d="M113 258.541V240.713" id="Vector_226" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_49">
+<path d="M202.142 258.541V240.713" id="Vector_227" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_50">
+<path d="M113 258.541H202.14" id="Vector_228" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_51">
+<path d="M113 240.713H202.14" id="Vector_229" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_26">
+<g id="Clip path group_46">
+<mask height="19" id="mask45_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="269">
+<g id="p2c36d1dced">
+<path d="M202.14 269.642H113V287.469H202.14V269.642Z" fill="white" id="Vector_230"/>
+</g>
+</mask>
+<g mask="url(#mask45_1933_7665)">
+<g id="Group_50">
+<rect fill="url(#pattern45_1933_7665)" height="18.5448" id="image51f37f6aa6" transform="matrix(1 0 0 -1 113 287.47)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_58">
+<path d="M113 287.469V269.642" id="Vector_231" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_59">
+<path d="M202.142 287.469V269.642" id="Vector_232" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_60">
+<path d="M113 287.47H202.14" id="Vector_233" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_61">
+<path d="M113 269.642H202.14" id="Vector_234" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_29">
+<g id="Clip path group_47">
+<mask height="19" id="mask46_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="298">
+<g id="pf8e5b41a16">
+<path d="M202.14 298.569H113V316.397H202.14V298.569Z" fill="white" id="Vector_235"/>
+</g>
+</mask>
+<g mask="url(#mask46_1933_7665)">
+<g id="Group_51">
+<rect fill="url(#pattern46_1933_7665)" height="18.5448" id="image40ba8adacf" transform="matrix(1 0 0 -1 113 316.397)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_68">
+<path d="M113 316.397V298.569" id="Vector_236" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_69">
+<path d="M202.142 316.397V298.569" id="Vector_237" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_70">
+<path d="M113 316.397H202.14" id="Vector_238" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_71">
+<path d="M113 298.569H202.14" id="Vector_239" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_32">
+<g id="Clip path group_48">
+<mask height="19" id="mask47_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="327">
+<g id="pa6cad4f039">
+<path d="M202.14 327.498H113V345.326H202.14V327.498Z" fill="white" id="Vector_240"/>
+</g>
+</mask>
+<g mask="url(#mask47_1933_7665)">
+<g id="Group_52">
+<rect fill="url(#pattern47_1933_7665)" height="18.5448" id="image3271a37a99" transform="matrix(1 0 0 -1 113 345.326)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_78">
+<path d="M113 345.326V327.498" id="Vector_241" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_79">
+<path d="M202.142 345.326V327.498" id="Vector_242" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_80">
+<path d="M113 345.326H202.14" id="Vector_243" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_81">
+<path d="M113 327.498H202.14" id="Vector_244" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_35">
+<g id="Clip path group_49">
+<mask height="19" id="mask48_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="356">
+<g id="p92ed400b29">
+<path d="M202.14 356.426H113V374.254H202.14V356.426Z" fill="white" id="Vector_245"/>
+</g>
+</mask>
+<g mask="url(#mask48_1933_7665)">
+<g id="Group_53">
+<rect fill="url(#pattern48_1933_7665)" height="18.5447" id="image4e643e1772" transform="matrix(1 0 0 -1 113 374.254)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_88">
+<path d="M113 374.254V356.426" id="Vector_246" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_89">
+<path d="M202.142 374.254V356.426" id="Vector_247" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_90">
+<path d="M113 374.254H202.14" id="Vector_248" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_91">
+<path d="M113 356.426H202.14" id="Vector_249" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_38">
+<g id="Clip path group_50">
+<mask height="19" id="mask49_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="385">
+<g id="p489ef2a5e6">
+<path d="M202.14 385.354H113V403.182H202.14V385.354Z" fill="white" id="Vector_250"/>
+</g>
+</mask>
+<g mask="url(#mask49_1933_7665)">
+<g id="Group_54">
+<rect fill="url(#pattern49_1933_7665)" height="18.5448" id="image52c7a2d9cc" transform="matrix(1 0 0 -1 113 403.183)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_98">
+<path d="M113 403.182V385.354" id="Vector_251" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_99">
+<path d="M202.142 403.182V385.354" id="Vector_252" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_100">
+<path d="M113 403.183H202.14" id="Vector_253" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_101">
+<path d="M113 385.354H202.14" id="Vector_254" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_41">
+<g id="Clip path group_51">
+<mask height="19" id="mask50_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="414">
+<g id="p8f0ca2db5f">
+<path d="M202.14 414.283H113V432.111H202.14V414.283Z" fill="white" id="Vector_255"/>
+</g>
+</mask>
+<g mask="url(#mask50_1933_7665)">
+<g id="Group_55">
+<rect fill="url(#pattern50_1933_7665)" height="18.5448" id="imageb05661201d" transform="matrix(1 0 0 -1 113 432.111)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_108">
+<path d="M113 432.111V414.283" id="Vector_256" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_109">
+<path d="M202.142 432.111V414.283" id="Vector_257" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_110">
+<path d="M113 432.111H202.14" id="Vector_258" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_111">
+<path d="M113 414.283H202.14" id="Vector_259" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_44">
+<g id="Clip path group_52">
+<mask height="19" id="mask51_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="443">
+<g id="p7638f39d46">
+<path d="M202.14 443.211H113V461.039H202.14V443.211Z" fill="white" id="Vector_260"/>
+</g>
+</mask>
+<g mask="url(#mask51_1933_7665)">
+<g id="Group_56">
+<rect fill="url(#pattern51_1933_7665)" height="18.5447" id="imageea9e8c6579" transform="matrix(1 0 0 -1 113 461.039)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_118">
+<path d="M113 461.039V443.211" id="Vector_261" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_119">
+<path d="M202.142 461.039V443.211" id="Vector_262" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_120">
+<path d="M113 461.039H202.14" id="Vector_263" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_121">
+<path d="M113 443.211H202.14" id="Vector_264" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_47">
+<g id="Clip path group_53">
+<mask height="18" id="mask52_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="472">
+<g id="p370baae8d1">
+<path d="M202.14 472.14H113V489.967H202.14V472.14Z" fill="white" id="Vector_265"/>
+</g>
+</mask>
+<g mask="url(#mask52_1933_7665)">
+<g id="Group_57">
+<rect fill="url(#pattern52_1933_7665)" height="18.5448" id="imagec036675b12" transform="matrix(1 0 0 -1 113 489.968)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_128">
+<path d="M113 489.967V472.14" id="Vector_266" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_129">
+<path d="M202.142 489.967V472.14" id="Vector_267" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_130">
+<path d="M113 489.968H202.14" id="Vector_268" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_131">
+<path d="M113 472.14H202.14" id="Vector_269" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_50">
+<g id="Clip path group_54">
+<mask height="18" id="mask53_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="501">
+<g id="pf15847e59a">
+<path d="M202.14 501.067H113V518.895H202.14V501.067Z" fill="white" id="Vector_270"/>
+</g>
+</mask>
+<g mask="url(#mask53_1933_7665)">
+<g id="Group_58">
+<rect fill="url(#pattern53_1933_7665)" height="18.5448" id="imageddae79a5fd" transform="matrix(1 0 0 -1 113 518.896)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_138">
+<path d="M113 518.895V501.067" id="Vector_271" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_139">
+<path d="M202.142 518.895V501.067" id="Vector_272" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_140">
+<path d="M113 518.896H202.14" id="Vector_273" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_141">
+<path d="M113 501.067H202.14" id="Vector_274" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_53">
+<g id="Clip path group_55">
+<mask height="19" id="mask54_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="529">
+<g id="pea4d66ed19">
+<path d="M202.14 529.996H113V547.824H202.14V529.996Z" fill="white" id="Vector_275"/>
+</g>
+</mask>
+<g mask="url(#mask54_1933_7665)">
+<g id="Group_59">
+<rect fill="url(#pattern54_1933_7665)" height="18.5447" id="image55a8e48ed8" transform="matrix(1 0 0 -1 113 547.824)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_148">
+<path d="M113 547.824V529.996" id="Vector_276" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_149">
+<path d="M202.142 547.824V529.996" id="Vector_277" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_150">
+<path d="M113 547.824H202.14" id="Vector_278" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_151">
+<path d="M113 529.996H202.14" id="Vector_279" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_56">
+<g id="Clip path group_56">
+<mask height="19" id="mask55_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="558">
+<g id="p4ada58a917">
+<path d="M202.14 558.924H113V576.752H202.14V558.924Z" fill="white" id="Vector_280"/>
+</g>
+</mask>
+<g mask="url(#mask55_1933_7665)">
+<g id="Group_60">
+<rect fill="url(#pattern55_1933_7665)" height="18.5448" id="imagef7a689184c" transform="matrix(1 0 0 -1 113 576.752)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_158">
+<path d="M113 576.752V558.924" id="Vector_281" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_159">
+<path d="M202.142 576.752V558.924" id="Vector_282" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_160">
+<path d="M113 576.752H202.14" id="Vector_283" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_161">
+<path d="M113 558.924H202.14" id="Vector_284" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_59">
+<g id="Clip path group_57">
+<mask height="19" id="mask56_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="587">
+<g id="pa3ccabb5da">
+<path d="M202.14 587.853H113V605.68H202.14V587.853Z" fill="white" id="Vector_285"/>
+</g>
+</mask>
+<g mask="url(#mask56_1933_7665)">
+<g id="Group_61">
+<rect fill="url(#pattern56_1933_7665)" height="18.5447" id="imageff92400460" transform="matrix(1 0 0 -1 113 605.681)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_168">
+<path d="M113 605.68V587.853" id="Vector_286" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_169">
+<path d="M202.142 605.68V587.853" id="Vector_287" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_170">
+<path d="M113 605.681H202.14" id="Vector_288" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_171">
+<path d="M113 587.853H202.14" id="Vector_289" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_62">
+<g id="Clip path group_58">
+<mask height="19" id="mask57_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="616">
+<g id="pa09cd6a31b">
+<path d="M202.14 616.78H113V634.608H202.14V616.78Z" fill="white" id="Vector_290"/>
+</g>
+</mask>
+<g mask="url(#mask57_1933_7665)">
+<g id="Group_62">
+<rect fill="url(#pattern57_1933_7665)" height="18.5447" id="image486c6ba08c" transform="matrix(1 0 0 -1 113 634.608)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_178">
+<path d="M113 634.608V616.78" id="Vector_291" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_179">
+<path d="M202.142 634.608V616.78" id="Vector_292" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_180">
+<path d="M113 634.608H202.14" id="Vector_293" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_181">
+<path d="M113 616.78H202.14" id="Vector_294" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_65">
+<g id="Clip path group_59">
+<mask height="19" id="mask58_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="645">
+<g id="pb63a44534d">
+<path d="M202.14 645.709H113V663.537H202.14V645.709Z" fill="white" id="Vector_295"/>
+</g>
+</mask>
+<g mask="url(#mask58_1933_7665)">
+<g id="Group_63">
+<rect fill="url(#pattern58_1933_7665)" height="18.5447" id="imageb4d5a24604" transform="matrix(1 0 0 -1 113 663.537)" width="89.3529"/>
+</g>
+</g>
+</g>
+<g id="patch_188">
+<path d="M113 663.537V645.709" id="Vector_296" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_189">
+<path d="M202.142 663.537V645.709" id="Vector_297" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_190">
+<path d="M113 663.537H202.14" id="Vector_298" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_191">
+<path d="M113 645.709H202.14" id="Vector_299" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_68">
+<g id="Clip path group_60">
+<mask height="19" id="mask59_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="113" y="674">
+<g id="p6a06595e3c">
+<path d="M202.14 674.637H113V692.376H202.14V674.637Z" fill="white" id="Vector_300"/>
+</g>
+</mask>
+<g mask="url(#mask59_1933_7665)">
+<g id="Group_64">
+<rect fill="url(#pattern59_1933_7665)" height="18.5452" id="image8a7fd14e7c" transform="matrix(1 0 0 -1 113 692.303)" width="89.353"/>
+</g>
+</g>
+</g>
+<g id="matplotlib.axis_79">
+<g id="xtick_3">
+<g id="line2d_3">
+<g id="Group_65">
+<g id="Vector_301">
+<path d="M113 692.374V696.472V692.374Z" fill="#666664"/>
+<path d="M113 692.374V696.472" stroke="#666664" stroke-width="1.06667"/>
+</g>
+</g>
+</g>
+</g>
+<g id="xtick_4">
+<g id="line2d_4">
+<g id="Group_66">
+<g id="Vector_302">
+<path d="M202.142 692.375V696.473V692.375Z" fill="#666664"/>
+<path d="M202.142 692.375V696.473" stroke="#666664" stroke-width="1.06667"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g id="patch_198">
+<path d="M113 692.376V674.637" id="Vector_303" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_199">
+<path d="M202.14 692.376V674.637" id="Vector_304" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_200">
+<path d="M113 692.376H202.14" id="Vector_305" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_201">
+<path d="M113 674.637H202.14" id="Vector_306" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<text fill="#4D4D4D" font-family="Roboto" font-size="9" id="&lt;1% max_3" letter-spacing="0em" style="white-space: pre" transform="translate(113.001 698)" xml:space="preserve"><tspan x="0" y="8.07617">&lt;1% max</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="9" id="max_3" letter-spacing="0em" style="white-space: pre" transform="translate(184.154 697.695)" xml:space="preserve"><tspan x="0.732176" y="8.07617">max</tspan></text>
+</g>
+</g>
+</g>
+<g id="Frame 521">
+<g id="axes_71">
+<g id="Clip path group_61">
+<mask height="18" id="mask60_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="125">
+<g id="pf56e6e3b12">
+<path d="M637.14 125H548V142.828H637.14V125Z" fill="white" id="Vector_307"/>
+</g>
+</mask>
+<g mask="url(#mask60_1933_7665)">
+<g id="Group_67">
+<rect fill="url(#pattern60_1933_7665)" height="18.545" id="imagee80d959c78" transform="matrix(1 0 0 -1 548 142.828)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_208">
+<path d="M548 142.828V125" id="Vector_308" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_209">
+<path d="M637.14 142.828V125" id="Vector_309" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_210">
+<path d="M548 142.827H637.14" id="Vector_310" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_211">
+<path d="M548 125H637.14" id="Vector_311" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_74">
+<g id="Clip path group_62">
+<mask height="19" id="mask61_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="153">
+<g id="pc83e831caa">
+<path d="M637.14 153.928H548V171.756H637.14V153.928Z" fill="white" id="Vector_312"/>
+</g>
+</mask>
+<g mask="url(#mask61_1933_7665)">
+<g id="Group_68">
+<rect fill="url(#pattern61_1933_7665)" height="18.545" id="image549d1a5d87" transform="matrix(1 0 0 -1 548 171.756)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_218">
+<path d="M548 171.756V153.928" id="Vector_313" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_219">
+<path d="M637.14 171.756V153.928" id="Vector_314" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_220">
+<path d="M548 171.755H637.14" id="Vector_315" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_221">
+<path d="M548 153.928H637.14" id="Vector_316" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_77">
+<g id="Clip path group_63">
+<mask height="19" id="mask62_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="182">
+<g id="p6139e865a1">
+<path d="M637.14 182.856H548V200.684H637.14V182.856Z" fill="white" id="Vector_317"/>
+</g>
+</mask>
+<g mask="url(#mask62_1933_7665)">
+<g id="Group_69">
+<rect fill="url(#pattern62_1933_7665)" height="18.545" id="imageff3f3c3761" transform="matrix(1 0 0 -1 548 200.685)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_228">
+<path d="M548 200.684V182.856" id="Vector_318" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_229">
+<path d="M637.14 200.684V182.856" id="Vector_319" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_230">
+<path d="M548 200.684H637.14" id="Vector_320" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_231">
+<path d="M548 182.856H637.14" id="Vector_321" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_80">
+<g id="Clip path group_64">
+<mask height="19" id="mask63_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="211">
+<g id="p94018e8e5c">
+<path d="M637.14 211.784H548V229.612H637.14V211.784Z" fill="white" id="Vector_322"/>
+</g>
+</mask>
+<g mask="url(#mask63_1933_7665)">
+<g id="Group_70">
+<rect fill="url(#pattern63_1933_7665)" height="18.545" id="imagec785a33256" transform="matrix(1 0 0 -1 548 229.612)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_238">
+<path d="M548 229.612V211.784" id="Vector_323" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_239">
+<path d="M637.14 229.612V211.784" id="Vector_324" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_240">
+<path d="M548 229.611H637.14" id="Vector_325" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_241">
+<path d="M548 211.784H637.14" id="Vector_326" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_83">
+<g id="Clip path group_65">
+<mask height="19" id="mask64_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="240">
+<g id="pd1b316235f">
+<path d="M637.14 240.712H548V258.54H637.14V240.712Z" fill="white" id="Vector_327"/>
+</g>
+</mask>
+<g mask="url(#mask64_1933_7665)">
+<g id="Group_71">
+<rect fill="url(#pattern64_1933_7665)" height="18.545" id="imagec7155d7310" transform="matrix(1 0 0 -1 548 258.54)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_248">
+<path d="M548 258.54V240.712" id="Vector_328" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_249">
+<path d="M637.14 258.54V240.712" id="Vector_329" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_250">
+<path d="M548 258.54H637.14" id="Vector_330" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_251">
+<path d="M548 240.712H637.14" id="Vector_331" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_86">
+<g id="Clip path group_66">
+<mask height="19" id="mask65_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="269">
+<g id="p9cd17b9757">
+<path d="M637.14 269.64H548V287.468H637.14V269.64Z" fill="white" id="Vector_332"/>
+</g>
+</mask>
+<g mask="url(#mask65_1933_7665)">
+<g id="Group_72">
+<rect fill="url(#pattern65_1933_7665)" height="18.545" id="image0ae494313d" transform="matrix(1 0 0 -1 548 287.468)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_258">
+<path d="M548 287.468V269.64" id="Vector_333" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_259">
+<path d="M637.14 287.468V269.64" id="Vector_334" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_260">
+<path d="M548 287.468H637.14" id="Vector_335" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_261">
+<path d="M548 269.64H637.14" id="Vector_336" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_89">
+<g id="Clip path group_67">
+<mask height="19" id="mask66_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="298">
+<g id="p55ccb33e3e">
+<path d="M637.14 298.568H548V316.396H637.14V298.568Z" fill="white" id="Vector_337"/>
+</g>
+</mask>
+<g mask="url(#mask66_1933_7665)">
+<g id="Group_73">
+<rect fill="url(#pattern66_1933_7665)" height="18.545" id="imagefa4aaa3615" transform="matrix(1 0 0 -1 548 316.396)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_268">
+<path d="M548 316.396V298.568" id="Vector_338" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_269">
+<path d="M637.14 316.396V298.568" id="Vector_339" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_270">
+<path d="M548 316.396H637.14" id="Vector_340" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_271">
+<path d="M548 298.568H637.14" id="Vector_341" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_92">
+<g id="Clip path group_68">
+<mask height="19" id="mask67_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="327">
+<g id="p8e72e9db13">
+<path d="M637.14 327.496H548V345.324H637.14V327.496Z" fill="white" id="Vector_342"/>
+</g>
+</mask>
+<g mask="url(#mask67_1933_7665)">
+<g id="Group_74">
+<rect fill="url(#pattern67_1933_7665)" height="18.545" id="image61979ad4e6" transform="matrix(1 0 0 -1 548 345.324)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_278">
+<path d="M548 345.324V327.496" id="Vector_343" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_279">
+<path d="M637.14 345.324V327.496" id="Vector_344" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_280">
+<path d="M548 345.323H637.14" id="Vector_345" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_281">
+<path d="M548 327.496H637.14" id="Vector_346" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_95">
+<g id="Clip path group_69">
+<mask height="19" id="mask68_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="356">
+<g id="p639aa82c65">
+<path d="M637.14 356.424H548V374.252H637.14V356.424Z" fill="white" id="Vector_347"/>
+</g>
+</mask>
+<g mask="url(#mask68_1933_7665)">
+<g id="Group_75">
+<rect fill="url(#pattern68_1933_7665)" height="18.545" id="imagecc27ede615" transform="matrix(1 0 0 -1 548 374.252)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_288">
+<path d="M548 374.252V356.424" id="Vector_348" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_289">
+<path d="M637.14 374.252V356.424" id="Vector_349" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_290">
+<path d="M548 374.251H637.14" id="Vector_350" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_291">
+<path d="M548 356.424H637.14" id="Vector_351" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_98">
+<g id="Clip path group_70">
+<mask height="19" id="mask69_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="385">
+<g id="p284300bcac">
+<path d="M637.14 385.352H548V403.18H637.14V385.352Z" fill="white" id="Vector_352"/>
+</g>
+</mask>
+<g mask="url(#mask69_1933_7665)">
+<g id="Group_76">
+<rect fill="url(#pattern69_1933_7665)" height="18.545" id="image0233d32fbe" transform="matrix(1 0 0 -1 548 403.18)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_298">
+<path d="M548 403.18V385.352" id="Vector_353" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_299">
+<path d="M637.14 403.18V385.352" id="Vector_354" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_300">
+<path d="M548 403.179H637.14" id="Vector_355" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_301">
+<path d="M548 385.352H637.14" id="Vector_356" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_101">
+<g id="Clip path group_71">
+<mask height="19" id="mask70_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="414">
+<g id="pf311a81d06">
+<path d="M637.14 414.28H548V432.108H637.14V414.28Z" fill="white" id="Vector_357"/>
+</g>
+</mask>
+<g mask="url(#mask70_1933_7665)">
+<g id="Group_77">
+<rect fill="url(#pattern70_1933_7665)" height="18.545" id="image44b88f2124" transform="matrix(1 0 0 -1 548 432.108)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_308">
+<path d="M548 432.108V414.28" id="Vector_358" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_309">
+<path d="M637.14 432.108V414.28" id="Vector_359" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_310">
+<path d="M548 432.108H637.14" id="Vector_360" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_311">
+<path d="M548 414.28H637.14" id="Vector_361" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_104">
+<g id="Clip path group_72">
+<mask height="19" id="mask71_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="443">
+<g id="p9113b6483a">
+<path d="M637.14 443.208H548V461.036H637.14V443.208Z" fill="white" id="Vector_362"/>
+</g>
+</mask>
+<g mask="url(#mask71_1933_7665)">
+<g id="Group_78">
+<rect fill="url(#pattern71_1933_7665)" height="18.545" id="image2d585cb57a" transform="matrix(1 0 0 -1 548 461.036)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_318">
+<path d="M548 461.036V443.208" id="Vector_363" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_319">
+<path d="M637.14 461.036V443.208" id="Vector_364" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_320">
+<path d="M548 461.035H637.14" id="Vector_365" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_321">
+<path d="M548 443.208H637.14" id="Vector_366" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_107">
+<g id="Clip path group_73">
+<mask height="18" id="mask72_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="472">
+<g id="p288d6d6878">
+<path d="M637.14 472.136H548V489.964H637.14V472.136Z" fill="white" id="Vector_367"/>
+</g>
+</mask>
+<g mask="url(#mask72_1933_7665)">
+<g id="Group_79">
+<rect fill="url(#pattern72_1933_7665)" height="18.545" id="image3c28cddd47" transform="matrix(1 0 0 -1 548 489.964)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_328">
+<path d="M548 489.964V472.136" id="Vector_368" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_329">
+<path d="M637.14 489.964V472.136" id="Vector_369" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_330">
+<path d="M548 489.963H637.14" id="Vector_370" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_331">
+<path d="M548 472.136H637.14" id="Vector_371" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_110">
+<g id="Clip path group_74">
+<mask height="18" id="mask73_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="501">
+<g id="p63f1bcf90f">
+<path d="M637.14 501.064H548V518.892H637.14V501.064Z" fill="white" id="Vector_372"/>
+</g>
+</mask>
+<g mask="url(#mask73_1933_7665)">
+<g id="Group_80">
+<rect fill="url(#pattern73_1933_7665)" height="18.545" id="imagebec9a89fb6" transform="matrix(1 0 0 -1 548 518.893)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_338">
+<path d="M548 518.892V501.064" id="Vector_373" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_339">
+<path d="M637.14 518.892V501.064" id="Vector_374" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_340">
+<path d="M548 518.893H637.14" id="Vector_375" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_341">
+<path d="M548 501.064H637.14" id="Vector_376" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_113">
+<g id="Clip path group_75">
+<mask height="19" id="mask74_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="529">
+<g id="paa81dcf4fb">
+<path d="M637.14 529.992H548V547.82H637.14V529.992Z" fill="white" id="Vector_377"/>
+</g>
+</mask>
+<g mask="url(#mask74_1933_7665)">
+<g id="Group_81">
+<rect fill="url(#pattern74_1933_7665)" height="18.545" id="image4dabb14182" transform="matrix(1 0 0 -1 548 547.82)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_348">
+<path d="M548 547.82V529.992" id="Vector_378" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_349">
+<path d="M637.14 547.82V529.992" id="Vector_379" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_350">
+<path d="M548 547.819H637.14" id="Vector_380" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_351">
+<path d="M548 529.992H637.14" id="Vector_381" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_116">
+<g id="Clip path group_76">
+<mask height="19" id="mask75_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="558">
+<g id="pd3062e1777">
+<path d="M637.14 558.92H548V576.748H637.14V558.92Z" fill="white" id="Vector_382"/>
+</g>
+</mask>
+<g mask="url(#mask75_1933_7665)">
+<g id="Group_82">
+<rect fill="url(#pattern75_1933_7665)" height="18.545" id="image6002ecaf0b" transform="matrix(1 0 0 -1 548 576.748)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_358">
+<path d="M548 576.748V558.92" id="Vector_383" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_359">
+<path d="M637.14 576.748V558.92" id="Vector_384" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_360">
+<path d="M548 576.748H637.14" id="Vector_385" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_361">
+<path d="M548 558.92H637.14" id="Vector_386" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_119">
+<g id="Clip path group_77">
+<mask height="19" id="mask76_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="587">
+<g id="pf822b31c8c">
+<path d="M637.14 587.849H548V605.677H637.14V587.849Z" fill="white" id="Vector_387"/>
+</g>
+</mask>
+<g mask="url(#mask76_1933_7665)">
+<g id="Group_83">
+<rect fill="url(#pattern76_1933_7665)" height="18.545" id="image7b93aac6e9" transform="matrix(1 0 0 -1 548 605.677)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_368">
+<path d="M548 605.677V587.849" id="Vector_388" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_369">
+<path d="M637.14 605.677V587.849" id="Vector_389" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_370">
+<path d="M548 605.676H637.14" id="Vector_390" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_371">
+<path d="M548 587.849H637.14" id="Vector_391" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_122">
+<g id="Clip path group_78">
+<mask height="19" id="mask77_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="616">
+<g id="peb93fabe85">
+<path d="M637.14 616.776H548V634.604H637.14V616.776Z" fill="white" id="Vector_392"/>
+</g>
+</mask>
+<g mask="url(#mask77_1933_7665)">
+<g id="Group_84">
+<rect fill="url(#pattern77_1933_7665)" height="18.545" id="image57679b3da4" transform="matrix(1 0 0 -1 548 634.604)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_378">
+<path d="M548 634.604V616.776" id="Vector_393" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_379">
+<path d="M637.14 634.604V616.776" id="Vector_394" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_380">
+<path d="M548 634.604H637.14" id="Vector_395" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_381">
+<path d="M548 616.776H637.14" id="Vector_396" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_125">
+<g id="Clip path group_79">
+<mask height="19" id="mask78_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="645">
+<g id="p012d6646c2">
+<path d="M637.14 645.704H548V663.532H637.14V645.704Z" fill="white" id="Vector_397"/>
+</g>
+</mask>
+<g mask="url(#mask78_1933_7665)">
+<g id="Group_85">
+<rect fill="url(#pattern78_1933_7665)" height="18.545" id="image1512bcf78b" transform="matrix(1 0 0 -1 548 663.532)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="patch_388">
+<path d="M548 663.532V645.704" id="Vector_398" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_389">
+<path d="M637.14 663.532V645.704" id="Vector_399" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_390">
+<path d="M548 663.531H637.14" id="Vector_400" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_391">
+<path d="M548 645.704H637.14" id="Vector_401" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+</g>
+<g id="axes_128">
+<g id="Clip path group_80">
+<mask height="19" id="mask79_1933_7665" maskUnits="userSpaceOnUse" style="mask-type:luminance" width="90" x="548" y="674">
+<g id="pe97fe120a6">
+<path d="M637.14 674.632H548V692.371H637.14V674.632Z" fill="white" id="Vector_402"/>
+</g>
+</mask>
+<g mask="url(#mask79_1933_7665)">
+<g id="Group_86">
+<rect fill="url(#pattern79_1933_7665)" height="18.5449" id="image690e769c41" transform="matrix(1 0 0 -1 548 692.37)" width="89.3531"/>
+</g>
+</g>
+</g>
+<g id="matplotlib.axis_159">
+<g id="xtick_7">
+<g id="line2d_7">
+<g id="Group_87">
+<g id="Vector_403">
+<path d="M548 692.369V696.467V692.369Z" fill="#666664"/>
+<path d="M548 692.369V696.467" stroke="#666664" stroke-width="1.06667"/>
+</g>
+</g>
+</g>
+</g>
+<g id="xtick_8">
+<g id="line2d_8">
+<g id="Group_88">
+<g id="Vector_404">
+<path d="M637.139 692.369V696.467V692.369Z" fill="#666664"/>
+<path d="M637.139 692.369V696.467" stroke="#666664" stroke-width="1.06667"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g id="patch_398">
+<path d="M548 692.371V674.632" id="Vector_405" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_399">
+<path d="M637.14 692.371V674.632" id="Vector_406" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_400">
+<path d="M548 692.37H637.14" id="Vector_407" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<g id="patch_401">
+<path d="M548 674.632H637.14" id="Vector_408" stroke="#666664" stroke-linecap="square" stroke-width="1.06667"/>
+</g>
+<text fill="#4D4D4D" font-family="Roboto" font-size="9" id="&lt;1% max_4" letter-spacing="0em" style="white-space: pre" transform="translate(548 698)" xml:space="preserve"><tspan x="0" y="8.07617">&lt;1% max</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="9" id="max_4" letter-spacing="0em" style="white-space: pre" transform="translate(619.029 698)" xml:space="preserve"><tspan x="0.732176" y="8.07617">max</tspan></text>
+</g>
+</g>
+</g>
+<defs>
+<pattern height="1" id="pattern0_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern1_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern2_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern3_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern4_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern5_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern6_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern7_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern8_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern9_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern10_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern11_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern12_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern13_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern14_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern15_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern16_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern17_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern18_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern19_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern20_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image1_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern21_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image2_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern22_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern23_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image3_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern24_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern25_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern26_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern27_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern28_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern29_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern30_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern31_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern32_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern33_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern34_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image4_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern35_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern36_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern37_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern38_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern39_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image0_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern40_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image5_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern41_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image6_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern42_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image7_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern43_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image8_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern44_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image8_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern45_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image9_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern46_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image10_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern47_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image11_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern48_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image11_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern49_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image12_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern50_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image13_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern51_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image14_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern52_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image15_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern53_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image16_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern54_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image17_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern55_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image18_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern56_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image18_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern57_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image19_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern58_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image20_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern59_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image21_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern60_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image5_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern61_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image6_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern62_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image22_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern63_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image23_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern64_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image24_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern65_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image1_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern66_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image25_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern67_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image26_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern68_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image27_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern69_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image28_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern70_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image29_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern71_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image30_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern72_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image31_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern73_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image31_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern74_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image32_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern75_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image33_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern76_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image34_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern77_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image8_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern78_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image8_1933_7665"/>
+</pattern>
+<pattern height="1" id="pattern79_1933_7665" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00943396 0.0454545)" xlink:href="#image35_1933_7665"/>
+</pattern>
+<image data-name="image7a9e36d86b.png" height="22" id="image0_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_0874a0b546c8914f.png"/>
+<image data-name="image2101dec780.png" height="22" id="image1_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_775bc51e90626884.png"/>
+<image data-name="image74199e7dfc.png" height="22" id="image2_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_bb5548cd281e880f.png"/>
+<image data-name="image90357ef15c.png" height="22" id="image3_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_55bf9ada0681ba60.png"/>
+<image data-name="image80a870f7bd.png" height="22" id="image4_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_4af0d1d0b3884645.png"/>
+<image data-name="imageaa12c223f0.png" height="22" id="image5_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_59a4bdae8a2e1412.png"/>
+<image data-name="image70c17e9a37.png" height="22" id="image6_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_118871f2766221f3.png"/>
+<image data-name="imagee57bdf6a21.png" height="22" id="image7_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_fe7373211b31eaae.png"/>
+<image data-name="image8605dde58a.png" height="22" id="image8_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_95112b76591d3fa9.png"/>
+<image data-name="imagebae9033502.png" height="22" id="image9_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_7bdb4a5197402560.png"/>
+<image data-name="imagebf2dc90999.png" height="22" id="image10_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_5ae125519cf974fb.png"/>
+<image data-name="imageacafbb8cc6.png" height="22" id="image11_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_ed44652e77f13861.png"/>
+<image data-name="image196d66532e.png" height="22" id="image12_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_20faa29fc3bad55e.png"/>
+<image data-name="image210da0f2b7.png" height="22" id="image13_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_8a81e2732b400a78.png"/>
+<image data-name="imagecf437aa741.png" height="22" id="image14_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_1848a26f41ff46fe.png"/>
+<image data-name="image2bc8ad9d28.png" height="22" id="image15_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_a0d7a8d1329b7971.png"/>
+<image data-name="imaged6f92a3d3c.png" height="22" id="image16_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_41f5650e049995dd.png"/>
+<image data-name="image881740444e.png" height="22" id="image17_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_495d13bb7da99e5e.png"/>
+<image data-name="imagefa91725142.png" height="22" id="image18_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_38e7e2826b2bae5e.png"/>
+<image data-name="imageb3a47cc1fc.png" height="22" id="image19_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_fc26e9c541e2e73c.png"/>
+<image data-name="image36c8661736.png" height="22" id="image20_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_2724290ff3d996b5.png"/>
+<image data-name="image5da69f977e.png" height="22" id="image21_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_285206c90b1c5ddb.png"/>
+<image data-name="imageb65c231813.png" height="22" id="image22_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_fe12dfc9a66ce3e9.png"/>
+<image data-name="image832ba52a4e.png" height="22" id="image23_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_9362398cecafa152.png"/>
+<image data-name="image0afb306dbb.png" height="22" id="image24_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_347429b4eb397d2b.png"/>
+<image data-name="imagef315a0248e.png" height="22" id="image25_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_60394feb343f746a.png"/>
+<image data-name="image1018bd0dc6.png" height="22" id="image26_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_c15063288db18f28.png"/>
+<image data-name="image12b1570628.png" height="22" id="image27_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_1a411eea4b5486b9.png"/>
+<image data-name="image5beff123d6.png" height="22" id="image28_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_c38b7e7824e9a9f9.png"/>
+<image data-name="image34418fe04f.png" height="22" id="image29_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_b71ab6fd59982ec8.png"/>
+<image data-name="image648512bf2f.png" height="22" id="image30_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_bf0f5590f7b9cea4.png"/>
+<image data-name="imagef8fee5c02c.png" height="22" id="image31_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_ffdafc0df7084e6a.png"/>
+<image data-name="image620fea7b33.png" height="22" id="image32_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_96395984d341032d.png"/>
+<image data-name="image17cb8fb911.png" height="22" id="image33_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_4ebdd7d68ebc914f.png"/>
+<image data-name="image7fefab42b3.png" height="22" id="image34_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_f3317d9257c5dd43.png"/>
+<image data-name="imagedec06b733f.png" height="22" id="image35_1933_7665" preserveAspectRatio="none" width="106" xlink:href="./png/img_00d2e167504d96e3.png"/>
+</defs>
+</svg>

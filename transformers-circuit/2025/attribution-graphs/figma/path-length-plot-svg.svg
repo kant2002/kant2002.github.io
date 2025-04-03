@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="638" viewBox="0 0 799 638" width="799" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_2366_5394)" id="path-length-plot-svg">
+<rect fill="white" height="638" width="799"/>
+<rect fill="url(#pattern0_2366_5394)" height="600" id="image 881740456" width="799.325"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Comparison of average cumulative influence versus path length by dictionary type. Shorter paths are easier to trace." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="20" y="621.443">Figure 00: Comparison of average cumulative influence versus path length by dictionary type. Shorter paths are easier to trace.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2366_5394" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.000632911 0.00084317)" xlink:href="#image0_2366_5394"/>
+</pattern>
+<clipPath id="clip0_2366_5394">
+<rect fill="white" height="638" width="799"/>
+</clipPath>
+<image data-name="image.png" height="1186" id="image0_2366_5394" preserveAspectRatio="none" width="1580" xlink:href="./png/img_bdf64ad868e3eeaf.png"/>
+</defs>
+</svg>

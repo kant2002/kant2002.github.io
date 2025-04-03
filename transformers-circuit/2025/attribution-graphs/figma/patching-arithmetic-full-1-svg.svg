@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="1206" viewBox="0 0 790 1206" width="790" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_2157_7326)" id="patching-arithmetic-full-1-svg">
+<rect fill="white" height="1206" width="790"/>
+<rect fill="url(#pattern0_2157_7326)" height="1086" id="image 881740452" width="652" x="67" y="83"/>
+<text fill="#1A1A1A" font-family="Roboto" font-size="24" font-weight="bold" id="Effect of inhibiting a supernode (â2Ã) on others" letter-spacing="0em" style="white-space: pre" transform="translate(193 26)" xml:space="preserve"><tspan x="0" y="14.7031">Effect of inhibiting a supernode (−2×) on others</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="16" id="Inhibited supernodes" letter-spacing="0em" style="white-space: pre" transform="translate(-5 1155) rotate(-90)" xml:space="preserve"><tspan x="403.383" y="59.9688">Inhibited supernodes</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="16" id="Activity after perturbation (as fraction of initial value)" letter-spacing="0em" style="white-space: pre" transform="translate(250 65)" xml:space="preserve"><tspan x="0" y="12.4688">Activity after perturbation (as fraction of initial value)</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: More intervention effects on feature activations for âcalc: 36+59=â" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="1182.44">Figure 00: More intervention effects on feature activations for “calc: 36+59=”</tspan></text>
+<g id="Group 729">
+<text fill="#1A1A1A" font-family="Roboto" font-size="13" id="Connected nodes" letter-spacing="0em" style="white-space: pre" transform="translate(35.6224 164.847)" xml:space="preserve"><tspan x="0" y="15.239">Connected nodes</tspan></text>
+<rect height="16.438" id="Rectangle 540" stroke="#D37423" stroke-width="6" width="21.3621" x="3" y="167"/>
+</g>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2157_7326" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.000826446 0.000496172)" xlink:href="#image0_2157_7326"/>
+</pattern>
+<clipPath id="clip0_2157_7326">
+<rect fill="white" height="1206" width="790"/>
+</clipPath>
+<image data-name="image.png" height="2016" id="image0_2157_7326" preserveAspectRatio="none" width="1210" xlink:href="./png/img_0455559f01bd4b7b.png"/>
+</defs>
+</svg>

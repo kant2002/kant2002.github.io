@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="643" viewBox="0 0 850 643" width="850" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_1258_4852)" id="pruning-plot-svg">
+<rect fill="white" height="643" width="850"/>
+<rect fill="url(#pattern0_1258_4852)" height="611" id="image" width="804"/>
+<circle cx="289" cy="267" id="Ellipse 262" r="32" stroke="#545454" stroke-dasharray="6 6" stroke-width="2"/>
+<text fill="black" font-family="Roboto" font-size="16" id="Default Pruning Threshold" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="183" y="222.969">Default Pruning </tspan><tspan x="183" y="241.969">Threshold</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Average node count and completeness score for graphs as a function of pruning threshold." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="20" y="624.443">Figure 00: Average node count and completeness score for graphs as a function of pruning threshold.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_1258_4852" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.00064348 0 0 0.00084674 -0.00834945 0)" xlink:href="#image0_1258_4852"/>
+</pattern>
+<clipPath id="clip0_1258_4852">
+<rect fill="white" height="643" width="850"/>
+</clipPath>
+<image data-name="image.png" height="1181" id="image0_1258_4852" preserveAspectRatio="none" width="1580" xlink:href="./png/img_08d1b0636b814331.png"/>
+</defs>
+</svg>

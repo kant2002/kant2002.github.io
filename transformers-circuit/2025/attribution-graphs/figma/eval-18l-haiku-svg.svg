@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="399" viewBox="0 0 1160 399" width="1160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="eval-18l-haiku-svg">
+<rect fill="white" height="399" width="1160"/>
+<rect fill="url(#pattern0_2446_15487)" height="381" id="image 881740466" width="1160"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Reconstruction error and sparsity/interpretability scores for 18L and Haiku." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="394.443">Figure 00: Reconstruction error and sparsity/interpretability scores for 18L and Haiku. </tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2446_15487" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.000244141 0 0 0.000743315 0 -0.000622847)" xlink:href="#image0_2446_15487"/>
+</pattern>
+<image data-name="image.png" height="1347" id="image0_2446_15487" preserveAspectRatio="none" width="4096" xlink:href="./png/img_9d519705b5327428.png"/>
+</defs>
+</svg>

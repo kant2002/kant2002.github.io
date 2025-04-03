@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="403" viewBox="0 0 1160 403" width="1160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="eval-18l-dictionaries-svg">
+<rect fill="white" height="403" width="1160"/>
+<rect fill="url(#pattern0_2439_15481)" height="385" id="image 881740465" width="1160"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Reconstruction error and sparsity/interpretability scores for multiple dictionary types fit to 18L." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="398.443">Figure 00: Reconstruction error and sparsity/interpretability scores for multiple dictionary types fit to 18L. </tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2439_15481" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.000244141 0 0 0.000735593 0 -0.000570718)" xlink:href="#image0_2439_15481"/>
+</pattern>
+<image data-name="image.png" height="1361" id="image0_2439_15481" preserveAspectRatio="none" width="4096" xlink:href="./png/img_0e7e4606990d1f2a.png"/>
+</defs>
+</svg>

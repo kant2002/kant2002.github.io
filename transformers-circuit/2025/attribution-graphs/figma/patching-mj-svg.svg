@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="557" viewBox="0 0 790 557" width="790" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="patching-mj-svg">
+<rect fill="white" height="557" width="790"/>
+<text fill="#1A1A1A" font-family="Roboto" font-size="24" font-weight="bold" id="Effect of inhibiting a supernode (â1Ã) on others" letter-spacing="0em" style="white-space: pre" transform="translate(198 19)" xml:space="preserve"><tspan x="23.4219" y="13.2031">Effect of inhibiting a supernode (−1×) on others</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="16" id="Inhibited supernodes" letter-spacing="0em" style="white-space: pre" transform="translate(39 504) rotate(-90)" xml:space="preserve"><tspan x="94.8828" y="45.4688">Inhibited supernodes</tspan></text>
+<rect fill="url(#pattern0_2156_7313)" height="430" id="image" width="664.797" x="105" y="84"/>
+<text fill="#1A1A1A" font-family="Roboto" font-size="16" id="Activity after perturbation (as fraction of initial value)" letter-spacing="0em" style="white-space: pre" transform="translate(198 64)" xml:space="preserve"><tspan x="90.7188" y="10.4688">Activity after perturbation (as fraction of initial value)</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Selected intervention effects on feature activations for âFact: Michael Jordan plays the sport ofâ." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="537.443">Figure 00: Selected intervention effects on feature activations for “Fact: Michael Jordan plays the sport of”.</tspan></text>
+<g id="Group 729">
+<text fill="#1A1A1A" font-family="Roboto" font-size="13" id="Connected nodes" letter-spacing="0em" style="white-space: pre" transform="translate(35.6224 110.847)" xml:space="preserve"><tspan x="0" y="15.239">Connected nodes</tspan></text>
+<rect height="16.438" id="Rectangle 540" stroke="#D37423" stroke-width="6" width="21.3621" x="3" y="113"/>
+</g>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2156_7313" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.000595593 0.00092081)" xlink:href="#image0_2156_7313"/>
+</pattern>
+<image data-name="image.png" height="1086" id="image0_2156_7313" preserveAspectRatio="none" width="1679" xlink:href="./png/img_588191b72ab48d0c.png"/>
+</defs>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="702" viewBox="0 0 811 702" width="811" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="node-influence-correlation-svg">
+<rect fill="white" height="702" width="811"/>
+<rect fill="url(#pattern0_2366_5386)" height="624" id="image 881740454" width="803.613" x="7"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Spearman correlation between a nodeâs ablation KL divergence (the KL of a clean forward pass and a forward pass with a feature ablated) and several natural node importance baselines: graph-based influence, the direct edge weight to the logit, and the original activation. We sweep over ranges to apply our âconstrainedâ patching, and find the range makes little difference." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="7" y="645.443">Figure 00: Spearman correlation between a node’s ablation KL divergence (the KL of a clean forward pass and a forward pass with a </tspan><tspan x="7" y="663.443">feature ablated) and several natural node importance baselines: graph-based influence, the direct edge weight to the logit, and the </tspan><tspan x="7" y="681.443">original activation. We sweep over ranges to apply our “constrained” patching, and find the range makes little difference.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2366_5386" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.000723589 0 0 0.000931868 0 -0.00926572)" xlink:href="#image0_2366_5386"/>
+</pattern>
+<image data-name="image.png" height="1093" id="image0_2366_5386" preserveAspectRatio="none" width="1382" xlink:href="./png/img_843b540b02829599.png"/>
+</defs>
+</svg>

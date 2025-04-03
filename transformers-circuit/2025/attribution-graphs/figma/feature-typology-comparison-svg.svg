@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="2210" viewBox="0 0 1219 2210" width="1219" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_656_730)" id="feature-typology-comparison-svg">
+<rect fill="white" height="2210" width="1219"/>
+<rect fill="#FFFCFA" height="1000" id="Rectangle 130" rx="1.5" stroke="#B8B6AD" width="1218" x="0.5" y="1179.37"/>
+<text fill="#333333" font-family="Roboto" font-size="25" font-weight="bold" id="Lookup Table Features" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="29" y="1227.41">LOOKUP TABLE FEATURES</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="25" font-weight="bold" id="Haiku" letter-spacing="0em" style="white-space: pre" transform="translate(30 1262.87)" xml:space="preserve"><tspan x="0" y="21.0449">Haiku</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="25" font-weight="bold" id="18L" letter-spacing="0em" style="white-space: pre" transform="translate(30 1759.87)" xml:space="preserve"><tspan x="0" y="21.0449">18L</tspan></text>
+<rect fill="#FFFCFA" height="1128.87" id="Rectangle 130_2" rx="1.5" stroke="#B8B6AD" width="1218" x="1.5" y="0.5"/>
+<text fill="#333333" font-family="Roboto" font-size="25" font-weight="bold" id="Sum features" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="11" y="35.4141">SUM FEATURES</tspan></text>
+<g id="Group 698">
+<path d="M885 1562.73H884.5V1563.23V1630.71C884.5 1633.74 886.962 1636.21 890 1636.21H1180C1183.04 1636.21 1185.5 1633.74 1185.5 1630.71V1563.23V1562.73H1185H885Z" fill="#F6F6F3" id="Rectangle 217" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="_6 + _9" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="996.475" y="1609.52">_6 + _9</tspan></text>
+<path d="M1185 1563.37H1185.5V1562.87V1267.87C1185.5 1264.83 1183.04 1262.37 1180 1262.37H890C886.962 1262.37 884.5 1264.83 884.5 1267.87V1562.87V1563.37H885H1185Z" fill="url(#pattern0_656_730)" id="image" stroke="#B8B6AD"/>
+</g>
+<g id="Group 697">
+<path d="M540 1563.49H539.5V1563.99V1631.23C539.5 1634.27 541.962 1636.73 545 1636.73H835C838.038 1636.73 840.5 1634.27 840.5 1631.23V1563.99V1563.49H840H540Z" fill="#F6F6F3" id="Rectangle 218" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="~36 + ~60" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="632.041" y="1610.16">~36 + ~60</tspan></text>
+<path d="M840 1563.37H840.5V1562.87V1267.87C840.5 1264.83 838.038 1262.37 835 1262.37H545C541.962 1262.37 539.5 1264.83 539.5 1267.87V1562.87V1563.37H540H840Z" fill="url(#pattern1_656_730)" id="image_2" stroke="#B8B6AD"/>
+</g>
+<g id="Group 696">
+<path d="M195 1564.1H194.5V1564.6V1631.6C194.5 1634.64 196.962 1637.1 200 1637.1H490C493.038 1637.1 495.5 1634.64 495.5 1631.6V1564.6V1564.1H495H195Z" fill="#F6F6F3" id="Rectangle 219" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="~40 + ~50" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="287.041" y="1610.65">~40 + ~50</tspan></text>
+<path d="M495 1563.37H495.5V1562.87V1267.87C495.5 1264.83 493.038 1262.37 490 1262.37H200C196.962 1262.37 194.5 1264.83 194.5 1267.87V1562.87V1563.37H195H495Z" fill="url(#pattern2_656_730)" id="image_3" stroke="#B8B6AD"/>
+</g>
+<g id="Group 709">
+<g id="Group 706">
+<path d="M840 503.492H840.5V502.992V207.992C840.5 204.955 838.038 202.492 835 202.492H545C541.962 202.492 539.5 204.955 539.5 207.992V502.992V503.492H540H840Z" fill="url(#pattern3_656_730)" id="image_4" stroke="#B8B6AD"/>
+<path d="M540 503.492H539.5V503.992V571.232C539.5 574.27 541.962 576.732 545 576.732H835C838.038 576.732 840.5 574.27 840.5 571.232V503.992V503.492H840H540Z" fill="#F6F6F3" id="Rectangle 218_2" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="sum = _95" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="632.419" y="550.162">sum = _95</tspan></text>
+</g>
+<rect fill="url(#pattern4_656_730)" height="76" id="image 49" rx="5.5" stroke="#B8B6AD" width="301" x="539.5" y="106.102"/>
+</g>
+<g id="Group 710">
+<g id="Group 705">
+<path d="M1185 503.369H1185.5V502.869V207.869C1185.5 204.832 1183.04 202.369 1180 202.369H890C886.962 202.369 884.5 204.832 884.5 207.869V502.869V503.369H885H1185Z" fill="url(#pattern5_656_730)" id="image_5" stroke="#B8B6AD"/>
+<path d="M885 503.369H884.5V503.869V570.869C884.5 573.907 886.962 576.369 890 576.369H1180C1183.04 576.369 1185.5 573.907 1185.5 570.869V503.869V503.369H1185H885Z" fill="#F6F6F3" id="Rectangle 217_2" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="sum = _5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="983.112" y="548.147">sum = _5</tspan></text>
+</g>
+<rect fill="url(#pattern6_656_730)" height="76" id="image 50" rx="5.5" stroke="#B8B6AD" width="301" x="886.5" y="105.369"/>
+</g>
+<g id="Group 708">
+<g id="Group 707">
+<path d="M495 503.37H495.5V502.87V207.87C495.5 204.833 493.038 202.37 490 202.37H200C196.962 202.37 194.5 204.833 194.5 207.87V502.87V503.37H195H495Z" fill="url(#pattern7_656_730)" id="image_6" stroke="#B8B6AD"/>
+<path d="M195 502.37H194.5V502.87V569.87C194.5 572.908 196.962 575.37 200 575.37H490C493.038 575.37 495.5 572.908 495.5 569.87V502.87V502.37H495H195Z" fill="#F6F6F3" id="Rectangle 219_2" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="sum ~92" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="295.171" y="548.915">sum ~92</tspan></text>
+</g>
+<rect fill="url(#pattern8_656_730)" height="76" id="image 51" rx="5.5" stroke="#B8B6AD" width="301" x="194.5" y="106.369"/>
+</g>
+<g id="Group 702">
+<path d="M195 997.637H194.5V998.137V1065.14C194.5 1068.17 196.962 1070.64 200 1070.64H490C493.038 1070.64 495.5 1068.17 495.5 1065.14V998.137V997.637H495H195Z" fill="#F6F6F3" id="Rectangle 220" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="sum ~92_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="298.171" y="1048.92">sum ~92</tspan></text>
+<path d="M495 1000.37H495.5V999.869V704.869C495.5 701.832 493.038 699.369 490 699.369H200C196.962 699.369 194.5 701.832 194.5 704.869V999.869V1000.37H195H495Z" fill="url(#pattern9_656_730)" id="image_7" stroke="#C0BEB6"/>
+</g>
+<g id="Group 703">
+<path d="M540 997.637H539.5V998.137V1065.14C539.5 1068.17 541.962 1070.64 545 1070.64H835C838.038 1070.64 840.5 1068.17 840.5 1065.14V998.137V997.637H840H540Z" fill="#F6F6F3" id="Rectangle 220_2" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="sum ~_95" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="637.604" y="1048.92">sum ~_95</tspan></text>
+<path d="M840 1000.37H840.5V999.869V704.869C840.5 701.832 838.038 699.369 835 699.369H545C541.962 699.369 539.5 701.832 539.5 704.869V999.869V1000.37H540H840Z" fill="url(#pattern10_656_730)" id="image_8" stroke="#C0BEB6"/>
+</g>
+<text fill="#1A1A1A" font-family="Roboto" font-size="25" font-weight="bold" id="Haiku_2" letter-spacing="0em" style="white-space: pre" transform="translate(30 106.869)" xml:space="preserve"><tspan x="0" y="21.0449">Haiku</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="25" font-weight="bold" id="18L_2" letter-spacing="0em" style="white-space: pre" transform="translate(30 600.869)" xml:space="preserve"><tspan x="0" y="21.0449">18L</tspan></text>
+<g id="Group 711">
+<path d="M540 2059.37H539.5V2059.87V2126.87C539.5 2129.91 541.962 2132.37 545 2132.37H835C838.038 2132.37 840.5 2129.91 840.5 2126.87V2059.87V2059.37H840H540Z" fill="#F6F6F3" id="Rectangle 220_3" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="~20 + ~20 mod 25" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="589.533" y="2110.65">~20 + ~20 mod 25</tspan></text>
+<path d="M840 2060.37H840.5V2059.87V1764.87C840.5 1761.83 838.038 1759.37 835 1759.37H545C541.962 1759.37 539.5 1761.83 539.5 1764.87V2059.87V2060.37H540H840Z" fill="url(#pattern11_656_730)" id="image_9" stroke="#C0BEB6"/>
+</g>
+<g id="Group 712">
+<path d="M195 2059.37H194.5V2059.87V2126.87C194.5 2129.91 196.962 2132.37 200 2132.37H490C493.038 2132.37 495.5 2129.91 495.5 2126.87V2059.87V2059.37H495H195Z" fill="#F6F6F3" id="Rectangle 220_4" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="sum ~92_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="298.171" y="2110.65">sum ~92</tspan></text>
+<path d="M495 2060.37H495.5V2059.87V1764.87C495.5 1761.83 493.038 1759.37 490 1759.37H200C196.962 1759.37 194.5 1761.83 194.5 1764.87V2059.87V2060.37H195H495Z" fill="url(#pattern12_656_730)" id="image_10" stroke="#C0BEB6"/>
+</g>
+<g id="Group 704">
+<path d="M885 999.637H884.5V1000.14V1067.14C884.5 1070.17 886.962 1072.64 890 1072.64H1180C1183.04 1072.64 1185.5 1070.17 1185.5 1067.14V1000.14V999.637H1185H885Z" fill="#F6F6F3" id="Rectangle 220_5" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="sum = _5_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="987.597" y="1050.92">sum = _5</tspan></text>
+<path d="M1185 1002.37H1185.5V1001.87V706.869C1185.5 703.832 1183.04 701.369 1180 701.369H890C886.962 701.369 884.5 703.832 884.5 706.869V1001.87V1002.37H885H1185Z" fill="url(#pattern13_656_730)" id="image_11" stroke="#C0BEB6"/>
+</g>
+<g id="Group 713">
+<path d="M885 2061.37H884.5V2061.87V2128.87C884.5 2131.91 886.962 2134.37 890 2134.37H1180C1183.04 2134.37 1185.5 2131.91 1185.5 2128.87V2061.87V2061.37H1185H885Z" fill="#F6F6F3" id="Rectangle 220_6" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="_6 + _9?" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="993.249" y="2112.65">_6 + _9?</tspan></text>
+<path d="M1185 2061.37H1185.5V2060.87V1765.87C1185.5 1762.83 1183.04 1760.37 1180 1760.37H890C886.962 1760.37 884.5 1762.83 884.5 1765.87V2060.87V2061.37H885H1185Z" fill="url(#pattern14_656_730)" id="image_12" stroke="#C0BEB6"/>
+</g>
+<rect fill="url(#pattern15_656_730)" height="76" id="image 63" rx="5.5" stroke="#B8B6AD" width="301" x="194.5" y="602.369"/>
+<rect fill="url(#pattern16_656_730)" height="76" id="image 64" rx="5.5" stroke="#B8B6AD" width="301" x="539.5" y="602.369"/>
+<rect fill="url(#pattern17_656_730)" height="76" id="image 65" rx="5.5" stroke="#B8B6AD" width="301" x="886.5" y="601.369"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" id="Figure 00: A comparison of similar featuresâ operand plots between Haiku and 18L." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="1" y="2197.81">Figure 00: A comparison of similar features’ operand plots between Haiku and 18L.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image0_656_730"/>
+</pattern>
+<pattern height="1" id="pattern1_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image1_656_730"/>
+</pattern>
+<pattern height="1" id="pattern2_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image2_656_730"/>
+</pattern>
+<pattern height="1" id="pattern3_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image3_656_730"/>
+</pattern>
+<pattern height="1" id="pattern4_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005 0.02)" xlink:href="#image4_656_730"/>
+</pattern>
+<pattern height="1" id="pattern5_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image5_656_730"/>
+</pattern>
+<pattern height="1" id="pattern6_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005 0.02)" xlink:href="#image6_656_730"/>
+</pattern>
+<pattern height="1" id="pattern7_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image7_656_730"/>
+</pattern>
+<pattern height="1" id="pattern8_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005 0.02)" xlink:href="#image8_656_730"/>
+</pattern>
+<pattern height="1" id="pattern9_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image9_656_730"/>
+</pattern>
+<pattern height="1" id="pattern10_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image10_656_730"/>
+</pattern>
+<pattern height="1" id="pattern11_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image11_656_730"/>
+</pattern>
+<pattern height="1" id="pattern12_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image12_656_730"/>
+</pattern>
+<pattern height="1" id="pattern13_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image13_656_730"/>
+</pattern>
+<pattern height="1" id="pattern14_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image14_656_730"/>
+</pattern>
+<pattern height="1" id="pattern15_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005 0.02)" xlink:href="#image15_656_730"/>
+</pattern>
+<pattern height="1" id="pattern16_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005 0.02)" xlink:href="#image16_656_730"/>
+</pattern>
+<pattern height="1" id="pattern17_656_730" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005 0.02)" xlink:href="#image17_656_730"/>
+</pattern>
+<clipPath id="clip0_656_730">
+<rect fill="white" height="2210" width="1219"/>
+</clipPath>
+<image data-name="image.png" height="200" id="image0_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_c702d789a3c96fcd.png"/>
+<image data-name="image.png" height="200" id="image1_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_35fb129c031f0e96.png"/>
+<image data-name="image.png" height="200" id="image2_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_0e43a3d68d7bd069.png"/>
+<image data-name="image.png" height="200" id="image3_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_d421b62689920e2c.png"/>
+<image data-name="image.png" height="50" id="image4_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_7c16ca863f79c3a0.png"/>
+<image data-name="image.png" height="200" id="image5_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_f1a94877f5ec08ff.png"/>
+<image data-name="image.png" height="50" id="image6_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_a3e2f10455de0cd5.png"/>
+<image data-name="image.png" height="200" id="image7_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_513affa1360b85a0.png"/>
+<image data-name="image.png" height="50" id="image8_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_5dff3f03bda41323.png"/>
+<image data-name="image.png" height="200" id="image9_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_508f02f8cc0ee9bd.png"/>
+<image data-name="image.png" height="200" id="image10_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_4287255500542922.png"/>
+<image data-name="image.png" height="200" id="image11_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_0bec43475c67051a.png"/>
+<image data-name="image.png" height="200" id="image12_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_139b148711d47a78.png"/>
+<image data-name="image.png" height="200" id="image13_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_89703dd1a586f315.png"/>
+<image data-name="image.png" height="200" id="image14_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_b1116f9037f94d13.png"/>
+<image data-name="image.png" height="50" id="image15_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_7aad773075752a48.png"/>
+<image data-name="image.png" height="50" id="image16_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_9b6462f0c1fe6bfd.png"/>
+<image data-name="image.png" height="50" id="image17_656_730" preserveAspectRatio="none" width="200" xlink:href="./png/img_73eda416027b3345.png"/>
+</defs>
+</svg>

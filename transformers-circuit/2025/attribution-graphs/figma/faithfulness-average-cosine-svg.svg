@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="976" viewBox="0 0 1160 976" width="1160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="faithfulness-average-cosine-svg">
+<rect fill="white" height="976" width="1160"/>
+<rect fill="url(#pattern0_2456_16908)" height="948" id="image 881740469" width="1160"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Average cosine similarity 1 layer after an intervention/perturbation." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="971.443">Figure 00: Average cosine similarity 1 layer after an intervention/perturbation.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2456_16908" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.000500491 0 0 0.000612416 -0.000241219 -0.0527426)" xlink:href="#image0_2456_16908"/>
+</pattern>
+<image data-name="image.png" height="1719" id="image0_2456_16908" preserveAspectRatio="none" width="1999" xlink:href="./png/img_b868e3d1d91b8565.png"/>
+</defs>
+</svg>

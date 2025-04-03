@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="1287" viewBox="0 0 1200 1287" width="1200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_1134_2257)" id="small-feature-taxonomy-svg">
+<rect fill="white" height="1287" width="1200"/>
+<rect fill="#FFFCFA" height="1261" id="Rectangle 130" rx="1.5" stroke="#B8B6AD" width="1203" x="0.5" y="0.5"/>
+<text fill="#333333" font-family="Roboto" font-size="25" font-weight="bold" id="Feature taxonomy" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="10" y="35.5449">FEATURE TAXONOMY</tspan></text>
+<g id="Group 698">
+<path d="M767 534.5H767.5V534V239C767.5 235.962 765.038 233.5 762 233.5H472C468.962 233.5 466.5 235.962 466.5 239V534V534.5H467H767Z" fill="url(#pattern0_1134_2257)" id="image 80" stroke="#B8B6AD"/>
+<path d="M467 533.856H466.5V534.356V601.836C466.5 604.874 468.962 607.336 472 607.336H762C765.038 607.336 767.5 604.874 767.5 601.836V534.356V533.856H767H467Z" fill="#F6F6F3" id="Rectangle 217" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="_9 + _9" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="578.475" y="580.652">_9 + _9</tspan></text>
+<path d="M767 534.5H767.5V534V239C767.5 235.962 765.038 233.5 762 233.5H472C468.962 233.5 466.5 235.962 466.5 239V534V534.5H467H767Z" fill="url(#pattern1_1134_2257)" id="image" stroke="#B8B6AD"/>
+</g>
+<g id="Group 718">
+<g id="Group 715">
+<path d="M858 534.623H857.5V535.123V602.363C857.5 605.401 859.962 607.863 863 607.863H1153C1156.04 607.863 1158.5 605.401 1158.5 602.363V535.123V534.623H1158H858Z" fill="#F6F6F3" id="Rectangle 218" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="add 9" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="976.933" y="581.293">add 9</tspan></text>
+</g>
+<path d="M1158 534.5H1158.5V534V239C1158.5 235.962 1156.04 233.5 1153 233.5H863C859.962 233.5 857.5 235.962 857.5 239V534V534.5H858H1158Z" fill="url(#pattern2_1134_2257)" id="image_2" stroke="#C0BEB6"/>
+</g>
+<g id="Group 709">
+<g id="Group 706">
+<path d="M376 534.891H376.5V534.391V239.391C376.5 236.353 374.038 233.891 371 233.891H81C77.9624 233.891 75.5 236.353 75.5 239.391V534.391V534.891H76H376Z" fill="url(#pattern3_1134_2257)" id="image_3" stroke="#B8B6AD"/>
+<path d="M76 534.891H75.5V535.391V602.631C75.5 605.668 77.9624 608.131 81 608.131H371C374.038 608.131 376.5 605.668 376.5 602.631V535.391V534.891H376H76Z" fill="#F6F6F3" id="Rectangle 218_2" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="sum = _95" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="168.419" y="581.56">sum = _95</tspan></text>
+</g>
+</g>
+<g id="Group 719">
+<g id="Group 706_2">
+<path d="M376 1122.89H376.5V1122.39V827.391C376.5 824.353 374.038 821.891 371 821.891H81C77.9624 821.891 75.5 824.353 75.5 827.391V1122.39V1122.89H76H376Z" fill="url(#pattern4_1134_2257)" id="image_4" stroke="#B8B6AD"/>
+<path d="M76 1122.89H75.5V1123.39V1190.63C75.5 1193.67 77.9624 1196.13 81 1196.13H371C374.038 1196.13 376.5 1193.67 376.5 1190.63V1123.39V1122.89H376H76Z" fill="#F6F6F3" id="Rectangle 218_3" stroke="#B8B6AD"/>
+</g>
+</g>
+<g id="Group 720">
+<g id="Group 706_3">
+<path d="M767 1122.89H767.5V1122.39V827.391C767.5 824.353 765.038 821.891 762 821.891H472C468.962 821.891 466.5 824.353 466.5 827.391V1122.39V1122.89H467H767Z" fill="url(#pattern5_1134_2257)" id="image_5" stroke="#B8B6AD"/>
+<path d="M467 1122.89H466.5V1123.39V1190.63C466.5 1193.67 468.962 1196.13 472 1196.13H762C765.038 1196.13 767.5 1193.67 767.5 1190.63V1123.39V1122.89H767H467Z" fill="#F6F6F3" id="Rectangle 218_4" stroke="#B8B6AD"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="?" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="610.774" y="1169.56">?</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="25" font-weight="bold" id="active on â=â" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="154.65" y="1169.56">active on “=”</tspan></text>
+</g>
+</g>
+<text fill="#1A1A1A" font-family="Roboto" font-size="17" font-weight="bold" id="Sum Features" letter-spacing="0em" style="white-space: pre" transform="translate(76 90)" xml:space="preserve"><tspan x="0" y="18.3105">Sum Features</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="17" font-weight="bold" id="Mostly Active Features" letter-spacing="0em" style="white-space: pre" transform="translate(76 678)" xml:space="preserve"><tspan x="0" y="18.3105">Mostly Active Features</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="17" font-weight="bold" id="Miscellaneous Features" letter-spacing="0em" style="white-space: pre" transform="translate(467 678)" xml:space="preserve"><tspan x="0" y="18.3105">Miscellaneous Features</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="17" font-weight="bold" id="Lookup table Features" letter-spacing="0em" style="white-space: pre" transform="translate(467 90)" xml:space="preserve"><tspan x="0" y="18.3105">Lookup table Features</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="17" font-weight="bold" id="Add function Features" letter-spacing="0em" style="white-space: pre" transform="translate(858 90)" xml:space="preserve"><tspan x="0" y="18.3105">Add function Features</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" id="Sum features have diagonal operand plots, and fire on pairs of inputs whose sum satisfies some condition." letter-spacing="0em" style="white-space: pre" transform="translate(76 119)" xml:space="preserve"><tspan x="0" y="15.3105">Sum features have diagonal operand plots, </tspan><tspan x="0" y="34.3105">and fire on pairs of inputs whose sum </tspan><tspan x="0" y="53.3105">satisfies some condition.</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" id="Features which are on on most addition prompts. Their output effects vary, but include things like âupweight simple numbersâ." letter-spacing="0em" style="white-space: pre" transform="translate(76 707)" xml:space="preserve"><tspan x="0" y="15.3105">Features which are on on most addition </tspan><tspan x="0" y="34.3105">prompts. Their output effects vary, but </tspan><tspan x="0" y="53.3105">include things like “upweight simple </tspan><tspan x="0" y="72.3105">numbers”.</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" id="We see a variety of lower-influence features with strange patterns. These may be artifacts of the crosscoder training process, or may reflect more subtle model properties." letter-spacing="0em" style="white-space: pre" transform="translate(467 707)" xml:space="preserve"><tspan x="0" y="15.3105">We see a variety of lower-influence features </tspan><tspan x="0" y="34.3105">with strange patterns. These may be </tspan><tspan x="0" y="53.3105">artifacts of the crosscoder training process, </tspan><tspan x="0" y="72.3105">or may reflect more subtle model </tspan><tspan x="0" y="91.3105">properties.</tspan></text>
+<g id="Lookup Table Features are approximately of the form condition1(a) and condition2(b), and look like grids.">
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" letter-spacing="0em" style="white-space: pre" transform="translate(467 119)" xml:space="preserve"><tspan x="0" y="15.3105">Lookup Table Features are approximately of </tspan><tspan x="0" y="34.3105">the form </tspan><tspan x="310.25" y="34.3105">, </tspan><tspan x="0" y="53.3105">and look like grids.</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" font-weight="bold" letter-spacing="0em" style="white-space: pre" transform="translate(467 119)" xml:space="preserve"><tspan x="68.6475" y="34.3105">condition1(a) and condition2(b)</tspan></text>
+</g>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" id="Add Function Features have plots which are unions of horizontal (condition on first operand) and vertical (condition on second operand) lines." letter-spacing="0em" style="white-space: pre" transform="translate(858 119)" xml:space="preserve"><tspan x="0" y="15.3105">Add Function Features have plots which are </tspan><tspan x="0" y="34.3105">unions of horizontal (condition on first </tspan><tspan x="0" y="53.3105">operand) and vertical (condition on second </tspan><tspan x="0" y="72.3105">operand) lines.</tspan></text>
+<g id="Frame 118">
+<g id="Frame 114">
+<g id="Figure 00: Types of features commonly active on the â=â within prompts of the form âcalc: a+b=â for a, b in [0,99].">
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="1282.44">Figure 00: Types of features commonly active on the “=” within prompts of the form “calc: </tspan><tspan x="523.161" y="1282.44">+</tspan><tspan x="537.85" y="1282.44">=” for </tspan><tspan x="579.376" y="1282.44">, </tspan><tspan x="592.478" y="1282.44"> in [0,99].</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" font-weight="bold" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="516.204" y="1282.44">a</tspan><tspan x="530.537" y="1282.44">b</tspan><tspan x="572.419" y="1282.44">a</tspan><tspan x="585.165" y="1282.44">b</tspan></text>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<pattern height="1" id="pattern0_1134_2257" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image0_1134_2257"/>
+</pattern>
+<pattern height="1" id="pattern1_1134_2257" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image1_1134_2257"/>
+</pattern>
+<pattern height="1" id="pattern2_1134_2257" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image2_1134_2257"/>
+</pattern>
+<pattern height="1" id="pattern3_1134_2257" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image3_1134_2257"/>
+</pattern>
+<pattern height="1" id="pattern4_1134_2257" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image4_1134_2257"/>
+</pattern>
+<pattern height="1" id="pattern5_1134_2257" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.005)" xlink:href="#image5_1134_2257"/>
+</pattern>
+<clipPath id="clip0_1134_2257">
+<rect fill="white" height="1287" width="1200"/>
+</clipPath>
+<image data-name="image.png" height="200" id="image0_1134_2257" preserveAspectRatio="none" width="200" xlink:href="./png/img_87146499f42ca5a7.png"/>
+<image data-name="image.png" height="200" id="image1_1134_2257" preserveAspectRatio="none" width="200" xlink:href="./png/img_65aedc250ed33c0d.png"/>
+<image data-name="image.png" height="200" id="image2_1134_2257" preserveAspectRatio="none" width="200" xlink:href="./png/img_7a8c7de1a9dceda0.png"/>
+<image data-name="image.png" height="200" id="image3_1134_2257" preserveAspectRatio="none" width="200" xlink:href="./png/img_35004f8eb823d7b4.png"/>
+<image data-name="image.png" height="200" id="image4_1134_2257" preserveAspectRatio="none" width="200" xlink:href="./png/img_78b7da7e68f2f905.png"/>
+<image data-name="image.png" height="200" id="image5_1134_2257" preserveAspectRatio="none" width="200" xlink:href="./png/img_cac0b3ea28e76c91.png"/>
+</defs>
+</svg>

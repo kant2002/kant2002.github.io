@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="596" viewBox="0 0 1312 596" width="1312" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_2163_7438)" id="replacement-model-metrics-svg">
+<rect fill="white" height="596" width="1312"/>
+<rect fill="url(#pattern0_2163_7438)" height="540" id="image" width="1304.22" x="8"/>
+<g id="Line 33">
+<line stroke="#333333" stroke-width="6" x1="1053.17" x2="984.721" y1="115.548" y2="92.7308"/>
+<line stroke="#333333" stroke-width="6" x1="1053.17" x2="984.721" y1="115.548" y2="92.7308"/>
+</g>
+<g id="Line 36">
+<line stroke="#333333" stroke-width="6" x1="1088.52" x2="1051.87" y1="156.173" y2="114.688"/>
+<line stroke="#333333" stroke-width="6" x1="1088.52" x2="1051.87" y1="156.173" y2="114.688"/>
+</g>
+<g id="Line 37">
+<line stroke="#333333" stroke-width="6" x1="1115.96" x2="1088.14" y1="206.339" y2="155.63"/>
+<line stroke="#333333" stroke-width="6" x1="1115.96" x2="1088.14" y1="206.339" y2="155.63"/>
+</g>
+<text fill="#7A7A7A" font-family="Roboto" font-size="15" id="Lower is better" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="928" y="375.627">Lower is better</tspan></text>
+<text fill="#7A7A7A" font-family="Roboto" font-size="15" id="Neurons begin to look interpretable above this threshold" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="314" y="174.627">Neurons begin to 
+</tspan><tspan x="314" y="191.627">look interpretable
+</tspan><tspan x="314" y="208.627">above this threshold</tspan></text>
+<g id="Neurons (varying threshold)">
+<text fill="#949494" font-family="Roboto" font-size="18" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="1130" y="145.152">(varying threshold)</tspan></text>
+<text fill="#949494" font-family="Roboto" font-size="18" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="1130" y="125.152">Neurons
+</tspan></text>
+</g>
+<g id="Neurons (varying threshold)_2">
+<text fill="#949494" font-family="Roboto" font-size="18" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="483" y="148.152">(varying threshold)</tspan></text>
+<text fill="#949494" font-family="Roboto" font-size="18" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="483" y="128.152">Neurons
+</tspan></text>
+</g>
+<text fill="#D55E00" font-family="Roboto" font-size="15" id="10m" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="247" y="248.127">10m</tspan></text>
+<text fill="#D55E00" font-family="Roboto" font-size="18" id="Per-Layer Transcoders" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="193" y="104.652">Per-Layer
+</tspan><tspan x="193" y="124.652">Transcoders</tspan></text>
+<text fill="#D55E00" font-family="Roboto" font-size="15" id="3m" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="255" y="231.127">3m</tspan></text>
+<text fill="#D55E00" font-family="Roboto" font-size="15" id="1m" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="262" y="211.127">1m</tspan></text>
+<text fill="#D55E00" font-family="Roboto" font-size="15" id="300k" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="249" y="150.627">300k</tspan></text>
+<text fill="#0173B2" font-family="Roboto" font-size="15" id="10m_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="172" y="361.127">10m</tspan></text>
+<text fill="#0173B2" font-family="Roboto" font-size="18" id="Cross-layer Transcoders" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="95" y="153.652">Cross-layer </tspan><tspan x="95" y="173.652">Transcoders</tspan></text>
+<text fill="#0173B2" font-family="Roboto" font-size="15" id="3m_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="182" y="323.127">3m</tspan></text>
+<text fill="#0173B2" font-family="Roboto" font-size="15" id="1m_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="186" y="290.127">1m</tspan></text>
+<text fill="#0173B2" font-family="Roboto" font-size="15" id="300k_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="177" y="202.127">300k</tspan></text>
+<text fill="#D55E00" font-family="Roboto" font-size="15" id="10m_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="878" y="275.127">10m</tspan></text>
+<text fill="#D55E00" font-family="Roboto" font-size="15" id="3m_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="901" y="262.127">3m</tspan></text>
+<text fill="#D55E00" font-family="Roboto" font-size="15" id="1m_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="903" y="231.127">1m</tspan></text>
+<text fill="#D55E00" font-family="Roboto" font-size="15" id="300k_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="901" y="201.127">300k</tspan></text>
+<text fill="#0173B2" font-family="Roboto" font-size="15" id="10m_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="819" y="403.127">10m</tspan></text>
+<text fill="#0173B2" font-family="Roboto" font-size="18" id="Cross-layer Transcoders_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="742" y="234.152">Cross-layer </tspan><tspan x="742" y="254.152">Transcoders</tspan></text>
+<text fill="#0173B2" font-family="Roboto" font-size="15" id="3m_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="829" y="375.127">3m</tspan></text>
+<text fill="#0173B2" font-family="Roboto" font-size="15" id="300k_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="826" y="274.127">300k</tspan></text>
+<text fill="#0173B2" font-family="Roboto" font-size="15" id="1m_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="837" y="346.127">1m</tspan></text>
+<path d="M894.785 393.773C894.785 394.326 895.233 394.773 895.785 394.773L904.785 394.773C905.337 394.773 905.785 394.326 905.785 393.773C905.785 393.221 905.337 392.773 904.785 392.773L896.785 392.773L896.785 384.773C896.785 384.221 896.337 383.773 895.785 383.773C895.233 383.773 894.785 384.221 894.785 384.773L894.785 393.773ZM954.895 333.249L954.183 333.962L955.597 335.376L956.309 334.664L954.895 333.249ZM952.758 335.386L951.334 336.81L952.748 338.224L954.173 336.8L952.758 335.386ZM949.91 338.234L948.486 339.658L949.9 341.073L951.324 339.648L949.91 338.234ZM947.062 341.083L945.637 342.507L947.052 343.921L948.476 342.497L947.062 341.083ZM944.213 343.931L942.789 345.355L944.203 346.769L945.627 345.345L944.213 343.931ZM941.365 346.779L939.94 348.204L941.355 349.618L942.779 348.194L941.365 346.779ZM938.516 349.628L937.092 351.052L938.506 352.466L939.93 351.042L938.516 349.628ZM935.668 352.476L934.244 353.901L935.658 355.315L937.082 353.891L935.668 352.476ZM932.819 355.325L931.395 356.749L932.809 358.163L934.234 356.739L932.819 355.325ZM929.971 358.173L928.547 359.597L929.961 361.012L931.385 359.587L929.971 358.173ZM927.123 361.022L925.698 362.446L927.113 363.86L928.537 362.436L927.123 361.022ZM924.274 363.87L922.85 365.294L924.264 366.708L925.688 365.284L924.274 363.87ZM921.426 366.718L920.001 368.143L921.416 369.557L922.84 368.133L921.426 366.718ZM918.577 369.567L917.153 370.991L918.567 372.405L919.991 370.981L918.577 369.567ZM915.729 372.415L914.305 373.839L915.719 375.254L917.143 373.83L915.729 372.415ZM912.88 375.264L911.456 376.688L912.87 378.102L914.295 376.678L912.88 375.264ZM910.032 378.112L908.608 379.536L910.022 380.951L911.446 379.526L910.032 378.112ZM907.184 380.961L905.759 382.385L907.174 383.799L908.598 382.375L907.184 380.961ZM904.335 383.809L902.911 385.233L904.325 386.647L905.749 385.223L904.335 383.809ZM901.487 386.657L900.063 388.082L901.477 389.496L902.901 388.072L901.487 386.657ZM898.638 389.506L897.214 390.93L898.628 392.344L900.053 390.92L898.638 389.506ZM895.79 392.354L895.078 393.066L896.492 394.481L897.204 393.768L895.79 392.354ZM894.785 393.773C894.785 394.326 895.233 394.773 895.785 394.773L904.785 394.773C905.337 394.773 905.785 394.326 905.785 393.773C905.785 393.221 905.337 392.773 904.785 392.773L896.785 392.773L896.785 384.773C896.785 384.221 896.337 383.773 895.785 383.773C895.233 383.773 894.785 384.221 894.785 384.773L894.785 393.773ZM954.895 333.249L954.183 333.962L955.597 335.376L956.309 334.664L954.895 333.249ZM952.758 335.386L951.334 336.81L952.748 338.224L954.173 336.8L952.758 335.386ZM949.91 338.234L948.486 339.658L949.9 341.073L951.324 339.648L949.91 338.234ZM947.062 341.083L945.637 342.507L947.052 343.921L948.476 342.497L947.062 341.083ZM944.213 343.931L942.789 345.355L944.203 346.769L945.627 345.345L944.213 343.931ZM941.365 346.779L939.94 348.204L941.355 349.618L942.779 348.194L941.365 346.779ZM938.516 349.628L937.092 351.052L938.506 352.466L939.93 351.042L938.516 349.628ZM935.668 352.476L934.244 353.901L935.658 355.315L937.082 353.891L935.668 352.476ZM932.819 355.325L931.395 356.749L932.809 358.163L934.234 356.739L932.819 355.325ZM929.971 358.173L928.547 359.597L929.961 361.012L931.385 359.587L929.971 358.173ZM927.123 361.022L925.698 362.446L927.113 363.86L928.537 362.436L927.123 361.022ZM924.274 363.87L922.85 365.294L924.264 366.708L925.688 365.284L924.274 363.87ZM921.426 366.718L920.001 368.143L921.416 369.557L922.84 368.133L921.426 366.718ZM918.577 369.567L917.153 370.991L918.567 372.405L919.991 370.981L918.577 369.567ZM915.729 372.415L914.305 373.839L915.719 375.254L917.143 373.83L915.729 372.415ZM912.88 375.264L911.456 376.688L912.87 378.102L914.295 376.678L912.88 375.264ZM910.032 378.112L908.608 379.536L910.022 380.951L911.446 379.526L910.032 378.112ZM907.184 380.961L905.759 382.385L907.174 383.799L908.598 382.375L907.184 380.961ZM904.335 383.809L902.911 385.233L904.325 386.647L905.749 385.223L904.335 383.809ZM901.487 386.657L900.063 388.082L901.477 389.496L902.901 388.072L901.487 386.657ZM898.638 389.506L897.214 390.93L898.628 392.344L900.053 390.92L898.638 389.506ZM895.79 392.354L895.078 393.066L896.492 394.481L897.204 393.768L895.79 392.354Z" fill="#737163" id="Arrow 54"/>
+<text fill="#7A7A7A" font-family="Roboto" font-size="15" id="Lower is better_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="253" y="363.627">Lower is better</tspan></text>
+<path d="M205.438 393.773C205.438 394.326 205.886 394.773 206.438 394.773L215.438 394.773C215.99 394.773 216.438 394.326 216.438 393.773C216.438 393.221 215.99 392.773 215.438 392.773L207.438 392.773L207.438 384.773C207.438 384.221 206.99 383.773 206.438 383.773C205.886 383.773 205.438 384.221 205.438 384.773L205.438 393.773ZM265.548 333.249L264.836 333.962L266.25 335.376L266.962 334.664L265.548 333.249ZM263.411 335.386L261.987 336.81L263.401 338.224L264.826 336.8L263.411 335.386ZM260.563 338.234L259.139 339.658L260.553 341.073L261.977 339.648L260.563 338.234ZM257.715 341.083L256.29 342.507L257.705 343.921L259.129 342.497L257.715 341.083ZM254.866 343.931L253.442 345.355L254.856 346.769L256.28 345.345L254.866 343.931ZM252.018 346.779L250.594 348.204L252.008 349.618L253.432 348.194L252.018 346.779ZM249.169 349.628L247.745 351.052L249.159 352.466L250.584 351.042L249.169 349.628ZM246.321 352.476L244.897 353.901L246.311 355.315L247.735 353.891L246.321 352.476ZM243.472 355.325L242.048 356.749L243.462 358.163L244.887 356.739L243.472 355.325ZM240.624 358.173L239.2 359.597L240.614 361.012L242.038 359.587L240.624 358.173ZM237.776 361.022L236.351 362.446L237.766 363.86L239.19 362.436L237.776 361.022ZM234.927 363.87L233.503 365.294L234.917 366.708L236.341 365.284L234.927 363.87ZM232.079 366.718L230.655 368.143L232.069 369.557L233.493 368.133L232.079 366.718ZM229.23 369.567L227.806 370.991L229.22 372.405L230.645 370.981L229.23 369.567ZM226.382 372.415L224.958 373.839L226.372 375.254L227.796 373.83L226.382 372.415ZM223.533 375.264L222.109 376.688L223.524 378.102L224.948 376.678L223.533 375.264ZM220.685 378.112L219.261 379.536L220.675 380.951L222.099 379.526L220.685 378.112ZM217.837 380.961L216.412 382.385L217.827 383.799L219.251 382.375L217.837 380.961ZM214.988 383.809L213.564 385.233L214.978 386.647L216.402 385.223L214.988 383.809ZM212.14 386.657L210.716 388.082L212.13 389.496L213.554 388.072L212.14 386.657ZM209.291 389.506L207.867 390.93L209.281 392.344L210.706 390.92L209.291 389.506ZM206.443 392.354L205.731 393.066L207.145 394.481L207.857 393.768L206.443 392.354ZM205.438 393.773C205.438 394.326 205.886 394.773 206.438 394.773L215.438 394.773C215.99 394.773 216.438 394.326 216.438 393.773C216.438 393.221 215.99 392.773 215.438 392.773L207.438 392.773L207.438 384.773C207.438 384.221 206.99 383.773 206.438 383.773C205.886 383.773 205.438 384.221 205.438 384.773L205.438 393.773ZM265.548 333.249L264.836 333.962L266.25 335.376L266.962 334.664L265.548 333.249ZM263.411 335.386L261.987 336.81L263.401 338.224L264.826 336.8L263.411 335.386ZM260.563 338.234L259.139 339.658L260.553 341.073L261.977 339.648L260.563 338.234ZM257.715 341.083L256.29 342.507L257.705 343.921L259.129 342.497L257.715 341.083ZM254.866 343.931L253.442 345.355L254.856 346.769L256.28 345.345L254.866 343.931ZM252.018 346.779L250.594 348.204L252.008 349.618L253.432 348.194L252.018 346.779ZM249.169 349.628L247.745 351.052L249.159 352.466L250.584 351.042L249.169 349.628ZM246.321 352.476L244.897 353.901L246.311 355.315L247.735 353.891L246.321 352.476ZM243.472 355.325L242.048 356.749L243.462 358.163L244.887 356.739L243.472 355.325ZM240.624 358.173L239.2 359.597L240.614 361.012L242.038 359.587L240.624 358.173ZM237.776 361.022L236.351 362.446L237.766 363.86L239.19 362.436L237.776 361.022ZM234.927 363.87L233.503 365.294L234.917 366.708L236.341 365.284L234.927 363.87ZM232.079 366.718L230.655 368.143L232.069 369.557L233.493 368.133L232.079 366.718ZM229.23 369.567L227.806 370.991L229.22 372.405L230.645 370.981L229.23 369.567ZM226.382 372.415L224.958 373.839L226.372 375.254L227.796 373.83L226.382 372.415ZM223.533 375.264L222.109 376.688L223.524 378.102L224.948 376.678L223.533 375.264ZM220.685 378.112L219.261 379.536L220.675 380.951L222.099 379.526L220.685 378.112ZM217.837 380.961L216.412 382.385L217.827 383.799L219.251 382.375L217.837 380.961ZM214.988 383.809L213.564 385.233L214.978 386.647L216.402 385.223L214.988 383.809ZM212.14 386.657L210.716 388.082L212.13 389.496L213.554 388.072L212.14 386.657ZM209.291 389.506L207.867 390.93L209.281 392.344L210.706 390.92L209.291 389.506ZM206.443 392.354L205.731 393.066L207.145 394.481L207.857 393.768L206.443 392.354Z" fill="#737163" id="Arrow 55"/>
+<g id="Group 730">
+<g id="Line 31">
+<line stroke="#333333" stroke-width="6" x1="467.2" x2="439.543" y1="174.224" y2="120.293"/>
+<line stroke="#333333" stroke-width="6" x1="467.2" x2="439.543" y1="174.224" y2="120.293"/>
+</g>
+<g id="Line 32">
+<line stroke="#333333" stroke-width="6" x1="440.448" x2="402.42" y1="121.351" y2="93.6938"/>
+<line stroke="#333333" stroke-width="6" x1="440.448" x2="402.42" y1="121.351" y2="93.6938"/>
+</g>
+<g id="Line 33_2">
+<line stroke="#333333" stroke-width="6" x1="403.672" x2="335.912" y1="94.2234" y2="82.4693"/>
+<line stroke="#333333" stroke-width="6" x1="403.672" x2="335.912" y1="94.2234" y2="82.4693"/>
+</g>
+</g>
+<line id="Line 34" stroke="#333333" stroke-dasharray="2 2" x1="445.451" x2="469.651" y1="184.16" y2="172.406"/>
+<path d="M452.131 164.518C451.865 164.445 451.59 164.602 451.517 164.868L450.333 169.21C450.261 169.476 450.418 169.751 450.684 169.824C450.951 169.897 451.226 169.739 451.298 169.473L452.351 165.614L456.21 166.666C456.476 166.739 456.751 166.582 456.824 166.316C456.896 166.049 456.739 165.774 456.473 165.702L452.131 164.518ZM457.965 174.432L452.434 164.752L451.566 165.248L457.097 174.928L457.965 174.432Z" fill="black" id="Line 35"/>
+<text fill="#D55E00" font-family="Roboto" font-size="18" id="Per-Layer Transcoders_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="849" y="156.652">Per-Layer
+</tspan><tspan x="849" y="176.652">Transcoders</tspan></text>
+<text fill="#7A7A7A" font-family="Roboto" font-size="15" id="Neurons begin to look interpretable above this threshold_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="975" y="209.627">Neurons begin to 
+</tspan><tspan x="975" y="226.627">look interpretable
+</tspan><tspan x="975" y="243.627">above this threshold</tspan></text>
+<line id="Line 38" stroke="#333333" stroke-dasharray="2 2" x1="1094.65" x2="1118.16" y1="218.755" y2="204.235"/>
+<path d="M1099.13 198.518C1098.87 198.445 1098.59 198.602 1098.52 198.868L1097.33 203.21C1097.26 203.476 1097.42 203.751 1097.68 203.824C1097.95 203.897 1098.23 203.739 1098.3 203.473L1099.35 199.614L1103.21 200.666C1103.48 200.739 1103.75 200.582 1103.82 200.316C1103.9 200.049 1103.74 199.774 1103.47 199.702L1099.13 198.518ZM1104.97 208.432L1099.43 198.752L1098.57 199.248L1104.1 208.928L1104.97 208.432Z" fill="black" id="Line 39"/>
+<g id="Figure 00: Comparison of cross-layer transcoders, per-layer transcoders, and thresholded neurons in terms of their top-1 accuracy and KL divergence when used as the basis for a replacement model. Interpretability thresholds are determined using sort and contrastive eval (see Evaluations).">
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="8" y="561.443">Figure 00:</tspan><tspan x="68.2266" y="561.443">Comparison of cross-layer transcoders, per-layer transcoders, and thresholded neurons in terms of their top-1 accuracy and KL divergence when used as the basis for a replacement model. Interpretability </tspan><tspan x="8" y="579.443">thresholds are determined using sort and contrastive eval (see Evaluations).</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" font-weight="bold" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="64.9893" y="561.443"> </tspan></text>
+</g>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2163_7438" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.000244141 0 0 0.000589655 0 -0.0023864)" xlink:href="#image0_2163_7438"/>
+</pattern>
+<clipPath id="clip0_2163_7438">
+<rect fill="white" height="596" width="1312"/>
+</clipPath>
+<image data-name="image.png" height="1704" id="image0_2163_7438" preserveAspectRatio="none" width="4096" xlink:href="./png/img_90ad15eabb03adc4.png"/>
+</defs>
+</svg>

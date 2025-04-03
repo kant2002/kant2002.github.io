@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="594" viewBox="0 0 1017 594" width="1017" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="appendix-resid-norms-svg">
+<rect fill="white" height="594" width="1016"/>
+<rect fill="url(#pattern0_2439_15472)" height="576" id="image 881740462" width="1016.68"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: L2 Norm of residual stream activations by layer in 18L." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="10" y="589.443">Figure 00: L2 Norm of residual stream activations by layer in 18L.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2439_15472" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.000505561 0 0 0.000892352 -2.41357e-08 -0.0520833)" xlink:href="#image0_2439_15472"/>
+</pattern>
+<image data-name="image.png" height="1179" id="image0_2439_15472" preserveAspectRatio="none" width="1978" xlink:href="./png/img_9b4b0a0ad5271e40.png"/>
+</defs>
+</svg>

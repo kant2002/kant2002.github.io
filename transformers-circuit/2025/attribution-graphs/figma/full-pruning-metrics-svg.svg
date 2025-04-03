@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="870" viewBox="0 0 1240 870" width="1240" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_2366_5399)" id="full-pruning-metrics-svg">
+<rect fill="white" height="870" width="1240"/>
+<rect fill="url(#pattern0_2366_5399)" height="820" id="image 881740458" width="1240"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Comparison of graph completeness and replacement score versus per-token L0 for graphs generated with different underlying dictionaries. Higher scores correspond to graphs with fewer holes, and lower L0 suggests more interpretable graphs." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="10" y="833.443">Figure 00: Comparison of graph completeness and replacement score versus per-token L0 for graphs generated with different underlying dictionaries.  Higher scores correspond to graphs with fewer holes, and </tspan><tspan x="10" y="851.443">lower L0 suggests more interpretable graphs.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2366_5399" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.000420401 0.000635728)" xlink:href="#image0_2366_5399"/>
+</pattern>
+<clipPath id="clip0_2366_5399">
+<rect fill="white" height="870" width="1240"/>
+</clipPath>
+<image data-name="image.png" height="1573" id="image0_2366_5399" preserveAspectRatio="none" width="2379" xlink:href="./png/img_e7124c6feac61ae0.png"/>
+</defs>
+</svg>

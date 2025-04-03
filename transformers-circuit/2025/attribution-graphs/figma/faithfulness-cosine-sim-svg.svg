@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="1019" viewBox="0 0 1160 1019" width="1160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="faithfulness-cosine-sim-svg">
+<rect fill="white" height="1019" width="1160"/>
+<rect fill="url(#pattern0_2456_16902)" height="991" id="image 881740468" width="1160"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Cosine similarity of perturbations." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="1014.44">Figure 00: Cosine similarity of perturbations.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_2456_16902" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.000500447 0 0 0.00058579 -0.000196344 -0.0403633)" xlink:href="#image0_2456_16902"/>
+</pattern>
+<image data-name="image.png" height="1776" id="image0_2456_16902" preserveAspectRatio="none" width="1999" xlink:href="./png/img_f6a3573800bb175f.png"/>
+</defs>
+</svg>

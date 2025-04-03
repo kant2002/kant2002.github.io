@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="861" viewBox="0 0 1172 861" width="1172" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="amplification-svg">
+<rect fill="white" height="861" width="1172"/>
+<path d="M169 776H246" id="Vector 310" stroke="#B8B6AD" stroke-dasharray="2 2" stroke-width="2"/>
+<path d="M912 242H989" id="Vector 322" stroke="#B8B6AD" stroke-dasharray="2 2" stroke-width="2"/>
+<path d="M723 778L989 778" id="Vector 323" stroke="#B8B6AD" stroke-dasharray="2 2" stroke-width="2"/>
+<path d="M169 416H246" id="Vector 320" stroke="#B8B6AD" stroke-dasharray="2 2" stroke-width="2"/>
+<text fill="#030303" font-family="Roboto" font-size="17" font-weight="bold" id="Per-Layer Transcoders (PLTs)" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="17.8105">Per-Layer Transcoders (PLTs)</tspan></text>
+<path d="M310 708.5L301.34 723.5H318.66L310 708.5ZM311.5 740V722H308.5V740H311.5Z" fill="#633636" id="Vector 296"/>
+<path d="M435 612L417.732 613.345L427.531 627.627L435 612ZM367.349 660.237L424.717 620.875L423.02 618.401L365.651 657.763L367.349 660.237Z" fill="#633636" id="Vector 315"/>
+<path d="M435 446L417.732 447.345L427.531 461.627L435 446ZM367.349 494.237L424.717 454.875L423.02 452.401L365.651 491.763L367.349 494.237Z" fill="#633636" id="Vector 317"/>
+<path d="M435 253L417.732 254.345L427.531 268.627L435 253ZM367.349 301.237L424.717 261.875L423.02 259.401L365.651 298.763L367.349 301.237Z" fill="#633636" id="Vector 319"/>
+<path d="M375.229 534L392.498 535.345L382.698 549.627L375.229 534ZM442.881 582.237L385.513 542.875L387.21 540.401L444.578 579.763L442.881 582.237Z" fill="#633636" id="Vector 316"/>
+<path d="M375.229 353L392.498 354.345L382.698 368.627L375.229 353ZM442.881 401.237L385.513 361.875L387.21 359.401L444.578 398.763L442.881 401.237Z" fill="#633636" id="Vector 318"/>
+<path d="M310 547L301.34 562H318.66L310 547ZM311.5 639V560.5H308.5V639H311.5Z" fill="#633636" id="Vector 300"/>
+<path d="M499 449L490.34 464H507.66L499 449ZM500.5 560V462.5H497.5V560H500.5Z" fill="#633636" id="Vector 301"/>
+<path d="M499 272L490.34 287H507.66L499 272ZM500.5 385V285.5H497.5V385H500.5Z" fill="#633636" id="Vector 304"/>
+<path d="M310 449L301.34 464H318.66L310 449ZM311.5 480.5V462.5H308.5V480.5H311.5Z" fill="#633636" id="Vector 298"/>
+<path d="M308 351L299.34 366L316.66 366L308 351ZM309.5 383L309.5 364.5L306.5 364.5L306.5 383L309.5 383Z" fill="#633636" id="Vector 299"/>
+<path d="M499 174L490.34 189H507.66L499 174ZM500.5 206V187.5H497.5V206H500.5Z" fill="#633636" id="Vector 312"/>
+<g id="Group 589">
+<rect fill="#F6F6F3" height="69" id="Rectangle 131" rx="1.5" stroke="#B8B6AD" width="310" x="248.5" y="105.5"/>
+<g id="Tokens" style="mix-blend-mode:darken">
+<g id="Frame 90">
+<rect fill="#F6F6F3" height="70" transform="translate(248 105)" width="184"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="268.53" y="134.603">Zagreb:Croatia
+</tspan><tspan x="273.635" y="158.603">::Copenhagen:</tspan></text>
+</g>
+</g>
+<g id="Tokens_2" style="mix-blend-mode:darken">
+<g id="Frame 90_2">
+<path d="M442.346 105H557.001C558.105 105 559.001 105.895 559.001 107V173H442.346V105Z" fill="#E6E3D6"/>
+<text fill="black" font-family="Roboto Mono" font-size="18" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="462.836" y="144.992">Denmark</tspan></text>
+</g>
+<path d="M442.346 173H558.368H559.001C559.001 174.105 558.105 175 557.001 175H442.346V173Z" fill="#706D5C" id="Rectangle 19"/>
+</g>
+</g>
+<path d="M169 235L471 235" id="Vector 321" stroke="#B8B6AD" stroke-dasharray="2 2" stroke-width="2"/>
+<g id="Group 824">
+<g id="CircuitNode">
+<g id="Group 286">
+<g id="Frame 88">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="440" y="561"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="440" y="561"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="464.95" y="598.811">Denmark</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="445.992" y="572.918">L5</tspan></text>
+</g>
+<g id="Group 825">
+<g id="CircuitNode_2">
+<g id="Group 286_2">
+<g id="Frame 88_2">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="249" y="640"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="249" y="640"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="260.354" y="677.811">Copenhagen</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="254.992" y="651.918">L2</tspan></text>
+</g>
+<g id="Group 830">
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L1" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="262.992" y="759.918">L1</tspan></text>
+</g>
+<g id="Group 829">
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L1_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="258.992" y="756.918">L1</tspan></text>
+</g>
+<g id="Group 840">
+<g id="Group 839">
+<g id="CircuitNode_3">
+<g id="Group 286_3">
+<g id="Frame 88_3">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="261" y="750"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="261" y="750"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="272.354" y="787.811">Copenhagen</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L1_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="266.992" y="761.918">L1</tspan></text>
+</g>
+<g id="Group 838">
+<g id="CircuitNode_4">
+<g id="Group 286_4">
+<g id="Frame 88_4">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="255" y="746"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="255" y="746"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="266.354" y="783.811">Copenhagen</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L1_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="260.992" y="757.918">L1</tspan></text>
+</g>
+<g id="Group 828">
+<g id="CircuitNode_5">
+<g id="Group 286_5">
+<g id="Frame 88_5">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="249" y="742"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="249" y="742"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="260.354" y="779.811">Copenhagen</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L1_5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="254.992" y="753.918">L1</tspan></text>
+</g>
+</g>
+<g id="Group 823">
+<g id="CircuitNode_6">
+<g id="Group 286_6">
+<g id="Frame 88_6">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="249" y="482"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="249" y="482"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_6" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="260.354" y="519.811">Copenhagen</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L7" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="254.992" y="493.918">L7</tspan></text>
+</g>
+<g id="Group 820">
+<g id="CircuitNode_7">
+<g id="Group 286_7">
+<g id="Frame 88_7">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="440" y="207"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="440" y="207"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_7" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="464.95" y="244.811">Denmark</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L10" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="443.18" y="218.918">L10</tspan></text>
+</g>
+<g id="Group 821">
+<g id="CircuitNode_8">
+<g id="Group 286_8">
+<g id="Frame 88_8">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="249" y="286"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="249" y="286"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_8" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="260.354" y="323.811">Copenhagen</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L9" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="254.992" y="297.918">L9</tspan></text>
+</g>
+<g id="CircuitNode_9">
+<g id="Group 286_9">
+<g id="Frame 88_9">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="440" y="384"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="440" y="384"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_9" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="464.95" y="421.811">Denmark</tspan></text>
+</g>
+</g>
+</g>
+<g id="CircuitNode_10">
+<g id="Group 286_10">
+<g id="Frame 88_10">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="249" y="384"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="249" y="384"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_10" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="260.354" y="421.811">Copenhagen</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L8" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="254.992" y="395.918">L8</tspan></text>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L8_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="443.992" y="395.918">L8</tspan></text>
+<g id="Screenshot 2025-03-05 at 10.34.13â¯PM 1">
+<rect fill="url(#pattern0_1445_2285)" height="121" rx="8" width="210" y="173"/>
+<rect height="120.5" rx="7.75" stroke="black" stroke-opacity="0.5" stroke-width="0.5" width="209.5" x="0.25" y="173.25"/>
+</g>
+<g id="Screenshot 2025-03-05 at 10.28.10â¯PM 1">
+<rect fill="url(#pattern1_1445_2285)" height="106" rx="8" width="209.506" y="363"/>
+<rect height="105.5" rx="7.75" stroke="black" stroke-opacity="0.5" stroke-width="0.5" width="209.006" x="0.25" y="363.25"/>
+</g>
+<g id="Screenshot 2025-03-05 at 10.27.02â¯PM 1">
+<rect fill="url(#pattern2_1445_2285)" height="115" rx="8" width="209.91" y="715"/>
+<rect height="114.5" rx="7.75" stroke="black" stroke-opacity="0.5" stroke-width="0.5" width="209.41" x="0.25" y="715.25"/>
+</g>
+<text fill="#030303" font-family="Roboto" font-size="17" font-weight="bold" id="Cross-Layer Transcoder (CLT)" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="611" y="17.8105">Cross-Layer Transcoder (CLT)</tspan></text>
+<path d="M862 274L853.34 289H870.66L862 274ZM840.246 420.71L839.073 419.776L840.246 420.71ZM863.5 358.441V287.5H860.5V358.441H863.5ZM673.5 751.5V667.059H670.5V751.5H673.5ZM694.927 605.724L768.174 513.684L765.826 511.816L692.58 603.856L694.927 605.724ZM768.174 513.684L841.42 421.644L839.073 419.776L765.826 511.816L768.174 513.684ZM673.5 667.059C673.5 644.779 681.054 623.157 694.927 605.724L692.58 603.856C678.284 621.82 670.5 644.101 670.5 667.059H673.5ZM860.5 358.441C860.5 380.721 852.946 402.343 839.073 419.776L841.42 421.644C855.716 403.68 863.5 381.399 863.5 358.441H860.5Z" fill="#633636" id="Vector 294"/>
+<path d="M862 176L853.34 191H870.66L862 176ZM863.5 208V189.5H860.5V208H863.5Z" fill="#633636" id="Vector 313"/>
+<g id="Group 833">
+<rect fill="#F6F6F3" height="69" id="Rectangle 131_2" rx="1.5" stroke="#B8B6AD" width="310" x="611.5" y="105.5"/>
+<g id="Tokens_3" style="mix-blend-mode:darken">
+<g id="Frame 90_3">
+<rect fill="#F6F6F3" height="70" transform="translate(611 105)" width="184"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="631.53" y="134.603">Zagreb:Croatia
+</tspan><tspan x="636.635" y="158.603">::Copenhagen:</tspan></text>
+</g>
+</g>
+<g id="Tokens_4" style="mix-blend-mode:darken">
+<g id="Frame 90_4">
+<path d="M805.346 105H920.001C921.105 105 922.001 105.895 922.001 107V173H805.346V105Z" fill="#E6E3D6"/>
+<text fill="black" font-family="Roboto Mono" font-size="18" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="825.836" y="144.992">Denmark</tspan></text>
+</g>
+<path d="M805.346 173H921.368H922.001C922.001 174.105 921.105 175 920.001 175H805.346V173Z" fill="#706D5C" id="Rectangle 19_2"/>
+</g>
+</g>
+<g id="CircuitNode_11">
+<g id="Group 286_11">
+<g id="Frame 88_11">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="803" y="209"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="803" y="209"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_11" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="827.95" y="246.811">Denmark</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L8_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="808.992" y="220.918">L8</tspan></text>
+<g id="Group 835">
+<g id="Screenshot 2025-03-05 at 10.05.36â¯PM 1">
+<rect fill="url(#pattern3_1445_2285)" height="109" rx="8" width="210" x="960.001" y="195"/>
+<rect height="108.5" rx="7.75" stroke="black" stroke-opacity="0.5" stroke-width="0.5" width="209.5" x="960.251" y="195.25"/>
+</g>
+<g id="Screenshot 2025-03-05 at 10.13.39â¯PM 1">
+<rect fill="url(#pattern4_1445_2285)" height="116" rx="8" width="210" x="960.001" y="720"/>
+<rect height="115.5" rx="7.75" stroke="black" stroke-opacity="0.5" stroke-width="0.5" width="209.5" x="960.251" y="720.25"/>
+</g>
+</g>
+<text fill="#4C4C4C" font-family="Roboto" font-size="16" id="CLTs can collapse repeating or amplifying paths, but may risk more mechanistic unfaithfulness" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="678" y="383.469">CLTs can collapse </tspan><tspan x="678" y="400.469">repeating or amplifying </tspan><tspan x="678" y="417.469">paths, but may risk </tspan><tspan x="678" y="434.469">more mechanistic </tspan><tspan x="678" y="451.469">unfaithfulness</tspan></text>
+<text fill="#4C4C4C" font-family="Roboto" font-size="16" id="PLTs model computation independently at each layer. This can create repeated features." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="43.9688">PLTs model computation independently at each layer. This can create repeated </tspan><tspan x="0" y="60.9688">features.</tspan></text>
+<text fill="#4C4C4C" font-family="Roboto" font-size="16" id="CLTs can merge computation across layers, simplifying graphs (but potentially being less faithful)." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="611" y="43.9688">CLTs can merge computation across layers, simplifying graphs (but potentially </tspan><tspan x="611" y="60.9688">being less faithful).</tspan></text>
+<g id="Group 841">
+<g id="Group 839_2">
+<g id="CircuitNode_12">
+<g id="Group 286_12">
+<g id="Frame 88_12">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="624" y="750"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="624" y="750"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_12" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="635.354" y="787.811">Copenhagen</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L1_6" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="629.992" y="761.918">L1</tspan></text>
+</g>
+<g id="Group 838_2">
+<g id="CircuitNode_13">
+<g id="Group 286_13">
+<g id="Frame 88_13">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="618" y="746"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="618" y="746"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_13" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="629.354" y="783.811">Copenhagen</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L1_7" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="623.992" y="757.918">L1</tspan></text>
+</g>
+<g id="Group 828_2">
+<g id="CircuitNode_14">
+<g id="Group 286_14">
+<g id="Frame 88_14">
+<rect fill="#E6E3D6" height="64" rx="5" width="118" x="612" y="742"/>
+<rect height="64" rx="5" stroke="#706D5C" stroke-width="2" width="118" x="612" y="742"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_14" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="623.354" y="779.811">Copenhagen</tspan></text>
+</g>
+</g>
+</g>
+<text fill="#3E3E3E" font-family="Roboto" font-size="10" id="L1_8" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="617.992" y="753.918">L1</tspan></text>
+</g>
+</g>
+<path d="M1 76L561 76" id="Vector 889" stroke="#E6E6E6"/>
+<path d="M611 76L1171 76" id="Vector 890" stroke="#E6E6E6"/>
+<g id="Frame 114">
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: CLTs produce simpler graphs than PLTs." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="856.443">Figure 00: CLTs produce simpler graphs than PLTs.</tspan></text>
+</g>
+</g>
+<defs>
+<pattern height="1" id="pattern0_1445_2285" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00169492 0.00294159)" xlink:href="#image0_1445_2285"/>
+</pattern>
+<pattern height="1" id="pattern1_1445_2285" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.0014881 0.00294118)" xlink:href="#image1_1445_2285"/>
+</pattern>
+<pattern height="1" id="pattern2_1445_2285" patternContentUnits="objectBoundingBox" width="1">
+<use transform="scale(0.00165017 0.00301205)" xlink:href="#image2_1445_2285"/>
+</pattern>
+<pattern height="1" id="pattern3_1445_2285" patternContentUnits="objectBoundingBox" width="1">
+<use transform="translate(-0.0952381) scale(0.00147457 0.00284091)" xlink:href="#image3_1445_2285"/>
+</pattern>
+<pattern height="1" id="pattern4_1445_2285" patternContentUnits="objectBoundingBox" width="1">
+<use transform="translate(-0.0952381) scale(0.00156926 0.00284091)" xlink:href="#image4_1445_2285"/>
+</pattern>
+<image data-name="Screenshot 2025-03-05 at 10.34.13â¯PM.png" height="340" id="image0_1445_2285" preserveAspectRatio="none" width="590" xlink:href="./png/img_2d8d6b59fa29d065.png"/>
+<image data-name="Screenshot 2025-03-05 at 10.28.10â¯PM.png" height="340" id="image1_1445_2285" preserveAspectRatio="none" width="672" xlink:href="./png/img_9dbfb8d2806e999d.png"/>
+<image data-name="Screenshot 2025-03-05 at 10.27.02â¯PM.png" height="332" id="image2_1445_2285" preserveAspectRatio="none" width="606" xlink:href="./png/img_90be68a73d41b8eb.png"/>
+<image data-name="Screenshot 2025-03-05 at 10.05.36â¯PM.png" height="352" id="image3_1445_2285" preserveAspectRatio="none" width="808" xlink:href="./png/img_837e451f1ec8fbba.png"/>
+<image data-name="Screenshot 2025-03-05 at 10.13.39â¯PM.png" height="352" id="image4_1445_2285" preserveAspectRatio="none" width="756" xlink:href="./png/img_d5a9daf253d59d23.png"/>
+</defs>
+</svg>

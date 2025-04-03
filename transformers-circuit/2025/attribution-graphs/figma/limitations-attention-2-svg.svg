@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="645" viewBox="0 0 1167 645" width="1167" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_875_1781)" id="limitations-attention-2-svg">
+<rect fill="white" height="645" width="1167"/>
+<g id="Union">
+<mask fill="white" id="path-1-inside-1_875_1781">
+<path clip-rule="evenodd" d="M797.424 462.594H809.865V474.428H929.865V473.29C929.865 454.582 929.806 444.969 929.747 435.357C929.687 425.66 929.627 415.965 929.628 396.933C929.63 366.522 929.629 261.302 929.629 220.936C929.629 212.1 922.465 205 913.629 205H852.379H809.865H728.002C719.165 205 712.002 212.112 712.002 220.948C712.001 254.104 712 331.213 712.002 377.298C712.003 403.894 728.831 404.874 747.549 405.964C771.003 407.329 797.424 408.867 797.424 461.192V462.594Z" fill-rule="evenodd"/>
+</mask>
+<path clip-rule="evenodd" d="M797.424 462.594H809.865V474.428H929.865V473.29C929.865 454.582 929.806 444.969 929.747 435.357C929.687 425.66 929.627 415.965 929.628 396.933C929.63 366.522 929.629 261.302 929.629 220.936C929.629 212.1 922.465 205 913.629 205H852.379H809.865H728.002C719.165 205 712.002 212.112 712.002 220.948C712.001 254.104 712 331.213 712.002 377.298C712.003 403.894 728.831 404.874 747.549 405.964C771.003 407.329 797.424 408.867 797.424 461.192V462.594Z" fill="#F6F6F3" fill-rule="evenodd"/>
+<path d="M809.865 462.594H810.865V461.594H809.865V462.594ZM797.424 462.594H796.424V463.594H797.424V462.594ZM809.865 474.428H808.865V475.428H809.865V474.428ZM929.865 474.428V475.428H930.865V474.428H929.865ZM929.747 435.357L928.747 435.363L929.747 435.357ZM929.628 396.933L928.628 396.933L929.628 396.933ZM929.629 220.936L928.629 220.936L929.629 220.936ZM712.002 220.948L713.002 220.948V220.948L712.002 220.948ZM712.002 377.298L711.002 377.298V377.298L712.002 377.298ZM747.549 405.964L747.607 404.965L747.549 405.964ZM809.865 461.594H797.424V463.594H809.865V461.594ZM808.865 462.594V474.428H810.865V462.594H808.865ZM809.865 475.428H929.865V473.428H809.865V475.428ZM930.865 474.428V473.29H928.865V474.428H930.865ZM930.865 473.29C930.865 454.58 930.806 444.964 930.747 435.351L928.747 435.363C928.806 444.974 928.865 454.585 928.865 473.29H930.865ZM930.747 435.351C930.687 425.655 930.627 415.962 930.628 396.933L928.628 396.933C928.627 415.967 928.687 425.665 928.747 435.363L930.747 435.351ZM930.628 396.933C930.63 366.522 930.629 261.302 930.629 220.936L928.629 220.936C928.629 261.302 928.63 366.522 928.628 396.933L930.628 396.933ZM930.629 220.936C930.629 211.542 923.012 204 913.629 204V206C921.918 206 928.629 212.657 928.629 220.936L930.629 220.936ZM913.629 204H852.379V206H913.629V204ZM852.379 204H809.865V206H852.379V204ZM728.002 206H809.865V204H728.002V206ZM713.002 220.948C713.002 212.668 719.713 206 728.002 206V204C718.617 204 711.002 211.555 711.002 220.948L713.002 220.948ZM713.002 377.298C713 331.213 713.001 254.104 713.002 220.948L711.002 220.948C711.001 254.104 711 331.213 711.002 377.298L713.002 377.298ZM747.607 404.965C738.172 404.416 729.552 403.893 723.249 400.326C720.141 398.566 717.6 396.063 715.824 392.407C714.039 388.735 713.002 383.848 713.002 377.298L711.002 377.298C711.002 384.046 712.069 389.256 714.025 393.281C715.989 397.324 718.825 400.12 722.264 402.066C729.056 405.91 738.208 406.422 747.491 406.962L747.607 404.965ZM798.424 461.192C798.424 434.885 791.781 421.033 781.879 413.666C772.059 406.36 759.266 405.644 747.607 404.965L747.491 406.962C759.287 407.649 771.431 408.385 780.685 415.27C789.857 422.094 796.424 435.174 796.424 461.192H798.424ZM798.424 462.594V461.192H796.424V462.594H798.424Z" fill="#D0CEC8" mask="url(#path-1-inside-1_875_1781)"/>
+</g>
+<g id="Union_2">
+<mask fill="white" id="path-3-inside-2_875_1781">
+<path clip-rule="evenodd" d="M1069.81 240.091C1069.81 239.078 1069.9 238.088 1070.08 237.129L1070.08 204.285C1070.08 187.556 1078.34 179.014 1086.59 170.489C1094.8 162 1103 153.527 1103 137.003V136H1143.53V136.44H1166.69C1166.69 136.44 1166.69 323.883 1166.69 369.994C1166.69 393.153 1166.71 404.95 1166.73 416.75C1166.75 428.446 1166.77 440.145 1166.77 462.91V464.295H1129.77V463.273H1126.89V462.263C1126.89 445.618 1112.68 437.085 1098.44 428.533C1084.14 419.947 1069.81 411.343 1069.81 394.492C1069.81 367.942 1069.81 277.152 1069.81 240.091Z" fill-rule="evenodd"/>
+</mask>
+<path clip-rule="evenodd" d="M1069.81 240.091C1069.81 239.078 1069.9 238.088 1070.08 237.129L1070.08 204.285C1070.08 187.556 1078.34 179.014 1086.59 170.489C1094.8 162 1103 153.527 1103 137.003V136H1143.53V136.44H1166.69C1166.69 136.44 1166.69 323.883 1166.69 369.994C1166.69 393.153 1166.71 404.95 1166.73 416.75C1166.75 428.446 1166.77 440.145 1166.77 462.91V464.295H1129.77V463.273H1126.89V462.263C1126.89 445.618 1112.68 437.085 1098.44 428.533C1084.14 419.947 1069.81 411.343 1069.81 394.492C1069.81 367.942 1069.81 277.152 1069.81 240.091Z" fill="#F6F6F3" fill-rule="evenodd"/>
+<path d="M1070.08 237.129L1071.06 237.313L1071.08 237.222L1071.08 237.129L1070.08 237.129ZM1069.81 240.091L1068.81 240.091L1069.81 240.091ZM1070.08 204.285L1069.08 204.285V204.285L1070.08 204.285ZM1086.59 170.489L1087.31 171.185L1086.59 170.489ZM1103 136V135H1102V136H1103ZM1143.53 136H1144.53V135H1143.53V136ZM1143.53 136.44H1142.53V137.44H1143.53V136.44ZM1166.69 136.44L1167.69 136.44L1167.69 135.44H1166.69V136.44ZM1166.69 369.994L1165.69 369.994L1166.69 369.994ZM1166.73 416.75L1167.73 416.749L1166.73 416.75ZM1166.77 464.295V465.295H1167.77V464.295H1166.77ZM1129.77 464.295H1128.77V465.295H1129.77V464.295ZM1129.77 463.273H1130.77V462.273H1129.77V463.273ZM1126.89 463.273H1125.89V464.273H1126.89V463.273ZM1098.44 428.533L1098.95 427.676L1098.44 428.533ZM1069.81 394.492L1068.81 394.492L1069.81 394.492ZM1069.1 236.944C1068.91 237.964 1068.81 239.016 1068.81 240.091L1070.81 240.091C1070.81 239.14 1070.89 238.212 1071.06 237.313L1069.1 236.944ZM1069.08 204.285L1069.08 237.129L1071.08 237.129L1071.08 204.285L1069.08 204.285ZM1085.87 169.794C1077.62 178.329 1069.08 187.126 1069.08 204.285L1071.08 204.285C1071.08 187.986 1079.07 179.699 1087.31 171.185L1085.87 169.794ZM1102 137.003C1102 153.097 1094.08 161.313 1085.87 169.794L1087.31 171.185C1095.53 162.686 1104 153.958 1104 137.003H1102ZM1102 136V137.003H1104V136H1102ZM1143.53 135H1103V137H1143.53V135ZM1144.53 136.44V136H1142.53V136.44H1144.53ZM1166.69 135.44H1143.53V137.44H1166.69V135.44ZM1167.69 369.994C1167.69 346.939 1167.69 288.55 1167.69 235.925C1167.69 209.613 1167.69 184.742 1167.69 166.448C1167.69 157.302 1167.69 149.799 1167.69 144.584C1167.69 141.976 1167.69 139.94 1167.69 138.556C1167.69 137.864 1167.69 137.335 1167.69 136.979C1167.69 136.801 1167.69 136.666 1167.69 136.576C1167.69 136.531 1167.69 136.497 1167.69 136.474C1167.69 136.463 1167.69 136.454 1167.69 136.448C1167.69 136.445 1167.69 136.443 1167.69 136.442C1167.69 136.44 1167.69 136.44 1166.69 136.44C1165.69 136.44 1165.69 136.44 1165.69 136.442C1165.69 136.443 1165.69 136.445 1165.69 136.448C1165.69 136.454 1165.69 136.463 1165.69 136.474C1165.69 136.497 1165.69 136.531 1165.69 136.576C1165.69 136.666 1165.69 136.801 1165.69 136.979C1165.69 137.335 1165.69 137.864 1165.69 138.556C1165.69 139.94 1165.69 141.976 1165.69 144.584C1165.69 149.799 1165.69 157.302 1165.69 166.448C1165.69 184.742 1165.69 209.613 1165.69 235.925C1165.69 288.55 1165.69 346.939 1165.69 369.994L1167.69 369.994ZM1167.73 416.749C1167.71 404.949 1167.69 393.152 1167.69 369.994L1165.69 369.994C1165.69 393.153 1165.71 404.951 1165.73 416.752L1167.73 416.749ZM1167.77 462.91C1167.77 440.144 1167.75 428.445 1167.73 416.749L1165.73 416.752C1165.75 428.447 1165.77 440.145 1165.77 462.91H1167.77ZM1167.77 464.295V462.91H1165.77V464.295H1167.77ZM1129.77 465.295H1166.77V463.295H1129.77V465.295ZM1128.77 463.273V464.295H1130.77V463.273H1128.77ZM1126.89 464.273H1129.77V462.273H1126.89V464.273ZM1125.89 462.263V463.273H1127.89V462.263H1125.89ZM1097.92 429.391C1105.07 433.682 1112.07 437.892 1117.3 443.074C1122.49 448.221 1125.89 454.273 1125.89 462.263H1127.89C1127.89 453.608 1124.18 447.072 1118.71 441.653C1113.27 436.269 1106.04 431.936 1098.95 427.676L1097.92 429.391ZM1068.81 394.492C1068.81 403.248 1072.55 409.854 1078.05 415.321C1083.53 420.754 1090.8 425.113 1097.92 429.391L1098.95 427.676C1091.77 423.367 1084.73 419.131 1079.46 413.902C1074.23 408.708 1070.81 402.586 1070.81 394.492L1068.81 394.492ZM1068.81 240.091C1068.81 277.152 1068.81 367.942 1068.81 394.492L1070.81 394.492C1070.81 367.942 1070.81 277.152 1070.81 240.091L1068.81 240.091Z" fill="#D0CEC8" mask="url(#path-3-inside-2_875_1781)"/>
+</g>
+<path d="M1161.1 368.104L1161.89 307.104C1161.95 302.645 1158.35 299 1153.9 299H1091C1086.58 299 1083 302.582 1083 307V330.876C1083 331.98 1082.1 332.876 1081 332.876H1036C1034.9 332.876 1034 331.98 1034 330.876V327C1034 325.895 1033.1 325 1032 325H1014C1012.9 325 1012 324.105 1012 323V290C1012 288.895 1012.9 288 1014 288H1044C1048.42 288 1052 284.418 1052 280V213C1052 208.582 1048.42 205 1044 205H956C951.582 205 948 208.582 948 213V280C948 284.418 951.582 288 956 288H986C987.105 288 988 288.895 988 290V323C988 324.105 987.105 325 986 325H970C968.895 325 968 325.895 968 327V330C968 331.105 967.105 332 966 332H923C921.895 332 921 331.105 921 330V306C921 301.582 917.418 298 913 298H832C827.582 298 824 301.582 824 306V368C824 372.418 827.582 376 832 376H859C860.105 376 861 376.895 861 378V397C861 398.105 860.105 399 859 399H833C828.582 399 825 402.582 825 407V433C825 437.418 828.582 441 833 441H912C916.418 441 920 437.418 920 433V407C920 402.582 916.418 399 912 399H887C885.895 399 885 398.105 885 397V378C885 376.895 885.895 376 887 376H913C917.418 376 921 372.418 921 368V347C921 345.895 921.895 345 923 345H966C967.105 345 968 345.895 968 347V350C968 351.105 968.895 352 970 352H1032C1033.1 352 1034 351.105 1034 350V348C1034 346.895 1034.9 346 1036 346H1081C1082.1 346 1083 346.895 1083 348V368C1083 372.418 1086.58 376 1091 376H1153.1C1157.48 376 1161.05 372.481 1161.1 368.104Z" fill="#F0D1B2" id="Union_3"/>
+<g id="Group 764">
+<rect fill="#F6F6F3" height="141" id="Rectangle 305" rx="1.5" stroke="#B8B6AD" width="565" x="601.5" y="460.5"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="16" id="Human: In what year did World War II end?ââ (A) 1776ââ" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="615" y="481.215">Human: In </tspan><tspan x="615" y="503.215">what year </tspan><tspan x="615" y="525.215">did World </tspan><tspan x="615" y="547.215">War II </tspan><tspan x="615" y="569.215">end?⏎⏎
+</tspan><tspan x="615" y="591.215">(A) 1776⏎⏎ </tspan></text>
+<text fill="#333333" font-family="Roboto Mono" font-size="16" id="1865ââ Assistant: Answer" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="955" y="526.215">1865⏎⏎
+</tspan><tspan x="955" y="548.215">Assistant: Answer</tspan></text>
+<rect fill="#706D5C" height="2" id="Rectangle 309" width="57" x="727" y="460"/>
+<rect fill="#706D5C" height="2" id="Rectangle 316" width="131" x="798" y="460"/>
+<g id="Group 761">
+<g id="Frame 91" style="mix-blend-mode:darken">
+<path d="M1127 461.894H1167V600C1167 601.105 1166.1 602 1165 602H1127V461.894Z" fill="#E6E3D6"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id=":" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="1141.9" y="537.55">:</tspan></text>
+</g>
+<path d="M1127 460H1165.11C1166.15 460 1167 460.848 1167 461.893H1127V460Z" fill="#706D5C" id="Rectangle 308"/>
+</g>
+<g id="Frame 94" style="mix-blend-mode:darken">
+<rect fill="#E6E3D6" height="139" transform="translate(727 462)" width="57"/>
+<g id="( B )">
+<text fill="black" font-family="Roboto Mono" font-size="17" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="734.179" y="537.103">(</tspan><tspan x="750.395" y="537.103">B</tspan><tspan x="766.611" y="537.103">)</tspan></text>
+<text fill="black" font-family="Roboto Mono" font-size="10" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="744.389" y="537.103"> </tspan><tspan x="760.605" y="537.103"> </tspan></text>
+</g>
+</g>
+<g id="Frame 95" style="mix-blend-mode:darken">
+<rect fill="#E6E3D6" height="139" transform="translate(798 462)" width="131"/>
+<g id="1945 ââ ( C )">
+<text fill="black" font-family="Roboto Mono" font-size="17" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="804.221" y="537.103">1945</tspan><tspan x="851.067" y="537.103">⏎⏎</tspan><tspan x="882.54" y="537.103">(</tspan><tspan x="897.554" y="537.103">C</tspan><tspan x="912.569" y="537.103">)</tspan></text>
+<text fill="black" font-family="Roboto Mono" font-size="8" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="892.75" y="537.103"> </tspan><tspan x="907.764" y="537.103"> </tspan></text>
+<text fill="black" font-family="Roboto Mono" font-size="10" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="845.061" y="537.103"> </tspan><tspan x="876.534" y="537.103"> </tspan></text>
+</g>
+</g>
+<rect fill="#F6F6F3" height="139" id="Rectangle 310" width="2" x="745" y="462"/>
+<rect fill="#F6F6F3" height="139" id="Rectangle 311" width="2" x="763" y="462"/>
+<rect fill="#F6F6F3" height="139" id="Rectangle 312" width="2" x="848" y="462"/>
+<rect fill="#F6F6F3" height="139" id="Rectangle 313" width="2" x="879" y="462"/>
+<rect fill="#F6F6F3" height="139" id="Rectangle 314" width="2" x="893" y="462"/>
+<rect fill="#F6F6F3" height="139" id="Rectangle 315" width="2" x="910" y="462"/>
+<g id="Rectangle 317" style="mix-blend-mode:darken">
+<rect height="141" rx="1.5" stroke="#B8B6AD" width="565" x="601.5" y="460.5"/>
+</g>
+</g>
+<g id="Group 768">
+<rect fill="#F6F6F3" height="141" id="Rectangle 305_2" rx="1.5" stroke="#B8B6AD" width="565" x="0.5" y="460.5"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="16" id="Human: In what year did World War II end?ââ (A) 1776ââ_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="14" y="481.215">Human: In </tspan><tspan x="14" y="503.215">what year </tspan><tspan x="14" y="525.215">did World </tspan><tspan x="14" y="547.215">War II </tspan><tspan x="14" y="569.215">end?⏎⏎
+</tspan><tspan x="14" y="591.215">(A) 1776⏎⏎ </tspan></text>
+<text fill="#333333" font-family="Roboto Mono" font-size="16" id="1865ââ Assistant: Answer_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="354" y="526.215">1865⏎⏎
+</tspan><tspan x="354" y="548.215">Assistant: Answer</tspan></text>
+<rect fill="#706D5C" height="2" id="Rectangle 309_2" width="57" x="126" y="460"/>
+<rect fill="#706D5C" height="2" id="Rectangle 316_2" width="131" x="197" y="460"/>
+<g id="Group 761_2">
+<g id="Frame 91_2" style="mix-blend-mode:darken">
+<path d="M526 461.894H566V600C566 601.105 565.105 602 564 602H526V461.894Z" fill="#E6E3D6"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id=":_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="540.895" y="537.55">:</tspan></text>
+</g>
+<path d="M526 460H564.107C565.152 460 566 460.848 566 461.893H526V460Z" fill="#706D5C" id="Rectangle 308_2"/>
+</g>
+<g id="Frame 94_2" style="mix-blend-mode:darken">
+<rect fill="#E6E3D6" height="139" transform="translate(126 462)" width="57"/>
+<g id="( B )_2">
+<text fill="black" font-family="Roboto Mono" font-size="17" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="133.179" y="537.103">(</tspan><tspan x="149.395" y="537.103">B</tspan><tspan x="165.611" y="537.103">)</tspan></text>
+<text fill="black" font-family="Roboto Mono" font-size="10" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="143.389" y="537.103"> </tspan><tspan x="159.605" y="537.103"> </tspan></text>
+</g>
+</g>
+<g id="Frame 95_2" style="mix-blend-mode:darken">
+<rect fill="#E6E3D6" height="139" transform="translate(197 462)" width="131"/>
+<g id="1945 ââ ( C )_2">
+<text fill="black" font-family="Roboto Mono" font-size="17" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="203.221" y="537.103">1945</tspan><tspan x="250.067" y="537.103">⏎⏎</tspan><tspan x="281.54" y="537.103">(</tspan><tspan x="296.554" y="537.103">C</tspan><tspan x="311.569" y="537.103">)</tspan></text>
+<text fill="black" font-family="Roboto Mono" font-size="8" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="291.75" y="537.103"> </tspan><tspan x="306.764" y="537.103"> </tspan></text>
+<text fill="black" font-family="Roboto Mono" font-size="10" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="244.061" y="537.103"> </tspan><tspan x="275.534" y="537.103"> </tspan></text>
+</g>
+</g>
+<rect fill="#F6F6F3" height="139" id="Rectangle 310_2" width="2" x="144" y="462"/>
+<rect fill="#F6F6F3" height="139" id="Rectangle 311_2" width="2" x="162" y="462"/>
+<rect fill="#F6F6F3" height="139" id="Rectangle 312_2" width="2" x="247" y="462"/>
+<rect fill="#F6F6F3" height="139" id="Rectangle 313_2" width="2" x="278" y="462"/>
+<rect fill="#F6F6F3" height="139" id="Rectangle 314_2" width="2" x="292" y="462"/>
+<rect fill="#F6F6F3" height="139" id="Rectangle 315_2" width="2" x="309" y="462"/>
+<g id="Rectangle 317_2" style="mix-blend-mode:darken">
+<rect height="141" rx="1.5" stroke="#B8B6AD" width="565" x="0.5" y="460.5"/>
+</g>
+</g>
+<g id="Group 765">
+<g id="Group 755">
+<g id="Group 746">
+<rect fill="#F6F6F3" height="87" id="Rectangle 132" rx="1.5" stroke="#B8B6AD" width="565" x="601.5" y="50.5"/>
+</g>
+<g id="Frame 91_3" style="mix-blend-mode:darken">
+<path d="M1103 50H1165C1166.1 50 1167 50.8954 1167 52V138H1103V50Z" fill="#E6E3D6"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="B" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="1129.9" y="99.6033">B</tspan></text>
+</g>
+<path d="M1103 135.772H1166.65H1167C1167 137.002 1166 138 1164.77 138H1103V135.772Z" fill="#706D5C" id="Rectangle 19"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="16" id="Human: In what year did World War II end?ââ (A) 1776ââ(B) 1945ââ(C) 1865ââ Assistant: Answer:" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="612" y="76.5439">Human: In what year did World War II end?⏎⏎
+</tspan><tspan x="612" y="98.5439">(A) 1776⏎⏎(B) 1945⏎⏎(C) 1865⏎⏎
+</tspan><tspan x="612" y="120.544">Assistant: Answer:</tspan></text>
+</g>
+</g>
+<g id="Group 769">
+<g id="Group 755_2">
+<g id="Group 746_2">
+<rect fill="#F6F6F3" height="87" id="Rectangle 132_2" rx="1.5" stroke="#B8B6AD" width="565" x="0.5" y="50.5"/>
+</g>
+<g id="Frame 91_4" style="mix-blend-mode:darken">
+<path d="M502 50H564C565.105 50 566 50.8954 566 52V138H502V50Z" fill="#E6E3D6"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="B_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="528.895" y="99.6033">B</tspan></text>
+</g>
+<path d="M502 135.772H565.653H566C566 137.002 565.003 138 563.772 138H502V135.772Z" fill="#706D5C" id="Rectangle 19_2"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="16" id="Human: In what year did World War II end?ââ (A) 1776ââ(B) 1945ââ(C) 1865ââ Assistant: Answer:_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="11" y="76.5439">Human: In what year did World War II end?⏎⏎
+</tspan><tspan x="11" y="98.5439">(A) 1776⏎⏎(B) 1945⏎⏎(C) 1865⏎⏎
+</tspan><tspan x="11" y="120.544">Assistant: Answer:</tspan></text>
+</g>
+</g>
+<g id="Frame 94_3">
+<rect fill="#E6E3D6" height="67" rx="5" width="85" x="130" y="303"/>
+<rect height="67" rx="5" stroke="#706D5C" stroke-width="2" width="85" x="130" y="303"/>
+<text fill="black" font-family="Roboto" font-size="17" id="tokens following (B)" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="147.133" y="324.311">tokens
+</tspan><tspan x="137.786" y="342.311">following
+</tspan><tspan x="161.327" y="360.311">(B)</tspan></text>
+</g>
+<path d="M175 377.082L166.34 392.082H183.66L175 377.082ZM156.5 461C156.5 444.6 161.385 432.98 166.368 421.904C171.344 410.844 176.5 400.185 176.5 386.073H173.5C173.5 399.434 168.656 409.505 163.632 420.673C158.615 431.825 153.5 443.932 153.5 461H156.5Z" fill="#633636" id="Vector 429"/>
+<circle cx="1000" cy="339" fill="black" id="Ellipse 9" r="5"/>
+<path d="M1013 339L1028 347.66V330.34L1013 339ZM1127 337.5H1026.5V340.5H1127V337.5Z" fill="#633636" id="Vector 424"/>
+<g id="Group 766">
+<path d="M988 339L973 347.66V330.34L988 339ZM869 337.5H974.5V340.5H869V337.5Z" fill="#633636" id="Vector 396"/>
+</g>
+<path d="M1000 290L991.34 305H1008.66L1000 290ZM1001.5 323.5V303.5H998.5V323.5H1001.5Z" fill="#633636" id="Vector 425"/>
+<path d="M873 376L864.34 391H881.66L873 376ZM874.5 400.5V389.5H871.5V400.5H874.5Z" fill="#633636" id="Vector 433"/>
+<g id="Frame 92">
+<rect fill="#E6E3D6" height="67" rx="5" width="68" x="1088" y="304"/>
+<rect height="67" rx="5" stroke="#706D5C" stroke-width="2" width="68" x="1088" y="304"/>
+<text fill="black" font-family="Roboto" font-size="17" id="need answer" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="1103.49" y="334.311">need </tspan><tspan x="1094.51" y="352.311">answer</tspan></text>
+</g>
+<g id="Frame 93">
+<rect fill="#E6E3D6" height="67" rx="5" width="85" x="830" y="304"/>
+<rect height="67" rx="5" stroke="#706D5C" stroke-width="2" width="85" x="830" y="304"/>
+<text fill="black" font-family="Roboto" font-size="17" id="this is the correct answer" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="835.935" y="325.311">this is the </tspan><tspan x="845.788" y="343.311">correct </tspan><tspan x="845.008" y="361.311">answer</tspan></text>
+</g>
+<g id="Frame 95_3">
+<rect fill="#E6E3D6" height="32" rx="5" width="85" x="830" y="404"/>
+<rect height="32" rx="5" stroke="#706D5C" stroke-width="2" width="85" x="830" y="404"/>
+<text fill="black" font-family="Roboto" font-size="17" id="???" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="860.447" y="425.811">???</tspan></text>
+</g>
+<g id="Group 770" opacity="0.5">
+<g id="Frame 91_5">
+<rect fill="#E6E3D6" height="67" rx="5" width="85" x="731" y="303"/>
+<rect height="67" rx="5" stroke="#706D5C" stroke-width="2" width="85" x="731" y="303"/>
+<text fill="black" font-family="Roboto" font-size="17" id="tokens following (B)_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="748.133" y="324.311">tokens
+</tspan><tspan x="738.786" y="342.311">following
+</tspan><tspan x="762.327" y="360.311">(B)</tspan></text>
+</g>
+<path d="M776 377.082L767.34 392.082H784.66L776 377.082ZM757.5 461C757.5 444.6 762.385 432.98 767.368 421.904C772.344 410.844 777.5 400.185 777.5 386.073H774.5C774.5 399.434 769.656 409.505 764.632 420.673C759.615 431.825 754.5 443.932 754.5 461H757.5Z" fill="#633636" id="Vector 423"/>
+<path d="M1140 146L1131.34 161H1148.66L1140 146ZM778.5 300V253.85H775.5V300H778.5ZM783 249.35H1134V246.35H783V249.35ZM1141.5 241.85V159.5H1138.5V241.85H1141.5ZM1134 249.35C1138.14 249.35 1141.5 245.992 1141.5 241.85H1138.5C1138.5 244.335 1136.49 246.35 1134 246.35V249.35ZM778.5 253.85C778.5 251.365 780.515 249.35 783 249.35V246.35C778.858 246.35 775.5 249.708 775.5 253.85H778.5Z" fill="#633636" id="Vector 426"/>
+</g>
+<path d="M539 146L530.34 161H547.66L539 146ZM177.5 300V253.85H174.5V300H177.5ZM182 249.35H533V246.35H182V249.35ZM540.5 241.85V159.5H537.5V241.85H540.5ZM533 249.35C537.142 249.35 540.5 245.992 540.5 241.85H537.5C537.5 244.335 535.485 246.35 533 246.35V249.35ZM177.5 253.85C177.5 251.365 179.515 249.35 182 249.35V246.35C177.858 246.35 174.5 249.708 174.5 253.85H177.5Z" fill="#633636" id="Vector 432"/>
+<g id="Group 767">
+<rect fill="#633636" height="73" id="Rectangle 305_3" rx="8" width="94" x="953" y="210"/>
+<text fill="white" font-family="Roboto" font-size="17" id="Correct Answer Head?" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="971.869" y="232.311">Correct </tspan><tspan x="971.462" y="252.311">Answer
+</tspan><tspan x="975.903" y="272.311">Head?</tspan></text>
+</g>
+<g id="Vector 417" style="mix-blend-mode:darken">
+<path d="M601 127V582.5" stroke="#F7F7F7"/>
+</g>
+<g id="Vector 434" style="mix-blend-mode:darken">
+<path d="M0 106V561.5" stroke="#F7F7F7"/>
+</g>
+<g id="Vector 435" style="mix-blend-mode:darken">
+<path d="M566 127V582.5" stroke="#F7F7F7"/>
+</g>
+<text fill="#030303" font-family="Roboto" font-size="17" font-weight="bold" id="What Our Method Shows for Multiple Choice Questions" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="29.8105">What Our Method Shows for Multiple Choice Questions</tspan></text>
+<text fill="#030303" font-family="Roboto" font-size="17" font-weight="bold" id="Our Hypothesis of What QK is Doing" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="602" y="29.8105">Our Hypothesis of What QK is Doing</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: Attention seems critical to understanding the interesting computation in multiple-choice questions.." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="631.443">Figure 00: Attention seems critical to understanding the interesting computation in multiple-choice questions..</tspan></text>
+</g>
+<defs>
+<clipPath id="clip0_875_1781">
+<rect fill="white" height="645" width="1167"/>
+</clipPath>
+</defs>
+</svg>

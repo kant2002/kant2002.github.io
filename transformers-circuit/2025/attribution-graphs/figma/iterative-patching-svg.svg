@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="557" viewBox="0 0 661 557" width="661" xmlns="http://www.w3.org/2000/svg">
+<g id="iterative-patching-svg">
+<rect fill="white" height="557" width="661"/>
+<path d="M17 343H644V480C644 484.971 639.971 489 635 489H26C21.0294 489 17 484.971 17 480V343Z" fill="#F6F6F3" id="Rectangle 446" stroke="white" stroke-width="2"/>
+<path d="M17 206C17 201.029 21.0294 197 26 197H635C639.971 197 644 201.029 644 206V343H17V206Z" fill="#F6F6F3" id="Rectangle 447" stroke="white" stroke-width="2"/>
+<text fill="#1A1A1A" font-family="Roboto" font-size="17" font-weight="bold" id="Iterative patching" letter-spacing="0em" style="white-space: pre" transform="translate(346 43)" xml:space="preserve"><tspan x="0" y="15.3105">Iterative patching</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" id="Iteratively recompute the values of features which read from layers in the patching range" letter-spacing="0em" style="white-space: pre" transform="translate(346 65)" xml:space="preserve"><tspan x="0" y="15.3105">Iteratively recompute the values of </tspan><tspan x="0" y="34.3105">features which read from layers in </tspan><tspan x="0" y="53.3105">the patching range</tspan></text>
+<path d="M501 296L509.66 311H492.34L501 296ZM502.5 309.5V312H499.5V309.5H502.5ZM491 323.5H158V320.5H491V323.5ZM158 323.5C147.783 323.5 139.5 331.783 139.5 342L136.5 342C136.5 330.126 146.126 320.5 158 320.5V323.5ZM502.5 312C502.5 318.351 497.351 323.5 491 323.5V320.5C495.694 320.5 499.5 316.694 499.5 312H502.5Z" fill="#CC6500" id="Vector 847"/>
+<path d="M501 423V402C501 388.193 489.807 377 476 377H153" id="Vector 848" stroke="#CC6500" stroke-width="3"/>
+<path d="M501 444L509.66 459H492.34L501 444ZM502.5 457.5V458H499.5V457.5H502.5ZM491 469.5H176V466.5H491V469.5ZM502.5 458C502.5 464.351 497.351 469.5 491 469.5V466.5C495.694 466.5 499.5 462.694 499.5 458H502.5Z" fill="#B8B6AD" id="Vector 850"/>
+<path d="M138 15L129.34 30L146.66 30L138 15ZM136.5 28.5L136.5 229L139.5 229L139.5 28.5L136.5 28.5Z" fill="#B8B6AD" id="Vector 854"/>
+<path d="M138 224L129.34 239L146.66 239L138 224ZM136.5 237.5L136.5 376L139.5 376L139.5 237.5L136.5 237.5Z" fill="#B8B6AD" id="Vector 866"/>
+<path d="M138 224L129.34 239L146.66 239L138 224ZM136.5 237.5L136.5 376L139.5 376L139.5 237.5L136.5 237.5Z" fill="#CC6500" id="Vector 867"/>
+<path d="M138 376L129.34 391L146.66 391L138 376ZM136.5 389.5L136.5 528L139.5 528L139.5 389.5L136.5 389.5Z" fill="#B8B6AD" id="Vector 868"/>
+<path d="M213 229H138" id="Vector 855" stroke="#CC6500" stroke-width="3"/>
+<path d="M252 128V112C252 95.4315 238.569 82 222 82H138" id="Vector 856" stroke="#B8B6AD" stroke-width="3"/>
+<path d="M252 128L260.66 143H243.34L252 128ZM253.5 141.5V144.351H250.5V141.5H253.5ZM222 175.851H157.649V172.851H222V175.851ZM157.649 175.851C147.626 175.851 139.5 183.977 139.5 194H136.5C136.5 182.32 145.969 172.851 157.649 172.851V175.851ZM253.5 144.351C253.5 161.748 239.397 175.851 222 175.851V172.851C237.74 172.851 250.5 160.091 250.5 144.351H253.5Z" fill="#B8B6AD" id="Vector 858"/>
+<path d="M227 235H249.557C257.904 235 265.873 238.477 271.55 244.596L384 365.804C390.622 372.943 399.92 377 409.658 377L429 377" id="Vector 860" stroke="#CC6500" stroke-width="3"/>
+<path d="M501 252V249C501 235.193 489.807 224 476 224L226 224" id="Vector 863" stroke="#CC6500" stroke-width="3"/>
+<path d="M252 468.351H157.649C146.797 468.351 138 477.148 138 488V488" id="Vector 865" stroke="#B8B6AD" stroke-width="3"/>
+<g id="CircuitNode">
+<g id="Group 286">
+<g id="Frame 88">
+<rect fill="#FFE6CC" height="44" rx="5" width="248" x="351" y="400"/>
+<rect height="44" rx="5" stroke="#CC6500" stroke-width="2" width="248" x="351" y="400"/>
+<text fill="#CC6500" font-family="Roboto" font-size="19" id="CLT" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="358" y="428.494">CLT</tspan></text>
+<g id="Ellipse 250">
+<circle cx="435.6" cy="422" fill="#F6F6F3" id="Ellipse 198" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 251">
+<circle cx="465.6" cy="422" fill="#F6F6F3" id="Ellipse 198_2" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 252">
+<circle cx="495.6" cy="422" fill="#F6F6F3" id="Ellipse 198_3" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="InterventionPill">
+<rect fill="#CC6500" height="22" rx="11" width="46.4" x="515.6" y="411"/>
+<text fill="white" font-family="Styrene B LC" font-size="16" id="â2Ã" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="522.18" y="428.04">−2×</tspan></text>
+</g>
+<g id="Ellipse 253">
+<circle cx="582" cy="422" fill="#F6F6F3" id="Ellipse 198_4" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+</g>
+</g>
+</g>
+<g id="CircuitNode_2">
+<g id="Group 286_2">
+<g id="Frame 88_2">
+<rect fill="#FFE6CC" height="42" rx="5" width="248" x="351" y="253"/>
+<rect height="42" rx="5" stroke="#CC6500" stroke-width="2" width="248" x="351" y="253"/>
+<text fill="#CC6500" font-family="Roboto" font-size="19" id="CLT_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="358" y="280.494">CLT</tspan></text>
+<g id="Ellipse 250_2">
+<circle cx="470" cy="274" fill="#F6F6F3" id="Ellipse 198_5" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 251_2">
+<circle cx="498" cy="274" fill="#F6F6F3" id="Ellipse 198_6" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 252_2">
+<circle cx="526" cy="274" fill="#CC6500" id="Ellipse 198_7" r="9" stroke="#CC6500" stroke-width="2"/>
+</g>
+<g id="Ellipse 253_2">
+<circle cx="554" cy="274" fill="#F6F6F3" id="Ellipse 198_8" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 254">
+<circle cx="582" cy="274" fill="#CC6500" id="Ellipse 198_9" r="9" stroke="#CC6500" stroke-width="2"/>
+</g>
+</g>
+</g>
+</g>
+<g id="CircuitNode_3">
+<g id="Group 286_3">
+<g id="Frame 88_3">
+<rect fill="#E6E3D6" height="42" rx="5" width="105" x="177" y="105"/>
+<rect height="42" rx="5" stroke="#B8B6AD" stroke-width="2" width="105" x="177" y="105"/>
+<g id="MLP" style="mix-blend-mode:multiply">
+<text fill="black" font-family="Roboto" font-size="19" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="184.092" y="132.494">MLP</tspan></text>
+</g>
+<g id="Ellipse 250_3" style="mix-blend-mode:multiply">
+<rect fill="#F6F6F3" height="16" id="Rectangle 429" rx="4" stroke="#B8B6AD" stroke-width="2" width="16" x="232" y="118"/>
+</g>
+<g id="Ellipse 251_3" style="mix-blend-mode:multiply">
+<rect fill="#F6F6F3" height="16" id="Rectangle 429_2" rx="4" stroke="#B8B6AD" stroke-width="2" width="16" x="258" y="118"/>
+</g>
+</g>
+</g>
+</g>
+<g id="Group 612">
+<circle cx="137.5" cy="376.5" fill="#E6E3D6" id="Ellipse 1" r="16.5" stroke="#B8B6AD" stroke-width="2"/>
+<text fill="#706D5C" font-family="Roboto" font-size="24" id="+" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="131.191" y="384.703">+</tspan></text>
+</g>
+<g id="Group 613">
+<circle cx="137.5" cy="228.5" fill="#E6E3D6" id="Ellipse 1_2" r="16.5" stroke="#B8B6AD" stroke-width="2"/>
+<text fill="#706D5C" font-family="Roboto" font-size="24" id="+_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="131.191" y="236.703">+</tspan></text>
+</g>
+<g id="Group 614">
+<circle cx="137.5" cy="82.5" fill="#E6E3D6" id="Ellipse 1_3" r="16.5" stroke="#B8B6AD" stroke-width="2"/>
+<text fill="#706D5C" font-family="Roboto" font-size="24" id="+_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="131.191" y="90.7031">+</tspan></text>
+</g>
+<g id="Group 615">
+<circle cx="220.601" cy="229.4" fill="#CC6500" id="Ellipse 1_4" r="15.4004"/>
+<text fill="white" font-family="Roboto" font-size="21.1199" id="+_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="214.888" y="236.619">+</tspan></text>
+</g>
+<text fill="black" font-family="Roboto" font-size="15" id="Residual stream" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="153.138" y="520.127">Residual stream</tspan></text>
+<text fill="#262624" font-family="Roboto" font-size="14" id="Layer 1" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="35" y="384.285">Layer 1</tspan></text>
+<text fill="#262624" font-family="Roboto" font-size="14" id="Layer 2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="35" y="234.285">Layer 2</tspan></text>
+<text fill="#262624" font-family="Roboto" font-size="14" id="Layer 3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="35" y="86.2852">Layer 3</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: A schematic of iterative patching." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="15" y="552.443">Figure 00: A schematic of iterative patching.</tspan></text>
+</g>
+</svg>

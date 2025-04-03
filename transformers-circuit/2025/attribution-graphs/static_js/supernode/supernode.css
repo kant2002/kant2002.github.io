@@ -1,0 +1,14 @@
+
+.supernode{
+    .feature{
+        stroke-width: 1px;
+        transition: stroke-width .2s;
+    }
+
+    .feature-examples-tooltipped{
+        stroke: #000;
+        stroke-width: 3px;
+        transition: stroke-width 0s;
+        
+    }
+}

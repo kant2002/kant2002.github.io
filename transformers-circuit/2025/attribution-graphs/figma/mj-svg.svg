@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="695" viewBox="0 0 1304 695" width="1304" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_1960_5309)" id="mj-svg">
+<rect fill="white" height="695" width="1304"/>
+<g id="Union">
+<path clip-rule="evenodd" d="M300 2C300 0.89543 300.895 0 302 0H714.982H723H815.482C826.125 0 877.294 0.148968 923.772 0.28428C959.429 0.388089 992.325 0.48386 1002.04 0.498164C1003.15 0.499789 1004 1.39543 1004 2.5V39.5C1004 40.6046 1003.12 41.5 1002.01 41.5H877.981C835.16 41.5 806.204 52.3942 784.415 62.5923C789.123 64.1157 794.321 65 800.171 65H907.197C908.301 65 909.171 65.8954 909.171 67V103C909.171 104.105 908.285 105 907.181 105H793.671C770.929 105 751.515 98.2652 735.218 92.6119C723.431 88.523 713.275 85 704.671 85H689.671H302C300.895 85 300 84.1046 300 83V2Z" fill="#F6F6F3" fill-rule="evenodd"/>
+<path d="M923.772 0.28428L923.773 -0.215718L923.772 0.28428ZM1002.04 0.498164L1002.04 0.998163L1002.04 0.498164ZM784.415 62.5923L784.203 62.1395L783.053 62.6774L784.261 63.0681L784.415 62.5923ZM735.218 92.6119L735.382 92.1395L735.218 92.6119ZM302 -0.5C300.619 -0.5 299.5 0.619288 299.5 2H300.5C300.5 1.17157 301.172 0.5 302 0.5V-0.5ZM714.982 -0.5H302V0.5H714.982V-0.5ZM723 -0.5H714.982V0.5H723V-0.5ZM815.482 -0.5H723V0.5H815.482V-0.5ZM923.773 -0.215718C877.296 -0.351028 826.126 -0.5 815.482 -0.5V0.5C826.124 0.5 877.292 0.648964 923.77 0.784278L923.773 -0.215718ZM1002.04 -0.00183591C992.326 -0.0161384 959.431 -0.111908 923.773 -0.215718L923.77 0.784278C959.427 0.888086 992.324 0.983859 1002.04 0.998163L1002.04 -0.00183591ZM1004.5 2.5C1004.5 1.13385 1003.44 0.0002163 1002.04 -0.00183591L1002.04 0.998163C1002.86 0.999362 1003.5 1.65701 1003.5 2.5H1004.5ZM1004.5 39.5V2.5H1003.5V39.5H1004.5ZM1002.01 42C1003.4 42 1004.5 40.8761 1004.5 39.5H1003.5C1003.5 40.333 1002.84 41 1002.01 41V42ZM877.981 42H1002.01V41H877.981V42ZM784.627 63.0452C806.374 52.8667 835.256 42 877.981 42V41C835.064 41 806.034 51.9217 784.203 62.1395L784.627 63.0452ZM800.171 64.5C794.373 64.5 789.227 63.6238 784.569 62.1166L784.261 63.0681C789.019 64.6076 794.269 65.5 800.171 65.5V64.5ZM907.197 64.5H800.171V65.5H907.197V64.5ZM909.671 67C909.671 65.6279 908.586 64.5 907.197 64.5V65.5C908.017 65.5 908.671 66.163 908.671 67H909.671ZM909.671 103V67H908.671V103H909.671ZM907.181 105.5C908.565 105.5 909.671 104.377 909.671 103H908.671C908.671 103.832 908.006 104.5 907.181 104.5V105.5ZM793.671 105.5H907.181V104.5H793.671V105.5ZM735.054 93.0842C751.346 98.7359 770.835 105.5 793.671 105.5V104.5C771.024 104.5 751.683 97.7944 735.382 92.1395L735.054 93.0842ZM704.671 85.5C713.172 85.5 723.237 88.985 735.054 93.0842L735.382 92.1395C723.625 88.0611 713.378 84.5 704.671 84.5V85.5ZM689.671 85.5H704.671V84.5H689.671V85.5ZM302 85.5H689.671V84.5H302V85.5ZM299.5 83C299.5 84.3807 300.619 85.5 302 85.5V84.5C301.172 84.5 300.5 83.8284 300.5 83H299.5ZM299.5 2V83H300.5V2H299.5Z" fill="#B8B6AD"/>
+</g>
+<path d="M471 239H492.579C494.465 239 496.291 239.667 497.734 240.883L619.5 343.5" id="Vector 80" stroke="#B8B6AD" stroke-dasharray="2 2" stroke-width="2"/>
+<path d="M695 340.5V225.499C695 221.081 698.582 217.499 703 217.499L967.502 217.5C971.92 217.5 975.501 213.92 975.502 209.502L975.551 49.5002M975.551 49.5002L965.323 49.5003M975.551 49.5002L985.361 49.5" id="Vector 130" stroke="#0A47C2" stroke-width="3"/>
+<path d="M854 107L846.783 119.5H861.217L854 107ZM848 174V175.25V174ZM524 174L524 172.75L524 174ZM519.25 523V180H516.75V523H519.25ZM524 175.25L848 175.25V172.75L524 172.75L524 175.25ZM855.25 168V118.25H852.75V168H855.25ZM848 175.25C852.004 175.25 855.25 172.004 855.25 168H852.75C852.75 170.623 850.623 172.75 848 172.75V175.25ZM519.25 180C519.25 177.376 521.377 175.25 524 175.25L524 172.75C519.996 172.75 516.75 175.996 516.75 180H519.25Z" fill="#633636" id="Vector 885"/>
+<path d="M660.5 340V180C660.5 176.686 663.186 174 666.5 174H821" id="Vector 891" stroke="#633636" stroke-width="2.5"/>
+<path d="M949 294L941.783 306.5H956.217L949 294ZM519.25 523V451.585H516.75V523H519.25ZM524 446.835H943V444.335H524V446.835ZM950.25 439.585V305.25H947.75V439.585H950.25ZM943 446.835C947.004 446.835 950.25 443.59 950.25 439.585H947.75C947.75 442.209 945.623 444.335 943 444.335V446.835ZM519.25 451.585C519.25 448.962 521.377 446.835 524 446.835V444.335C519.996 444.335 516.75 447.581 516.75 451.585H519.25Z" fill="#633636" id="Vector 889"/>
+<path d="M854 107L861.217 119.5H846.783L854 107ZM947.75 230V180.5H950.25V230H947.75ZM943 175.75H860V173.25H943V175.75ZM852.75 168.5V118.25H855.25V168.5H852.75ZM860 175.75C855.996 175.75 852.75 172.504 852.75 168.5H855.25C855.25 171.123 857.377 173.25 860 173.25V175.75ZM947.75 180.5C947.75 177.877 945.623 175.75 943 175.75V173.25C947.004 173.25 950.25 176.496 950.25 180.5H947.75Z" fill="#633636" id="Vector 886"/>
+<path d="M676 401L668.783 413.5H683.217L676 401ZM829.25 527V488.699H826.75V527H829.25ZM822 481.449H682V483.949H822V481.449ZM677.25 476.699V412.25H674.75V476.699H677.25ZM682 481.449C679.377 481.449 677.25 479.322 677.25 476.699H674.75C674.75 480.703 677.996 483.949 682 483.949V481.449ZM829.25 488.699C829.25 484.695 826.004 481.449 822 481.449V483.949C824.623 483.949 826.75 486.076 826.75 488.699H829.25Z" fill="#633636" id="Vector 881"/>
+<path d="M676 401L683.217 413.5H668.783L676 401ZM516.75 527V488.699H519.25V527H516.75ZM524 481.449H670V483.949H524V481.449ZM674.75 476.699V412.25H677.25V476.699H674.75ZM670 481.449C672.623 481.449 674.75 479.322 674.75 476.699H677.25C677.25 480.703 674.004 483.949 670 483.949V481.449ZM516.75 488.699C516.75 484.695 519.996 481.449 524 481.449V483.949C521.377 483.949 519.25 486.076 519.25 488.699H516.75Z" fill="#633636" id="Vector 888"/>
+<path d="M949 294L956.217 306.5H941.783L949 294ZM824.75 340.5V327.816H827.25V340.5H824.75ZM832 320.566H943V323.066H832V320.566ZM947.75 315.816V305.25H950.25V315.816H947.75ZM943 320.566C945.623 320.566 947.75 318.439 947.75 315.816H950.25C950.25 319.82 947.004 323.066 943 323.066V320.566ZM824.75 327.816C824.75 323.812 827.996 320.566 832 320.566V323.066C829.377 323.066 827.25 325.193 827.25 327.816H824.75Z" fill="#633636" id="Vector 890"/>
+<path d="M828 579L820.783 591.5L835.217 591.5L828 579ZM829.25 636L829.25 590.25L826.75 590.25L826.75 636L829.25 636Z" fill="#633636" id="Vector 318"/>
+<path d="M676 579L668.783 591.5L683.217 591.5L676 579ZM677.25 636L677.25 590.25L674.75 590.25L674.75 636L677.25 636Z" fill="#633636" id="Vector 325"/>
+<path d="M518 579L510.783 591.5L525.217 591.5L518 579ZM519.25 634L519.25 590.25L516.75 590.25L516.75 634L519.25 634Z" fill="#633636" id="Vector 326"/>
+<g id="Tokens" style="mix-blend-mode:darken">
+<g id="Frame 90">
+<rect fill="#F6F6F3" height="35" transform="translate(307 24)" width="439"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="317" y="48.1033">Fact: Michael Jordan plays the sport of</tspan></text>
+</g>
+</g>
+<g id="Tokens_2" style="mix-blend-mode:darken">
+<g id="Frame 90_2">
+<path d="M799 65H907C908.105 65 909 65.8954 909 67V103H799V65Z" fill="#E6E3D6"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="802.5" y="89.6033">basketball</tspan></text>
+</g>
+<path d="M799 103H908.404H909C909 104.105 908.105 105 907 105H799V103Z" fill="#706D5C" id="Rectangle 19"/>
+</g>
+<g id="Tokens_3" style="mix-blend-mode:darken">
+<g id="Frame 90_3">
+<path d="M894 1H1002C1003.1 1 1004 1.89543 1004 3V39H894V1Z" fill="#E6E3D6"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="908" y="25.6033">football</tspan></text>
+</g>
+<path d="M894 39H1003.4H1004C1004 40.1046 1003.1 41 1002 41H894V39Z" fill="#706D5C" id="Rectangle 19_2"/>
+</g>
+<g id="Frame 106">
+<rect fill="#F6F6F3" height="39" rx="1.5" width="703" x="300.5" y="623.5"/>
+<rect height="39" rx="1.5" stroke="#B8B6AD" width="703" x="300.5" y="623.5"/>
+<g id="Tokens_4" style="mix-blend-mode:darken">
+<rect height="39" rx="9.5" stroke="black" width="63" x="373.5" y="623.5"/>
+<g id="Frame 90_4">
+<rect fill="#F6F6F3" height="40" transform="translate(373 623)" width="64"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="381" y="649.603">Fact: </tspan></text>
+</g>
+</g>
+<g id="Tokens_5" style="mix-blend-mode:darken">
+<rect height="39" rx="9.5" stroke="black" width="42" x="729.5" y="623.5"/>
+<g id="Frame 90_5">
+<rect fill="#F6F6F3" height="40" transform="translate(729 623)" width="43"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="737" y="649.603">the</tspan></text>
+</g>
+</g>
+<g id="Tokens_6" style="mix-blend-mode:darken">
+<rect height="39" rx="9.5" stroke="black" width="32" x="912.5" y="623.5"/>
+<g id="Frame 90_6">
+<rect fill="#F6F6F3" height="40" transform="translate(912 623)" width="33"/>
+<text fill="#333333" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_6" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="920" y="649.603">of</tspan></text>
+</g>
+</g>
+<g id="Tokens_7" style="mix-blend-mode:darken">
+<rect fill="#706D5C" height="2" id="Rectangle 19_3" width="163" x="444" y="623"/>
+<g id="Frame 90_7">
+<rect fill="#E6E3D6" height="38" transform="translate(444 625)" width="163"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_7" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="454" y="649.603">Michael Jordan</tspan></text>
+</g>
+</g>
+<g id="Tokens_8" style="mix-blend-mode:darken">
+<rect fill="#706D5C" height="2" id="Rectangle 19_4" width="72" x="642" y="623"/>
+<g id="Frame 90_8">
+<rect fill="#E6E3D6" height="38" transform="translate(642 625)" width="72"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_8" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="652" y="649.603">plays</tspan></text>
+</g>
+</g>
+<g id="Tokens_9" style="mix-blend-mode:darken">
+<rect fill="#706D5C" height="2" id="Rectangle 19_5" width="72" x="790" y="623"/>
+<g id="Frame 90_9">
+<rect fill="#E6E3D6" height="38" transform="translate(790 625)" width="72"/>
+<text fill="black" font-family="Roboto Mono" font-size="17" id="Lorem ipsum dolor sit amet, consectetur adipiscing elit_9" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="800" y="649.603">sport</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_michael-jordan-a__b11317859_b20543216_b24884166_b21867209_b5244254_b13738160_b6967619_b469597_b8936163_b18022340_b10664725_b1387082_b26562574_b5795447_b14218066_b26659811_b29636672">
+<g id="Group 286">
+<g id="Frame 90_10">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="469.75" y="523.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="469.75" y="523.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="491.684" y="538.811">Michael </tspan><tspan x="478.817" y="556.811">Jordan and </tspan><tspan x="482.503" y="574.811">celebrities</tspan></text>
+</g>
+<g id="Frame 89">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="466.75" y="521.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="466.75" y="521.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="488.684" y="536.811">Michael </tspan><tspan x="475.817" y="554.811">Jordan and </tspan><tspan x="479.503" y="572.811">celebrities</tspan></text>
+</g>
+<g id="Frame 88">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="463.75" y="519.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="463.75" y="519.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="485.684" y="534.811">Michael </tspan><tspan x="472.817" y="552.811">Jordan and </tspan><tspan x="476.503" y="570.811">celebrities</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_play__b25789245_b13049449">
+<g id="Group 286_2">
+<g id="Frame 90_11">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="632.75" y="523.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="632.75" y="523.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="669.077" y="556.811">play</tspan></text>
+</g>
+<g id="Frame 89_2">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="629.75" y="521.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="629.75" y="521.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="666.077" y="554.811">play</tspan></text>
+</g>
+<g id="Frame 88_2">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="626.75" y="519.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="626.75" y="519.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_6" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="663.077" y="552.811">play</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_sport__b11595019_b87530_b29466651">
+<g id="Group 286_3">
+<g id="Frame 90_12">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="779.75" y="523.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="779.75" y="523.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_7" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="811.62" y="556.811">sport</tspan></text>
+</g>
+<g id="Frame 89_3">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="776.75" y="521.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="776.75" y="521.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_8" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="808.62" y="554.811">sport</tspan></text>
+</g>
+<g id="Frame 88_3">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="773.75" y="519.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="773.75" y="519.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_9" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="805.62" y="552.811">sport</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_sport-game-of__b14783035_b22768949_b17157020_b27279870_b7197964_b25640349_b29410733_b15597638_b12442800">
+<g id="Group 286_4">
+<g id="Frame 90_13">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="777.75" y="344.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="777.75" y="344.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_10" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="784.75" y="368.811">sport/game </tspan><tspan x="821.697" y="386.811">of</tspan></text>
+</g>
+<g id="Frame 89_4">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="774.75" y="342.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="774.75" y="342.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_11" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="781.75" y="366.811">sport/game </tspan><tspan x="818.697" y="384.811">of</tspan></text>
+</g>
+<g id="Frame 88_4">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="771.75" y="340.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="771.75" y="340.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_12" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="778.75" y="364.811">sport/game </tspan><tspan x="815.697" y="382.811">of</tspan></text>
+</g>
+</g>
+</g>
+<g id="sn18l_basketball-discu__b7032707_b8356976_b13464407_b4737369_b16708274_b10901930">
+<g id="Group 286_5">
+<g id="Frame 90_14">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="634.75" y="344.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="634.75" y="344.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_13" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="647.669" y="368.811">basketball </tspan><tspan x="645.71" y="386.811">discussion</tspan></text>
+</g>
+<g id="Frame 89_5">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="631.75" y="342.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="631.75" y="342.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_14" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="644.669" y="366.811">basketball </tspan><tspan x="642.71" y="384.811">discussion</tspan></text>
+</g>
+<g id="Frame 88_5">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="628.75" y="340.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="628.75" y="340.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_15" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="641.669" y="364.811">basketball </tspan><tspan x="639.71" y="382.811">discussion</tspan></text>
+</g>
+</g>
+</g>
+<rect fill="#F6F6F3" height="88" id="image" rx="1.5" stroke="#B8B6AD" width="392" x="78.5" y="174.5"/>
+<path d="M78 151C78 149.895 78.8954 149 80 149H469C470.105 149 471 149.895 471 151V175H78V151Z" fill="#B8B6AD" id="Rectangle 125"/>
+<text fill="white" font-family="Roboto" font-size="14" id="Basketball discussion" letter-spacing="-0.02em" style="white-space: pre" xml:space="preserve"><tspan x="85" y="166.785">Basketball discussion</tspan></text>
+<text fill="white" font-family="Roboto" font-size="12" font-weight="bold" id="Dataset Examples" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="348.43" y="166.602">DATASET EXAMPLES</tspan></text>
+<rect fill="url(#pattern0_1960_5309)" height="78" id="image_2" width="384.872" x="81" y="178"/>
+<g id="sn18l_say-a-sport__b9744180_b13595118_b25380772_b21253596_b11448156_b14924495">
+<g id="Group 286_6">
+<g id="Frame 90_15">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="900.75" y="237.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="900.75" y="237.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_16" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="910.805" y="270.811">say a sport</tspan></text>
+</g>
+<g id="Frame 89_6">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="897.75" y="235.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="897.75" y="235.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_17" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="907.805" y="268.811">say a sport</tspan></text>
+</g>
+<g id="Frame 88_6">
+<rect fill="#E6E3D6" height="54.5" rx="5.25" width="103.5" x="894.75" y="233.75"/>
+<rect height="54.5" rx="5.25" stroke="#706D5C" stroke-width="1.5" width="103.5" x="894.75" y="233.75"/>
+<text fill="black" font-family="Roboto" font-size="17" id="Label_18" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="904.805" y="266.811">say a sport</tspan></text>
+</g>
+</g>
+</g>
+<g id="Group 884">
+<rect fill="white" height="11" id="Rectangle 460" width="11" x="943" y="212"/>
+</g>
+<g id="Group 885">
+<rect fill="white" height="11" id="Rectangle 460_2" width="8.25" x="672" y="440"/>
+</g>
+<g id="Group 887">
+<rect fill="white" height="11" id="Rectangle 459" width="2.24" x="514.5" y="252"/>
+<rect fill="white" height="11" id="Rectangle 460_3" width="5" x="519.28" y="252"/>
+</g>
+<g id="Group 886">
+<rect fill="white" height="11" id="Rectangle 460_4" width="8.25" x="824" y="440"/>
+</g>
+<path d="M949 43L941.783 55.5H956.217L949 43ZM950.25 233V54.25H947.75V233H950.25Z" fill="#633636" id="Vector 887"/>
+<path d="M676 401L668.783 413.5L683.217 413.5L676 401ZM677.25 519L677.25 412.25L674.75 412.25L674.75 519L677.25 519Z" fill="#633636" id="Vector 892"/>
+<path d="M828 401L820.783 413.5L835.217 413.5L828 401ZM829.25 513.5L829.25 412.25L826.75 412.25L826.75 513.5L829.25 513.5Z" fill="#633636" id="Vector 880"/>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: A simplified diagram of the attribution graph for 18L recalling a simple fact." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="300" y="689.443">Figure 00: A simplified diagram of the attribution graph for 18L recalling a simple fact.</tspan></text>
+</g>
+<defs>
+<pattern height="1" id="pattern0_1960_5309" patternContentUnits="objectBoundingBox" width="1">
+<use transform="matrix(0.00142722 0 0 0.00704225 -0.461945 0)" xlink:href="#image0_1960_5309"/>
+</pattern>
+<clipPath id="clip0_1960_5309">
+<rect fill="white" height="695" width="1304"/>
+</clipPath>
+<image data-name="image.png" height="142" id="image0_1960_5309" preserveAspectRatio="none" width="1348" xlink:href="./png/img_6fec20aac4fe3d0e.png"/>
+</defs>
+</svg>
