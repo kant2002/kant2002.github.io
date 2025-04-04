@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg fill="none" height="636" viewBox="0 0 584 636" width="584" xmlns="http://www.w3.org/2000/svg">
+<g id="methods-diagram-left-only-svg">
+<rect fill="white" height="636" width="584"/>
+<path d="M87 174H575" id="Vector 555" stroke="#B8B6AD" stroke-dasharray="4 4" stroke-width="1.5"/>
+<path d="M87 469H575" id="Vector 556" stroke="#B8B6AD" stroke-dasharray="4 4" stroke-width="1.5"/>
+<path d="M227 277H190" id="Vector 820" stroke="#CC6500" stroke-width="3"/>
+<path d="M227 130H190" id="Vector 821" stroke="#CC6500" stroke-width="3"/>
+<path d="M476 344L484.66 359H467.34L476 344ZM477.5 357.5V365H474.5V357.5H477.5ZM471 371.5H151V368.5H471V371.5ZM477.5 365C477.5 368.59 474.59 371.5 471 371.5V368.5C472.933 368.5 474.5 366.933 474.5 365H477.5Z" fill="#CC6500" id="Vector 473"/>
+<path d="M476 471V439C476 430.716 469.284 424 461 424H192" id="Vector 469" stroke="#CC6500" stroke-width="3"/>
+<path d="M476 197L484.66 212H467.34L476 197ZM477.5 210.5V217.5H474.5V210.5H477.5ZM471 224H151V221H471V224ZM477.5 217.5C477.5 221.09 474.59 224 471 224V221C472.933 221 474.5 219.433 474.5 217.5H477.5Z" fill="#CC6500" id="Vector 507"/>
+<path d="M476 492L484.66 507H467.34L476 492ZM477.5 505.5V511H474.5V505.5H477.5ZM471 517.5H151V514.5H471V517.5ZM477.5 511C477.5 514.59 474.59 517.5 471 517.5V514.5C472.933 514.5 474.5 512.933 474.5 511H477.5Z" fill="#CC6500" id="Vector 468"/>
+<path d="M87 323H575" id="Vector 554" stroke="#B8B6AD" stroke-dasharray="4 4" stroke-width="1.5"/>
+<path d="M113 74L104.34 89L121.66 89L113 74ZM111.5 87.5L111.5 563L114.5 563L114.5 87.5L111.5 87.5Z" fill="#B8B6AD" id="Vector 508"/>
+<path d="M227 323V307C227 290.431 213.569 277 197 277H113" id="Vector 503" stroke="#B8B6AD" stroke-width="3"/>
+<path d="M227 176V160C227 143.431 213.569 130 197 130H113" id="Vector 505" stroke="#B8B6AD" stroke-width="3"/>
+<path d="M227 323L235.66 338H218.34L227 323ZM228.5 336.5V340H225.5V336.5H228.5ZM197 371.5H132V368.5H197V371.5ZM132 371.5C122.335 371.5 114.5 379.335 114.5 389H111.5C111.5 377.678 120.678 368.5 132 368.5V371.5ZM228.5 340C228.5 357.397 214.397 371.5 197 371.5V368.5C212.74 368.5 225.5 355.74 225.5 340H228.5Z" fill="#B8B6AD" id="Vector 504"/>
+<path d="M227 176L235.66 191H218.34L227 176ZM228.5 189.5V192.5H225.5V189.5H228.5ZM197 224H132.5V221H197V224ZM132.5 224C122.559 224 114.5 232.059 114.5 242L111.5 242C111.5 230.402 120.902 221 132.5 221V224ZM228.5 192.5C228.5 209.897 214.397 224 197 224V221C212.74 221 225.5 208.24 225.5 192.5H228.5Z" fill="#B8B6AD" id="Vector 506"/>
+<path d="M227 470V454C227 437.431 213.569 424 197 424H113" id="Vector 466" stroke="#B8B6AD" stroke-width="3"/>
+<path d="M240 281H256.214C265.369 281 274.023 285.18 279.714 292.352L373.675 410.756C380.314 419.123 390.41 424 401.091 424L414 424" id="Vector 474" stroke="#CC6500" stroke-width="3"/>
+<path d="M232 130H251.166C264.527 130 277.006 136.671 284.427 147.781L358.014 257.941C364.507 267.663 375.427 273.5 387.117 273.5H404.5" id="Vector 480" stroke="#CC6500" stroke-width="3"/>
+<path d="M227 135H243.519C257.617 135 270.338 143.458 275.793 156.458L380.335 405.607C385.011 416.75 395.915 424 407.999 424H434" id="Vector 475" stroke="#CC6500" stroke-width="3"/>
+<path d="M476 300V288.5C476 280.216 469.284 273.5 461 273.5L239 273.5" id="Vector 471" stroke="#CC6500" stroke-width="3"/>
+<path d="M476 164V140C476 131.716 469.284 125 461 125H232" id="Vector 476" stroke="#CC6500" stroke-width="3"/>
+<path d="M227 470L235.66 485H218.34L227 470ZM228.5 483.5V486H225.5V483.5H228.5ZM197 517.5H133V514.5H197V517.5ZM133 517.5C122.783 517.5 114.5 525.783 114.5 536H111.5C111.5 524.126 121.126 514.5 133 514.5V517.5ZM228.5 486C228.5 503.397 214.397 517.5 197 517.5V514.5C212.74 514.5 225.5 501.74 225.5 486H228.5Z" fill="#B8B6AD" id="Vector 467"/>
+<g id="CircuitNode">
+<g id="Group 286">
+<g id="Frame 88">
+<rect fill="#FFE6CC" height="42" rx="5" width="210" x="364" y="448"/>
+<rect height="42" rx="5" stroke="#CC6500" stroke-width="2" width="210" x="364" y="448"/>
+<text fill="#CC6500" font-family="Roboto" font-size="19" id="CLT" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="371" y="475.494">CLT</tspan></text>
+<g id="Ellipse 250">
+<circle cx="437" cy="469" fill="#F6F6F3" id="Ellipse 198" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 254">
+<circle cx="467" cy="469" fill="#F6F6F3" id="Ellipse 198_2" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 251">
+<circle cx="497" cy="469" fill="#F6F6F3" id="Ellipse 198_3" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 252">
+<circle cx="527" cy="469" fill="#F6F6F3" id="Ellipse 198_4" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 253">
+<circle cx="557" cy="469" fill="#F6F6F3" id="Ellipse 198_5" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+</g>
+</g>
+</g>
+<g id="CircuitNode_2">
+<g id="Group 286_2">
+<g id="Frame 88_2">
+<rect fill="#FFE6CC" height="42" rx="5" width="210" x="364" y="301"/>
+<rect height="42" rx="5" stroke="#CC6500" stroke-width="2" width="210" x="364" y="301"/>
+<text fill="#CC6500" font-family="Roboto" font-size="19" id="CLT_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="371" y="328.494">CLT</tspan></text>
+<g id="Ellipse 250_2">
+<circle cx="445" cy="322" fill="#F6F6F3" id="Ellipse 198_6" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 251_2">
+<circle cx="473" cy="322" fill="#F6F6F3" id="Ellipse 198_7" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 252_2">
+<circle cx="501" cy="322" fill="#F6F6F3" id="Ellipse 198_8" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 253_2">
+<circle cx="529" cy="322" fill="#F6F6F3" id="Ellipse 198_9" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 254_2">
+<circle cx="557" cy="322" fill="#F6F6F3" id="Ellipse 198_10" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+</g>
+</g>
+</g>
+<g id="CircuitNode_3">
+<g id="Group 286_3">
+<g id="Frame 88_3">
+<rect fill="#FFE6CC" height="42" rx="5" width="210" x="364" y="154"/>
+<rect height="42" rx="5" stroke="#CC6500" stroke-width="2" width="210" x="364" y="154"/>
+<text fill="#CC6500" font-family="Roboto" font-size="19" id="CLT_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="371" y="181.494">CLT</tspan></text>
+<g id="Ellipse 250_3">
+<circle cx="445" cy="175" fill="#F6F6F3" id="Ellipse 198_11" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 251_3">
+<circle cx="473" cy="175" fill="#F6F6F3" id="Ellipse 198_12" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 252_3">
+<circle cx="501" cy="175" fill="#F6F6F3" id="Ellipse 198_13" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 253_3">
+<circle cx="529" cy="175" fill="#F6F6F3" id="Ellipse 198_14" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+<g id="Ellipse 254_3">
+<circle cx="557" cy="175" fill="#F6F6F3" id="Ellipse 198_15" r="9" stroke="#B8B6AD" stroke-width="2"/>
+</g>
+</g>
+</g>
+</g>
+<g id="CircuitNode_4">
+<g id="Group 286_4">
+<g id="Frame 88_4">
+<rect fill="#E6E3D6" height="42" rx="5" width="105" x="152" y="302"/>
+<rect height="42" rx="5" stroke="#B8B6AD" stroke-width="2" width="105" x="152" y="302"/>
+<g id="MLP" style="mix-blend-mode:multiply">
+<text fill="black" font-family="Roboto" font-size="19" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="159.092" y="329.494">MLP</tspan></text>
+</g>
+<g id="Ellipse 250_4" style="mix-blend-mode:multiply">
+<rect fill="#F6F6F3" height="16" id="Rectangle 429" rx="4" stroke="#B8B6AD" stroke-width="2" width="16" x="207" y="315"/>
+</g>
+<g id="Ellipse 251_4" style="mix-blend-mode:multiply">
+<rect fill="#F6F6F3" height="16" id="Rectangle 429_2" rx="4" stroke="#B8B6AD" stroke-width="2" width="16" x="233" y="315"/>
+</g>
+</g>
+</g>
+</g>
+<g id="CircuitNode_5">
+<g id="Group 286_5">
+<g id="Frame 88_5">
+<rect fill="#E6E3D6" height="42" rx="5" width="105" x="152" y="153"/>
+<rect height="42" rx="5" stroke="#B8B6AD" stroke-width="2" width="105" x="152" y="153"/>
+<g id="MLP_2" style="mix-blend-mode:multiply">
+<text fill="black" font-family="Roboto" font-size="19" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="159.092" y="180.494">MLP</tspan></text>
+</g>
+<g id="Ellipse 250_5" style="mix-blend-mode:multiply">
+<rect fill="#F6F6F3" height="16" id="Rectangle 429_3" rx="4" stroke="#B8B6AD" stroke-width="2" width="16" x="207" y="166"/>
+</g>
+<g id="Ellipse 251_5" style="mix-blend-mode:multiply">
+<rect fill="#F6F6F3" height="16" id="Rectangle 429_4" rx="4" stroke="#B8B6AD" stroke-width="2" width="16" x="233" y="166"/>
+</g>
+</g>
+</g>
+</g>
+<g id="CircuitNode_6">
+<g id="Group 286_6">
+<g id="Frame 88_6">
+<rect fill="#E6E3D6" height="42" rx="5" width="105" x="152" y="448"/>
+<rect height="42" rx="5" stroke="#B8B6AD" stroke-width="2" width="105" x="152" y="448"/>
+<g id="MLP_3" style="mix-blend-mode:multiply">
+<text fill="black" font-family="Roboto" font-size="19" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="159.092" y="475.494">MLP</tspan></text>
+</g>
+<g id="Ellipse 250_6" style="mix-blend-mode:multiply">
+<rect fill="#F6F6F3" height="16" id="Rectangle 429_5" rx="4" stroke="#B8B6AD" stroke-width="2" width="16" x="207" y="461"/>
+</g>
+<g id="Ellipse 251_6" style="mix-blend-mode:multiply">
+<rect fill="#F6F6F3" height="16" id="Rectangle 429_6" rx="4" stroke="#B8B6AD" stroke-width="2" width="16" x="233" y="461"/>
+</g>
+</g>
+</g>
+</g>
+<g id="Group 598">
+<circle cx="112.5" cy="424.5" fill="#E6E3D6" id="Ellipse 1" r="16.5" stroke="#B8B6AD" stroke-width="2"/>
+<text fill="#706D5C" font-family="Roboto" font-size="24" id="+" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="106.191" y="432.703">+</tspan></text>
+</g>
+<g id="Group 599">
+<circle cx="112.5" cy="276.5" fill="#E6E3D6" id="Ellipse 1_2" r="16.5" stroke="#B8B6AD" stroke-width="2"/>
+<text fill="#706D5C" font-family="Roboto" font-size="24" id="+_2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="106.191" y="284.703">+</tspan></text>
+</g>
+<g id="Group 600">
+<circle cx="112.5" cy="130.5" fill="#E6E3D6" id="Ellipse 1_3" r="16.5" stroke="#B8B6AD" stroke-width="2"/>
+<text fill="#706D5C" font-family="Roboto" font-size="24" id="+_3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="106.191" y="138.703">+</tspan></text>
+</g>
+<g id="Group 605">
+<circle cx="235.2" cy="277.2" fill="#CC6500" id="Ellipse 1_4" r="11.1998"/>
+<text fill="white" font-family="Roboto" font-size="15.3597" id="+_4" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="231.183" y="282.45">+</tspan></text>
+</g>
+<g id="Group 606">
+<circle cx="235.2" cy="130.2" fill="#CC6500" id="Ellipse 1_5" r="11.1998"/>
+<text fill="white" font-family="Roboto" font-size="15.3597" id="+_5" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="231.183" y="135.45">+</tspan></text>
+</g>
+<text fill="black" font-family="Roboto" font-size="15" id="Residual stream" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="81.9282" y="581.127">Residual </tspan><tspan x="87.0698" y="597.127">stream</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="Feature" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="501.341" y="560.127">Feature</tspan></text>
+<text fill="black" font-family="Roboto" font-size="15" id="Neuron" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="216.14" y="560.127">Neuron</tspan></text>
+<text fill="#1A1A1A" font-family="Roboto" font-size="17" font-weight="bold" id="Cross-Layer Transcoder" letter-spacing="0em" style="white-space: pre" transform="translate(9 10)" xml:space="preserve"><tspan x="0" y="15.3105">Cross-Layer Transcoder</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="17" id="Features read from one layer and write to all following ones" letter-spacing="0em" style="white-space: pre" transform="translate(9 35)" xml:space="preserve"><tspan x="0" y="15.3105">Features read from one layer and write to all following ones</tspan></text>
+<path d="M527.354 481.646C527.158 481.451 526.842 481.451 526.646 481.646L523.464 484.828C523.269 485.024 523.269 485.34 523.464 485.536C523.66 485.731 523.976 485.731 524.172 485.536L527 482.707L529.828 485.536C530.024 485.731 530.34 485.731 530.536 485.536C530.731 485.34 530.731 485.024 530.536 484.828L527.354 481.646ZM526.5 482V542H527.5V482H526.5Z" fill="#706D5C" id="Vector 797" opacity="0.6"/>
+<path d="M241.354 481.646C241.158 481.451 240.842 481.451 240.646 481.646L237.464 484.828C237.269 485.024 237.269 485.34 237.464 485.536C237.66 485.731 237.976 485.731 238.172 485.536L241 482.707L243.828 485.536C244.024 485.731 244.34 485.731 244.536 485.536C244.731 485.34 244.731 485.024 244.536 484.828L241.354 481.646ZM240.5 482V542H241.5V482H240.5Z" fill="#706D5C" id="Vector 798" opacity="0.6"/>
+<text fill="#262624" font-family="Roboto" font-size="14" id="Layer 1" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="9" y="476.285">Layer 1</tspan></text>
+<text fill="#262624" font-family="Roboto" font-size="14" id="Layer 2" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="9" y="326.285">Layer 2</tspan></text>
+<text fill="#262624" font-family="Roboto" font-size="14" id="Layer 3" letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="9" y="178.285">Layer 3</tspan></text>
+<text fill="#4D4D4D" font-family="Roboto" font-size="13" id="Figure 00: The cross-layer transcoder (CLT) forms the core architecture of our replacement model." letter-spacing="0em" style="white-space: pre" xml:space="preserve"><tspan x="0" y="631.443">Figure 00: The cross-layer transcoder (CLT) forms the core architecture of our replacement model.</tspan></text>
+</g>
+</svg>
