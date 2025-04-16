@@ -11,6 +11,7 @@ comments: true
 - [1. Шаблон створення сленгу]({% post_url 2025-02-02-llm-patterns %})
 - [3. Перевернута взаємодія]({% post_url 2025-03-06-flipped-interaction %})
 - [4. Шаблон персона]({% post_url 2025-03-31-persona-pattern %})
+- [5. Шаблон уточнення питання]({% post_url 2025-04-16-question-refinement %})
 
 # Автоматизатор виводу
 
