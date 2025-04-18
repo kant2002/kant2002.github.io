@@ -2,7 +2,7 @@
 layout: post
 title: 'MagicMapper: The fork of AutoMapper'
 date:   2025-04-18 20:02:12 +0500
-categories: en programming-languages
+categories: en dotnet
 comments: true
 ---
 
