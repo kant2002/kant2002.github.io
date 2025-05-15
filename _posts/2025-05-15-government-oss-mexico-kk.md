@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Мексика үкіметінде ашық кодты қолдану тәжірибесі"
-date:   2025-04-09 09:48:04 +0500
+date:   2025-05-15 08:28:08 +0500
 categories: kk software-development
 comments: true
 ---
