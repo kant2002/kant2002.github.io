@@ -12,6 +12,7 @@ comments: true
 - [2. Автоматизатор виводу]({% post_url 2025-02-21-output-automater %})
 - [3. Перевернута взаємодія]({% post_url 2025-03-06-flipped-interaction %})
 - [4. Шаблон персона]({% post_url 2025-03-31-persona-pattern %})
+- [6. Шаблон альтернативні підходи]({% post_url 2025-03-31-persona-pattern %})
 
 # Шаблон уточнення питання
 
