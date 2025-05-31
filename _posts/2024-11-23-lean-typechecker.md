@@ -5,6 +5,7 @@ date:   2024-11-23 11:43:44 +0600
 categories: uk lean
 comments: true
 use_math: false
+render_with_liquid: false
 ---
 
 У цьому прикладі, ми побудуємо сертифікований перевіряльник типів для простої мови виразів яка має лише 2 типа натуральні числа і логічні значення, і лише дві операції додавання і логічне І.
@@ -61,9 +62,11 @@ inductive Maybe (p : α → Prop) where
 
 Ми визначаємо нотацію для `Maybe` яка схожа до вбудованої нотації для вбудованого типу Lean `Subtype`.
 
+
 ```lean
 notation "{{ " x " | " p " }}" => Maybe (fun x => p)
 ```
+
 
 Створимо функцію `Expr.typeCheck e` яка повертає тип `ty` і доказ того що `e` має тип `ty`, або `unknown`. Зауважте що, `def Expr.typeCheck ...` у Lean це нотація до `namespace Expr def typeCheck ... end Expr`. Терм `.found .nat .nat` це сахар до `Maybe.found Ty.nat HasType.nat`. Lean може вивести використовуємий простір імен для очікуваних типів. Нотація `e.typeCheck` це також сахар для виклику `Expr.typeCheck e`. 
 
