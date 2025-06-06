@@ -14,7 +14,7 @@ Whole excercise would be performed over [TruePath](https://github.com/ForNeVeR/T
 
 # FsCheck
 
-For this demonstation I would use [FsCheck](https://fscheck.github.io/FsCheck/) which is library written in F#, but for this article I would use C#, since that's language which TruePath is written in. Since TruePath uses XUnit for the testing, I would use `FsCheck.Xunit` integration package, which simplifies writing FsCheck tests for Xunit.
+For this demonstation I would use [FsCheck](https://fscheck.github.io/FsCheck/) which is library written in F#, but for this article I would use C#, since that's language which TruePath is written in. Since TruePath uses XUnit for the testing, I would use `FsCheck.Xunit` integration package, which simplifies writing FsCheck tests for Xunit. *Update 2025/06/06, since I decide that F# is interesting enough, I create [Gist](https://gist.github.com/kant2002/fb37d810ef529035d3f0068884142a45)*
 
 When testing using FsCheck, your most important thing would be write generators for our test data. In that sense property based testing is very similar to fuzzing, with only difference is that we have a bit more statements abour our code then simple *It does not crash*.
 
