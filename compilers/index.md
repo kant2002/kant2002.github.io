@@ -13,6 +13,7 @@ permalink: /compilers/
 - [Wirth N. Compiler Construction(2017)](https://people.inf.ethz.ch/wirth/CompilerConstruction/CompilerConstruction1.pdf) Інша класична робота про будування компіляторів від Вірта. В цій книзі ви створите трішки обмежену версію Oberon.
 - [Essentials of Compilation: An Incremental Approach](https://jeapostrophe.github.io/courses/2018/spring/406/notes/book.pdf)
 - [Douglas Thain. Introduction to Compilers and Language Design](https://www3.nd.edu/~dthain/compilerbook/)
+- [Rui Ueyama. Introduction to C compiler creation for those who want to know about low layers](/compilers/chibicc)
 
 Якщо ви бажаєте додати якусь книгу сюди, то вам потрібно лише зробити [PR на гітхабі](https://github.com/kant2002/kant2002.github.io/blob/main/compilers/index.md).
 
