@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Побрехенькі про авіацію у які вірять програмісти"
-date:   2025-06-14 14:10:00 +0500
+date:   2025-06-15 14:10:00 +0500
 categories: domain-driven uk
 comments: true
 ---
@@ -11,7 +11,7 @@ comments: true
 
 У компанії FlightAware наше програмне забезпечення має коректно обробляти всілякі дивні й непередбачувані ситуації. Хоча нам, інженерам, хотілося б, щоб авіаційні дані були чистими та добре стандартизованими, реальний світ це бардак.
 
-Існує безліч припущень, які можна зробити під час проєктування типів даних і схем для авіаційної інформації — і багато з них виявляються хибними. У дусі класичної [статті Патріка Маккензі про імена](https://kant2002.github.io/domain-driven/uk/2025/06/14/falsehoods-programmer-believe-about-names.html), ось перелік хибних уявлень, які можна мати про авіацію. Хоча деякі з них — це просто поширені міфи, деякі реально створювали проблеми нашим клієнтам, а інші — роками завдавали труднощів і в наших власних системах.
+Існує безліч припущень, які можна зробити під час проєктування типів даних і схем для авіаційної інформації - і багато з них виявляються хибними. Ось перелік хибних уявлень, у дусі класичної [статті Патріка Маккензі про імена](https://kant2002.github.io/domain-driven/uk/2025/06/14/falsehoods-programmer-believe-about-names.html), які можна мати про авіацію. Хоча деякі з них - це просто поширені міфи, деякі реально створювали проблеми нашим клієнтам, а інші - роками завдавали труднощів і в наших власних системах.
 
 Усі вони ілюструють ті ситуації, які наша система відстеження рейсів Hyperfeed повинна правильно інтерпретувати, щоб забезпечити чисту та послідовну стрічку даних для нашого сайту, додатків і API.
 
@@ -24,8 +24,8 @@ comments: true
 - У рейсів є розклад.
 - Рейси злітають і приземляються [в аеропортах](https://www.flightaware.com/live/flight/N144NE/history/20250518/1747Z/KPSM/L%2042.98589%20-71.12891?ref=flightaware.engineering).
 - Повітряний транспорт (крім гелікоптерів) злітають і приземляються в аеропортах.
-- Тривалість рейсу — не більше [дванадцяти годин або щось приблизне](https://www.flightaware.com/live/flight/SIA21/history/20250516/1345Z/KEWR/WSSS?ref=flightaware.engineering).
-- Добре, нехай — не більше [кількох діб](https://www.flightaware.com/live/flight/HBAL812/history/20190717/1738Z?ref=flightaware.engineering).
+- Тривалість рейсу - не більше [дванадцяти годин або щось приблизне](https://www.flightaware.com/live/flight/SIA21/history/20250516/1345Z/KEWR/WSSS?ref=flightaware.engineering).
+- Добре, нехай - не більше [кількох діб](https://www.flightaware.com/live/flight/HBAL812/history/20190717/1738Z?ref=flightaware.engineering).
 - Рейси ідентифікуються номером, що складається з коду авіакомпанії та кількох цифр, наприклад, UAL1234.
 - Рейси [ідентифікуються або](https://www.flightaware.com/live/flight/C6031/history/20250521/1752Z/KBID/KFMH?ref=flightaware.engineering) номером авіакомпанії (наприклад, UAL1234), або реєстраційним номером літака, як-от N12345, B6459 або FHUVL.
 - Ідентифікатор рейсу на кшталт B6459 однозначно є або реєстраційним номером ([B–6459](https://www.flightaware.com/live/flight/B6459?ref=flightaware.engineering)), або номером рейсу авіакомпанії ([B6 459](https://www.flightaware.com/live/flight/JBU459?ref=flightaware.engineering)), або чимось іншим.
@@ -35,8 +35,8 @@ comments: true
 - Номер рейсу, вказаний у вашому квитку, той самий [яким користуються пілоти та авіадиспетчери](https://www.eurocontrol.int/service/call-sign-similarity-service?ref=flightaware.engineering).
 - Ідентифікатор рейсу не використовує код якоїсь зовсім не пов’язаної авіакомпанії.
 - Жодні рейси не використовують один і той самий номер рейсу протягом дня.
-- Ну вже ж точно — не буває, щоб один і той самий номер рейсу використовувався одночасно?
-- Добре, гаразд — але ж принаймні два окремі рейси великої пасажирської авіакомпанії, які вилітають із різницею у кілька хвилин один від одного, не будуть [одночасно](https://www.flightaware.com/live/flight/AAL2586/history/20250509/1935Z/TBPB/KCLT?ref=flightaware.engineering) мати [той самий](https://www.flightaware.com/live/flight/AAL2586/history/20250508/1935Z/TBPB/KCLT?ref=flightaware.engineering) номер рейсу, правда ж?..
+- Ну вже ж точно - не буває, щоб один і той самий номер рейсу використовувався одночасно?
+- Добре, гаразд - але ж принаймні два окремі рейси великої пасажирської авіакомпанії, які вилітають із різницею у кілька хвилин один від одного, не будуть [одночасно](https://www.flightaware.com/live/flight/AAL2586/history/20250509/1935Z/TBPB/KCLT?ref=flightaware.engineering) мати [той самий](https://www.flightaware.com/live/flight/AAL2586/history/20250508/1935Z/TBPB/KCLT?ref=flightaware.engineering) номер рейсу, правда ж?..
 
 ## Аеропорти
 
@@ -48,9 +48,9 @@ comments: true
 - Міністерство транспорту США призначає [кожному підпорядкованому](https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/loc_id_search/Encodes_Decodes/?ref=flightaware.engineering) аеропорту [один канонічний код](https://www.bts.gov/topics/airlines-and-airports/world-airport-codes?ref=flightaware.engineering).
 - Жоден аеропорт не має [кількох IATA-кодів](https://en.wikipedia.org/wiki/EuroAirport_Basel_Mulhouse_Freiburg?ref=flightaware.engineering).
 - ICAO-коди для аеропортів у США [завжди починаються з літери K](https://www.flightaware.com/live/airport/PANC?ref=flightaware.engineering).
-- Для американських аеропортів, чий ICAO-код починається з K, [останні три літери](https://en.wikipedia.org/wiki/McClellan%E2%80%93Palomar_Airport?ref=flightaware.engineering) — це його IATA-код.
+- Для американських аеропортів, чий ICAO-код починається з K, [останні три літери](https://en.wikipedia.org/wiki/McClellan%E2%80%93Palomar_Airport?ref=flightaware.engineering) - це його IATA-код.
 - За ICAO-кодом можна визначити, у якому [географічному регіоні](https://www.flightaware.com/live/airport/NZIR?ref=flightaware.engineering) знаходиться аеропорт.
-- Усе, що має IATA-код — [це аеропорт](https://en.wikipedia.org/wiki/List_of_IATA-indexed_railway_stations,_bus_stations_and_ferry_terminals?ref=flightaware.engineering).
+- Усе, що має IATA-код - [це аеропорт](https://en.wikipedia.org/wiki/List_of_IATA-indexed_railway_stations,_bus_stations_and_ferry_terminals?ref=flightaware.engineering).
 - Усе, що має ICAO-код, знаходиться [на Землі](https://en.wikipedia.org/wiki/Jezero_(crater)?ref=flightaware.engineering).
 - У кожного аеропорту є принаймні один загальновідомий ідентифікатор.
 
@@ -69,7 +69,7 @@ comments: true
 - Існує єдине [загальноприйняте визначення висоти](https://en.wikipedia.org/wiki/Altitude?ref=flightaware.engineering#In_aviation).
 - Інформація про рейси від постачальників аеронавігаційних послуг є точною.
 - Ну гаразд, *доволі* точною; вони б не вказували, що рейс вирушив, якби це справді не так.
-- Якщо зазначено, що план польоту скасовано, то цей рейс точно не відбудеться — це не може бути просто результатом редагування кимось плану польоту.
+- Якщо зазначено, що план польоту скасовано, то цей рейс точно не відбудеться - це не може бути просто результатом редагування кимось плану польоту.
 - Принаймні їхні радарні дані точно ідентифікують кожне повітряне судно.
 - Радари з перетинаючима зонами покриття показують однакове місцезнаходження об’єкта, який бачать одночасно.
 - Якщо вони надсилають нам план польоту з ICAO-кодом відомого аеропорту як пунктом призначення, це означає, що існує намір туди прибути.
