@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Побрехенькі про авіацію у які вірять програмісти"
-date:   2025-06-15 14:10:00 +0500
+date:   2025-06-15 13:01:00 +0500
 categories: domain-driven uk
 comments: true
 ---
