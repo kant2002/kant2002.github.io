@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Що працює (а що ні) при продажу формальних методів!"
-date:   2023-06-20 10:45:44 -0500
+date:   2025-06-20 10:45:44 -0500
 categories: uk formal-methods
 comments: true
 translation_source: https://www.galois.com/articles/what-works-and-doesnt-selling-formal-methods
