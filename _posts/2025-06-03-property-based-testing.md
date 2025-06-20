@@ -10,6 +10,8 @@ Here we go property-based testing. It's usually topic which does not have too mu
 
 So here our problem. The path normalization. This is art of conversion of paths `road/path/../to/hell/` to `road/to/hell`, or `skip/me/./if/you/can` to `skip/me/if/you/can`, or `../../../only/forward/no/backwards`. Basically simplification of paths. That can be very tricky business. For example, `././test` is just `test`, or `/../some/` is really wrong path, but we have to leave it as is because it appear as absolute path. 
 
+<!--more-->
+
 Whole excercise would be performed over [TruePath](https://github.com/ForNeVeR/TruePath) which is library for static typing when working with paths.
 
 # FsCheck
