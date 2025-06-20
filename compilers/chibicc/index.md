@@ -2,8 +2,8 @@
 layout: page
 title: Вступ у створення компілятора C для тих, хто хоче знати про низькорівневі речі
 permalink: /compilers/chibicc
-translation_source: https://www.ocf.berkeley.edu/~stefan/fun/chibicc.html
-translation_source: https://www.sigbus.info/compilerbook
+translation_source: "https://www.ocf.berkeley.edu/~stefan/fun/chibicc.html"
+translation_source: "https://www.sigbus.info/compilerbook"
 ---
 
 

@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Що працює (а що ні) при продажу формальних методів!"
-date:   2025-06-20 10:45:44 -0500
+date:   2025-06-20 10:45:44 +0500
 categories: uk formal-methods
 comments: true
-translation_source: https://www.galois.com/articles/what-works-and-doesnt-selling-formal-methods
+translation_source: "https://www.galois.com/articles/what-works-and-doesnt-selling-formal-methods"
 ---
 
 *Орігінальна [стаття](https://www.galois.com/articles/what-works-and-doesnt-selling-formal-methods) Майка Додса від 8 травня 2025 року про те що допомогає продавати формальні методи для мене дуже інтимна, так як вона говорить про дуже делікатні і важливі речі - як розмовляти про важливість формальних методів. Тому питання - перекладати, чи не перекладати для мене взагалі не стояло.*
