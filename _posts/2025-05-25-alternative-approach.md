@@ -14,6 +14,7 @@ comments: true
 - [4. Шаблон персона]({% post_url 2025-03-31-persona-pattern %})
 - [5. Шаблон уточнення питання]({% post_url 2025-05-25-alternative-approach %})
 - [7. Шаблон когнітивного верифікатора]({% post_url 2025-06-14-cognitive-verifier %})
+- [8. Шаблон список фактів для перевірки]({% post_url 2025-06-21-fact-checker-list %})
 
 # Шаблон альтернативні підходи
 

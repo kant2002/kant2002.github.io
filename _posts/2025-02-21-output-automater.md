@@ -14,6 +14,7 @@ comments: true
 - [5. Шаблон уточнення питання]({% post_url 2025-04-16-question-refinement %})
 - [6. Шаблон альтернативні підходи]({% post_url 2025-05-25-alternative-approach %})
 - [7. Шаблон когнітивного верифікатора]({% post_url 2025-06-14-cognitive-verifier %})
+- [8. Шаблон список фактів для перевірки]({% post_url 2025-06-21-fact-checker-list %})
 
 # Автоматизатор виводу
 
