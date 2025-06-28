@@ -15,6 +15,7 @@ comments: true
 - [6. Шаблон альтернативні підходи]({% post_url 2025-05-25-alternative-approach %})
 - [7. Шаблон когнітивного верифікатора]({% post_url 2025-06-14-cognitive-verifier %})
 - [8. Шаблон список фактів для перевірки]({% post_url 2025-06-21-fact-checker-list %})
+- [9. Шаблон нескінченної генерації]({% post_url 2025-06-28-infinite-generation %})
 
 # Шаблон уточнення питання
 

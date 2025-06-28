@@ -15,6 +15,7 @@ comments: true
 - [5. Шаблон уточнення питання]({% post_url 2025-05-25-alternative-approach %})
 - [6. Шаблон альтернативні підходи]({% post_url 2025-05-25-alternative-approach %})
 - [8. Шаблон список фактів для перевірки]({% post_url 2025-06-21-fact-checker-list %})
+- [9. Шаблон нескінченної генерації]({% post_url 2025-06-28-infinite-generation %})
 
 # Шаблон альтернативні підходи
 
