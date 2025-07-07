@@ -16,6 +16,7 @@ comments: true
 - [7. Шаблон когнітивного верифікатора]({% post_url 2025-06-14-cognitive-verifier %})
 - [8. Шаблон список фактів для перевірки]({% post_url 2025-06-21-fact-checker-list %})
 - [9. Шаблон нескінченної генерації]({% post_url 2025-06-28-infinite-generation %})
+- [10. Шаблон генератора візуалізацій]({% post_url 2025-07-07-visualization-generator %})
 
 # Шаблон персона
 
