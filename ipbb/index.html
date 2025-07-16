@@ -1,0 +1,5588 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта загрязнения Казахстана</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            margin: 5px 0 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .map-container {
+            height: calc(100vh - 100px);
+            position: relative;
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .popup-content {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-width: 250px;
+        }
+        
+        .popup-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        
+        .popup-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .info-item {
+            background: #f8f9fa;
+            padding: 8px;
+            border-radius: 4px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #555;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .info-value {
+            color: #2c3e50;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .depth-item {
+            grid-column: 1 / -1;
+            background: #e8f4f8;
+            border-left-color: #2980b9;
+        }
+        
+        .metal-zn { border-left-color: #e74c3c; }
+        .metal-cu { border-left-color: #f39c12; }
+        .metal-cd { border-left-color: #8e44ad; }
+        .metal-pb { border-left-color: #27ae60; }
+        
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #666;
+            font-size: 18px;
+        }
+        
+        .error {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #e74c3c;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Карта загрязнения почвы Казахстана</h1>
+        <p>Данные за 2024 год</p>
+    </div>
+    
+    <div class="map-container">
+        <div id="loading" class="loading">Загрузка карты...</div>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script>
+        // Данные о загрязнении за 2024 год
+        const pollutionData = [
+    {
+        "#": 1,
+        "name": "P-1",
+        "Latitude": 50.34868,
+        "Longitude": 83.4987,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1106.0,
+        "Cu, 3.0 mg/kg": 98.0,
+        "Cd, 0.5 mg/kg": 11.1,
+        "Pb, 32 mg/kg": 13.7
+    },
+    {
+        "#": 2,
+        "name": "P-1",
+        "Latitude": 50.34868,
+        "Longitude": 83.4987,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 207.0,
+        "Cu, 3.0 mg/kg": 23.3,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 7.6
+    },
+    {
+        "#": 3,
+        "name": "P-1",
+        "Latitude": 50.34868,
+        "Longitude": 83.4987,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 97.0,
+        "Cu, 3.0 mg/kg": 44.6,
+        "Cd, 0.5 mg/kg": 2.3,
+        "Pb, 32 mg/kg": 1.6
+    },
+    {
+        "#": 4,
+        "name": "P-1",
+        "Latitude": 50.34868,
+        "Longitude": 83.4987,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 86.0,
+        "Cu, 3.0 mg/kg": 51.7,
+        "Cd, 0.5 mg/kg": 2.4,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 5,
+        "name": "P-2",
+        "Latitude": 50.35231,
+        "Longitude": 83.50495,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 3276.0,
+        "Cu, 3.0 mg/kg": 392.0,
+        "Cd, 0.5 mg/kg": 39.0,
+        "Pb, 32 mg/kg": 82.0
+    },
+    {
+        "#": 6,
+        "name": "P-2",
+        "Latitude": 50.35231,
+        "Longitude": 83.50495,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1489.0,
+        "Cu, 3.0 mg/kg": 101.0,
+        "Cd, 0.5 mg/kg": 6.7,
+        "Pb, 32 mg/kg": 14.0
+    },
+    {
+        "#": 7,
+        "name": "P-2",
+        "Latitude": 50.35231,
+        "Longitude": 83.50495,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 964.0,
+        "Cu, 3.0 mg/kg": 57.3,
+        "Cd, 0.5 mg/kg": 7.8,
+        "Pb, 32 mg/kg": 15.4
+    },
+    {
+        "#": 8,
+        "name": "P-2",
+        "Latitude": 50.35231,
+        "Longitude": 83.50495,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 560.0,
+        "Cu, 3.0 mg/kg": 3.6,
+        "Cd, 0.5 mg/kg": 4.6,
+        "Pb, 32 mg/kg": 11.4
+    },
+    {
+        "#": 9,
+        "name": "P-3",
+        "Latitude": 50.34166,
+        "Longitude": 83.49445,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 578.0,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 6.4,
+        "Pb, 32 mg/kg": 20.2
+    },
+    {
+        "#": 10,
+        "name": "P-3",
+        "Latitude": 50.34166,
+        "Longitude": 83.49445,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 110.0,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 1.9,
+        "Pb, 32 mg/kg": 8.5
+    },
+    {
+        "#": 11,
+        "name": "P-3",
+        "Latitude": 50.34166,
+        "Longitude": 83.49445,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 96.0,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 2.4,
+        "Pb, 32 mg/kg": 8.4
+    },
+    {
+        "#": 12,
+        "name": "P-4",
+        "Latitude": 50.3464,
+        "Longitude": 83.48613,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 4415.0,
+        "Cu, 3.0 mg/kg": 1177.0,
+        "Cd, 0.5 mg/kg": 179.0,
+        "Pb, 32 mg/kg": 414.0
+    },
+    {
+        "#": 13,
+        "name": "P-4",
+        "Latitude": 50.3464,
+        "Longitude": 83.48613,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 4245.0,
+        "Cu, 3.0 mg/kg": 947.0,
+        "Cd, 0.5 mg/kg": 160.0,
+        "Pb, 32 mg/kg": 249.0
+    },
+    {
+        "#": 14,
+        "name": "P-4",
+        "Latitude": 50.3464,
+        "Longitude": 83.48613,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1784.0,
+        "Cu, 3.0 mg/kg": 11.1,
+        "Cd, 0.5 mg/kg": 10.0,
+        "Pb, 32 mg/kg": 8.4
+    },
+    {
+        "#": 15,
+        "name": "P-4",
+        "Latitude": 50.3464,
+        "Longitude": 83.48613,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1024.0,
+        "Cu, 3.0 mg/kg": 6.5,
+        "Cd, 0.5 mg/kg": 6.2,
+        "Pb, 32 mg/kg": 3.5
+    },
+    {
+        "#": 16,
+        "name": "P-5",
+        "Latitude": 50.34654,
+        "Longitude": 83.48355,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 3275.0,
+        "Cu, 3.0 mg/kg": 206.0,
+        "Cd, 0.5 mg/kg": 63.0,
+        "Pb, 32 mg/kg": 83.0
+    },
+    {
+        "#": 17,
+        "name": "P-5",
+        "Latitude": 50.34654,
+        "Longitude": 83.48355,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 3284.0,
+        "Cu, 3.0 mg/kg": 110.0,
+        "Cd, 0.5 mg/kg": 64.0,
+        "Pb, 32 mg/kg": 66.0
+    },
+    {
+        "#": 18,
+        "name": "P-5",
+        "Latitude": 50.34654,
+        "Longitude": 83.48355,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2128.0,
+        "Cu, 3.0 mg/kg": 7.4,
+        "Cd, 0.5 mg/kg": 15.5,
+        "Pb, 32 mg/kg": 11.0
+    },
+    {
+        "#": 19,
+        "name": "P-5",
+        "Latitude": 50.34654,
+        "Longitude": 83.48355,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 818.0,
+        "Cu, 3.0 mg/kg": 2.6,
+        "Cd, 0.5 mg/kg": 4.5,
+        "Pb, 32 mg/kg": 3.9
+    },
+    {
+        "#": 20,
+        "name": "P-6",
+        "Latitude": 50.35086,
+        "Longitude": 83.48562,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 3624.0,
+        "Cu, 3.0 mg/kg": 328.0,
+        "Cd, 0.5 mg/kg": 118.0,
+        "Pb, 32 mg/kg": 227.0
+    },
+    {
+        "#": 21,
+        "name": "P-6",
+        "Latitude": 50.35086,
+        "Longitude": 83.48562,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 3086.0,
+        "Cu, 3.0 mg/kg": 44.1,
+        "Cd, 0.5 mg/kg": 36.0,
+        "Pb, 32 mg/kg": 320.0
+    },
+    {
+        "#": 22,
+        "name": "P-6",
+        "Latitude": 50.35086,
+        "Longitude": 83.48562,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1817.0,
+        "Cu, 3.0 mg/kg": 11.1,
+        "Cd, 0.5 mg/kg": 9.4,
+        "Pb, 32 mg/kg": 16.5
+    },
+    {
+        "#": 23,
+        "name": "P-6",
+        "Latitude": 50.35086,
+        "Longitude": 83.48562,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 535.0,
+        "Cu, 3.0 mg/kg": 3.4,
+        "Cd, 0.5 mg/kg": 5.0,
+        "Pb, 32 mg/kg": 5.9
+    },
+    {
+        "#": 24,
+        "name": "P-7",
+        "Latitude": 50.34991,
+        "Longitude": 83.4809,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 3239.0,
+        "Cu, 3.0 mg/kg": 129.0,
+        "Cd, 0.5 mg/kg": 88.0,
+        "Pb, 32 mg/kg": 960.0
+    },
+    {
+        "#": 25,
+        "name": "P-7",
+        "Latitude": 50.34991,
+        "Longitude": 83.4809,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 2060.0,
+        "Cu, 3.0 mg/kg": 66.9,
+        "Cd, 0.5 mg/kg": 35.0,
+        "Pb, 32 mg/kg": 21.9
+    },
+    {
+        "#": 26,
+        "name": "P-7",
+        "Latitude": 50.34991,
+        "Longitude": 83.4809,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 537.0,
+        "Cu, 3.0 mg/kg": 2.3,
+        "Cd, 0.5 mg/kg": 5.7,
+        "Pb, 32 mg/kg": 2.6
+    },
+    {
+        "#": 27,
+        "name": "P-7",
+        "Latitude": 50.34991,
+        "Longitude": 83.4809,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 88.0,
+        "Cu, 3.0 mg/kg": 0.3,
+        "Cd, 0.5 mg/kg": 3.0,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 28,
+        "name": "P-8",
+        "Latitude": 50.35183,
+        "Longitude": 83.48393,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 2955.0,
+        "Cu, 3.0 mg/kg": 66.4,
+        "Cd, 0.5 mg/kg": 61.0,
+        "Pb, 32 mg/kg": 690.0
+    },
+    {
+        "#": 29,
+        "name": "P-8",
+        "Latitude": 50.35183,
+        "Longitude": 83.48393,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1588.0,
+        "Cu, 3.0 mg/kg": 44.7,
+        "Cd, 0.5 mg/kg": 12.0,
+        "Pb, 32 mg/kg": 15.0
+    },
+    {
+        "#": 30,
+        "name": "P-8",
+        "Latitude": 50.35183,
+        "Longitude": 83.48393,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 329.0,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 1.8,
+        "Pb, 32 mg/kg": 3.4
+    },
+    {
+        "#": 31,
+        "name": "P-8",
+        "Latitude": 50.35183,
+        "Longitude": 83.48393,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 137.0,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 32,
+        "name": "P-9",
+        "Latitude": 50.36105,
+        "Longitude": 83.47659,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 2191.0,
+        "Cu, 3.0 mg/kg": 220.0,
+        "Cd, 0.5 mg/kg": 61.0,
+        "Pb, 32 mg/kg": 336.0
+    },
+    {
+        "#": 33,
+        "name": "P-9",
+        "Latitude": 50.36105,
+        "Longitude": 83.47659,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1618.0,
+        "Cu, 3.0 mg/kg": 22.8,
+        "Cd, 0.5 mg/kg": 32.0,
+        "Pb, 32 mg/kg": 22.8
+    },
+    {
+        "#": 34,
+        "name": "P-9",
+        "Latitude": 50.36105,
+        "Longitude": 83.47659,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 473.0,
+        "Cu, 3.0 mg/kg": 5.2,
+        "Cd, 0.5 mg/kg": 16.0,
+        "Pb, 32 mg/kg": 7.8
+    },
+    {
+        "#": 35,
+        "name": "P-9",
+        "Latitude": 50.36105,
+        "Longitude": 83.47659,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 371.0,
+        "Cu, 3.0 mg/kg": 21.8,
+        "Cd, 0.5 mg/kg": 4.8,
+        "Pb, 32 mg/kg": 17.6
+    },
+    {
+        "#": 36,
+        "name": "P-10",
+        "Latitude": 50.35158,
+        "Longitude": 83.47304,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1117.0,
+        "Cu, 3.0 mg/kg": 72.0,
+        "Cd, 0.5 mg/kg": 6.1,
+        "Pb, 32 mg/kg": 16.9
+    },
+    {
+        "#": 37,
+        "name": "P-10",
+        "Latitude": 50.35158,
+        "Longitude": 83.47304,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 393.0,
+        "Cu, 3.0 mg/kg": 13.2,
+        "Cd, 0.5 mg/kg": 8.1,
+        "Pb, 32 mg/kg": 5.8
+    },
+    {
+        "#": 38,
+        "name": "P-10",
+        "Latitude": 50.35158,
+        "Longitude": 83.47304,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 784.0,
+        "Cu, 3.0 mg/kg": 35.7,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 14.2
+    },
+    {
+        "#": 39,
+        "name": "P-10",
+        "Latitude": 50.35158,
+        "Longitude": 83.47304,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 745.0,
+        "Cu, 3.0 mg/kg": 22.5,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 15.2
+    },
+    {
+        "#": 40,
+        "name": "P-11",
+        "Latitude": 50.35798,
+        "Longitude": 83.4882,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 312.0,
+        "Cu, 3.0 mg/kg": 4.2,
+        "Cd, 0.5 mg/kg": 4.2,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 41,
+        "name": "P-11",
+        "Latitude": 50.35798,
+        "Longitude": 83.4882,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 174.0,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 42,
+        "name": "P-11",
+        "Latitude": 50.35798,
+        "Longitude": 83.4882,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 68.0,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 43,
+        "name": "P-11",
+        "Latitude": 50.35798,
+        "Longitude": 83.4882,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 98.0,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 44,
+        "name": "P-12",
+        "Latitude": 50.33769,
+        "Longitude": 83.49277,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 626.0,
+        "Cu, 3.0 mg/kg": 9.0,
+        "Cd, 0.5 mg/kg": 9.7,
+        "Pb, 32 mg/kg": 29.5
+    },
+    {
+        "#": 45,
+        "name": "P-12",
+        "Latitude": 50.33769,
+        "Longitude": 83.49277,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 76.0,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 1.7,
+        "Pb, 32 mg/kg": 6.7
+    },
+    {
+        "#": 46,
+        "name": "P-12",
+        "Latitude": 50.33769,
+        "Longitude": 83.49277,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 116.0,
+        "Cu, 3.0 mg/kg": 2.6,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 15.5
+    },
+    {
+        "#": 47,
+        "name": "P-13",
+        "Latitude": 50.3441,
+        "Longitude": 83.50051,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1564.0,
+        "Cu, 3.0 mg/kg": 27.1,
+        "Cd, 0.5 mg/kg": 40.0,
+        "Pb, 32 mg/kg": 118.0
+    },
+    {
+        "#": 48,
+        "name": "P-13",
+        "Latitude": 50.3441,
+        "Longitude": 83.50051,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1834.0,
+        "Cu, 3.0 mg/kg": 126.0,
+        "Cd, 0.5 mg/kg": 32.0,
+        "Pb, 32 mg/kg": 206.0
+    },
+    {
+        "#": 49,
+        "name": "P-13",
+        "Latitude": 50.3441,
+        "Longitude": 83.50051,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 522.0,
+        "Cu, 3.0 mg/kg": 9.2,
+        "Cd, 0.5 mg/kg": 5.3,
+        "Pb, 32 mg/kg": 24.3
+    },
+    {
+        "#": 50,
+        "name": "P-13",
+        "Latitude": 50.3441,
+        "Longitude": 83.50051,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 240.0,
+        "Cu, 3.0 mg/kg": 7.6,
+        "Cd, 0.5 mg/kg": 4.7,
+        "Pb, 32 mg/kg": 27.4
+    },
+    {
+        "#": 51,
+        "name": "P-14",
+        "Latitude": 50.35228,
+        "Longitude": 83.51445,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 518.0,
+        "Cu, 3.0 mg/kg": 11.3,
+        "Cd, 0.5 mg/kg": 4.8,
+        "Pb, 32 mg/kg": 25.2
+    },
+    {
+        "#": 52,
+        "name": "P-14",
+        "Latitude": 50.35228,
+        "Longitude": 83.51445,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 300.0,
+        "Cu, 3.0 mg/kg": 8.1,
+        "Cd, 0.5 mg/kg": 3.6,
+        "Pb, 32 mg/kg": 31.9
+    },
+    {
+        "#": 53,
+        "name": "P-14",
+        "Latitude": 50.35228,
+        "Longitude": 83.51445,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 530.0,
+        "Cu, 3.0 mg/kg": 13.3,
+        "Cd, 0.5 mg/kg": 5.8,
+        "Pb, 32 mg/kg": 53.8
+    },
+    {
+        "#": 54,
+        "name": "P-15",
+        "Latitude": 50.3611,
+        "Longitude": 83.50329,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1935.0,
+        "Cu, 3.0 mg/kg": 8.6,
+        "Cd, 0.5 mg/kg": 48.0,
+        "Pb, 32 mg/kg": 29.4
+    },
+    {
+        "#": 55,
+        "name": "P-15",
+        "Latitude": 50.3611,
+        "Longitude": 83.50329,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1074.0,
+        "Cu, 3.0 mg/kg": 4.3,
+        "Cd, 0.5 mg/kg": 14.0,
+        "Pb, 32 mg/kg": 8.0
+    },
+    {
+        "#": 56,
+        "name": "P-15",
+        "Latitude": 50.3611,
+        "Longitude": 83.50329,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 498.0,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 5.0,
+        "Pb, 32 mg/kg": 3.6
+    },
+    {
+        "#": 57,
+        "name": "P-15",
+        "Latitude": 50.3611,
+        "Longitude": 83.50329,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 46.0,
+        "Cu, 3.0 mg/kg": 0.4,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 58,
+        "name": "P-16",
+        "Latitude": 50.35786,
+        "Longitude": 83.50181,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 2718.0,
+        "Cu, 3.0 mg/kg": 40.0,
+        "Cd, 0.5 mg/kg": 46.0,
+        "Pb, 32 mg/kg": 78.0
+    },
+    {
+        "#": 59,
+        "name": "P-16",
+        "Latitude": 50.35786,
+        "Longitude": 83.50181,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 414.0,
+        "Cu, 3.0 mg/kg": 15.5,
+        "Cd, 0.5 mg/kg": 5.7,
+        "Pb, 32 mg/kg": 9.1
+    },
+    {
+        "#": 60,
+        "name": "P-16",
+        "Latitude": 50.35786,
+        "Longitude": 83.50181,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 142.0,
+        "Cu, 3.0 mg/kg": 6.5,
+        "Cd, 0.5 mg/kg": 2.0,
+        "Pb, 32 mg/kg": 6.3
+    },
+    {
+        "#": 61,
+        "name": "P-16",
+        "Latitude": 50.35786,
+        "Longitude": 83.50181,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 54.0,
+        "Cu, 3.0 mg/kg": 2.0,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 4.8
+    },
+    {
+        "#": 62,
+        "name": "P-17",
+        "Latitude": 50.35835,
+        "Longitude": 83.52831,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1064.0,
+        "Cu, 3.0 mg/kg": 64.7,
+        "Cd, 0.5 mg/kg": 20.0,
+        "Pb, 32 mg/kg": 154.0
+    },
+    {
+        "#": 63,
+        "name": "P-17",
+        "Latitude": 50.35835,
+        "Longitude": 83.52831,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1126.0,
+        "Cu, 3.0 mg/kg": 296.0,
+        "Cd, 0.5 mg/kg": 36.0,
+        "Pb, 32 mg/kg": 360.0
+    },
+    {
+        "#": 64,
+        "name": "P-17",
+        "Latitude": 50.35835,
+        "Longitude": 83.52831,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1286.0,
+        "Cu, 3.0 mg/kg": 454.0,
+        "Cd, 0.5 mg/kg": 62.0,
+        "Pb, 32 mg/kg": 712.0
+    },
+    {
+        "#": 65,
+        "name": "P-17",
+        "Latitude": 50.35835,
+        "Longitude": 83.52831,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1774.0,
+        "Cu, 3.0 mg/kg": 498.0,
+        "Cd, 0.5 mg/kg": 90.0,
+        "Pb, 32 mg/kg": 1106.0
+    },
+    {
+        "#": 66,
+        "name": "P-18",
+        "Latitude": 50.36325,
+        "Longitude": 83.53606,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 38.0,
+        "Cu, 3.0 mg/kg": 30.0,
+        "Cd, 0.5 mg/kg": 26.0,
+        "Pb, 32 mg/kg": 5.4
+    },
+    {
+        "#": 67,
+        "name": "P-18",
+        "Latitude": 50.36325,
+        "Longitude": 83.53606,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 24.0,
+        "Cu, 3.0 mg/kg": 1.6,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 3.6
+    },
+    {
+        "#": 68,
+        "name": "P-18",
+        "Latitude": 50.36325,
+        "Longitude": 83.53606,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 454.0,
+        "Cu, 3.0 mg/kg": 11.4,
+        "Cd, 0.5 mg/kg": 7.5,
+        "Pb, 32 mg/kg": 102.0
+    },
+    {
+        "#": 69,
+        "name": "P-18",
+        "Latitude": 50.36325,
+        "Longitude": 83.53606,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 496.0,
+        "Cu, 3.0 mg/kg": 9.5,
+        "Cd, 0.5 mg/kg": 8.4,
+        "Pb, 32 mg/kg": 2276.0
+    },
+    {
+        "#": 70,
+        "name": "P-19",
+        "Latitude": 50.36417,
+        "Longitude": 83.54088,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 376.0,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.9,
+        "Pb, 32 mg/kg": 16.9
+    },
+    {
+        "#": 71,
+        "name": "P-19",
+        "Latitude": 50.36417,
+        "Longitude": 83.54088,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 3500.0,
+        "Cu, 3.0 mg/kg": 4.5,
+        "Cd, 0.5 mg/kg": 12.9,
+        "Pb, 32 mg/kg": 684.0
+    },
+    {
+        "#": 72,
+        "name": "P-19",
+        "Latitude": 50.36417,
+        "Longitude": 83.54088,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 3834.0,
+        "Cu, 3.0 mg/kg": 2.6,
+        "Cd, 0.5 mg/kg": 13.7,
+        "Pb, 32 mg/kg": 1450.0
+    },
+    {
+        "#": 73,
+        "name": "P-19",
+        "Latitude": 50.36417,
+        "Longitude": 83.54088,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3334.0,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 7.9,
+        "Pb, 32 mg/kg": 508.0
+    },
+    {
+        "#": 74,
+        "name": "P-20",
+        "Latitude": 50.36275,
+        "Longitude": 83.55311,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1170.0,
+        "Cu, 3.0 mg/kg": 39.9,
+        "Cd, 0.5 mg/kg": 15.8,
+        "Pb, 32 mg/kg": 1996.0
+    },
+    {
+        "#": 75,
+        "name": "P-20",
+        "Latitude": 50.36275,
+        "Longitude": 83.55311,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 428.0,
+        "Cu, 3.0 mg/kg": 16.4,
+        "Cd, 0.5 mg/kg": 12.2,
+        "Pb, 32 mg/kg": 6.1
+    },
+    {
+        "#": 76,
+        "name": "P-20",
+        "Latitude": 50.36275,
+        "Longitude": 83.55311,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 276.0,
+        "Cu, 3.0 mg/kg": 7.4,
+        "Cd, 0.5 mg/kg": 5.8,
+        "Pb, 32 mg/kg": 38.6
+    },
+    {
+        "#": 77,
+        "name": "P-20",
+        "Latitude": 50.36275,
+        "Longitude": 83.55311,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 14.0,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 2.6,
+        "Pb, 32 mg/kg": 5.2
+    },
+    {
+        "#": 78,
+        "name": "P-21",
+        "Latitude": 50.35864,
+        "Longitude": 83.55804,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 50.0,
+        "Cu, 3.0 mg/kg": 1.6,
+        "Cd, 0.5 mg/kg": 4.0,
+        "Pb, 32 mg/kg": 6.5
+    },
+    {
+        "#": 79,
+        "name": "P-21",
+        "Latitude": 50.35864,
+        "Longitude": 83.55804,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 18.0,
+        "Cu, 3.0 mg/kg": 1.4,
+        "Cd, 0.5 mg/kg": 3.4,
+        "Pb, 32 mg/kg": 4.8
+    },
+    {
+        "#": 80,
+        "name": "P-21",
+        "Latitude": 50.35864,
+        "Longitude": 83.55804,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 52.0,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 3.2,
+        "Pb, 32 mg/kg": 4.2
+    },
+    {
+        "#": 81,
+        "name": "P-21",
+        "Latitude": 50.35864,
+        "Longitude": 83.55804,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 74.0,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 2.5,
+        "Pb, 32 mg/kg": 4.5
+    },
+    {
+        "#": 82,
+        "name": "P-22",
+        "Latitude": 50.35331,
+        "Longitude": 83.55061,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 558.0,
+        "Cu, 3.0 mg/kg": 12.7,
+        "Cd, 0.5 mg/kg": 16.9,
+        "Pb, 32 mg/kg": 29.7
+    },
+    {
+        "#": 83,
+        "name": "P-22",
+        "Latitude": 50.35331,
+        "Longitude": 83.55061,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 96.0,
+        "Cu, 3.0 mg/kg": 15.2,
+        "Cd, 0.5 mg/kg": 5.4,
+        "Pb, 32 mg/kg": 11.8
+    },
+    {
+        "#": 84,
+        "name": "P-22",
+        "Latitude": 50.35331,
+        "Longitude": 83.55061,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 112.0,
+        "Cu, 3.0 mg/kg": 17.8,
+        "Cd, 0.5 mg/kg": 6.3,
+        "Pb, 32 mg/kg": 12.9
+    },
+    {
+        "#": 85,
+        "name": "P-22",
+        "Latitude": 50.35331,
+        "Longitude": 83.55061,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 156.0,
+        "Cu, 3.0 mg/kg": 28.6,
+        "Cd, 0.5 mg/kg": 8.4,
+        "Pb, 32 mg/kg": 30.6
+    },
+    {
+        "#": 86,
+        "name": "P-23",
+        "Latitude": 50.35493,
+        "Longitude": 83.53115,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1144.0,
+        "Cu, 3.0 mg/kg": 13.9,
+        "Cd, 0.5 mg/kg": 56.0,
+        "Pb, 32 mg/kg": 236.0
+    },
+    {
+        "#": 87,
+        "name": "P-23",
+        "Latitude": 50.35493,
+        "Longitude": 83.53115,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 756.0,
+        "Cu, 3.0 mg/kg": 62.2,
+        "Cd, 0.5 mg/kg": 15.1,
+        "Pb, 32 mg/kg": 88.0
+    },
+    {
+        "#": 88,
+        "name": "P-23",
+        "Latitude": 50.35493,
+        "Longitude": 83.53115,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 758.0,
+        "Cu, 3.0 mg/kg": 50.2,
+        "Cd, 0.5 mg/kg": 10.1,
+        "Pb, 32 mg/kg": 80.0
+    },
+    {
+        "#": 89,
+        "name": "P-24",
+        "Latitude": 50.34993,
+        "Longitude": 83.53469,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 414.0,
+        "Cu, 3.0 mg/kg": 6.4,
+        "Cd, 0.5 mg/kg": 12.3,
+        "Pb, 32 mg/kg": 16.4
+    },
+    {
+        "#": 90,
+        "name": "P-24",
+        "Latitude": 50.34993,
+        "Longitude": 83.53469,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 704.0,
+        "Cu, 3.0 mg/kg": 28.4,
+        "Cd, 0.5 mg/kg": 28.0,
+        "Pb, 32 mg/kg": 37.4
+    },
+    {
+        "#": 91,
+        "name": "P-24",
+        "Latitude": 50.34993,
+        "Longitude": 83.53469,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 772.0,
+        "Cu, 3.0 mg/kg": 58.0,
+        "Cd, 0.5 mg/kg": 10.3,
+        "Pb, 32 mg/kg": 36.5
+    },
+    {
+        "#": 92,
+        "name": "P-24",
+        "Latitude": 50.34993,
+        "Longitude": 83.53469,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 892.0,
+        "Cu, 3.0 mg/kg": 86.0,
+        "Cd, 0.5 mg/kg": 7.9,
+        "Pb, 32 mg/kg": 41.9
+    },
+    {
+        "#": 93,
+        "name": "P-25",
+        "Latitude": 50.32602,
+        "Longitude": 83.49365,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 22.0,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 2.5
+    },
+    {
+        "#": 94,
+        "name": "P-25",
+        "Latitude": 50.32602,
+        "Longitude": 83.49365,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 64.0,
+        "Cu, 3.0 mg/kg": 0.5,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 2.0
+    },
+    {
+        "#": 95,
+        "name": "P-25",
+        "Latitude": 50.32602,
+        "Longitude": 83.49365,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 7.4,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 96,
+        "name": "P-25",
+        "Latitude": 50.32602,
+        "Longitude": 83.49365,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3.3,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 0.5
+    },
+    {
+        "#": 97,
+        "name": "P-26",
+        "Latitude": 50.28223,
+        "Longitude": 83.32791,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 26.0,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 2.1,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 98,
+        "name": "P-26",
+        "Latitude": 50.28223,
+        "Longitude": 83.32791,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 18.4,
+        "Cu, 3.0 mg/kg": 1.6,
+        "Cd, 0.5 mg/kg": 2.3,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 99,
+        "name": "P-26",
+        "Latitude": 50.28223,
+        "Longitude": 83.32791,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 8.0,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 2.0,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 100,
+        "name": "P-26",
+        "Latitude": 50.28223,
+        "Longitude": 83.32791,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3.3,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 101,
+        "name": "P-27",
+        "Latitude": 50.59838,
+        "Longitude": 81.88802,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 22.3,
+        "Cu, 3.0 mg/kg": 4.7,
+        "Cd, 0.5 mg/kg": 1.6,
+        "Pb, 32 mg/kg": 1.8
+    },
+    {
+        "#": 102,
+        "name": "P-27",
+        "Latitude": 50.59838,
+        "Longitude": 81.88802,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 34.2,
+        "Cu, 3.0 mg/kg": 4.5,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.9
+    },
+    {
+        "#": 103,
+        "name": "P-28",
+        "Latitude": 50.59161,
+        "Longitude": 81.88157,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 9.9,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 104,
+        "name": "P-28",
+        "Latitude": 50.59161,
+        "Longitude": 81.88157,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 7.7,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.3
+    },
+    {
+        "#": 105,
+        "name": "P-28",
+        "Latitude": 50.59161,
+        "Longitude": 81.88157,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.2,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 106,
+        "name": "P-28",
+        "Latitude": 50.59161,
+        "Longitude": 81.88157,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.1,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 107,
+        "name": "P-29",
+        "Latitude": 50.5899,
+        "Longitude": 81.88684,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 138.0,
+        "Cu, 3.0 mg/kg": 802.0,
+        "Cd, 0.5 mg/kg": 1.6,
+        "Pb, 32 mg/kg": 5.3
+    },
+    {
+        "#": 108,
+        "name": "P-29",
+        "Latitude": 50.5899,
+        "Longitude": 81.88684,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 606.0,
+        "Cu, 3.0 mg/kg": 29.4,
+        "Cd, 0.5 mg/kg": 2.0,
+        "Pb, 32 mg/kg": 1.3
+    },
+    {
+        "#": 109,
+        "name": "P-29",
+        "Latitude": 50.5899,
+        "Longitude": 81.88684,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 7.4,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 110,
+        "name": "P-29",
+        "Latitude": 50.5899,
+        "Longitude": 81.88684,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3.5,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 111,
+        "name": "P-30",
+        "Latitude": 50.59035,
+        "Longitude": 81.88834,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 200.0,
+        "Cu, 3.0 mg/kg": 88.0,
+        "Cd, 0.5 mg/kg": 2.7,
+        "Pb, 32 mg/kg": 7.0
+    },
+    {
+        "#": 112,
+        "name": "P-30",
+        "Latitude": 50.59035,
+        "Longitude": 81.88834,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 226.0,
+        "Cu, 3.0 mg/kg": 88.0,
+        "Cd, 0.5 mg/kg": 2.5,
+        "Pb, 32 mg/kg": 6.0
+    },
+    {
+        "#": 113,
+        "name": "P-30",
+        "Latitude": 50.59035,
+        "Longitude": 81.88834,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 4.2,
+        "Cu, 3.0 mg/kg": 18.9,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 2.5
+    },
+    {
+        "#": 114,
+        "name": "P-30",
+        "Latitude": 50.59035,
+        "Longitude": 81.88834,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 13.7,
+        "Cu, 3.0 mg/kg": 6.4,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 2.1
+    },
+    {
+        "#": 115,
+        "name": "P-31",
+        "Latitude": 50.58868,
+        "Longitude": 81.91599,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 3.8,
+        "Cu, 3.0 mg/kg": 1.4,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 1.9
+    },
+    {
+        "#": 116,
+        "name": "P-31",
+        "Latitude": 50.58868,
+        "Longitude": 81.91599,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1.6,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 2.3
+    },
+    {
+        "#": 117,
+        "name": "P-31",
+        "Latitude": 50.58868,
+        "Longitude": 81.91599,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.5,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 1.9
+    },
+    {
+        "#": 118,
+        "name": "P-31",
+        "Latitude": 50.58868,
+        "Longitude": 81.91599,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.6,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 119,
+        "name": "P-32",
+        "Latitude": 50.59059,
+        "Longitude": 81.90456,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 29.2,
+        "Cu, 3.0 mg/kg": 27.8,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 3.6
+    },
+    {
+        "#": 120,
+        "name": "P-32",
+        "Latitude": 50.59059,
+        "Longitude": 81.90456,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 17.5,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 1.9
+    },
+    {
+        "#": 121,
+        "name": "P-33",
+        "Latitude": 50.58762,
+        "Longitude": 81.88615,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 4510.0,
+        "Cu, 3.0 mg/kg": 2572.0,
+        "Cd, 0.5 mg/kg": 36.0,
+        "Pb, 32 mg/kg": 2.3
+    },
+    {
+        "#": 122,
+        "name": "P-33",
+        "Latitude": 50.58762,
+        "Longitude": 81.88615,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1634.0,
+        "Cu, 3.0 mg/kg": 1476.0,
+        "Cd, 0.5 mg/kg": 22.0,
+        "Pb, 32 mg/kg": 1.6
+    },
+    {
+        "#": 123,
+        "name": "P-33",
+        "Latitude": 50.58762,
+        "Longitude": 81.88615,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 990.0,
+        "Cu, 3.0 mg/kg": 914.0,
+        "Cd, 0.5 mg/kg": 4.2,
+        "Pb, 32 mg/kg": 1.8
+    },
+    {
+        "#": 124,
+        "name": "P-33",
+        "Latitude": 50.58762,
+        "Longitude": 81.88615,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1072.0,
+        "Cu, 3.0 mg/kg": 396.0,
+        "Cd, 0.5 mg/kg": 4.3,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 125,
+        "name": "P-34",
+        "Latitude": 50.58513,
+        "Longitude": 81.88454,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 2108.0,
+        "Cu, 3.0 mg/kg": 364.0,
+        "Cd, 0.5 mg/kg": 12.2,
+        "Pb, 32 mg/kg": 38.0
+    },
+    {
+        "#": 126,
+        "name": "P-34",
+        "Latitude": 50.58513,
+        "Longitude": 81.88454,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 386.0,
+        "Cu, 3.0 mg/kg": 6.4,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 2.5
+    },
+    {
+        "#": 127,
+        "name": "P-34",
+        "Latitude": 50.58513,
+        "Longitude": 81.88454,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 36.0,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 1.6
+    },
+    {
+        "#": 128,
+        "name": "P-35",
+        "Latitude": 50.5868,
+        "Longitude": 81.87592,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 6.6,
+        "Cu, 3.0 mg/kg": 1.8,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 129,
+        "name": "P-35",
+        "Latitude": 50.5868,
+        "Longitude": 81.87592,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 9.7,
+        "Cu, 3.0 mg/kg": 1.4,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 0.5
+    },
+    {
+        "#": 130,
+        "name": "P-35",
+        "Latitude": 50.5868,
+        "Longitude": 81.87592,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.8,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 0.5
+    },
+    {
+        "#": 131,
+        "name": "P-35",
+        "Latitude": 50.5868,
+        "Longitude": 81.87592,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3.0,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 2.0,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 132,
+        "name": "P-36",
+        "Latitude": 50.58402,
+        "Longitude": 81.87749,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 5.7,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 1.9,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 133,
+        "name": "P-36",
+        "Latitude": 50.58402,
+        "Longitude": 81.87749,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 2.3,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 1.8
+    },
+    {
+        "#": 134,
+        "name": "P-36",
+        "Latitude": 50.58402,
+        "Longitude": 81.87749,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.9,
+        "Cu, 3.0 mg/kg": 1.5,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 1.9
+    },
+    {
+        "#": 135,
+        "name": "P-36",
+        "Latitude": 50.58402,
+        "Longitude": 81.87749,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 4.1,
+        "Cu, 3.0 mg/kg": 2.2,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 2.0
+    },
+    {
+        "#": 136,
+        "name": "P-37",
+        "Latitude": 50.56635,
+        "Longitude": 81.86597,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 4.0,
+        "Cu, 3.0 mg/kg": 1.5,
+        "Cd, 0.5 mg/kg": 0.2,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 137,
+        "name": "P-37",
+        "Latitude": 50.56635,
+        "Longitude": 81.86597,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 3.3,
+        "Cu, 3.0 mg/kg": 1.4,
+        "Cd, 0.5 mg/kg": 0.2,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 138,
+        "name": "P-37",
+        "Latitude": 50.56635,
+        "Longitude": 81.86597,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 3.7,
+        "Cu, 3.0 mg/kg": 1.6,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 139,
+        "name": "P-37",
+        "Latitude": 50.56635,
+        "Longitude": 81.86597,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.9,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 0.3,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 140,
+        "name": "P-38",
+        "Latitude": 50.55137,
+        "Longitude": 81.86475,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 5.3,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 2.4,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 141,
+        "name": "P-38",
+        "Latitude": 50.55137,
+        "Longitude": 81.86475,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 4.2,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 142,
+        "name": "P-38",
+        "Latitude": 50.55137,
+        "Longitude": 81.86475,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.0,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 143,
+        "name": "P-39",
+        "Latitude": 50.5502,
+        "Longitude": 81.84794,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 6.1,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 144,
+        "name": "P-39",
+        "Latitude": 50.5502,
+        "Longitude": 81.84794,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 6.4,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 1.7,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 145,
+        "name": "P-39",
+        "Latitude": 50.5502,
+        "Longitude": 81.84794,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.0,
+        "Cu, 3.0 mg/kg": 0.3,
+        "Cd, 0.5 mg/kg": 2.2,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 146,
+        "name": "P-39",
+        "Latitude": 50.5502,
+        "Longitude": 81.84794,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 2.5,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 1.8,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 147,
+        "name": "P-40",
+        "Latitude": 50.54346,
+        "Longitude": 81.854,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 64.0,
+        "Cu, 3.0 mg/kg": 3.2,
+        "Cd, 0.5 mg/kg": 2.2,
+        "Pb, 32 mg/kg": 2.3
+    },
+    {
+        "#": 148,
+        "name": "P-40",
+        "Latitude": 50.54346,
+        "Longitude": 81.854,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 18.2,
+        "Cu, 3.0 mg/kg": 0.5,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 1.3
+    },
+    {
+        "#": 149,
+        "name": "P-40",
+        "Latitude": 50.54346,
+        "Longitude": 81.854,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 3.2,
+        "Cu, 3.0 mg/kg": 1.4,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 150,
+        "name": "P-41",
+        "Latitude": 50.55759,
+        "Longitude": 81.84727,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 2.1,
+        "Cu, 3.0 mg/kg": 6.0,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 1.3
+    },
+    {
+        "#": 151,
+        "name": "P-41",
+        "Latitude": 50.55759,
+        "Longitude": 81.84727,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 20.3,
+        "Cu, 3.0 mg/kg": 5.2,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 1.3
+    },
+    {
+        "#": 152,
+        "name": "P-41",
+        "Latitude": 50.55759,
+        "Longitude": 81.84727,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 12.2,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 8.2
+    },
+    {
+        "#": 153,
+        "name": "P-42",
+        "Latitude": 50.28223,
+        "Longitude": 81.99877,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 2.0,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 154,
+        "name": "P-42",
+        "Latitude": 50.28223,
+        "Longitude": 81.99877,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 2.2,
+        "Cu, 3.0 mg/kg": 0.6,
+        "Cd, 0.5 mg/kg": 0.3,
+        "Pb, 32 mg/kg": 0.5
+    },
+    {
+        "#": 155,
+        "name": "P-42",
+        "Latitude": 50.28223,
+        "Longitude": 81.99877,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.5,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 156,
+        "name": "P-42",
+        "Latitude": 50.28223,
+        "Longitude": 81.99877,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.2,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 1.6,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 157,
+        "name": "P-43",
+        "Latitude": 50.28759,
+        "Longitude": 82.00336,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 4.9,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 158,
+        "name": "P-43",
+        "Latitude": 50.28759,
+        "Longitude": 82.00336,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 2.9,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 159,
+        "name": "P-43",
+        "Latitude": 50.28759,
+        "Longitude": 82.00336,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.8,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 160,
+        "name": "P-43",
+        "Latitude": 50.28759,
+        "Longitude": 82.00336,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.5,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 1.6,
+        "Pb, 32 mg/kg": 0.4
+    },
+    {
+        "#": 161,
+        "name": "P-44",
+        "Latitude": 50.29331,
+        "Longitude": 82.01324,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 27.8,
+        "Cu, 3.0 mg/kg": 2.0,
+        "Cd, 0.5 mg/kg": 1.7,
+        "Pb, 32 mg/kg": 2.5
+    },
+    {
+        "#": 162,
+        "name": "P-44",
+        "Latitude": 50.29331,
+        "Longitude": 82.01324,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 7.8,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 1.6
+    },
+    {
+        "#": 163,
+        "name": "P-44",
+        "Latitude": 50.29331,
+        "Longitude": 82.01324,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.0,
+        "Cu, 3.0 mg/kg": 1.6,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 164,
+        "name": "P-44",
+        "Latitude": 50.29331,
+        "Longitude": 82.01324,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.2,
+        "Cu, 3.0 mg/kg": 2.2,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 165,
+        "name": "P-45",
+        "Latitude": 50.2871,
+        "Longitude": 82.01221,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 2.3,
+        "Cu, 3.0 mg/kg": 1.5,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 166,
+        "name": "P-45",
+        "Latitude": 50.2871,
+        "Longitude": 82.01221,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1.3,
+        "Cu, 3.0 mg/kg": 1.6,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 1.3
+    },
+    {
+        "#": 167,
+        "name": "P-45",
+        "Latitude": 50.2871,
+        "Longitude": 82.01221,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 0.8,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 168,
+        "name": "P-45",
+        "Latitude": 50.2871,
+        "Longitude": 82.01221,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 0.9,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 0.3,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 169,
+        "name": "P-46",
+        "Latitude": 50.28496,
+        "Longitude": 82.00816,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 3.1,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 170,
+        "name": "P-46",
+        "Latitude": 50.28496,
+        "Longitude": 82.00816,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 2.4,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 171,
+        "name": "P-46",
+        "Latitude": 50.28496,
+        "Longitude": 82.00816,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.1,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 172,
+        "name": "P-46",
+        "Latitude": 50.28496,
+        "Longitude": 82.00816,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3.5,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 173,
+        "name": "P-47",
+        "Latitude": 50.28201,
+        "Longitude": 82.00536,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 6.1,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 174,
+        "name": "P-47",
+        "Latitude": 50.28201,
+        "Longitude": 82.00536,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 3.6,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 175,
+        "name": "P-47",
+        "Latitude": 50.28201,
+        "Longitude": 82.00536,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.2,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 176,
+        "name": "P-47",
+        "Latitude": 50.28201,
+        "Longitude": 82.00536,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3.3,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 177,
+        "name": "P-48",
+        "Latitude": 50.27451,
+        "Longitude": 82.00117,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 5.1,
+        "Cu, 3.0 mg/kg": 1.4,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 178,
+        "name": "P-48",
+        "Latitude": 50.27451,
+        "Longitude": 82.00117,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 7.1,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 1.9,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 179,
+        "name": "P-48",
+        "Latitude": 50.27451,
+        "Longitude": 82.00117,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.7,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 1.7,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 180,
+        "name": "P-48",
+        "Latitude": 50.27451,
+        "Longitude": 82.00117,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3.6,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.9,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 181,
+        "name": "P-49",
+        "Latitude": 50.27801,
+        "Longitude": 82.00498,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 81.0,
+        "Cu, 3.0 mg/kg": 1.5,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 182,
+        "name": "P-49",
+        "Latitude": 50.27801,
+        "Longitude": 82.00498,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 130.0,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 183,
+        "name": "P-49",
+        "Latitude": 50.27801,
+        "Longitude": 82.00498,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 3.8,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 184,
+        "name": "P-49",
+        "Latitude": 50.27801,
+        "Longitude": 82.00498,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 4.6,
+        "Cu, 3.0 mg/kg": 1.4,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 185,
+        "name": "P-50",
+        "Latitude": 50.27736,
+        "Longitude": 82.01269,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 7.6,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 186,
+        "name": "P-50",
+        "Latitude": 50.27736,
+        "Longitude": 82.01269,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 4.6,
+        "Cu, 3.0 mg/kg": 2.2,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 187,
+        "name": "P-50",
+        "Latitude": 50.27736,
+        "Longitude": 82.01269,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.5,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 1.7,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 188,
+        "name": "P-50",
+        "Latitude": 50.27736,
+        "Longitude": 82.01269,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.0,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 1.8,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 189,
+        "name": "P-51",
+        "Latitude": 50.26831,
+        "Longitude": 82.01295,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 15.9,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 2.4,
+        "Pb, 32 mg/kg": 1.6
+    },
+    {
+        "#": 190,
+        "name": "P-51",
+        "Latitude": 50.26831,
+        "Longitude": 82.01295,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1.0,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 1.9,
+        "Pb, 32 mg/kg": 1.8
+    },
+    {
+        "#": 191,
+        "name": "P-51",
+        "Latitude": 50.26831,
+        "Longitude": 82.01295,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.7,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 192,
+        "name": "P-51",
+        "Latitude": 50.26831,
+        "Longitude": 82.01295,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3.5,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 193,
+        "name": "P-52",
+        "Latitude": 50.27764,
+        "Longitude": 82.01912,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 7.1,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 194,
+        "name": "P-52",
+        "Latitude": 50.27764,
+        "Longitude": 82.01912,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 6.1,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 195,
+        "name": "P-52",
+        "Latitude": 50.27764,
+        "Longitude": 82.01912,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.9,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.6,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 196,
+        "name": "P-52",
+        "Latitude": 50.27764,
+        "Longitude": 82.01912,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.1,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 197,
+        "name": "P-53",
+        "Latitude": 50.28233,
+        "Longitude": 82.02006,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1.6,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 198,
+        "name": "P-53",
+        "Latitude": 50.28233,
+        "Longitude": 82.02006,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 2.5,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 199,
+        "name": "P-53",
+        "Latitude": 50.28233,
+        "Longitude": 82.02006,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.7,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 1.3
+    },
+    {
+        "#": 200,
+        "name": "P-53",
+        "Latitude": 50.28233,
+        "Longitude": 82.02006,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 4.6,
+        "Cu, 3.0 mg/kg": 1.8,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 201,
+        "name": "P-54",
+        "Latitude": 50.28175,
+        "Longitude": 82.02642,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 7.2,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 1.6,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 202,
+        "name": "P-54",
+        "Latitude": 50.28175,
+        "Longitude": 82.02642,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 3.5,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 2.0,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 203,
+        "name": "P-54",
+        "Latitude": 50.28175,
+        "Longitude": 82.02642,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.5,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 2.0,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 204,
+        "name": "P-54",
+        "Latitude": 50.28175,
+        "Longitude": 82.02642,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.4,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 0.4
+    },
+    {
+        "#": 205,
+        "name": "P-55",
+        "Latitude": 50.51971,
+        "Longitude": 81.92542,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1.2,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 1.3
+    },
+    {
+        "#": 206,
+        "name": "P-55",
+        "Latitude": 50.51971,
+        "Longitude": 81.92542,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1.1,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 207,
+        "name": "P-55",
+        "Latitude": 50.51971,
+        "Longitude": 81.92542,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.3,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 208,
+        "name": "P-55",
+        "Latitude": 50.51971,
+        "Longitude": 81.92542,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 2.0,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 209,
+        "name": "P-56",
+        "Latitude": 50.49813,
+        "Longitude": 81.90027,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 5.3,
+        "Cu, 3.0 mg/kg": 0.4,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 210,
+        "name": "P-56",
+        "Latitude": 50.49813,
+        "Longitude": 81.90027,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 3.0,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 211,
+        "name": "P-56",
+        "Latitude": 50.49813,
+        "Longitude": 81.90027,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 3.2,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 212,
+        "name": "P-56",
+        "Latitude": 50.49813,
+        "Longitude": 81.90027,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3.6,
+        "Cu, 3.0 mg/kg": 2.1,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 213,
+        "name": "P-57",
+        "Latitude": 50.28636,
+        "Longitude": 82.0293,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 4.2,
+        "Cu, 3.0 mg/kg": 2.0,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 214,
+        "name": "P-57",
+        "Latitude": 50.28636,
+        "Longitude": 82.0293,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 3.1,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 215,
+        "name": "P-57",
+        "Latitude": 50.28636,
+        "Longitude": 82.0293,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.3,
+        "Cu, 3.0 mg/kg": 2.4,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 216,
+        "name": "P-57",
+        "Latitude": 50.28636,
+        "Longitude": 82.0293,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 2.3,
+        "Cu, 3.0 mg/kg": 2.9,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 217,
+        "name": "P-58",
+        "Latitude": 50.28922,
+        "Longitude": 82.01913,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 13.3,
+        "Cu, 3.0 mg/kg": 2.5,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 2.5
+    },
+    {
+        "#": 218,
+        "name": "P-58",
+        "Latitude": 50.28922,
+        "Longitude": 82.01913,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 3.8,
+        "Cu, 3.0 mg/kg": 2.1,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 219,
+        "name": "P-58",
+        "Latitude": 50.28922,
+        "Longitude": 82.01913,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.0,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 0.5
+    },
+    {
+        "#": 220,
+        "name": "P-58",
+        "Latitude": 50.28922,
+        "Longitude": 82.01913,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.6,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 221,
+        "name": "P-59",
+        "Latitude": 50.27325,
+        "Longitude": 82.02766,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1.5,
+        "Cu, 3.0 mg/kg": 1.5,
+        "Cd, 0.5 mg/kg": 1.6,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 222,
+        "name": "P-59",
+        "Latitude": 50.27325,
+        "Longitude": 82.02766,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 3.1,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 223,
+        "name": "P-59",
+        "Latitude": 50.27325,
+        "Longitude": 82.02766,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 3.0,
+        "Cu, 3.0 mg/kg": 1.4,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 224,
+        "name": "P-59",
+        "Latitude": 50.27325,
+        "Longitude": 82.02766,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3.8,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 225,
+        "name": "P-60",
+        "Latitude": 50.26299,
+        "Longitude": 82.07384,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 23.6,
+        "Cu, 3.0 mg/kg": 2.5,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 3.4
+    },
+    {
+        "#": 226,
+        "name": "P-60",
+        "Latitude": 50.26299,
+        "Longitude": 82.07384,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 6.3,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 227,
+        "name": "P-60",
+        "Latitude": 50.26299,
+        "Longitude": 82.07384,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.6,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 228,
+        "name": "P-61",
+        "Latitude": 50.17215,
+        "Longitude": 82.27604,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 13.2,
+        "Cu, 3.0 mg/kg": 4.4,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 3.7
+    },
+    {
+        "#": 229,
+        "name": "P-61",
+        "Latitude": 50.17215,
+        "Longitude": 82.27604,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 11.6,
+        "Cu, 3.0 mg/kg": 4.1,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 3.7
+    },
+    {
+        "#": 230,
+        "name": "P-61",
+        "Latitude": 50.17215,
+        "Longitude": 82.27604,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 20.7,
+        "Cu, 3.0 mg/kg": 6.9,
+        "Cd, 0.5 mg/kg": 2.5,
+        "Pb, 32 mg/kg": 5.8
+    },
+    {
+        "#": 231,
+        "name": "P-61",
+        "Latitude": 50.17215,
+        "Longitude": 82.27604,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 5.9,
+        "Cu, 3.0 mg/kg": 2.4,
+        "Cd, 0.5 mg/kg": 2.3,
+        "Pb, 32 mg/kg": 3.1
+    },
+    {
+        "#": 232,
+        "name": "P-62",
+        "Latitude": 50.16668,
+        "Longitude": 82.27747,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 32.0,
+        "Cu, 3.0 mg/kg": 11.5,
+        "Cd, 0.5 mg/kg": 3.5,
+        "Pb, 32 mg/kg": 7.4
+    },
+    {
+        "#": 233,
+        "name": "P-62",
+        "Latitude": 50.16668,
+        "Longitude": 82.27747,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 50.0,
+        "Cu, 3.0 mg/kg": 12.4,
+        "Cd, 0.5 mg/kg": 4.1,
+        "Pb, 32 mg/kg": 7.4
+    },
+    {
+        "#": 234,
+        "name": "P-62",
+        "Latitude": 50.16668,
+        "Longitude": 82.27747,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 33.0,
+        "Cu, 3.0 mg/kg": 3.2,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 2.9
+    },
+    {
+        "#": 235,
+        "name": "P-62",
+        "Latitude": 50.16668,
+        "Longitude": 82.27747,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 24.0,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 236,
+        "name": "P-63",
+        "Latitude": 50.16198,
+        "Longitude": 82.28194,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 44.9,
+        "Cu, 3.0 mg/kg": 980.0,
+        "Cd, 0.5 mg/kg": 5.0,
+        "Pb, 32 mg/kg": 82.0
+    },
+    {
+        "#": 237,
+        "name": "P-63",
+        "Latitude": 50.16198,
+        "Longitude": 82.28194,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 274.0,
+        "Cu, 3.0 mg/kg": 134.0,
+        "Cd, 0.5 mg/kg": 3.6,
+        "Pb, 32 mg/kg": 14.8
+    },
+    {
+        "#": 238,
+        "name": "P-63",
+        "Latitude": 50.16198,
+        "Longitude": 82.28194,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 8.1,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 239,
+        "name": "P-63",
+        "Latitude": 50.16198,
+        "Longitude": 82.28194,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 4.3,
+        "Cu, 3.0 mg/kg": 2.4,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 240,
+        "name": "P-64",
+        "Latitude": 50.15836,
+        "Longitude": 82.28342,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 209.0,
+        "Cu, 3.0 mg/kg": 948.0,
+        "Cd, 0.5 mg/kg": 5.4,
+        "Pb, 32 mg/kg": 86.0
+    },
+    {
+        "#": 241,
+        "name": "P-64",
+        "Latitude": 50.15836,
+        "Longitude": 82.28342,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 453.0,
+        "Cu, 3.0 mg/kg": 387.0,
+        "Cd, 0.5 mg/kg": 12.1,
+        "Pb, 32 mg/kg": 12.7
+    },
+    {
+        "#": 242,
+        "name": "P-64",
+        "Latitude": 50.15836,
+        "Longitude": 82.28342,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 337.0,
+        "Cu, 3.0 mg/kg": 693.0,
+        "Cd, 0.5 mg/kg": 9.5,
+        "Pb, 32 mg/kg": 46.8
+    },
+    {
+        "#": 243,
+        "name": "P-65",
+        "Latitude": 50.15356,
+        "Longitude": 82.29121,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 101.0,
+        "Cu, 3.0 mg/kg": 393.0,
+        "Cd, 0.5 mg/kg": 2.7,
+        "Pb, 32 mg/kg": 23.3
+    },
+    {
+        "#": 244,
+        "name": "P-65",
+        "Latitude": 50.15356,
+        "Longitude": 82.29121,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 97.0,
+        "Cu, 3.0 mg/kg": 608.0,
+        "Cd, 0.5 mg/kg": 2.3,
+        "Pb, 32 mg/kg": 53.0
+    },
+    {
+        "#": 245,
+        "name": "P-65",
+        "Latitude": 50.15356,
+        "Longitude": 82.29121,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 182.2,
+        "Cu, 3.0 mg/kg": 117.9,
+        "Cd, 0.5 mg/kg": 7.8,
+        "Pb, 32 mg/kg": 2.5
+    },
+    {
+        "#": 246,
+        "name": "P-65",
+        "Latitude": 50.15356,
+        "Longitude": 82.29121,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 2.7,
+        "Cu, 3.0 mg/kg": 1.5,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 247,
+        "name": "P-66",
+        "Latitude": 50.16114,
+        "Longitude": 82.28607,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 42.9,
+        "Cu, 3.0 mg/kg": 37.8,
+        "Cd, 0.5 mg/kg": 4.1,
+        "Pb, 32 mg/kg": 12.9
+    },
+    {
+        "#": 248,
+        "name": "P-66",
+        "Latitude": 50.16114,
+        "Longitude": 82.28607,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 43.8,
+        "Cu, 3.0 mg/kg": 43.0,
+        "Cd, 0.5 mg/kg": 4.0,
+        "Pb, 32 mg/kg": 12.6
+    },
+    {
+        "#": 249,
+        "name": "P-66",
+        "Latitude": 50.16114,
+        "Longitude": 82.28607,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 39.9,
+        "Cu, 3.0 mg/kg": 57.6,
+        "Cd, 0.5 mg/kg": 3.6,
+        "Pb, 32 mg/kg": 15.6
+    },
+    {
+        "#": 250,
+        "name": "P-66",
+        "Latitude": 50.16114,
+        "Longitude": 82.28607,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.6,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 1.9,
+        "Pb, 32 mg/kg": 1.8
+    },
+    {
+        "#": 251,
+        "name": "P-67",
+        "Latitude": 50.16155,
+        "Longitude": 82.30049,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 17.5,
+        "Cu, 3.0 mg/kg": 5.8,
+        "Cd, 0.5 mg/kg": 3.1,
+        "Pb, 32 mg/kg": 4.2
+    },
+    {
+        "#": 252,
+        "name": "P-67",
+        "Latitude": 50.16155,
+        "Longitude": 82.30049,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 18.5,
+        "Cu, 3.0 mg/kg": 6.2,
+        "Cd, 0.5 mg/kg": 3.4,
+        "Pb, 32 mg/kg": 4.0
+    },
+    {
+        "#": 253,
+        "name": "P-67",
+        "Latitude": 50.16155,
+        "Longitude": 82.30049,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 5.8,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 2.4,
+        "Pb, 32 mg/kg": 2.5
+    },
+    {
+        "#": 254,
+        "name": "P-67",
+        "Latitude": 50.16155,
+        "Longitude": 82.30049,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 3.0,
+        "Cu, 3.0 mg/kg": 2.1,
+        "Cd, 0.5 mg/kg": 2.0,
+        "Pb, 32 mg/kg": 2.2
+    },
+    {
+        "#": 255,
+        "name": "P-68",
+        "Latitude": 50.10217,
+        "Longitude": 82.17207,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 16.7,
+        "Cu, 3.0 mg/kg": 6.0,
+        "Cd, 0.5 mg/kg": 3.3,
+        "Pb, 32 mg/kg": 4.0
+    },
+    {
+        "#": 256,
+        "name": "P-68",
+        "Latitude": 50.10217,
+        "Longitude": 82.17207,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 14.4,
+        "Cu, 3.0 mg/kg": 5.4,
+        "Cd, 0.5 mg/kg": 3.0,
+        "Pb, 32 mg/kg": 3.1
+    },
+    {
+        "#": 257,
+        "name": "P-68",
+        "Latitude": 50.10217,
+        "Longitude": 82.17207,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.6,
+        "Cu, 3.0 mg/kg": 2.4,
+        "Cd, 0.5 mg/kg": 2.0,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 258,
+        "name": "P-68",
+        "Latitude": 50.10217,
+        "Longitude": 82.17207,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.4,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 2.1,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 259,
+        "name": "P-69",
+        "Latitude": 50.14994,
+        "Longitude": 82.30607,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 286.0,
+        "Cu, 3.0 mg/kg": 277.0,
+        "Cd, 0.5 mg/kg": 11.3,
+        "Pb, 32 mg/kg": 47.5
+    },
+    {
+        "#": 260,
+        "name": "P-69",
+        "Latitude": 50.14994,
+        "Longitude": 82.30607,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 177.0,
+        "Cu, 3.0 mg/kg": 248.0,
+        "Cd, 0.5 mg/kg": 7.7,
+        "Pb, 32 mg/kg": 26.7
+    },
+    {
+        "#": 261,
+        "name": "P-69",
+        "Latitude": 50.14994,
+        "Longitude": 82.30607,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 86.0,
+        "Cu, 3.0 mg/kg": 119.0,
+        "Cd, 0.5 mg/kg": 2.8,
+        "Pb, 32 mg/kg": 12.2
+    },
+    {
+        "#": 262,
+        "name": "P-70",
+        "Latitude": 50.14526,
+        "Longitude": 82.31932,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 26.0,
+        "Cu, 3.0 mg/kg": 37.6,
+        "Cd, 0.5 mg/kg": 1.7,
+        "Pb, 32 mg/kg": 4.9
+    },
+    {
+        "#": 263,
+        "name": "P-70",
+        "Latitude": 50.14526,
+        "Longitude": 82.31932,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 18.0,
+        "Cu, 3.0 mg/kg": 37.0,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 2.9
+    },
+    {
+        "#": 264,
+        "name": "P-70",
+        "Latitude": 50.14526,
+        "Longitude": 82.31932,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 15.0,
+        "Cu, 3.0 mg/kg": 5.8,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 265,
+        "name": "P-71",
+        "Latitude": 50.14382,
+        "Longitude": 82.31476,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 415.0,
+        "Cu, 3.0 mg/kg": 22.7,
+        "Cd, 0.5 mg/kg": 10.6,
+        "Pb, 32 mg/kg": 33.6
+    },
+    {
+        "#": 266,
+        "name": "P-71",
+        "Latitude": 50.14382,
+        "Longitude": 82.31476,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 230.0,
+        "Cu, 3.0 mg/kg": 192.0,
+        "Cd, 0.5 mg/kg": 6.8,
+        "Pb, 32 mg/kg": 23.5
+    },
+    {
+        "#": 267,
+        "name": "P-71",
+        "Latitude": 50.14382,
+        "Longitude": 82.31476,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 194.0,
+        "Cu, 3.0 mg/kg": 152.0,
+        "Cd, 0.5 mg/kg": 5.5,
+        "Pb, 32 mg/kg": 18.8
+    },
+    {
+        "#": 268,
+        "name": "P-71",
+        "Latitude": 50.14382,
+        "Longitude": 82.31476,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 231.0,
+        "Cu, 3.0 mg/kg": 220.0,
+        "Cd, 0.5 mg/kg": 4.6,
+        "Pb, 32 mg/kg": 17.5
+    },
+    {
+        "#": 269,
+        "name": "P-72",
+        "Latitude": 50.14129,
+        "Longitude": 82.31808,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 47.0,
+        "Cu, 3.0 mg/kg": 42.5,
+        "Cd, 0.5 mg/kg": 1.8,
+        "Pb, 32 mg/kg": 5.1
+    },
+    {
+        "#": 270,
+        "name": "P-72",
+        "Latitude": 50.14129,
+        "Longitude": 82.31808,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 4.1,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 271,
+        "name": "P-72",
+        "Latitude": 50.14129,
+        "Longitude": 82.31808,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 4.0,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 1.6
+    },
+    {
+        "#": 272,
+        "name": "P-73",
+        "Latitude": 50.14113,
+        "Longitude": 82.31418,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 253.0,
+        "Cu, 3.0 mg/kg": 92.0,
+        "Cd, 0.5 mg/kg": 7.1,
+        "Pb, 32 mg/kg": 20.4
+    },
+    {
+        "#": 273,
+        "name": "P-73",
+        "Latitude": 50.14113,
+        "Longitude": 82.31418,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 378.0,
+        "Cu, 3.0 mg/kg": 211.0,
+        "Cd, 0.5 mg/kg": 11.3,
+        "Pb, 32 mg/kg": 29.8
+    },
+    {
+        "#": 274,
+        "name": "P-74",
+        "Latitude": 50.13855,
+        "Longitude": 82.30999,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 439.0,
+        "Cu, 3.0 mg/kg": 552.0,
+        "Cd, 0.5 mg/kg": 14.0,
+        "Pb, 32 mg/kg": 42.7
+    },
+    {
+        "#": 275,
+        "name": "P-74",
+        "Latitude": 50.13855,
+        "Longitude": 82.30999,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 450.0,
+        "Cu, 3.0 mg/kg": 219.0,
+        "Cd, 0.5 mg/kg": 4.6,
+        "Pb, 32 mg/kg": 11.4
+    },
+    {
+        "#": 276,
+        "name": "P-74",
+        "Latitude": 50.13855,
+        "Longitude": 82.30999,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 274.0,
+        "Cu, 3.0 mg/kg": 260.0,
+        "Cd, 0.5 mg/kg": 5.3,
+        "Pb, 32 mg/kg": 13.7
+    },
+    {
+        "#": 277,
+        "name": "P-74",
+        "Latitude": 50.13855,
+        "Longitude": 82.30999,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 31.0,
+        "Cu, 3.0 mg/kg": 27.7,
+        "Cd, 0.5 mg/kg": 1.6,
+        "Pb, 32 mg/kg": 5.0
+    },
+    {
+        "#": 278,
+        "name": "P-75",
+        "Latitude": 50.13449,
+        "Longitude": 82.30804,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 21.0,
+        "Cu, 3.0 mg/kg": 11.0,
+        "Cd, 0.5 mg/kg": 1.8,
+        "Pb, 32 mg/kg": 3.2
+    },
+    {
+        "#": 279,
+        "name": "P-75",
+        "Latitude": 50.13449,
+        "Longitude": 82.30804,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 54.0,
+        "Cu, 3.0 mg/kg": 47.4,
+        "Cd, 0.5 mg/kg": 1.7,
+        "Pb, 32 mg/kg": 3.6
+    },
+    {
+        "#": 280,
+        "name": "P-75",
+        "Latitude": 50.13449,
+        "Longitude": 82.30804,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 74.0,
+        "Cu, 3.0 mg/kg": 40.4,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 3.1
+    },
+    {
+        "#": 281,
+        "name": "P-76",
+        "Latitude": 50.1348,
+        "Longitude": 82.31807,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 442.0,
+        "Cu, 3.0 mg/kg": 762.0,
+        "Cd, 0.5 mg/kg": 17.0,
+        "Pb, 32 mg/kg": 85.0
+    },
+    {
+        "#": 282,
+        "name": "P-76",
+        "Latitude": 50.1348,
+        "Longitude": 82.31807,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 763.0,
+        "Cu, 3.0 mg/kg": 1724.0,
+        "Cd, 0.5 mg/kg": 23.0,
+        "Pb, 32 mg/kg": 124.0
+    },
+    {
+        "#": 283,
+        "name": "P-76",
+        "Latitude": 50.1348,
+        "Longitude": 82.31807,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 772.0,
+        "Cu, 3.0 mg/kg": 1519.0,
+        "Cd, 0.5 mg/kg": 19.0,
+        "Pb, 32 mg/kg": 101.0
+    },
+    {
+        "#": 284,
+        "name": "P-76",
+        "Latitude": 50.1348,
+        "Longitude": 82.31807,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 292.0,
+        "Cu, 3.0 mg/kg": 417.0,
+        "Cd, 0.5 mg/kg": 8.4,
+        "Pb, 32 mg/kg": 4.9
+    },
+    {
+        "#": 285,
+        "name": "P-77",
+        "Latitude": 50.14329,
+        "Longitude": 82.30751,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1342.0,
+        "Cu, 3.0 mg/kg": 1768.0,
+        "Cd, 0.5 mg/kg": 30.0,
+        "Pb, 32 mg/kg": 145.0
+    },
+    {
+        "#": 286,
+        "name": "P-77",
+        "Latitude": 50.14329,
+        "Longitude": 82.30751,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1034.0,
+        "Cu, 3.0 mg/kg": 981.0,
+        "Cd, 0.5 mg/kg": 15.0,
+        "Pb, 32 mg/kg": 81.0
+    },
+    {
+        "#": 287,
+        "name": "P-77",
+        "Latitude": 50.14329,
+        "Longitude": 82.30751,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 320.0,
+        "Cu, 3.0 mg/kg": 365.0,
+        "Cd, 0.5 mg/kg": 8.0,
+        "Pb, 32 mg/kg": 27.5
+    },
+    {
+        "#": 288,
+        "name": "P-77",
+        "Latitude": 50.14329,
+        "Longitude": 82.30751,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 77.0,
+        "Cu, 3.0 mg/kg": 92.0,
+        "Cd, 0.5 mg/kg": 33.0,
+        "Pb, 32 mg/kg": 6.2
+    },
+    {
+        "#": 289,
+        "name": "P-78",
+        "Latitude": 50.14268,
+        "Longitude": 82.30089,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1756.0,
+        "Cu, 3.0 mg/kg": 7585.0,
+        "Cd, 0.5 mg/kg": 89.0,
+        "Pb, 32 mg/kg": 1071.0
+    },
+    {
+        "#": 290,
+        "name": "P-78",
+        "Latitude": 50.14268,
+        "Longitude": 82.30089,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 797.0,
+        "Cu, 3.0 mg/kg": 1784.0,
+        "Cd, 0.5 mg/kg": 26.0,
+        "Pb, 32 mg/kg": 223.0
+    },
+    {
+        "#": 291,
+        "name": "P-78",
+        "Latitude": 50.14268,
+        "Longitude": 82.30089,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 717.0,
+        "Cu, 3.0 mg/kg": 973.0,
+        "Cd, 0.5 mg/kg": 25.0,
+        "Pb, 32 mg/kg": 123.0
+    },
+    {
+        "#": 292,
+        "name": "P-79",
+        "Latitude": 50.14866,
+        "Longitude": 82.2598,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 456.0,
+        "Cu, 3.0 mg/kg": 46.0,
+        "Cd, 0.5 mg/kg": 3.5,
+        "Pb, 32 mg/kg": 9.1
+    },
+    {
+        "#": 293,
+        "name": "P-79",
+        "Latitude": 50.14866,
+        "Longitude": 82.2598,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 586.0,
+        "Cu, 3.0 mg/kg": 50.0,
+        "Cd, 0.5 mg/kg": 3.6,
+        "Pb, 32 mg/kg": 10.1
+    },
+    {
+        "#": 294,
+        "name": "P-79",
+        "Latitude": 50.14866,
+        "Longitude": 82.2598,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 335.0,
+        "Cu, 3.0 mg/kg": 205.0,
+        "Cd, 0.5 mg/kg": 6.5,
+        "Pb, 32 mg/kg": 34.5
+    },
+    {
+        "#": 295,
+        "name": "P-79",
+        "Latitude": 50.14866,
+        "Longitude": 82.2598,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 621.0,
+        "Cu, 3.0 mg/kg": 865.0,
+        "Cd, 0.5 mg/kg": 15.0,
+        "Pb, 32 mg/kg": 73.9
+    },
+    {
+        "#": 296,
+        "name": "P-80",
+        "Latitude": 50.13976,
+        "Longitude": 82.29564,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 485.0,
+        "Cu, 3.0 mg/kg": 1141.0,
+        "Cd, 0.5 mg/kg": 10.0,
+        "Pb, 32 mg/kg": 39.6
+    },
+    {
+        "#": 297,
+        "name": "P-80",
+        "Latitude": 50.13976,
+        "Longitude": 82.29564,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 439.0,
+        "Cu, 3.0 mg/kg": 1515.0,
+        "Cd, 0.5 mg/kg": 12.0,
+        "Pb, 32 mg/kg": 22.5
+    },
+    {
+        "#": 298,
+        "name": "P-80",
+        "Latitude": 50.13976,
+        "Longitude": 82.29564,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 204.0,
+        "Cu, 3.0 mg/kg": 814.0,
+        "Cd, 0.5 mg/kg": 5.4,
+        "Pb, 32 mg/kg": 12.0
+    },
+    {
+        "#": 299,
+        "name": "P-81",
+        "Latitude": 50.13959,
+        "Longitude": 82.29809,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1010.0,
+        "Cu, 3.0 mg/kg": 3314.0,
+        "Cd, 0.5 mg/kg": 38.0,
+        "Pb, 32 mg/kg": 215.0
+    },
+    {
+        "#": 300,
+        "name": "P-81",
+        "Latitude": 50.13959,
+        "Longitude": 82.29809,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1014.0,
+        "Cu, 3.0 mg/kg": 3516.0,
+        "Cd, 0.5 mg/kg": 37.0,
+        "Pb, 32 mg/kg": 134.0
+    },
+    {
+        "#": 301,
+        "name": "P-81",
+        "Latitude": 50.13959,
+        "Longitude": 82.29809,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1090.0,
+        "Cu, 3.0 mg/kg": 3569.0,
+        "Cd, 0.5 mg/kg": 43.0,
+        "Pb, 32 mg/kg": 151.0
+    },
+    {
+        "#": 302,
+        "name": "P-82",
+        "Latitude": 50.1329,
+        "Longitude": 82.33899,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 52.0,
+        "Cu, 3.0 mg/kg": 68.0,
+        "Cd, 0.5 mg/kg": 2.3,
+        "Pb, 32 mg/kg": 7.2
+    },
+    {
+        "#": 303,
+        "name": "P-82",
+        "Latitude": 50.1329,
+        "Longitude": 82.33899,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 34.0,
+        "Cu, 3.0 mg/kg": 21.0,
+        "Cd, 0.5 mg/kg": 2.0,
+        "Pb, 32 mg/kg": 7.2
+    },
+    {
+        "#": 304,
+        "name": "P-82",
+        "Latitude": 50.1329,
+        "Longitude": 82.33899,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 17.0,
+        "Cu, 3.0 mg/kg": 3.4,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 305,
+        "name": "P-82",
+        "Latitude": 50.1329,
+        "Longitude": 82.33899,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 14.0,
+        "Cu, 3.0 mg/kg": 1.8,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 306,
+        "name": "P-83",
+        "Latitude": 50.12997,
+        "Longitude": 82.51746,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 69.0,
+        "Cu, 3.0 mg/kg": 1.5,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 2.0
+    },
+    {
+        "#": 307,
+        "name": "P-83",
+        "Latitude": 50.12997,
+        "Longitude": 82.51746,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 63.0,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 1.9
+    },
+    {
+        "#": 308,
+        "name": "P-83",
+        "Latitude": 50.12997,
+        "Longitude": 82.51746,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 4.2,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 309,
+        "name": "P-83",
+        "Latitude": 50.12997,
+        "Longitude": 82.51746,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 6.7,
+        "Cu, 3.0 mg/kg": 0.5,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 310,
+        "name": "P-84",
+        "Latitude": 50.1318,
+        "Longitude": 82.51534,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 770.0,
+        "Cu, 3.0 mg/kg": 247.0,
+        "Cd, 0.5 mg/kg": 11.0,
+        "Pb, 32 mg/kg": 4.1
+    },
+    {
+        "#": 311,
+        "name": "P-84",
+        "Latitude": 50.1318,
+        "Longitude": 82.51534,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1144.0,
+        "Cu, 3.0 mg/kg": 240.0,
+        "Cd, 0.5 mg/kg": 13.7,
+        "Pb, 32 mg/kg": 25.4
+    },
+    {
+        "#": 312,
+        "name": "P-84",
+        "Latitude": 50.1318,
+        "Longitude": 82.51534,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 565.0,
+        "Cu, 3.0 mg/kg": 57.0,
+        "Cd, 0.5 mg/kg": 5.5,
+        "Pb, 32 mg/kg": 8.7
+    },
+    {
+        "#": 313,
+        "name": "P-84",
+        "Latitude": 50.1318,
+        "Longitude": 82.51534,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 411.0,
+        "Cu, 3.0 mg/kg": 35.5,
+        "Cd, 0.5 mg/kg": 3.7,
+        "Pb, 32 mg/kg": 11.5
+    },
+    {
+        "#": 314,
+        "name": "P-85",
+        "Latitude": 50.13008,
+        "Longitude": 82.51066,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 453.0,
+        "Cu, 3.0 mg/kg": 8.1,
+        "Cd, 0.5 mg/kg": 7.1,
+        "Pb, 32 mg/kg": 6.0
+    },
+    {
+        "#": 315,
+        "name": "P-85",
+        "Latitude": 50.13008,
+        "Longitude": 82.51066,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 426.0,
+        "Cu, 3.0 mg/kg": 7.3,
+        "Cd, 0.5 mg/kg": 5.6,
+        "Pb, 32 mg/kg": 4.5
+    },
+    {
+        "#": 316,
+        "name": "P-85",
+        "Latitude": 50.13008,
+        "Longitude": 82.51066,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 195.0,
+        "Cu, 3.0 mg/kg": 4.4,
+        "Cd, 0.5 mg/kg": 3.0,
+        "Pb, 32 mg/kg": 2.8
+    },
+    {
+        "#": 317,
+        "name": "P-85",
+        "Latitude": 50.13008,
+        "Longitude": 82.51066,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 43.0,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 0.5
+    },
+    {
+        "#": 318,
+        "name": "P-86",
+        "Latitude": 50.12734,
+        "Longitude": 82.50851,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1248.0,
+        "Cu, 3.0 mg/kg": 314.0,
+        "Cd, 0.5 mg/kg": 15.1,
+        "Pb, 32 mg/kg": 6.1
+    },
+    {
+        "#": 319,
+        "name": "P-86",
+        "Latitude": 50.12734,
+        "Longitude": 82.50851,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 1608.0,
+        "Cu, 3.0 mg/kg": 432.0,
+        "Cd, 0.5 mg/kg": 18.2,
+        "Pb, 32 mg/kg": 5.8
+    },
+    {
+        "#": 320,
+        "name": "P-86",
+        "Latitude": 50.12734,
+        "Longitude": 82.50851,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1641.0,
+        "Cu, 3.0 mg/kg": 205.0,
+        "Cd, 0.5 mg/kg": 31.0,
+        "Pb, 32 mg/kg": 10.0
+    },
+    {
+        "#": 321,
+        "name": "P-86",
+        "Latitude": 50.12734,
+        "Longitude": 82.50851,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1885.0,
+        "Cu, 3.0 mg/kg": 141.0,
+        "Cd, 0.5 mg/kg": 42.0,
+        "Pb, 32 mg/kg": 9.9
+    },
+    {
+        "#": 322,
+        "name": "P-87",
+        "Latitude": 50.12455,
+        "Longitude": 82.50509,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 435.0,
+        "Cu, 3.0 mg/kg": 91.0,
+        "Cd, 0.5 mg/kg": 3.3,
+        "Pb, 32 mg/kg": 2.0
+    },
+    {
+        "#": 323,
+        "name": "P-87",
+        "Latitude": 50.12455,
+        "Longitude": 82.50509,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 574.0,
+        "Cu, 3.0 mg/kg": 132.0,
+        "Cd, 0.5 mg/kg": 4.8,
+        "Pb, 32 mg/kg": 3.3
+    },
+    {
+        "#": 324,
+        "name": "P-87",
+        "Latitude": 50.12455,
+        "Longitude": 82.50509,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 398.0,
+        "Cu, 3.0 mg/kg": 17.8,
+        "Cd, 0.5 mg/kg": 4.2,
+        "Pb, 32 mg/kg": 3.2
+    },
+    {
+        "#": 325,
+        "name": "P-87",
+        "Latitude": 50.12455,
+        "Longitude": 82.50509,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 949.0,
+        "Cu, 3.0 mg/kg": 26.1,
+        "Cd, 0.5 mg/kg": 11.9,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 326,
+        "name": "P-88",
+        "Latitude": 50.12392,
+        "Longitude": 82.51152,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 139.0,
+        "Cu, 3.0 mg/kg": 3.8,
+        "Cd, 0.5 mg/kg": 2.8,
+        "Pb, 32 mg/kg": 2.7
+    },
+    {
+        "#": 327,
+        "name": "P-88",
+        "Latitude": 50.12392,
+        "Longitude": 82.51152,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 145.0,
+        "Cu, 3.0 mg/kg": 5.6,
+        "Cd, 0.5 mg/kg": 2.9,
+        "Pb, 32 mg/kg": 2.8
+    },
+    {
+        "#": 328,
+        "name": "P-88",
+        "Latitude": 50.12392,
+        "Longitude": 82.51152,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 112.0,
+        "Cu, 3.0 mg/kg": 5.7,
+        "Cd, 0.5 mg/kg": 2.7,
+        "Pb, 32 mg/kg": 1.8
+    },
+    {
+        "#": 329,
+        "name": "P-88",
+        "Latitude": 50.12392,
+        "Longitude": 82.51152,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 15.1,
+        "Cu, 3.0 mg/kg": 4.8,
+        "Cd, 0.5 mg/kg": 2.1,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 330,
+        "name": "P-89",
+        "Latitude": 50.11832,
+        "Longitude": 82.50514,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 13.0,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 331,
+        "name": "P-89",
+        "Latitude": 50.11832,
+        "Longitude": 82.50514,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 13.1,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.4
+    },
+    {
+        "#": 332,
+        "name": "P-89",
+        "Latitude": 50.11832,
+        "Longitude": 82.50514,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 12.1,
+        "Cu, 3.0 mg/kg": 0.3,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 333,
+        "name": "P-89",
+        "Latitude": 50.11832,
+        "Longitude": 82.50514,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 5.0,
+        "Cu, 3.0 mg/kg": 2.7,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 0.4
+    },
+    {
+        "#": 334,
+        "name": "P-90",
+        "Latitude": 50.12204,
+        "Longitude": 82.49545,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 224.0,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 2.4,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 335,
+        "name": "P-90",
+        "Latitude": 50.12204,
+        "Longitude": 82.49545,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 54.0,
+        "Cu, 3.0 mg/kg": 2.5,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 336,
+        "name": "P-90",
+        "Latitude": 50.12204,
+        "Longitude": 82.49545,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 47.0,
+        "Cu, 3.0 mg/kg": 9.2,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 337,
+        "name": "P-90",
+        "Latitude": 50.12204,
+        "Longitude": 82.49545,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 452.0,
+        "Cu, 3.0 mg/kg": 1.6,
+        "Cd, 0.5 mg/kg": 3.6,
+        "Pb, 32 mg/kg": 2.4
+    },
+    {
+        "#": 338,
+        "name": "P-91",
+        "Latitude": 50.11539,
+        "Longitude": 82.48662,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 6.7,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 339,
+        "name": "P-91",
+        "Latitude": 50.11539,
+        "Longitude": 82.48662,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 8.0,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.5
+    },
+    {
+        "#": 340,
+        "name": "P-91",
+        "Latitude": 50.11539,
+        "Longitude": 82.48662,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 0.9,
+        "Cu, 3.0 mg/kg": 1.6,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 0.3
+    },
+    {
+        "#": 341,
+        "name": "P-91",
+        "Latitude": 50.11539,
+        "Longitude": 82.48662,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 0.5,
+        "Cu, 3.0 mg/kg": 1.8,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 342,
+        "name": "P-92",
+        "Latitude": 50.13,
+        "Longitude": 82.47115,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 12.4,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 343,
+        "name": "P-92",
+        "Latitude": 50.13,
+        "Longitude": 82.47115,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 13.4,
+        "Cu, 3.0 mg/kg": 1.5,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 344,
+        "name": "P-92",
+        "Latitude": 50.13,
+        "Longitude": 82.47115,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 5.7,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 345,
+        "name": "P-92",
+        "Latitude": 50.13,
+        "Longitude": 82.47115,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 0.8,
+        "Cu, 3.0 mg/kg": 23.3,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 346,
+        "name": "P-93",
+        "Latitude": 50.13005,
+        "Longitude": 82.4875,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 120.0,
+        "Cu, 3.0 mg/kg": 10.5,
+        "Cd, 0.5 mg/kg": 3.1,
+        "Pb, 32 mg/kg": 4.3
+    },
+    {
+        "#": 347,
+        "name": "P-93",
+        "Latitude": 50.13005,
+        "Longitude": 82.4875,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 317.0,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 3.6,
+        "Pb, 32 mg/kg": 1.8
+    },
+    {
+        "#": 348,
+        "name": "P-93",
+        "Latitude": 50.13005,
+        "Longitude": 82.4875,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 5.8,
+        "Cu, 3.0 mg/kg": 1.4,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 349,
+        "name": "P-93",
+        "Latitude": 50.13005,
+        "Longitude": 82.4875,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 4.5,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 350,
+        "name": "P-94",
+        "Latitude": 50.13718,
+        "Longitude": 82.49327,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 26.7,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 351,
+        "name": "P-94",
+        "Latitude": 50.13718,
+        "Longitude": 82.49327,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 27.4,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 352,
+        "name": "P-94",
+        "Latitude": 50.13718,
+        "Longitude": 82.49327,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 11.5,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.4
+    },
+    {
+        "#": 353,
+        "name": "P-94",
+        "Latitude": 50.13718,
+        "Longitude": 82.49327,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 2.0,
+        "Cu, 3.0 mg/kg": 7.2,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 354,
+        "name": "P-95",
+        "Latitude": 50.13483,
+        "Longitude": 82.5008,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 111.0,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.8,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 355,
+        "name": "P-95",
+        "Latitude": 50.13483,
+        "Longitude": 82.5008,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 25.4,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 356,
+        "name": "P-95",
+        "Latitude": 50.13483,
+        "Longitude": 82.5008,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.1,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 357,
+        "name": "P-95",
+        "Latitude": 50.13483,
+        "Longitude": 82.5008,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 5.9,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 358,
+        "name": "P-96",
+        "Latitude": 50.13813,
+        "Longitude": 82.5062,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 26.2,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 359,
+        "name": "P-96",
+        "Latitude": 50.13813,
+        "Longitude": 82.5062,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 25.8,
+        "Cu, 3.0 mg/kg": 0.6,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 360,
+        "name": "P-96",
+        "Latitude": 50.13813,
+        "Longitude": 82.5062,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 4.2,
+        "Cu, 3.0 mg/kg": 0.6,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 361,
+        "name": "P-96",
+        "Latitude": 50.13813,
+        "Longitude": 82.5062,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 0.9,
+        "Cu, 3.0 mg/kg": 0.4,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 362,
+        "name": "P-97",
+        "Latitude": 50.13438,
+        "Longitude": 82.50462,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 260.0,
+        "Cu, 3.0 mg/kg": 46.0,
+        "Cd, 0.5 mg/kg": 3.8,
+        "Pb, 32 mg/kg": 4.3
+    },
+    {
+        "#": 363,
+        "name": "P-97",
+        "Latitude": 50.13438,
+        "Longitude": 82.50462,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 178.0,
+        "Cu, 3.0 mg/kg": 10.7,
+        "Cd, 0.5 mg/kg": 2.8,
+        "Pb, 32 mg/kg": 2.6
+    },
+    {
+        "#": 364,
+        "name": "P-97",
+        "Latitude": 50.13438,
+        "Longitude": 82.50462,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 5.9,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 365,
+        "name": "P-97",
+        "Latitude": 50.13438,
+        "Longitude": 82.50462,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.8,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 366,
+        "name": "P-98",
+        "Latitude": 50.08391,
+        "Longitude": 82.55985,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 3.6,
+        "Cu, 3.0 mg/kg": 1.6,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 367,
+        "name": "P-98",
+        "Latitude": 50.08391,
+        "Longitude": 82.55985,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 4.0,
+        "Cu, 3.0 mg/kg": 1.5,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 368,
+        "name": "P-98",
+        "Latitude": 50.08391,
+        "Longitude": 82.55985,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.7,
+        "Cu, 3.0 mg/kg": 1.8,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 369,
+        "name": "P-98",
+        "Latitude": 50.08391,
+        "Longitude": 82.55985,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.0,
+        "Cu, 3.0 mg/kg": 1.8,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 370,
+        "name": "P-99",
+        "Latitude": 50.08384,
+        "Longitude": 82.56032,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 52.0,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 1.8,
+        "Pb, 32 mg/kg": 2.2
+    },
+    {
+        "#": 371,
+        "name": "P-99",
+        "Latitude": 50.08384,
+        "Longitude": 82.56032,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 32.7,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 372,
+        "name": "P-99",
+        "Latitude": 50.08384,
+        "Longitude": 82.56032,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 4.0,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 0.2,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 373,
+        "name": "P-99",
+        "Latitude": 50.08384,
+        "Longitude": 82.56032,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 2.0,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 374,
+        "name": "P-100",
+        "Latitude": 50.03403,
+        "Longitude": 82.73848,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 37.8,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 2.2,
+        "Pb, 32 mg/kg": 2.2
+    },
+    {
+        "#": 375,
+        "name": "P-100",
+        "Latitude": 50.03403,
+        "Longitude": 82.73848,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 27.0,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 2.1,
+        "Pb, 32 mg/kg": 1.8
+    },
+    {
+        "#": 376,
+        "name": "P-100",
+        "Latitude": 50.03403,
+        "Longitude": 82.73848,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 5.9,
+        "Cu, 3.0 mg/kg": 0.4,
+        "Cd, 0.5 mg/kg": 1.6,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 377,
+        "name": "P-100",
+        "Latitude": 50.03403,
+        "Longitude": 82.73848,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 4.9,
+        "Cu, 3.0 mg/kg": 0.4,
+        "Cd, 0.5 mg/kg": 1.7,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 378,
+        "name": "P-101",
+        "Latitude": 50.04106,
+        "Longitude": 82.74651,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 4.1,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 0.5
+    },
+    {
+        "#": 379,
+        "name": "P-101",
+        "Latitude": 50.04106,
+        "Longitude": 82.74651,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 5.6,
+        "Cu, 3.0 mg/kg": 1.9,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 380,
+        "name": "P-101",
+        "Latitude": 50.04106,
+        "Longitude": 82.74651,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 6.2,
+        "Cu, 3.0 mg/kg": 2.6,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 0.5
+    },
+    {
+        "#": 381,
+        "name": "P-101",
+        "Latitude": 50.04106,
+        "Longitude": 82.74651,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 2.4,
+        "Cu, 3.0 mg/kg": 2.1,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 382,
+        "name": "P-102",
+        "Latitude": 50.05145,
+        "Longitude": 82.73312,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 6.0,
+        "Cu, 3.0 mg/kg": 2.2,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 383,
+        "name": "P-102",
+        "Latitude": 50.05145,
+        "Longitude": 82.73312,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 6.7,
+        "Cu, 3.0 mg/kg": 2.1,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 0.5
+    },
+    {
+        "#": 384,
+        "name": "P-102",
+        "Latitude": 50.05145,
+        "Longitude": 82.73312,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 4.0,
+        "Cu, 3.0 mg/kg": 2.2,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 385,
+        "name": "P-102",
+        "Latitude": 50.05145,
+        "Longitude": 82.73312,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.8,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 386,
+        "name": "P-103",
+        "Latitude": 50.04492,
+        "Longitude": 82.75978,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 16.5,
+        "Cu, 3.0 mg/kg": 0.4,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 387,
+        "name": "P-103",
+        "Latitude": 50.04492,
+        "Longitude": 82.75978,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 5.9,
+        "Cu, 3.0 mg/kg": 0.3,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 388,
+        "name": "P-103",
+        "Latitude": 50.04492,
+        "Longitude": 82.75978,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1.9,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 389,
+        "name": "P-103",
+        "Latitude": 50.04492,
+        "Longitude": 82.75978,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.1,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 390,
+        "name": "P-104",
+        "Latitude": 50.03692,
+        "Longitude": 82.76096,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 26.1,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 1.4
+    },
+    {
+        "#": 391,
+        "name": "P-104",
+        "Latitude": 50.03692,
+        "Longitude": 82.76096,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 8.3,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 392,
+        "name": "P-104",
+        "Latitude": 50.03692,
+        "Longitude": 82.76096,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.5,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 0.4
+    },
+    {
+        "#": 393,
+        "name": "P-104",
+        "Latitude": 50.03692,
+        "Longitude": 82.76096,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.6,
+        "Cu, 3.0 mg/kg": 1.4,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 394,
+        "name": "P-105",
+        "Latitude": 50.03651,
+        "Longitude": 82.77,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 5.2,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 395,
+        "name": "P-105",
+        "Latitude": 50.03651,
+        "Longitude": 82.77,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 17.8,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 1.7,
+        "Pb, 32 mg/kg": 1.5
+    },
+    {
+        "#": 396,
+        "name": "P-105",
+        "Latitude": 50.03651,
+        "Longitude": 82.77,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 3.4,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 397,
+        "name": "P-105",
+        "Latitude": 50.03651,
+        "Longitude": 82.77,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 0.3,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 398,
+        "name": "P-106",
+        "Latitude": 50.01948,
+        "Longitude": 82.4676,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 15.9,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 1.6,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 399,
+        "name": "P-106",
+        "Latitude": 50.01948,
+        "Longitude": 82.4676,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 3.8,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 1.3
+    },
+    {
+        "#": 400,
+        "name": "P-106",
+        "Latitude": 50.01948,
+        "Longitude": 82.4676,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 3.0,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 401,
+        "name": "P-106",
+        "Latitude": 50.01948,
+        "Longitude": 82.4676,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 2.9,
+        "Cu, 3.0 mg/kg": 1.7,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 402,
+        "name": "P-107",
+        "Latitude": 50.01969,
+        "Longitude": 82.47295,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 7.9,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 1.1
+    },
+    {
+        "#": 403,
+        "name": "P-107",
+        "Latitude": 50.01969,
+        "Longitude": 82.47295,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 2.4,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 404,
+        "name": "P-107",
+        "Latitude": 50.01969,
+        "Longitude": 82.47295,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 5.3,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 405,
+        "name": "P-107",
+        "Latitude": 50.01969,
+        "Longitude": 82.47295,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 8.0,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 1.2
+    },
+    {
+        "#": 406,
+        "name": "P-108",
+        "Latitude": 50.04055,
+        "Longitude": 82.78061,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 8.8,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 407,
+        "name": "P-108",
+        "Latitude": 50.04055,
+        "Longitude": 82.78061,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 5.5,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 408,
+        "name": "P-108",
+        "Latitude": 50.04055,
+        "Longitude": 82.78061,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 3.2,
+        "Cu, 3.0 mg/kg": 0.5,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 0.4
+    },
+    {
+        "#": 409,
+        "name": "P-108",
+        "Latitude": 50.04055,
+        "Longitude": 82.78061,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.6,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 0.3
+    },
+    {
+        "#": 410,
+        "name": "P-109",
+        "Latitude": 50.02682,
+        "Longitude": 82.77135,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 9.0,
+        "Cu, 3.0 mg/kg": 0.5,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 411,
+        "name": "P-109",
+        "Latitude": 50.02682,
+        "Longitude": 82.77135,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 15.6,
+        "Cu, 3.0 mg/kg": 0.6,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 412,
+        "name": "P-109",
+        "Latitude": 50.02682,
+        "Longitude": 82.77135,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 21.1,
+        "Cu, 3.0 mg/kg": 0.4,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 0.6
+    },
+    {
+        "#": 413,
+        "name": "P-110",
+        "Latitude": 50.02356,
+        "Longitude": 82.7699,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 39.0,
+        "Cu, 3.0 mg/kg": 0.4,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 1.0
+    },
+    {
+        "#": 414,
+        "name": "P-110",
+        "Latitude": 50.02356,
+        "Longitude": 82.7699,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 31.6,
+        "Cu, 3.0 mg/kg": 0.4,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 0.9
+    },
+    {
+        "#": 415,
+        "name": "P-110",
+        "Latitude": 50.02356,
+        "Longitude": 82.7699,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 11.6,
+        "Cu, 3.0 mg/kg": 0.4,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 0.5
+    },
+    {
+        "#": 416,
+        "name": "P-110",
+        "Latitude": 50.02356,
+        "Longitude": 82.7699,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 1.7,
+        "Cu, 3.0 mg/kg": 0.2,
+        "Cd, 0.5 mg/kg": 0.7,
+        "Pb, 32 mg/kg": 0.4
+    },
+    {
+        "#": 417,
+        "name": "P-111",
+        "Latitude": 50.02168,
+        "Longitude": 82.76043,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 48.3,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 1.7,
+        "Pb, 32 mg/kg": 1.6
+    },
+    {
+        "#": 418,
+        "name": "P-111",
+        "Latitude": 50.02168,
+        "Longitude": 82.76043,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 18.7,
+        "Cu, 3.0 mg/kg": 2.4,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 2.9
+    },
+    {
+        "#": 419,
+        "name": "P-111",
+        "Latitude": 50.02168,
+        "Longitude": 82.76043,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 2.4,
+        "Cu, 3.0 mg/kg": 2.0,
+        "Cd, 0.5 mg/kg": 1.0,
+        "Pb, 32 mg/kg": 2.4
+    },
+    {
+        "#": 420,
+        "name": "P-111",
+        "Latitude": 50.02168,
+        "Longitude": 82.76043,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 0.8,
+        "Cu, 3.0 mg/kg": 2.4,
+        "Cd, 0.5 mg/kg": 0.5,
+        "Pb, 32 mg/kg": 1.8
+    },
+    {
+        "#": 421,
+        "name": "P-112",
+        "Latitude": 50.02548,
+        "Longitude": 82.75712,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 9.7,
+        "Cu, 3.0 mg/kg": 2.9,
+        "Cd, 0.5 mg/kg": 3.0,
+        "Pb, 32 mg/kg": 1.9
+    },
+    {
+        "#": 422,
+        "name": "P-112",
+        "Latitude": 50.02548,
+        "Longitude": 82.75712,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 9.8,
+        "Cu, 3.0 mg/kg": 3.3,
+        "Cd, 0.5 mg/kg": 2.1,
+        "Pb, 32 mg/kg": 1.8
+    },
+    {
+        "#": 423,
+        "name": "P-112",
+        "Latitude": 50.02548,
+        "Longitude": 82.75712,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 10.8,
+        "Cu, 3.0 mg/kg": 2.1,
+        "Cd, 0.5 mg/kg": 2.6,
+        "Pb, 32 mg/kg": 2.0
+    },
+    {
+        "#": 424,
+        "name": "P-113",
+        "Latitude": 50.02666,
+        "Longitude": 82.74874,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 39.2,
+        "Cu, 3.0 mg/kg": 1.6,
+        "Cd, 0.5 mg/kg": 2.4,
+        "Pb, 32 mg/kg": 1.9
+    },
+    {
+        "#": 425,
+        "name": "P-113",
+        "Latitude": 50.02666,
+        "Longitude": 82.74874,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 26.1,
+        "Cu, 3.0 mg/kg": 1.4,
+        "Cd, 0.5 mg/kg": 2.3,
+        "Pb, 32 mg/kg": 1.6
+    },
+    {
+        "#": 426,
+        "name": "P-113",
+        "Latitude": 50.02666,
+        "Longitude": 82.74874,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 9.1,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 1.7
+    },
+    {
+        "#": 427,
+        "name": "P-114",
+        "Latitude": 50.02913,
+        "Longitude": 82.75326,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 22.0,
+        "Cu, 3.0 mg/kg": 2.3,
+        "Cd, 0.5 mg/kg": 1.5,
+        "Pb, 32 mg/kg": 3.9
+    },
+    {
+        "#": 428,
+        "name": "P-114",
+        "Latitude": 50.02913,
+        "Longitude": 82.75326,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 22.7,
+        "Cu, 3.0 mg/kg": 4.5,
+        "Cd, 0.5 mg/kg": 0.9,
+        "Pb, 32 mg/kg": 4.1
+    },
+    {
+        "#": 429,
+        "name": "P-114",
+        "Latitude": 50.02913,
+        "Longitude": 82.75326,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 9.6,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 3.0
+    },
+    {
+        "#": 430,
+        "name": "P-115",
+        "Latitude": 50.03315,
+        "Longitude": 82.75019,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 41.7,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 2.2,
+        "Pb, 32 mg/kg": 3.1
+    },
+    {
+        "#": 431,
+        "name": "P-115",
+        "Latitude": 50.03315,
+        "Longitude": 82.75019,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 36.3,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 2.1,
+        "Pb, 32 mg/kg": 3.4
+    },
+    {
+        "#": 432,
+        "name": "P-116",
+        "Latitude": 49.96553,
+        "Longitude": 82.61949,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 333.0,
+        "Cu, 3.0 mg/kg": 11.1,
+        "Cd, 0.5 mg/kg": 26.7,
+        "Pb, 32 mg/kg": 13.5
+    },
+    {
+        "#": 433,
+        "name": "P-116",
+        "Latitude": 49.96553,
+        "Longitude": 82.61949,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 299.0,
+        "Cu, 3.0 mg/kg": 19.1,
+        "Cd, 0.5 mg/kg": 17.6,
+        "Pb, 32 mg/kg": 12.1
+    },
+    {
+        "#": 434,
+        "name": "P-116",
+        "Latitude": 49.96553,
+        "Longitude": 82.61949,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 187.0,
+        "Cu, 3.0 mg/kg": 5.0,
+        "Cd, 0.5 mg/kg": 16.7,
+        "Pb, 32 mg/kg": 4.5
+    },
+    {
+        "#": 435,
+        "name": "P-117",
+        "Latitude": 49.97635,
+        "Longitude": 82.61951,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 274.0,
+        "Cu, 3.0 mg/kg": 11.9,
+        "Cd, 0.5 mg/kg": 12.6,
+        "Pb, 32 mg/kg": 21.2
+    },
+    {
+        "#": 436,
+        "name": "P-117",
+        "Latitude": 49.97635,
+        "Longitude": 82.61951,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 8.9,
+        "Cu, 3.0 mg/kg": 2.4,
+        "Cd, 0.5 mg/kg": 7.9,
+        "Pb, 32 mg/kg": 8.5
+    },
+    {
+        "#": 437,
+        "name": "P-117",
+        "Latitude": 49.97635,
+        "Longitude": 82.61951,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 54.3,
+        "Cu, 3.0 mg/kg": 2.0,
+        "Cd, 0.5 mg/kg": 6.4,
+        "Pb, 32 mg/kg": 7.2
+    },
+    {
+        "#": 438,
+        "name": "P-118",
+        "Latitude": 49.97989,
+        "Longitude": 82.63309,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 434.0,
+        "Cu, 3.0 mg/kg": 16.7,
+        "Cd, 0.5 mg/kg": 18.5,
+        "Pb, 32 mg/kg": 26.7
+    },
+    {
+        "#": 439,
+        "name": "P-118",
+        "Latitude": 49.97989,
+        "Longitude": 82.63309,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 236.0,
+        "Cu, 3.0 mg/kg": 15.6,
+        "Cd, 0.5 mg/kg": 10.7,
+        "Pb, 32 mg/kg": 16.6
+    },
+    {
+        "#": 440,
+        "name": "P-118",
+        "Latitude": 49.97989,
+        "Longitude": 82.63309,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 253.0,
+        "Cu, 3.0 mg/kg": 16.8,
+        "Cd, 0.5 mg/kg": 10.3,
+        "Pb, 32 mg/kg": 17.1
+    },
+    {
+        "#": 441,
+        "name": "P-119",
+        "Latitude": 49.97708,
+        "Longitude": 82.64009,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1074.0,
+        "Cu, 3.0 mg/kg": 5.7,
+        "Cd, 0.5 mg/kg": 20.4,
+        "Pb, 32 mg/kg": 54.0
+    },
+    {
+        "#": 442,
+        "name": "P-119",
+        "Latitude": 49.97708,
+        "Longitude": 82.64009,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 95.0,
+        "Cu, 3.0 mg/kg": 2.2,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 5.0
+    },
+    {
+        "#": 443,
+        "name": "P-119",
+        "Latitude": 49.97708,
+        "Longitude": 82.64009,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 753.0,
+        "Cu, 3.0 mg/kg": 32.6,
+        "Cd, 0.5 mg/kg": 9.7,
+        "Pb, 32 mg/kg": 34.9
+    },
+    {
+        "#": 444,
+        "name": "P-120",
+        "Latitude": 49.98743,
+        "Longitude": 82.63815,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1255.0,
+        "Cu, 3.0 mg/kg": 12.9,
+        "Cd, 0.5 mg/kg": 28.8,
+        "Pb, 32 mg/kg": 42.0
+    },
+    {
+        "#": 445,
+        "name": "P-120",
+        "Latitude": 49.98743,
+        "Longitude": 82.63815,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 208.0,
+        "Cu, 3.0 mg/kg": 3.6,
+        "Cd, 0.5 mg/kg": 3.6,
+        "Pb, 32 mg/kg": 6.2
+    },
+    {
+        "#": 446,
+        "name": "P-121",
+        "Latitude": 49.98822,
+        "Longitude": 82.63276,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1125.0,
+        "Cu, 3.0 mg/kg": 9.3,
+        "Cd, 0.5 mg/kg": 12.3,
+        "Pb, 32 mg/kg": 26.5
+    },
+    {
+        "#": 447,
+        "name": "P-121",
+        "Latitude": 49.98822,
+        "Longitude": 82.63276,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 944.0,
+        "Cu, 3.0 mg/kg": 7.3,
+        "Cd, 0.5 mg/kg": 7.1,
+        "Pb, 32 mg/kg": 19.7
+    },
+    {
+        "#": 448,
+        "name": "P-121",
+        "Latitude": 49.98822,
+        "Longitude": 82.63276,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 777.0,
+        "Cu, 3.0 mg/kg": 5.0,
+        "Cd, 0.5 mg/kg": 8.1,
+        "Pb, 32 mg/kg": 17.2
+    },
+    {
+        "#": 449,
+        "name": "P-122",
+        "Latitude": 49.99636,
+        "Longitude": 82.62959,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1675.0,
+        "Cu, 3.0 mg/kg": 20.1,
+        "Cd, 0.5 mg/kg": 31.1,
+        "Pb, 32 mg/kg": 59.5
+    },
+    {
+        "#": 450,
+        "name": "P-122",
+        "Latitude": 49.99636,
+        "Longitude": 82.62959,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 931.0,
+        "Cu, 3.0 mg/kg": 8.7,
+        "Cd, 0.5 mg/kg": 34.4,
+        "Pb, 32 mg/kg": 23.8
+    },
+    {
+        "#": 451,
+        "name": "P-122",
+        "Latitude": 49.99636,
+        "Longitude": 82.62959,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 96.0,
+        "Cu, 3.0 mg/kg": 0.5,
+        "Cd, 0.5 mg/kg": 2.7,
+        "Pb, 32 mg/kg": 3.1
+    },
+    {
+        "#": 452,
+        "name": "P-123",
+        "Latitude": 49.99599,
+        "Longitude": 82.62042,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1582.0,
+        "Cu, 3.0 mg/kg": 35.9,
+        "Cd, 0.5 mg/kg": 39.0,
+        "Pb, 32 mg/kg": 2.3
+    },
+    {
+        "#": 453,
+        "name": "P-123",
+        "Latitude": 49.99599,
+        "Longitude": 82.62042,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 546.0,
+        "Cu, 3.0 mg/kg": 28.6,
+        "Cd, 0.5 mg/kg": 13.2,
+        "Pb, 32 mg/kg": 29.7
+    },
+    {
+        "#": 454,
+        "name": "P-123",
+        "Latitude": 49.99599,
+        "Longitude": 82.62042,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 289.0,
+        "Cu, 3.0 mg/kg": 6.2,
+        "Cd, 0.5 mg/kg": 6.3,
+        "Pb, 32 mg/kg": 11.6
+    },
+    {
+        "#": 455,
+        "name": "P-124",
+        "Latitude": 50.00139,
+        "Longitude": 82.61688,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 332.0,
+        "Cu, 3.0 mg/kg": 5.8,
+        "Cd, 0.5 mg/kg": 6.1,
+        "Pb, 32 mg/kg": 16.5
+    },
+    {
+        "#": 456,
+        "name": "P-124",
+        "Latitude": 50.00139,
+        "Longitude": 82.61688,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 364.0,
+        "Cu, 3.0 mg/kg": 6.9,
+        "Cd, 0.5 mg/kg": 6.9,
+        "Pb, 32 mg/kg": 21.7
+    },
+    {
+        "#": 457,
+        "name": "P-124",
+        "Latitude": 50.00139,
+        "Longitude": 82.61688,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 246.0,
+        "Cu, 3.0 mg/kg": 4.2,
+        "Cd, 0.5 mg/kg": 4.6,
+        "Pb, 32 mg/kg": 14.6
+    },
+    {
+        "#": 458,
+        "name": "P-125",
+        "Latitude": 50.01009,
+        "Longitude": 82.63143,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 87.0,
+        "Cu, 3.0 mg/kg": 0.6,
+        "Cd, 0.5 mg/kg": 1.9,
+        "Pb, 32 mg/kg": 4.3
+    },
+    {
+        "#": 459,
+        "name": "P-125",
+        "Latitude": 50.01009,
+        "Longitude": 82.63143,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 95.0,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 2.3,
+        "Pb, 32 mg/kg": 4.2
+    },
+    {
+        "#": 460,
+        "name": "P-125",
+        "Latitude": 50.01009,
+        "Longitude": 82.63143,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 40.0,
+        "Cu, 3.0 mg/kg": 0.7,
+        "Cd, 0.5 mg/kg": 1.4,
+        "Pb, 32 mg/kg": 2.1
+    },
+    {
+        "#": 461,
+        "name": "P-125",
+        "Latitude": 50.01009,
+        "Longitude": 82.63143,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 42.0,
+        "Cu, 3.0 mg/kg": 1.0,
+        "Cd, 0.5 mg/kg": 1.7,
+        "Pb, 32 mg/kg": 2.6
+    },
+    {
+        "#": 462,
+        "name": "P-126",
+        "Latitude": 50.01319,
+        "Longitude": 82.58185,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 162.0,
+        "Cu, 3.0 mg/kg": 0.6,
+        "Cd, 0.5 mg/kg": 3.8,
+        "Pb, 32 mg/kg": 5.3
+    },
+    {
+        "#": 463,
+        "name": "P-126",
+        "Latitude": 50.01319,
+        "Longitude": 82.58185,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 126.0,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 3.0,
+        "Pb, 32 mg/kg": 4.8
+    },
+    {
+        "#": 464,
+        "name": "P-126",
+        "Latitude": 50.01319,
+        "Longitude": 82.58185,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 9.5,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.1,
+        "Pb, 32 mg/kg": 2.3
+    },
+    {
+        "#": 465,
+        "name": "P-126",
+        "Latitude": 50.01319,
+        "Longitude": 82.58185,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 35.0,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 2.9
+    },
+    {
+        "#": 466,
+        "name": "P-127",
+        "Latitude": 50.00077,
+        "Longitude": 82.58354,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 591.0,
+        "Cu, 3.0 mg/kg": 6.4,
+        "Cd, 0.5 mg/kg": 10.9,
+        "Pb, 32 mg/kg": 22.9
+    },
+    {
+        "#": 467,
+        "name": "P-127",
+        "Latitude": 50.00077,
+        "Longitude": 82.58354,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 110.0,
+        "Cu, 3.0 mg/kg": 2.2,
+        "Cd, 0.5 mg/kg": 1.9,
+        "Pb, 32 mg/kg": 6.1
+    },
+    {
+        "#": 468,
+        "name": "P-127",
+        "Latitude": 50.00077,
+        "Longitude": 82.58354,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 37.9,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 5.0
+    },
+    {
+        "#": 469,
+        "name": "P-127",
+        "Latitude": 50.00077,
+        "Longitude": 82.58354,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 5.7,
+        "Cu, 3.0 mg/kg": 1.2,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 2.9
+    },
+    {
+        "#": 470,
+        "name": "P-128",
+        "Latitude": 49.98978,
+        "Longitude": 82.583814,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 818.0,
+        "Cu, 3.0 mg/kg": 24.1,
+        "Cd, 0.5 mg/kg": 13.1,
+        "Pb, 32 mg/kg": 45.0
+    },
+    {
+        "#": 471,
+        "name": "P-128",
+        "Latitude": 49.98978,
+        "Longitude": 82.583814,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 859.0,
+        "Cu, 3.0 mg/kg": 38.2,
+        "Cd, 0.5 mg/kg": 10.8,
+        "Pb, 32 mg/kg": 51.3
+    },
+    {
+        "#": 472,
+        "name": "P-128",
+        "Latitude": 49.98978,
+        "Longitude": 82.583814,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 605.0,
+        "Cu, 3.0 mg/kg": 19.7,
+        "Cd, 0.5 mg/kg": 7.9,
+        "Pb, 32 mg/kg": 38.2
+    },
+    {
+        "#": 473,
+        "name": "P-129",
+        "Latitude": 49.98526,
+        "Longitude": 82.5967,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 1147.0,
+        "Cu, 3.0 mg/kg": 57.8,
+        "Cd, 0.5 mg/kg": 25.0,
+        "Pb, 32 mg/kg": 35.9
+    },
+    {
+        "#": 474,
+        "name": "P-129",
+        "Latitude": 49.98526,
+        "Longitude": 82.5967,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 690.0,
+        "Cu, 3.0 mg/kg": 40.0,
+        "Cd, 0.5 mg/kg": 12.1,
+        "Pb, 32 mg/kg": 22.6
+    },
+    {
+        "#": 475,
+        "name": "P-129",
+        "Latitude": 49.98526,
+        "Longitude": 82.5967,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 1142.0,
+        "Cu, 3.0 mg/kg": 74.0,
+        "Cd, 0.5 mg/kg": 28.0,
+        "Pb, 32 mg/kg": 59.2
+    },
+    {
+        "#": 476,
+        "name": "P-130",
+        "Latitude": 49.97572,
+        "Longitude": 82.60204,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 862.0,
+        "Cu, 3.0 mg/kg": 5.9,
+        "Cd, 0.5 mg/kg": 27.0,
+        "Pb, 32 mg/kg": 19.0
+    },
+    {
+        "#": 477,
+        "name": "P-130",
+        "Latitude": 49.97572,
+        "Longitude": 82.60204,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 386.0,
+        "Cu, 3.0 mg/kg": 4.8,
+        "Cd, 0.5 mg/kg": 6.0,
+        "Pb, 32 mg/kg": 6.3
+    },
+    {
+        "#": 478,
+        "name": "P-130",
+        "Latitude": 49.97572,
+        "Longitude": 82.60204,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 82.0,
+        "Cu, 3.0 mg/kg": 2.8,
+        "Cd, 0.5 mg/kg": 3.0,
+        "Pb, 32 mg/kg": 2.4
+    },
+    {
+        "#": 479,
+        "name": "P-131",
+        "Latitude": 49.97844,
+        "Longitude": 82.5858,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 205.0,
+        "Cu, 3.0 mg/kg": 13.9,
+        "Cd, 0.5 mg/kg": 4.1,
+        "Pb, 32 mg/kg": 5.8
+    },
+    {
+        "#": 480,
+        "name": "P-131",
+        "Latitude": 49.97844,
+        "Longitude": 82.5858,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 107.0,
+        "Cu, 3.0 mg/kg": 8.4,
+        "Cd, 0.5 mg/kg": 2.6,
+        "Pb, 32 mg/kg": 3.7
+    },
+    {
+        "#": 481,
+        "name": "P-132",
+        "Latitude": 49.95752,
+        "Longitude": 82.58084,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 54.0,
+        "Cu, 3.0 mg/kg": 6.9,
+        "Cd, 0.5 mg/kg": 2.4,
+        "Pb, 32 mg/kg": 2.2
+    },
+    {
+        "#": 482,
+        "name": "P-132",
+        "Latitude": 49.95752,
+        "Longitude": 82.58084,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 37.0,
+        "Cu, 3.0 mg/kg": 0.8,
+        "Cd, 0.5 mg/kg": 1.3,
+        "Pb, 32 mg/kg": 1.9
+    },
+    {
+        "#": 483,
+        "name": "P-132",
+        "Latitude": 49.95752,
+        "Longitude": 82.58084,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 41.0,
+        "Cu, 3.0 mg/kg": 1.3,
+        "Cd, 0.5 mg/kg": 1.2,
+        "Pb, 32 mg/kg": 2.0
+    },
+    {
+        "#": 484,
+        "name": "P-132",
+        "Latitude": 49.95752,
+        "Longitude": 82.58084,
+        "Depth, cm": "50-100",
+        "Zn, 23 mg/kg": 0.0,
+        "Cu, 3.0 mg/kg": 0.0,
+        "Cd, 0.5 mg/kg": 0.0,
+        "Pb, 32 mg/kg": 0.0
+    },
+    {
+        "#": 485,
+        "name": "P-133",
+        "Latitude": 49.8211,
+        "Longitude": 82.32539,
+        "Depth, cm": "0-5",
+        "Zn, 23 mg/kg": 18.0,
+        "Cu, 3.0 mg/kg": 0.3,
+        "Cd, 0.5 mg/kg": 0.8,
+        "Pb, 32 mg/kg": 0.8
+    },
+    {
+        "#": 486,
+        "name": "P-133",
+        "Latitude": 49.8211,
+        "Longitude": 82.32539,
+        "Depth, cm": "5-20",
+        "Zn, 23 mg/kg": 23.0,
+        "Cu, 3.0 mg/kg": 0.9,
+        "Cd, 0.5 mg/kg": 0.6,
+        "Pb, 32 mg/kg": 0.7
+    },
+    {
+        "#": 487,
+        "name": "P-133",
+        "Latitude": 49.8211,
+        "Longitude": 82.32539,
+        "Depth, cm": "20-50",
+        "Zn, 23 mg/kg": 32.0,
+        "Cu, 3.0 mg/kg": 1.1,
+        "Cd, 0.5 mg/kg": 0.4,
+        "Pb, 32 mg/kg": 0.6
+    }
+];
+
+        // Инициализация карты
+        let map;
+        
+        function initMap() {
+            // Создание карты с центром на Казахстане
+            map = L.map('map').setView([48.0196, 66.9237], 6);
+            
+            // Добавление тайлов OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 18
+            }).addTo(map);
+            
+            // Добавление маркеров
+            addPollutionMarkers();
+            
+            // Скрытие индикатора загрузки
+            document.getElementById('loading').style.display = 'none';
+        }
+        
+        function addPollutionMarkers() {
+            pollutionData.forEach(point => {
+                // Проверка валидности координат
+                if (isValidCoordinate(point.Latitude, point.Longitude)) {
+                    // Создание красного маркера
+                    const redIcon = L.divIcon({
+                        className: 'custom-marker',
+                        html: `<div style="
+                            background-color: #e74c3c;
+                            border: 2px solid #c0392b;
+                            border-radius: 50%;
+                            width: 16px;
+                            height: 16px;
+                            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                        "></div>`,
+                        iconSize: [16, 16],
+                        iconAnchor: [8, 8]
+                    });
+                    
+                    // Создание маркера
+                    const marker = L.marker([point.Latitude, point.Longitude], {
+                        icon: redIcon
+                    }).addTo(map);
+                    
+                    // Создание содержимого всплывающего окна
+                    const popupContent = createPopupContent(point);
+                    
+                    // Привязка всплывающего окна к маркеру
+                    marker.bindPopup(popupContent, {
+                        maxWidth: 350,
+                        className: 'custom-popup'
+                    });
+                }
+            });
+        }
+        
+        function createPopupContent(point) {
+            return `
+                <div class="popup-content">
+                    <div class="popup-title">${point.name}</div>
+                    <div class="popup-info">
+                        <div class="info-item depth-item">
+                            <div class="info-label">Глубина</div>
+                            <div class="info-value">${point["Depth, cm"]} см</div>
+                        </div>
+                        <div class="info-item metal-zn">
+                            <div class="info-label">Цинк (Zn)</div>
+                            <div class="info-value">${point["Zn, 23 mg/kg"]} мг/кг</div>
+                        </div>
+                        <div class="info-item metal-cu">
+                            <div class="info-label">Медь (Cu)</div>
+                            <div class="info-value">${point["Cu, 3.0 mg/kg"]} мг/кг</div>
+                        </div>
+                        <div class="info-item metal-cd">
+                            <div class="info-label">Кадмий (Cd)</div>
+                            <div class="info-value">${point["Cd, 0.5 mg/kg"]} мг/кг</div>
+                        </div>
+                        <div class="info-item metal-pb">
+                            <div class="info-label">Свинец (Pb)</div>
+                            <div class="info-value">${point["Pb, 32 mg/kg"]} мг/кг</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function isValidCoordinate(lat, lng) {
+            return lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180 && 
+                   !isNaN(lat) && !isNaN(lng);
+        }
+        
+        // Инициализация карты после загрузки страницы
+        window.addEventListener('load', initMap);
+    </script>
+</body>
+</html>
