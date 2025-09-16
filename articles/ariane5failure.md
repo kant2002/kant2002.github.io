@@ -6,9 +6,9 @@ permalink: /ariane-5-failure/
 
 <DIV ALIGN=right><P>Париж, 19 липня 1996</P></DIV>
 
-<CENTER><P><B><FONT SIZE=+1>ARIANE 5</FONT></B></P></CENTER>
+<CENTER><P><B>ARIANE 5</B></P></CENTER>
 
-<CENTER><P><B><FONT SIZE=+1>Аварія польоту 501</FONT></B></P></CENTER>
+<CENTER><P><B>Аварія польоту 501</B></P></CENTER>
 
 <CENTER><P>Звіт комісії з розслідування</P></CENTER>
 
@@ -18,7 +18,7 @@ permalink: /ariane-5-failure/
 
 <CENTER><P>[спочатку опубліковано в http://www.esrin.esa.it/htdocs/tidc/Press/Press96/ariane5rep.html]</P></CENTER>
 
-<CENTER><P>[перекладено із https://www-users.cse.umn.edu/~arnold/disasters/ariane5rep.html]</P></CENTER>
+<CENTER><P>[перекладено із <a href="https://www-users.cse.umn.edu/~arnold/disasters/ariane5rep.html">https://www-users.cse.umn.edu/~arnold/disasters/ariane5rep.html</a>]</P></CENTER>
 
 ### Передмова
 
