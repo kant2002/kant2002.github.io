@@ -41,15 +41,18 @@ permalink: /projects/
 - [Деoбфускатoр для .NET](https://github.com/kant2002/de4dot)
 - [Бібліoтека для навчання прoграмуванню](https://github.com/kant2002/FunSharp)
 - [NCrawler](https://github.com/kant2002/ncrawler)
+- [Hermes Decompiler](https://github.com/kant2002/hermes-dec)
 
 # Переклади
 
 - [Переклад SmolTutor paper](https://kant2002.github.io/smoltutor/)
 - [Рання історія Smalltalk](https://kant2002.github.io/EarlyHistoryOfSmalltalk/)
 - [Крипточуваки](https://kant2002.github.io/cryptopals/)
+- [Ступінь з цегляної науки](https://kant2002.github.io/articles/bricks)
+- [Аварія ARIANE 5 - Повний звіт](https://kant2002.github.io/articles/ariane5failure/)
+- [Чібік](https://kant2002.github.io/compilers/chibicc/)
 
 <!-- 
-- [Чібік](https://kant2002.github.io/compilers/chibicc/)
 - [Компілятор Ліспа своїми руками](https://kant2002.github.io/compilers/byol-c/)
 - [Трасування сітки: Розкриття обчислювальних графіків у мовних моделях](https://kant2002.github.io/transformers-circuit/2025/attribution-graphs/methods.html) 
 -->
