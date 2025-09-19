@@ -45,12 +45,12 @@ permalink: /projects/
 
 # Переклади
 
-- [Переклад SmolTutor paper](https://kant2002.github.io/smoltutor/)
-- [Рання історія Smalltalk](https://kant2002.github.io/EarlyHistoryOfSmalltalk/)
-- [Крипточуваки](https://kant2002.github.io/cryptopals/)
-- [Ступінь з цегляної науки](https://kant2002.github.io/articles/bricks)
-- [Аварія ARIANE 5 - Повний звіт](https://kant2002.github.io/articles/ariane5failure/)
-- [Чібік](https://kant2002.github.io/compilers/chibicc/)
+- [Переклад SmolTutor paper](/smoltutor/)
+- [Рання історія Smalltalk](/EarlyHistoryOfSmalltalk/)
+- [Крипточуваки](/cryptopals/)
+- [Ступінь з цегляної науки](/bricks)
+- [Аварія ARIANE 5 - Повний звіт](/ariane-5-failure/)
+- [Чібік](/compilers/chibicc)
 - [Гра натуральних чисел](https://adam.math.hhu.de/#/g/leanprover-community/nng4/)
 
 <!-- 
