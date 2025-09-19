@@ -51,6 +51,7 @@ permalink: /projects/
 - [Ступінь з цегляної науки](https://kant2002.github.io/articles/bricks)
 - [Аварія ARIANE 5 - Повний звіт](https://kant2002.github.io/articles/ariane5failure/)
 - [Чібік](https://kant2002.github.io/compilers/chibicc/)
+- [Гра натуральних чисел](https://adam.math.hhu.de/#/g/leanprover-community/nng4/)
 
 <!-- 
 - [Компілятор Ліспа своїми руками](https://kant2002.github.io/compilers/byol-c/)
