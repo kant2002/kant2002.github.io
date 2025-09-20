@@ -4,7 +4,7 @@ title: Lean 4 з підручником з математики - Частина
 permalink: /lean4/math-textbook-0/
 ---
 
-*Це переклад вступної статті від Filip Łajszczak - [https://filip.lajszczak.dev/lean-4-with-a-math-textbook---part-0---introduction.html](https://filip.lajszczak.dev/lean-4-with-a-math-textbook---part-0---introduction.html) про формалізацію класичної теорії множин від Хелени Расьової у Lean4*
+*Це переклад вступної статті від Филип Уайшчак (Filip Łajszczak) - [https://filip.lajszczak.dev/lean-4-with-a-math-textbook---part-0---introduction.html](https://filip.lajszczak.dev/lean-4-with-a-math-textbook---part-0---introduction.html) про формалізацію класичної теорії множин від Хелени Расьової у Lean4*
 
 У нещодавній розмові Лекса Фрідмана [із Терренсом Тао](https://lexfridman.com/terence-tao) важлива [частина](https://lexfridman.com/terence-tao-transcript#chapter10_ai_assisted_theorem_proving) розмови була присвячена його відкриттю та використанню [Lean 4](https://lean-lang.org/) для формалізації математики. Тао також говорить про те, наскільки зрозумілою та доступною є мова Lean, і як професійні математики, студенти та аматори можуть її використовувати. Він згадує про [проєкт mathlib](https://github.com/leanprover-community/mathlib4), що є ініціативою спільноти зі створення єдиної бібліотеки з математики, [Equational Theories Project](https://teorth.github.io/equational_theories/), який він започаткував, а також [формалізацію](https://github.com/teorth/analysis) власного [підручника з аналізу](https://terrytao.wordpress.com/books/analysis-i/).
 
@@ -26,6 +26,6 @@ permalink: /lean4/math-textbook-0/
 
 Серія на цей момент:
 
-- Частина 1 - Визначення множин і належності
-- Частина 2 - Підмножини
+- [Частина 1 - Визначення множин і належності](/lean4/math-textbook-1/)
+- [Частина 2 - Підмножини](/lean4/math-textbook-2/)
 - Частина 3 - Властивості підмножин
