@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Lean 4 з підручником з математики - Частина 0 - Вступ
+title: Lean 4 із підручником з математики - Частина 0 - Вступ
 permalink: /lean4/math-textbook-0/
 ---
 
@@ -28,4 +28,4 @@ permalink: /lean4/math-textbook-0/
 
 - [Частина 1 - Визначення множин і належності](/lean4/math-textbook-1/)
 - [Частина 2 - Підмножини](/lean4/math-textbook-2/)
-- Частина 3 - Властивості підмножин
+- [Частина 3 - Властивості підмножин](/lean4/math-textbook-3/)
