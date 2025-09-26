@@ -52,6 +52,7 @@ permalink: /projects/
 - [Аварія ARIANE 5 - Повний звіт](/ariane-5-failure/)
 - [Чібік](/compilers/chibicc)
 - [Гра натуральних чисел](https://adam.math.hhu.de/#/g/leanprover-community/nng4/)
+- [Lean 4 із підручником з математики](/lean4/math-textbook-0/)
 
 <!-- 
 - [Компілятор Ліспа своїми руками](https://kant2002.github.io/compilers/byol-c/)
