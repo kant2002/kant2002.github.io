@@ -116,3 +116,10 @@ I'm not for a witch hunt. I use these examples only because they are common, not
 # Conclusions
 
 Obviously there are no conclusions, since I am making guesses. Take a look at these snippets purely from an organizational perspective and tell me where I'm wrong. Obviously I may be wrong somewhere.
+
+But if any, I want to press two problems
+
+- When we speak about software architecture, we don't speak about what kind of business it is. Not brand, but what staff size, what industry, how important that system to business.
+- Also when we made technical decisions, money should be always on the table. You cannot be engineer without calculating money in my opinion.
+
+All of that is not super trade secrets, business people speak about it all the time. You obviously should not go into details, but anything better then current "it depends" mindset.
