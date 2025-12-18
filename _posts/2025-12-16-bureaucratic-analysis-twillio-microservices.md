@@ -2,7 +2,7 @@
 layout: post
 title:  "Bureaucratic analysis of Twilio Microservices journey"
 date:   2025-12-16 15:57:44 +0500
-categories: en dotnet
+categories: en engineering
 comments: true
 ---
 
