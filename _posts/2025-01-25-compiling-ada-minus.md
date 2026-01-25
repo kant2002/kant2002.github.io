@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Compiling Ada-"
-date:   2025-01-26 23:57:00 +0600
+date:   2026-01-25 23:57:00 +0600
 categories: software-development retro-computing
 comments: true
 ---
