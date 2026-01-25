@@ -220,4 +220,4 @@ Then I discover some include clashes, so I have to backout of `amdb` folder for 
 Summary
 =======
 
-What was interesting to me is that old codebase was more or less compilable today with minor in my opinion changes. I also hope that my work simplify life of somebody else who want to build this codebase further, or maybe compile it for actual platform which was originally used. It was small and fun excercise, so I'm pleased that it spend day on it. Have a great hacking!
+What was interesting to me is that old codebase was more or less compilable today with minor in my opinion changes. I also hope that my work simplify life of somebody else who want to build this codebase further, or maybe compile it for actual platform which was originally used. The changes can be seen in [this PR](https://github.com/kant2002/Ada-Minus-Compiler/pull/1). It was small and fun excercise, so I'm pleased that it spend day on it. Have a great hacking!
