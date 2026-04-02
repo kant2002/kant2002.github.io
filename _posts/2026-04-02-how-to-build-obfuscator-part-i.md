@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to build .NET obfuscator - Part I"
-date:   2026-04-02 21:34:44 +0100
+date:   2026-04-02 21:34:44 +0200
 categories: en obfuscators
 comments: true
 ---
