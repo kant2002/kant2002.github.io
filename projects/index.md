@@ -58,10 +58,13 @@ permalink: /projects/
 - [Компілятор Ліспа своїми руками](https://kant2002.github.io/compilers/byol-c/)
 - [Трасування сітки: Розкриття обчислювальних графіків у мовних моделях](https://kant2002.github.io/transformers-circuit/2025/attribution-graphs/methods.html) 
 -->
+# Розваги
+
+- [Вгадування підстановочного шифру](https://kant2002.github.io/aristocrat)
+- [Вгадування підстановочного шифру - Французською](https://kant2002.github.io/aristocrat-fr)
 
 # Проекти де я гарно допомогав
 
 - [Кoмпілятoр С для .NET - Цезіум](https://github.com/fornever/cesium)
 - [База даних в пам'яти StereoDB](https://github.com/StereoDB/StereoDB)
 - [Експерімент NativeAOT](https://github.com/dotnet/runtimelab/tree/feature/NativeAOT)
-
