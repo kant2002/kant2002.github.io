@@ -33,6 +33,7 @@ permalink: /projects/
 - [Приклад інтеграції ASP.NET Core Identity із існуючою базою](https://github.com/kant2002/SimpleIdentity)
 - [C# library for operating Ledman.cn senders](https://github.com/kant2002/Ledman)
 - [Монітор присутності Wifi мережі у радіусі](https://github.com/kant2002/wifi-monitor)
+- [Трансляція прикладів на Square в SQL](https://kant2002.github.io/square/)
 
 # Проекти які я підтримую
 
