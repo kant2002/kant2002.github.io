@@ -28,8 +28,8 @@ twitter_username: "kurdiumov"
 github_username:  "kant2002"
 lang: ua
 posts: Статті
-disqus:
-  shortname: kant2002
+#disqus:
+#  shortname: kant2002
 google_analytics: G-Q9C7QSY9LY
 show_excerpts: true
 excerpt_separator: <!--more-->
