@@ -6,12 +6,23 @@ categories: en obfuscators
 comments: true
 ---
 
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, logLevel: 'trace' });
+  document.querySelectorAll('pre > code.language-mermaid').forEach((codeBlock) => {
+    codeBlock.parentElement.outerHTML = `<pre class="mermaid">${codeBlock.textContent}</pre>`;
+  });
+</script>
+
+
 This is continuation of series about writing obfuscators. You can read first article [here](2026-04-02-how-to-build-obfuscator-part-i.md)
 
 We finished with string replacement and primitive obfuscation runtime.
 Now it's time to spice things up a bit. Before that we write relatively simple obfuscation techniques, which is quite trivial to undo. In this article I would explain how to transform control flow in such way that make your life a bit harder.
 
 Let's start make control flow harder to follow.
+
+<!--more-->
 
 ## Simple condition modifications
 
@@ -187,7 +198,7 @@ IL_000e: ret
 
 and basic blocks for the function would looks like this
 
-```mermaid
+<pre class="mermaid">
 flowchart TD
     A[IL_0000: ldarg.0
 IL_0001: ldc.i4.4
@@ -195,7 +206,7 @@ IL_0002: ble.s IL_000e] --> B("IL_0004: ldstr #quot;Hello, Conditions!#quot;
 IL_0009:&nbsp;call&nbsp;void&nbsp;[System.Console]System.Console::WriteLine(string)")
     B --> C(IL_000e: ret)
     A -.-> C  
-```
+</pre>
 
 For analysis let’s use following classes
 
