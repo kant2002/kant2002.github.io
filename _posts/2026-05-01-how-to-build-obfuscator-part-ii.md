@@ -15,7 +15,8 @@ comments: true
 </script>
 
 
-This is continuation of series about writing obfuscators. You can read first article [here](2026-04-02-how-to-build-obfuscator-part-i.md)
+This is continuation of series about writing obfuscators. You can read first article [here]({% post_url 2026-04-02-how-to-build-obfuscator-part-i %})
+
 
 We finished with string replacement and primitive obfuscation runtime.
 Now it's time to spice things up a bit. Before that we write relatively simple obfuscation techniques, which is quite trivial to undo. In this article I would explain how to transform control flow in such way that make your life a bit harder.
