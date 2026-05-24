@@ -139,6 +139,7 @@ foreach (var type in module.Types)
 {
     if (type.Name == "<Module>")
         continue;
+
     type.Name = "Class" + typeCode.ToString(CultureInfo.InvariantCulture);
     typeCode++;
     int methodCode = 0;
@@ -167,13 +168,17 @@ foreach (var type in module.Types)
 {
     if (type.Name == "<Module>")
         continue;
+    if (type.IsPublic || type.IsNestedFamily || type.IsNestedAssembly)
+        continue;
     type.Name = "Class" + typeCode.ToString(CultureInfo.InvariantCulture);
     typeCode++;
     int methodCode = 0;
     foreach (var method in type.Methods)
     {
         // Skip well known names
-        if (type.Name == ".ctor" || type.Name == ".cctor")
+        if (method.Name == ".ctor" || method.Name == ".cctor")
+            continue;
+        if (method.IsPublic || method.IsFamily)
             continue;
         method.Name = "Method" + methodCode.ToString(CultureInfo.InvariantCulture);
         methodCode++;
@@ -181,6 +186,8 @@ foreach (var type in module.Types)
     int fieldCode = 0;
     foreach (var field in type.Fields)
     {
+        if (field.IsPublic || field.IsFamily)
+            continue;
         field.Name = "Field" + fieldCode.ToString(CultureInfo.InvariantCulture);
         fieldCode++;
     }
