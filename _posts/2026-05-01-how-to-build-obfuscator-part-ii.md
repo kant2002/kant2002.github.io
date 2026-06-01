@@ -51,7 +51,7 @@ if (false || x > 4)
 }
 ```
 
-That looks silly, and if written as it is, it would be, but instead of `true` and `false`, you can inject more complicated expressions, for example `Math.Log10(10.0) == 1.0` for `true` or `Math.Log10(1) == 1.0` for `false`. Or even more complicated expressions. If you clever enough, you can even generate more complicated expression as you go.
+That looks silly, and if written as it is, it would be trivial, but instead of `true` and `false`, you can inject more complicated expressions, for example `Math.Log10(10.0) == 1.0` for `true` or `Math.Log10(1) == 1.0` for `false`. Or even more complicated expressions. If you clever enough, you can even generate more complicated expression as you go.
 
 So let's try to inject that false conditions which does not affect branching.
 
