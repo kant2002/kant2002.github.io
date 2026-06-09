@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Comment construire un obfuscateur .NET - Partie III"
-date:   2026-05-20 12:27:44 +0200
+date:   2026-06-02 12:27:44 +0200
 categories: en obfuscators
 comments: true
 use_mermaid: true

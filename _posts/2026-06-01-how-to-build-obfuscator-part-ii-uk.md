@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Як побудувати .NET обфускатор - Частина II"
-date:   2026-05-02 17:54:44 +0200
+date:   2026-06-01 17:54:44 +0200
 categories: uk обфускатори
 comments: true
 ---
