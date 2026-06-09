@@ -34,8 +34,9 @@ permalink: /projects/
 - [C# library for operating Ledman.cn senders](https://github.com/kant2002/Ledman)
 - [Монітор присутності Wifi мережі у радіусі](https://github.com/kant2002/wifi-monitor)
 - [Трансляція прикладів на Square в SQL](https://kant2002.github.io/square/)
-- [Курс про те як побудувати обфускатор для .NET](/projects/obfuscation/)
 - [Course: How to build obfuscation in .NET](/projects/obfuscation-en/)
+- [Comment créer un obfuscateur pour .NET](/projects/obfuscation-fr/)
+- [Курс про те як побудувати обфускатор для .NET](/projects/obfuscation/)
 
 # Проекти які я підтримую
 
