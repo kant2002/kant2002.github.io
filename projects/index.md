@@ -34,6 +34,8 @@ permalink: /projects/
 - [C# library for operating Ledman.cn senders](https://github.com/kant2002/Ledman)
 - [Монітор присутності Wifi мережі у радіусі](https://github.com/kant2002/wifi-monitor)
 - [Трансляція прикладів на Square в SQL](https://kant2002.github.io/square/)
+- [Курс про те як побудувати обфускатор для .NET](/projects/obfuscation/)
+- [Course: How to build obfuscation in .NET](/projects/obfuscation-en/)
 
 # Проекти які я підтримую
 
@@ -57,6 +59,7 @@ permalink: /projects/
 - [Чібік](/compilers/chibicc)
 - [Гра натуральних чисел](https://adam.math.hhu.de/#/g/leanprover-community/nng4/)
 - [Lean 4 із підручником з математики](/lean4/math-textbook-0/)
+- [Слова настанови. Абай Кунанбаєв](/words-abay/)
 
 <!-- 
 - [Компілятор Ліспа своїми руками](https://kant2002.github.io/compilers/byol-c/)
