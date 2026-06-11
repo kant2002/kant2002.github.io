@@ -2,7 +2,7 @@
 layout: post
 title:  "Як побудувати .NET обфускатор - Частина III"
 date:   2026-06-11 12:27:44 +0200
-categories: uk обфускатори
+categories: uk obfuscators
 comments: true
 use_mermaid: true
 ---
