@@ -237,3 +237,14 @@ international_remote = [73, 80]
 ```
 
 I believe I can reverse a bit of information from salary. But not today probably.
+
+**UPD**: Let's project these numbers on total developers population in Kazakhstan. According to the Bureau of National Statistics there 19 500 developers. Let's project this, by multiplying by coefficient 30,32 (approx. 19500/643). The actual coeefficient should be smaller, since 19 500 number includes 1C developers, AI developer which does not counted in the Kolese report.
+
+```
+kazakhstan_office = [11 888, 12 313]
+kazakhstan_remote = [2 214, 2 426]
+international_office = [2 608, 2 820]
+international_remote = [2 214, 2 426]
+```
+
+I don't feel comfortable project other numbers, since likely the Kolesa Group did not reach some nich audience or questionary is build in such way, as to make other groups under represented. Like 1 Java developer across all Android developers seems fishy. Does there no legacy projects at all in Kazakhstan? Does any mobile developers in the outsource companies never touch Java on Android? Questionable. Also number of interns really small in comparing to what actually on the market. Yeah, they are maybe not interested enough, but still. Same for executive positions (not the target audience). Number of full-stack developers is surprisingly small, given that lot of developers actually somewhat of full-stack developers, sicne they have to touch lot of things.
