@@ -10,14 +10,13 @@ use_math: true
 **PLEASE RETURN TO**  
 **CDR GRACE M. HOPPER USNR**
 
+<!--more-->
+
 to be presented by **E. J. Albertson** Methods Consultant, Methods Planning Division
 before The Computer Applications Symposium
 sponsored by Armour Research Foundation of Illinois Institute of Technology
 at Chicago, Illinois
 on October 28, 1959
-
-# CURRENT DEVELOPMENTS IN COMMON LANGUAGE  
-## PROGRAMMING FOR BUSINESS DATA SYSTEMS
 
 Although the title of this presentation could be interpreted to mean a comprehensive review of all current developments in common language programming for business data systems, let me assure you that it is not.
 
