@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Analysis of changes in the Bun codebase after the rewrite from Zig to Rust - Two month after"
-date:   2026-07-20 22:19:00 +0100
+date:   2026-07-20 22:19:00 +0200
 categories: en llm
 comments: true
 ---
