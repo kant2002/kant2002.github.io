@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Аналіз змін в кодовій бази Bun після перепису із Zig на Rust - Два місяці потому"
-date:   2026-07-20 22:19:00 +0200
+date:   2026-07-20 22:44:00 +0200
 categories: uk llm
 comments: true
 ---
