@@ -49,7 +49,8 @@ header_pages:
    - projects/index.md
    - cryptopals/index.md
    - compilers/index.md
-   - byol-c/index.md
+#   - byol-c/index.md
+   - articles/kazakhstan/index.md
    - EarlyHistoryOfSmalltalk/index.html
 
 defaults:
