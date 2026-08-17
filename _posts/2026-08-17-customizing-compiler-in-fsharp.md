@@ -163,7 +163,7 @@ dotnet run --no-build
 
 ## What's next
 
-This is simplest form of hacking, and we can for example create augmentations for FSharp.Core primitives, we can augment whole ASP.NET if we are brave enough. To simplify such hacking, I create [small tool](https://kant2002.github.io/FSharpKeywordTranslator) which present how code can be seen in other languages. Also obviosly lazy and want to try something in their browsers, spinning terminal is so complicates. So you can look at [Fable REPL in Ukrainian](https://kant2002.github.io/fable-repl-uk/). Samples included!
+This is simplest form of hacking, and we can for example create augmentations for FSharp.Core primitives, we can augment whole ASP.NET if we are brave enough. To simplify such hacking, I create [small tool](https://kant2002.github.io/FSharpKeywordTranslator) which present how code can be seen in other languages. Also obviosly lazy and want to try something in their browsers, spinning terminal is so complicates. So you can look at [Fable REPL in Ukrainian](https://kant2002.github.io/fable-repl-uk/). Samples included! If you love IDE, you can install VSIX extension in Visual Studio from file `artifacts\VSSetup\Release\VisualFSharpFull.vsix` and enjoy your best IDE. If you have other best IDE, find me on the Internet, we can figure out something.
 
 ## Conclusions
 
