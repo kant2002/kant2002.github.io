@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Кастомізуя компілятор F#"
+title:  "Кастомізуючи компілятор F#"
 date:   2026-08-17 18:30:00 +0200
 categories: uk dotnet fsharp
 comments: true
